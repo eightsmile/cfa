@@ -55,3 +55,13 @@ $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}} = \frac{Avtive Return}{TrackingError
 - Macro  - Factors are **Surprise** .Consider Last
 - Fundamental - Consider Firstly
 - Statistics - Explain Historical Return Covariance
+
+### VaR
+
+- Parametric  <- Assume the distribution (normal), $\mu$, $\sigma$.
+- Historical
+- Monte Carlo - Advantages:
+    -  can also more easily accommodate the large number of portfolio holdings. 
+    - allows the user to develop her own forward-looking assumptions about the portfolio’s risk and return characteristics.
+
+Drawbacks: Do not consider the Liquidity, and thus VaR could underestimate the risks.
