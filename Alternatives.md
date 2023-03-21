@@ -22,7 +22,28 @@
 - Shopping carters - require more management, such as tenant mix and promotion
     - A shopping centres is a type of **retail property**. A percentage lease is a unique aspect of many retail leases, which requires the tenant to pay additional rent once its sales reach a certain level. The lease will typically specify a “minimum rent” that must be paid regardless of the tenant’s sales. Percentage rent may be paid by the tenant once the tenant’s sales reach a certain level or breakpoint.
 
-### PE Investment - VC & LBOs
+#### Absolute Valuation
+
+Net Asset Value, $NAV = \frac{NOI}{cap\ rate}+Cash-Debt$ / # of shares
+
+#### Relative Value Approach
+
+- FFO ( funds from operations ) $=NetIncome + Loss+Dep\&Amt$
+- AFFO (Adjusted Funds from Operations) =
+    - FFO 
+    - **Minus** Non-Cash Rent Adjustment 
+    - **Minus**  Recurring Maintenance-type Capital Expenditures and Leasing Commissions.
+    - Adjusted funds from operations (AFFO) is a refinement of funds from operations (FFO), **which takes into consideration the leasing and maintenance-type capital expenditures necessary to maintain the economic income of a property.** 减掉了，所以考虑了
+    -  It is, however, **subject to more variation and error in estimation than FFO.** 
+    - Used to give a more accurate description about the current economic condition.
+
+#### Types
+
+- CMBS - asset-backed securitised **debt** obligations that receive cash flow from portfolios of mortgage loans.
+- REITs - own properties that are income producing.
+- REOCs - Real estate operating companies generate cash inflows primarily from the **sale of developed or improved properties,** as opposed to recurring lease or rental income.
+
+### VC & LBOs
 
 #### Characteristics
 
@@ -41,6 +62,21 @@
 - RVPI, Residual Value to Paid-in Capital, $RVPI = \frac{NAV(afterDistribution)}{Cumulative Invested Capital}$ - **Unrealised Return**
 - TVPI = DPI + RVPI
 - High Water Mark - Carry Interest 跟此前最高的比的 diff * rate
+
+#### Buyout
+
+Buyout funds seek out companies with **stable cash flows**. 
+
+- invest in companies with **low working capital requirements** and 
+- **acquire portfolio companies via auction**, involving multiple potential acquirers.
+
+#### PE
+
+**Valuation Creation**: Rather than ownership and control being separate, as in most publicly quoted companies, **private equity concentrates ownership and control.** Key points:
+
+- (1) the ability to re-engineer the private firm to generate superior returns, 
+- (2) financial leverage and the ability to access credit markets on favorable terms, and 
+- (3) a better alignment of interests between private equity firm owners and the managers of the firms they control.
 
 ### Commodities
 
