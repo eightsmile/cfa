@@ -170,17 +170,20 @@ Other things being equal, we would also expect these interest rates to be higher
 $$\Delta w_i = w_{p,i} - w_{B,i}$$
 
 - The sum of those $\sum \Delta w =0$
-- Active Return, $R_A = \sum \Delta w_i \times (R_i-R_B)$
+- Active Return / Value Added, $R_A = \sum \Delta w_i \times (R_i-R_B)$
+- Benchmark Weights / Allocation - Strategic Allocation
+- (Sub-) portfolio allocation - Active Allocation
 
-Decompose the **Value Added \ Active Return**, there would be (1) Security Selection $w_p(R_p - R_B)$, and (2) Asset Allocation $(w_p - w_B)R_B$.
+Decompose the **Value Added \ Active Return**, there would be:
 
-<img src="C:\Users\Cooper\AppData\Roaming\Typora\typora-user-images\image-20230318222804800.png" alt="image-20230318222804800" style="zoom:33%;" />
+- (1) Security Selection $w_A(R_{sub-portfolio} - R_B)$, 用**Active weights**, and
+- (2) Asset Allocation $(w_A - w_B)R_B$.
 
 #### Sharpe Ratio is Unaffected by Leverage
 
 $$SR = \frac{R_a-R_B}{\sigma_a}=\frac{c(R_a-R_B)}{c\sigma_a}$$
 
-SR is unaffected by cash. CML slope，怎么延长斜率都不变
+SR is **unaffected by cash**. CML slope，怎么延长斜率都不变。所以如果portfolio中有cash的话，用SR评估对比，会不准。
 
 #### Information Ratio - aggressiveness of active weights
 
@@ -188,15 +191,79 @@ Active Return relative to a benchmark with volatiltiy of the active reutrn.
 
 $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}}=\frac{R_A}{\sigma_A}=\frac{ActiveReturn}{ActiveRisks}$$
 
-Affected by leveraging cash，因为cash多了，active management就少了，所以受cash比例影响
+- **Affected** by leveraging cash，因为cash多了，active management就少了，所以受cash比例影响
+- **Unaffected** by Aggressiveness of the active weights
+    - The information ratio is **unaffected** by the **aggressiveness of the active weights (deviations from benchmark weights**) because both the active return and the active risk increase proportionally. $cR_A/c\sigma_A$
+
+#### Closet Return / Closet Portfolio
+
+- Sharpe ratio is close to the Benchmark
+- Active Risk is low
+- Information ratio = ActiveReturn / ActiveRisks can be indeterminate, it's often negative due to management fees. 
+
+#### Fundamental Law of Active Management
+
+- **Skill** / good at **forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
+- efficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. **多少active weight能转换成anticipated return。**
+- $IR = TC\times IC\times \sqrt{BR}$
+- $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
+
+Value Added is decomposed by four elements:
+
+- Skill / Forecast - IC
+- Portfolio Construction - TC
+- Breadth - number of independent decisions per year
+    - **Constraints**: an investment policy might not allow for short positions. Similarly, some securities are correlated with each other (such as all bonds being subject to duration risk), and thus **breadth is considerably less than the number of securities held in the portfolio.** **Breadth** is **overestimated** than truly the manager did.
+    - 原则：有constraint的，能灵活支配的stocks少，所以breadth小，跟unconstraint的比。
+- Aggressiveness - benchmark tracking risk / sigma
+
+#### Constructing Optimal Portfolio
 
 $$SR_p^2 = SR^2_B + IR^2$$
 
+The above equation implies that the **active portfolio with the highest (squared) information ratio** will also have the **highest (squared) Sharpe ratio.** 
 
+For unconstrained portfolios, the level of active risk that leads to the optimal result,
 
-- $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$
-- $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$
+$$\sigma_{R_A} = \frac{IR}{SR_B}\sigma_{B}$$
 
-- $IR = TC\times IC\times \sqrt{BR}$
-- Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$$
-- $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
+$$\frac{R_B-r_f}{\sigma^2_B}=\frac{SR}{\sigma_B} = \frac{IR}{\sigma_A}=\frac{R_A}{\sigma^2_A}$$
+
+### Trading Cost
+
+$$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − \frac{Ask price + Bid price}{2}\bigg) $$
+
+$$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − Mid-Price\bigg) $$
+
+#### Market Fragmentation
+
+ **Increases** the potential for price and liquidity **disparities across venues** because buyers and sellers often are not in the same venues at the same time.
+
+#### Players and Notations
+
+- Electronic Front Runner - low-latency trader who use AI to identify orders and trades. 抢在大订单前先下单（可能是内幕消息，可能是AI算出来的），需要系统low latency
+    - Break Orders into Pieces
+    - 要应对front runner 可以拆小单
+- Electronic Arbitrageurs - look for across-market arbitrage opportunity.
+- Electronic Dealer - 通过 round trips 的bid ask spread来获利
+- Electronic news traders - high-speed electronic news feeds 利用合法新闻来交易，需要系统low latency， 也叫Low-latency traders
+- Electronic Quote Matchers - try to exploit the **standing orders**. 用standing orders的best ask & best bid来保护自己，苗头不对马上脱手, 存在limit loss。 通过识别机构投资者的意图来获利, 需要low latency
+    - **Standing Order** - limit order waiting to be filled.
+- Buy Sider: 
+    - Advanced Orders: Limit Order with limit prices that change as mkt conditions change.
+    - **Flickering Order/Quotes** - electronic traders submit and then cancel shortly thereafter, often within a second. They do not want their orders to stand in the market.
+    - **Leapfrogging quotes** - （不是市场操纵，在spread区间内）When bid–ask spreads are wide, dealers often are willing to trade at better prices than they quote. They quote **wide spreads** because they hope to trade at more favorable prices. **When another trader quotes a better price, dealers often immediately quote an even better price.** If the spread is sufficiently **wide**, a game of leapfrog may ensue as the dealer jumps ahead again.
+- Market Manipulation: Improper operations and Distorting activities, such as
+    - (1) Trading for market impact 操纵价格; 
+    - (2) **Rumourmongering**: 散布谣言dissemination of false info; 
+    - (3) **wash trading: create the impression of market activity at a particular price**; 
+    - (4) **Spoofing / Layering**: traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is, or to suggest to other traders that the security is under- or overvalued. 通过limit order造成liquidity的假象。
+    - (5) **Bluffing**: influence other traders’ **perceptions** of value, especially **momentum** traders.
+    - (6) **Gunning the Market**: Selling quickly to push prices down with the hope of triggering stop-loss sell orders.
+
+#### Nouns
+
+- **Bluffers** often prey on momentum traders, who buy when prices are rising and sell when prices are falling.
+- **Spoofing** is a trading practice in which traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is or to suggest to other traders that the security is under- or overvalued.
+- **Wash trading** consists of trades arranged among commonly controlled accounts to create the impression of market activity at a particular price. The purpose of wash trading is to fool investors into believing that a market is more liquid than it truly is and to thereby increase investors’ confidence both in their ability to exit positions without substantial cost and in their assessments of security values.
+- Algorithmic trading generally **decrease** the impact of large trades and the cost of executions. 因为 algorithm trading可以拆单子
