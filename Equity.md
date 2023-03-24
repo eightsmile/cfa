@@ -83,15 +83,20 @@ $NCC$ is the non-cash charge - Depreciation and Amortisation.
 
 $$FCFE = FCFF - I\times(1-T)+NetBorrowing$$
 
+$$FCFE=NI+NCC−FC_{INV}−WFC_{INV}+Net Borrowing$$
+
 #### Items
 
 - **Working Capital Investment:**
 
      $WC_{INV} = WC_t - WC_{t-1} = \Delta WC$
 
-    - $WorkingCapital:\ WC = CA - CL \to = (CA-Cash)-(CL-Debt)$. 
-    - $CA $ 扣去cash & cash equivalent
-    - $CL$ 扣去Note Payables, current portion of long-term debt.
+     - $WorkingCapital:\ WC = CA - CL \to = (CA-Cash)-(CL-Debt)$. 
+     - $CA $ 扣去cash & cash equivalent
+     - $CL$ 扣去Note Payables, current portion of long-term debt.
+     - $-\Delta CA +\Delta CL$
+         - CL中包含 **A/P**, **Accrued** Tax&Expense
+         - P.S. Note Payable 算borrowing，因为有单据。
 
 - **Fixed Capital Investment:** $FC_{INV} = CapEx - \text{Cash Received from Selling Long-term Assets}$
 
@@ -120,3 +125,47 @@ $$FCFE = FCFF - I\times(1-T)+NetBorrowing$$
 - **New Borrowing**:
 
     BASE: $Debt_{t-1}+\underbrace{NewIssuing - Repayment}_{NetBorrowing} = Debt_t$
+    
+    Note Payables + Long-term debt
+
+#### Others
+
+- Proxy of Free Cash Flows
+    - EBITDA is a **poor** proxy for **FCFF**, because it does **not** account for **depreciation tax shield**.
+    - Net Income is a **poor** proxy for **FCFE**, because it does not include **non-cash** item.
+    - Cash Dividends, Share Repurchases, and Share Issuances does not affect FCFF & FCFE, because they still belong to investors / shareholders.
+
+### Residual Income Valuation
+
+Economic Value Added, $EVA = EBIT\times(1-t) - TotalCaptial \times WACC$
+
+, where $EBIT\times(1-t) = NOPAT$ - net operating profit after taxes.
+
+Market Value Added, $MVA = MarketValue - TotalCaptial$. MV - BV
+
+For the **Residual Income**, (we denote $B_0$ as the book value of equity)
+
+$$V_0 = B_0 + \frac{RI_1}{1+r}+\frac{RI_2}{(1+r)^2}+ \dots$$
+
+We assume the **Clean Surplus Relation**: BV of Equity changes are only resulted from R/E. Thus,
+
+$$B_t = B_{t-1} + EPS_t - Dividends$$
+
+$$ RI_t = EPS - r_e\times B_{t-1}=(ROE-r_e)B_{t-1} $$
+
+Now, we get,
+
+$$ V_0 = B_0 + \sum_{t=1}^{\infty} \frac{RI_t}{(1+r)^t}=B_0 + \sum_{t=1}^{\infty} \frac{E_t - rB_{t-1}}{(1+r)^t}  $$
+
+$$V_0=B_0 + \sum_{t=1}^{\infty} \frac{(ROE_t - r)B_{t-1}}{(1+r)^t}  $$
+
+####  First Stage RI Model
+
+$$V_0 = B_0 + \frac{ROE-r}{r-g}B_0$$
+
+Or,
+
+$$ \frac{P_0}{B_0} = 1+\frac{ROE-r}{r-g} $$
+
+#### Multi-Stage RI Model
+
