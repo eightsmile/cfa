@@ -19,9 +19,12 @@ $$WACC = \frac{D}{D+E}\times r_d(1-TaxRate)+\frac{E}{D+E}\times r_e$$
 
 Present Value of Growth Opportunities (PVGO)
 
-As $PV= \frac{E_1}{r-g}$, so,
+$$PV_{growth} = PV_{NoGrowth}+PVGO$$
 
-$$PV - PVGO =\frac{E_1}{r}$$
+- $PV_{Growth}= \frac{D_1}{r-g}$, have dividends in part, and the other part of earning are retention to generate, that retention generates the growth opportunity.
+- $PV_{NoGrowth}=\frac{E_1}{r}$, there is no dividend retention, all earning are distributed as dividends, and thus no growth at all. 
+
+$$PV_{Growth} - PVGO =\frac{E_1}{r}$$
 
 #### P/E
 
@@ -137,21 +140,33 @@ $$FCFE=NI+NCC−FC_{INV}−WFC_{INV}+Net Borrowing$$
 
 ### Residual Income Valuation
 
-Economic Value Added, $EVA = EBIT\times(1-t) - TotalCaptial \times WACC$
+#### EVA
+
+**Economic Value Added,** $EVA = EBIT\times(1-t) - TotalCaptial \times WACC$
 
 , where $EBIT\times(1-t) = NOPAT$ - net operating profit after taxes.
 
-Market Value Added, $MVA = MarketValue - TotalCaptial$. MV - BV
+**Market Value Added,** $MVA = MarketValue - TotalCaptial$. 
+
+MVA could also be a per-share terms, so $MVA = \frac{MV-BV}{\text{\# of shares}}$
+
+#### Residual Income (RI)
+
+P.S. **Exclude** **Non-recurring Charges and Earnings.**
 
 For the **Residual Income**, (we denote $B_0$ as the book value of equity)
 
 $$V_0 = B_0 + \frac{RI_1}{1+r}+\frac{RI_2}{(1+r)^2}+ \dots$$
 
-We assume the **Clean Surplus Relation**: BV of Equity changes are only resulted from R/E. Thus,
+We assume the **Clean Surplus Relation: BV of Equity changes are only resulted from R/E**. (进R/E则不violate clean surplus assumption。但是进OCI会影响)
+
+Thus, 
 
 $$B_t = B_{t-1} + EPS_t - Dividends$$
 
 $$ RI_t = EPS - r_e\times B_{t-1}=(ROE-r_e)B_{t-1} $$
+
+Attention here, dividends does not affect the Residual Income, as they are all in EPS. In other words, they all belongs to the equity holders.
 
 Now, we get,
 
@@ -168,4 +183,147 @@ Or,
 $$ \frac{P_0}{B_0} = 1+\frac{ROE-r}{r-g} $$
 
 #### Multi-Stage RI Model
+
+**Intrinsic Value  =  BV + PV of High-growth RI  +  PV of Continuing RI**
+
+$$V_0 = B_0 + \sum_{t=1}^{T-1}\frac{E_t - rB_{t-1}}{(1+r)^t} + \frac{E_T - rB_{T-1}}{(1+r-\omega)(1+r)^{T-1}}$$
+
+$$V_0 = B_0 +\sum\frac{RI_i}{(1+r)^i} + \frac{TerminalValue}{(1+r)^T}$$
+
+- $\omega$ is the persistence factor.
+
+**Assumptions**
+
+- RI continuous **indefinitely** at a positive level, $PV = \frac{RI_{t+1}}{r}$.
+- RI is **zero** from the terminal year forward.
+- RI declines to **zero** as ROE reverts to the **cost of equity**, $PV = \frac{RI_{t+1}}{1+r-\omega}$.
+
+**Pros**
+
+- Terminal Value do not account large proportions of PV.
+- RI can apply for company **not paying dividend**, and **have unpredictable CF**.
+
+**Cons**
+
+- Clean Surplus Relation need to be held.
+
+- The residual income model’s use of accounting income assumes that the
+
+    cost of debt capital is reflected appropriately by interest expense. ???
+
+- Manipulations of accounting data.
+
+- ROE needs to be predicable.
+
+#### Justified Forward P/E
+
+Justified - used estimated P, not the market P.
+
+$$ P_0/E_1 = \frac{\frac{Div_1}{r-g}}{ROE_0\times (1+g)} $$
+
+- $Div_1 = ROE_1\times (1-Payout)=ROE_0\times (1+g) \times (1-Payout)$
+- $g = ROE\times (1-Payout)$
+
+#### Justified P/B
+
+$$P = B_0 + B_0 \sum \frac{RI}{(1+r)^i}$$
+
+$$P/B = 1+ \frac{ROE-r}{r-g}$$
+
+#### Affections
+
+RI valuation relies heavily on **ROE** and **BV of Equity**. So, factors affecting ROE and BV would have impacts on the RI valuation result.
+
+Also, the **Clean Surplus Relation** matters. That relation assumes changes in BV are mostly from R/E. If accounting terms go into OCI, such as the following, would violate the Clean Surplus Relation, and make RI valuation less credible.
+
+- **Unrealised** changes in the fair value of some **financial instruments**; 
+- Foreign currency **translation** adjustments; 
+- Certain **pension adjustments**; 
+- Portion of **gains and losses on certain hedging instruments.**
+
+#### Other Adjustments
+
+- **Intangible assets, such as Goodwill and R&D**, have a significant effect on BV of equity.
+- **Nonrecurring items and other aggressive accounting practices**.
+- **Accounting standards differ internationally**.
+
+### Multipliers
+
+#### Harmonic Mean
+
+The **harmonic mean** is sometimes used to reduce the impact of large outliers—which are typically the major concern in using the arithmetic mean multiple—but not the impact of small outliers (i.e., those close to zero). The harmonic mean may aggravate the impact of small outliers, but such outliers are bounded by zero on the downside.
+
+$\bar{X} = \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+...}$
+
+or
+
+$$\frac{1}{\sum \frac{w_i}{x_i}}$$
+
+Give less weights to outliers. The harmonic mean tends to mitigate the impact of outliers.
+
+#### P/B
+
+- Exclude Preferred Shares from Book Value of Equity, 
+- Price - Common Stock Price only (no include preferred stocks)
+
+#### EV / Sales
+
+$Enterprise Value = Long-term\  Debt + Mkt.common + Mkt.prefer - Cash$ - (short-term investment)
+
+#### P/E and E/P
+
+About P/E
+
+1. Pay attention to the dilution of EPS. - Use Diluted EPS instead.
+
+2. Adjustments for Non-recurring Items. Exclude Non-recurring items.
+
+3. Adjustments for Business-cycle Influence - (analyst addresses the cyclical effect by **normalising EPS**):
+
+    **Molodovsky Effect:**  at the **bottom** of an economic cycle, earnings are low, and so P/E ratios are high. However, at the **top** of an economic cycle where there is an economic boom, earnings are high and so the P/E ratios are low.
+
+    P/E 最高点，是earning最小的时候，可能处于行业最低谷，可能是最好的投资点。vice versa.
+
+    <img src="https://cdn.corporatefinanceinstitute.com/assets/molodovsky-effect-1024x615.png" alt="Molodovsky Effect" style="zoom:33%;" />
+
+    **Normalising EPS:** (1) average EPS, (2) average ROE.
+
+4. Negative Earning: For earning, $E$, being negative, the $P/E$ would be meaningless. However, $E/P$ is still ok to use, which is also called **Inverse Price Ratio**.
+
+#### PEG
+
+P/E per unit of expected growth, $PEG=\frac{P/E}{g}$.
+
+The smaller, the better. Less PEG means undervalued.
+
+Using PEG ratio needs to consider the followings:
+
+- Assume $g$ and $P/E$ have a linear relationship.
+- No consider the (1) Duration of Growth, (2) Differences in Risks.
+
+#### P/B
+
+​		$$\frac{P_0}{E_1} = \frac{Div_1/(r-g)}{E_1}=\frac{1-b}{r-g}$$
+
+​		As, $\frac{P_0}{B_0\times ROE}=\frac{P_0}{E_1}$, $b\times ROE = g$, where $b$ is the retention rate. $1-b=Payout$
+
+​		$$\frac{P_0}{B_0} =ROE\times \frac{1-b}{r-g}=\frac{ROE\times Payout}{r-g}=\frac{ROE-g}{r-g}$$
+
+#### International Consideration
+
+- Differences in cross-border valuation: such as accounting methods, culture differences, economic differences, risks and growth opportunities.
+- $P/CFO$,  $P/FCFE$ will be **less** affected by accounting difference. 涉及cash的不太容易受会计区别影响。
+- $P/E$, $P/B$  are most affected. 涉及到earnings等这种，很容易受影响。
+
+#### Momentum Valuation Indicator
+
+- Unexpected Earnings: 
+
+$$UE = EPS-\mathbb{E}(EPS)$$
+
+- Standardised Unexpected Earnings
+
+$$Std.UE = \frac{UE}{\sigma_{UE}}$$
+
+### Public & Private Company
 
