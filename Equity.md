@@ -152,6 +152,8 @@ MVA could also be a per-share terms, so $MVA = \frac{MV-BV}{\text{\# of shares}}
 
 #### Residual Income (RI)
 
+Residual Income is **net income less a charge** (deduction) for common shareholders’ opportunity cost in generating net income. It is the residual or remaining income **after considering the costs of all of a company’s capital**. (Debt + Equity)
+
 P.S. **Exclude** **Non-recurring Charges and Earnings.**
 
 For the **Residual Income**, (we denote $B_0$ as the book value of equity)
@@ -270,6 +272,8 @@ Give less weights to outliers. The harmonic mean tends to mitigate the impact of
 
 $Enterprise Value = Long-term\  Debt + Mkt.common + Mkt.prefer - Cash$ - (short-term investment)
 
+EV = Equity.mkt + Debt.mkt - Cash
+
 #### P/E and E/P
 
 About P/E
@@ -327,3 +331,22 @@ $$Std.UE = \frac{UE}{\sigma_{UE}}$$
 
 ### Public & Private Company
 
+#### Excess Earnings Method - EEM
+
+TotalEarning -FixedAssetEarning - WorkingCapitalEarning = IntangibleAsset Earning
+
+$$\frac{IntangibleAssetEarning}{r_{intangible}-g}$$
+
+#### Normalised Earning / Normalised Net Income
+
+为调整了所以 adjustments之后的NI 或者 earnings
+
+#### Build-up Method
+
+逐层累加rate，算出 discount rate
+
+#### Less Agency Cost for Private Firm
+
+#### Cost of Equity - Add-on Model
+
+Add-on method 把所有的premium加一起，不用乘 beta
