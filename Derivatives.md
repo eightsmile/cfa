@@ -35,11 +35,32 @@ Daily Settlement
 
 $$FP_{standard} = FP_i\times \frac{1}{CF_i}$$
 
-用CF - Conversion Factor 把持有的乱七八糟的债卷，等价于 标准的 用于交割的 债券。
+用CF - Conversion Factor 把持有的乱七八糟的债券，等价于 标准的 用于交割的 债券。
 
 $$Full\ Price = Clean\ Price + Accruial\ Interest$$
 
-$$V_{Full} = FP^{clean}_{standard}\times CF+Accrual\ Interest$$
+$$V_{Full} =\underbrace{ FP^{clean}_{standard}\times CF }_{FP_i}+Accrual\ Interest$$
+
+#### Non-Arbitrage for T-Bond
+
+- $V$ here are the future value.
+- Hold the Future: $V = FP_{std} \times CF  + AI$
+- Hold the Bond: $V = (S_{clearn} + AI_0 )(1+r_f)^T - FVC$
+
+Bond price is usually quoted as **clean** price.
+
+#### Non-Arbitrage Quote Price for T-bond Future
+
+$$ PV_{full}\times (1+r_f)^T - AI^T = FP_{std}\times CF $$
+
+$$ (PV_{clean}+AI^0)\times (1+r_f)^T - AI^T = FP_{std}\times CF $$
+
+- Both LHS and RHS are the future value.
+- LHS is the Future Value of the Clean Price.
+    - Step 0. Get the PV(dirty price).
+    - Step 1. Compound the PV(dirty price) to FV(dirty price). We always want to compound the dirty price, as it is more accurate carrying all the cash flow.
+    - Step 2. Deduct the $AI^T$ to get the FV(clean price), as bond is always quoted at clean price.
+- RHS is the $FP_i$, is the future price.
 
 #### Derivation
 
