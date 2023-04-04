@@ -88,6 +88,10 @@ $$FCFE = FCFF - I\times(1-T)+NetBorrowing$$
 
 $$FCFE=NI+NCC−FC_{INV}−WFC_{INV}+Net Borrowing$$
 
+$$EquityValue = \frac{FCFE_1}{r-g}=\frac{FCFE_0\times (1+g)}{r-g}$$
+
+If a company’s capital structure is relatively stable, using FCFE to value equity is more direct and simpler than using FCFF. All three sections of the cash flow statement are important in determining FCFE because one must integrate the cash flows from the company’s operations with those from its investing and financing activities to calculate a free cash flow figure. Working with FCFF is likely to be easiest when a company is levered and has negative FCFE.
+
 #### Items
 
 - **Working Capital Investment:**
@@ -272,7 +276,7 @@ Give less weights to outliers. The harmonic mean tends to mitigate the impact of
 
 $Enterprise Value = Long-term\  Debt + Mkt.common + Mkt.prefer - Cash$ - (short-term investment)
 
-EV = Equity.mkt + Debt.mkt - Cash
+EV = Equity.mkt + long-term Debt.mkt - Cash
 
 #### P/E and E/P
 
@@ -350,3 +354,17 @@ $$\frac{IntangibleAssetEarning}{r_{intangible}-g}$$
 #### Cost of Equity - Add-on Model
 
 Add-on method 把所有的premium加一起，不用乘 beta
+
+#### Discount of Control
+
+$Discount of Control=\frac{1}{1+ControlPremium}$
+
+#### Valuation for Private Company
+
+- Market-based Approach for Mature Firm.
+- Asset Add-on Approach for Start-up Firm.
+- Income Approach for High-growth Firm.
+    - Income Approach contains three methods:
+        	1. FCF Method  -  DCF with going-concern assumption
+        	1. Capitalised CF Method  -   using a **single representative estimate of economic benefits** and dividing that estimate by an appropriate **capitalisation rate** to derive an indication of value.
+        	1. Residual Income Method / Excess Earnings Method  -  the excess earnings method consists of estimating the value of all of the company’s **intangible assets** by capitalizing future earnings in excess of the estimated return requirements associated with working capital and fixed assets. **The value of the intangible assets is added to the values of working capital and fixed assets to arrive at the value of the business enterprise.**
