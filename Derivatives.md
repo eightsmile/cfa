@@ -29,6 +29,8 @@ Long - Borrow at the Forward Rate in the Future.`
 
 在 $t=0$ 时刻签订，在 $t=1$ 时刻可以以 FRA 的 rate 借钱到 $t=2$ 时刻。所以借钱的区间为 $1\to2$, 还需将他们折成PV到0时刻。
 
+An FRA has two **counterparties**, a **fixed-rate receiver** that is short Euribor and a **floating-rate receiver** that is long Euribor.
+
 ### T-bond Futures 
 
 Daily Settlement
@@ -107,3 +109,48 @@ $$V_t = PV_{inflow}^{CNY} - PV^\$_{outflow}$$
 
 -   $PV^\$_{outflow}= \bigg( \frac{3\%}{4}\times \big(B_1+B_2 +B_3+B_4\big)+(1+B_4) \bigg)\times \$1$
 -  $PV_{inflow}^{CNY} = \bigg( \frac{6\%}{4}\times \big(B'_1+B'_2 +B'_3+B'_4\big)+(1+B'_4) \bigg) \times \frac{CNY}{\$}_{t=0} \times \frac{\$}{CNY}_{t=T}$
+
+外币固定换固定
+
+见 practice derivatives最后6题。**0.008396**为3个月前，刚开立swap时算出的fixed rate，三个月后虽然MRR变了，但是fixed rate不变，因此swap会有价值。
+
+#### Equity Swap
+
+equity index return <=> float rate
+
+$EquityReturn = \frac{Index_1-Index_0}{Index_0}$
+
+$$FloatRate = MRR$$
+
+$Value = EquityReturn \times NotionalAmount - FloatRate \times NotionalAmount $
+
+### Options
+
+#### Risk Neutral Probability
+
+$$p = \frac{1+r-d}{u-d}$$
+
+$$C_0 = \frac{1}{(1+r_f)^T}\mathbb{E}^P(C)$$
+
+#### Interest Rate Option
+
+For call,
+
+$$Payoff = \max(0,r_{reference} - r_{exercise})\times Notional Amount$$
+
+#### BSM
+
+$$C = S_0\times N(d_1) - Xe^{-r_fT}\times N(d_2)$$
+
+$$d_1 = \frac{ln(S_0/X) + (r_f +\frac{1}{2}\sigma^2) T}{\sigma \sqrt{T}}$$
+
+$$d_2 = d_1 - \sigma \times \sqrt{T}$$
+
+#### Swaption
+
+A swaption is an option to enter into a swap.
+
+- Payer Swaption is an option to enter into a swap as the **fixed-rate payer.**
+    - Pay fixed, 所以interest rate提升，swaption value more.
+- A receiver swaption is an option to enter into a swap as the **fixed-rate receiver (the floating-rate payer)**.
+    - receive fixed，pay float，所以interest rate提升，swaption value less.sw
