@@ -128,15 +128,38 @@ $Value = EquityReturn \times NotionalAmount - FloatRate \times NotionalAmount $
 
 #### Risk Neutral Probability
 
-$$p = \frac{1+r-d}{u-d}$$
+$$\pi = \frac{1+r-d}{u-d}$$
 
-$$C_0 = \frac{1}{(1+r_f)^T}\mathbb{E}^P(C)$$
+$$C_0 = \frac{1}{(1+r_f)^T}\mathbb{E}^{\pi}(C)$$
 
-#### Interest Rate Option
+Take Expectation by **Risk-Neutral Probability,**
+
+Discount by **Risk-free Rate.**
+
+#### Delta Hedging
+
+$$\Delta = \frac{V^+-V^-}{S^+-S^-}$$
+
+For a call, replicate / hedge with no options could be made:
+
+- Long Stock: $\Delta \times S_0$
+- Borrow Money: $\frac{\Delta \times S_0}{1+r_f}$
+
+The above action is equivalent to: Sell (write) a Call
+
+#### Option on Future Contract
+
+$S_0$ is the current price of future.
+
+#### Option on Interest Rate
 
 For call,
 
 $$Payoff = \max(0,r_{reference} - r_{exercise})\times Notional Amount$$
+
+$$Payoff_{t-1} = Payoff_t \times \bigg[\frac{1}{2}\times r_{ref}^{up}+\frac{1}{2}\times r_{ref}^{down}\bigg]$$
+
+In the two-period binomial model, **Node 0** represents the current state of the underlying instrument and the spot rate is the current market rate for the instrument. Therefore, the value of the underlying instrument at Node 0 is considered to be the **spot rate** because it represents the current market value of the instrument. 
 
 #### BSM
 
