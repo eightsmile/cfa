@@ -68,6 +68,9 @@ Drawbacks: Do not consider the Liquidity, and thus VaR could underestimate the r
 
 ### Economics and Investment Market
 
+- In recession, yield curve would be downward sloping.
+- **Output Gap**: An economy operating with a **positive output gap**—that is, where the level of actual GDP exceeds potential GDP—is producing beyond its sustainable capacity. Positive output gaps are usually associated with high and/or rising inflation, while high levels of unemployment usually accompany negative output gaps.
+
 #### PV Model
 
 $$ P = \sum \frac{CF_i}{(1+r)^i}$$
@@ -83,8 +86,11 @@ $$ P = \sum \frac{CF_i}{(1+r)^i}$$
   - Marginal Utility of Consumption at t=0 (current time) is normally larger than at t=1 (in the future), thus $m<1$.
   - Intuitively, $m$ describe people's desire. If people desire more on current, then current is more attractive, then MU0 is greater than MU1.
   - E.G. In “good” economic condition, individuals may have relatively high levels of current income so that current consumption is high. In this case, the **utility** derived from **an additional unit of consumption** today will be relatively low. 
-  - E.G. If $m$ is low. If bond price currently is too high, then less are affordable to people, so less people invest by buying bonds for future. They not invest future, and they consume  more today, so MU0 decrease, and $m$ gradually increase.
+  - E.G. If $m$ is low. If bond price currently is too high, then less are affordable to people, so people invest less by buying bonds for future. They not invest future, and they consume  more today, so MU0 decrease, and $m$ gradually increase.
 - Real Risk Free Ratee, $1+R = \frac{1}{m} $. There higher the GDP growth, the higher $R$ - **One-period Real Interest Rate**.
+    - $Nominal\  GDP\ Growth = Inflation+RealGrowth$
+    - $R_f / Rate = Inflation + RealInterestRate$
+
 
 #### Normal Risk-free Interest Rate $r$
 
@@ -96,13 +102,14 @@ $$r_{short} = R +\pi $$
 
 短期，不考虑uncertainty $\theta$， 因为 uncertainty is not realised，但是长期需要考虑
 
-Break-even inflation rate (BEI), $BEI = r_{non-inflation Index} - r_{inflation-indexed}$, then what left with is the inflation.
-
 #### Two Key Points
 
 - **Economic Growth** $\uparrow$, then **Credit Spread**  narrow $\downarrow$
 - Valuation Ratios $\uparrow$, coz price increase.
 - Stylised Factors, small-cap outperform
+    -  When **spreads are narrowing**, investors seem to be **less sensitive** between issues with weak versus strong credit, and the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Thus, **during times when corporate bond spreads are narrowing relative to government bonds and the spreads between higher- and lower-rated bond categories are also narrowing**, corporate bonds will generally **outperform** government bonds and lower-rated corporate bonds will tend to **outperform** higher-rated corporate bonds.
+
+- The **sensitivity** of a **corporate bond’s spread** to changes in the business cycle and the level of cyclicality tend to be **positively** correlated. **The greater the level of cyclicality, the greater the sensitivity of the bond’s spread to changes in the business cycle.** 这里cyclicality指的是周期性，周期性越强的行业，spread越大
 
 #### Risk-covariance
 
@@ -128,6 +135,12 @@ Similarly, if volatility of GDP growth $\uparrow$, then desire of consume
 #### BEI 
 
 BEI = zero coupon **Nominal** Bond  -  zero coupon **Real** Bond = $\pi$ + $\theta$, equals to the sum of expected inflation + volatility of inflation (the premium of uncertainty of inflation).
+
+Break-even inflation rate (BEI), $BEI = r_{non-inflation Index} - r_{inflation-indexed}$, then what left with is the inflation.
+
+The **break-even inflation** rate is the difference between the yield on **(1)** a zero-coupon, default-free **nominal** bond and on **(2)** a zero-coupon, default-free **real** bond of the same maturity.
+
+都是 zero-coupon + default free ，但是 real 和 nominal不同
 
 #### Upward-sloping, default-free government bond nominal yield curve.
 
@@ -162,6 +175,8 @@ Other things being equal, we would also expect these interest rates to be higher
 
 #### Active Return (Value Added) & Alpha
 
+**Alpha Return** and **Alpha** are not the same.
+
 - $R_A = R_p - R_B$
 - $\alpha = R_p - w\times R_B$
 
@@ -181,7 +196,7 @@ Decompose the **Value Added \ Active Return**, there would be:
 
 #### Sharpe Ratio is Unaffected by Leverage
 
-$$SR = \frac{R_a-R_B}{\sigma_a}=\frac{c(R_a-R_B)}{c\sigma_a}$$
+$$SR = \frac{R_a-R_f}{\sigma_a}=\frac{c(R_a-R_f)}{c\sigma_a}$$
 
 SR is **unaffected by cash**. CML slope，怎么延长斜率都不变。所以如果portfolio中有cash的话，用SR评估对比，会不准。
 
@@ -195,27 +210,32 @@ $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}}=\frac{R_A}{\sigma_A}=\frac{ActiveRet
 - **Unaffected** by Aggressiveness of the active weights
     - The information ratio is **unaffected** by the **aggressiveness of the active weights (deviations from benchmark weights**) because both the active return and the active risk increase proportionally. $cR_A/c\sigma_A$
 
+$$SR_p^2 = SR_B^2+IR^2$$
+
+While the Sharpe ratio measures reward per unit of risk in ***absolute*** returns, the information ratio measures reward per unit of risk in *benchmark **relative*** returns.
+
 #### Closet Return / Closet Portfolio
 
 - Sharpe ratio is close to the Benchmark
 - Active Risk is low
-- Information ratio = ActiveReturn / ActiveRisks can be indeterminate, it's often negative due to management fees. 
+- Information ratio = ActiveReturn / ActiveRisks can be indeterminate, it's often negative due to management fees. IC is in-determined, because 分子分母可以抵消。 
 
-#### Fundamental Law of Active Management
+### Fundamental Law of Active Management
 
-- **Skill** / good at **forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
-- efficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. **多少active weight能转换成anticipated return。**
+- **IC**: Information Coefficient: about **Forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
+- **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少active **weight**能转换成**anticipated return**。
+- **BR**: Breath <- 独立的 个数，独立的次数（如monthly）。要求一定要是独立的，否则**overestimate** the BR. （assets之间互相corr 会降低有效的 "独立个数" 导致overestimate）。
 - $IR = TC\times IC\times \sqrt{BR}$
 - $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
 
-Value Added is decomposed by four elements:
+Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
 
-- Skill / Forecast - IC
-- Portfolio Construction - TC
-- Breadth - number of independent decisions per year
+- **IC - Skill / Forecast -**
+- **TC - Portfolio Construction**
+- **Breadth - number of independent decisions per year**
     - **Constraints**: an investment policy might not allow for short positions. Similarly, some securities are correlated with each other (such as all bonds being subject to duration risk), and thus **breadth is considerably less than the number of securities held in the portfolio.** **Breadth** is **overestimated** than truly the manager did.
     - 原则：有constraint的，能灵活支配的stocks少，所以breadth小，跟unconstraint的比。
-- Aggressiveness - benchmark tracking risk / sigma
+- **Aggressiveness** - benchmark tracking risk / sigma
 
 #### Constructing Optimal Portfolio
 
@@ -229,11 +249,11 @@ $$\sigma_{R_A} = \frac{IR}{SR_B}\sigma_{B}$$
 
 $$\frac{R_B-r_f}{\sigma^2_B}=\frac{SR}{\sigma_B} = \frac{IR}{\sigma_A}=\frac{R_A}{\sigma^2_A}$$
 
-### Trading Cost
+### Trading Cost 记得*2
 
 $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − \frac{Ask price + Bid price}{2}\bigg) $$
 
-$$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − Mid-Price\bigg) $$
+$$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − MidPrice\bigg) $$
 
 #### Market Fragmentation
 
@@ -252,7 +272,7 @@ $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − Mid-Price\bigg)
 - Buy Sider: 
     - Advanced Orders: Limit Order with limit prices that change as mkt conditions change.
     - **Flickering Order/Quotes** - electronic traders submit and then cancel shortly thereafter, often within a second. They do not want their orders to stand in the market.
-    - **Leapfrogging quotes** - （不是市场操纵，在spread区间内）When bid–ask spreads are wide, dealers often are willing to trade at better prices than they quote. They quote **wide spreads** because they hope to trade at more favorable prices. **When another trader quotes a better price, dealers often immediately quote an even better price.** If the spread is sufficiently **wide**, a game of leapfrog may ensue as the dealer jumps ahead again.
+    - **Leapfrogging quotes** - （小跳蛙**不是市场操纵**，因为是为了竞价购买或者卖出，在spread区间内，**大spread时适用**，当spread小则leap的可能性变小）When bid–ask spreads are wide, dealers often are willing to trade at better prices than they quote. They quote **wide spreads** because they hope to trade at more favorable prices. **When another trader quotes a better price, dealers often immediately quote an even better price.** If the spread is sufficiently **wide**, a game of leapfrog may ensue as the dealer jumps ahead again.
 - Market Manipulation: Improper operations and Distorting activities, such as
     - (1) Trading for market impact 操纵价格; 
     - (2) **Rumourmongering**: 散布谣言dissemination of false info; 
@@ -260,6 +280,11 @@ $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − Mid-Price\bigg)
     - (4) **Spoofing / Layering**: traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is, or to suggest to other traders that the security is under- or overvalued. 通过limit order造成liquidity的假象。
     - (5) **Bluffing**: influence other traders’ **perceptions** of value, especially **momentum** traders.
     - (6) **Gunning the Market**: Selling quickly to push prices down with the hope of triggering stop-loss sell orders.
+- Traders:
+    - **Electronic proprietary traders (专属交易员)** can include **high-frequency traders** who complete round trips of a purchase followed by a sale within a short period of time and news traders who trade quickly in response to new information. They would generally not have the same interests as parasitic traders.
+    - **Electronic dealers** ***make markets*** by placing bids and offers with the expectation that they can profit from round trips at favourable net spreads. On the first indication that prices may move against their inventory positions, they immediately take steps to reduce their exposure.
+    - **Quote matchers** are **parasitic** traders (做front running) who base their predictions about future prices on information they obtain about orders that other traders intend to fill. Buy-side traders and their brokers are aware of the efforts quote matchers make to detect and front run their orders. Accordingly, they submit orders at random times and in various sizes in order to make detection more difficult.
+    
 
 #### Nouns
 
