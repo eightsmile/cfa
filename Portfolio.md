@@ -6,22 +6,26 @@ Investors -> AP -> Portfolio Managers
 
 在US：投资者 只能找AP买二级ETF。 只有AP可以一级create / redemption ETF 通过拿 a basket of stocks 换
 
+ETF intraday trading cost > arbitrage cost, then AP can create new ETF shares to earn the profits.
+
+Expected Holding Period Expense = Annual Cost * %ofYear + RoundTripTradingCost + Ask-bid Spread.
+
 #### Expense Ratios
 
-- Rolling Return Assessment - Tracking Difference. Allows for comparison with other annual metrics such as fund's expense ratio.
+- Rolling Return Assessment - Tracking Difference. Allows for comparison with other annual metrics such as fund's expense ratio. 因为ETF的标的是benchmark，ETF performance是他是否与Benchmark return表现一致。所以**Rolling Return Assessment reflects the impact of portfolio rebalancing expenses and other fees, an investor should:**
 - ETF's Expense ratio does not reflect the cost of portfolio rebalancing or other fees.
 
 #### Tracking Error
 
-Annualised Standard Deviation of daily (ETF returns - Benchmark Returns)
+- Annualised Standard Deviation of daily (ETF returns - Benchmark Returns)
 
 It does not reveal whether the fund is over/under-performed, or whether that tracking error is concentrated over a few days.
 
 **Sources of Tracking Error**: 
 
-- Fees and Expenses 大
-- Representative sampling/optimisation 大
-- Index Changes 当权重变的时候产生，但是会立刻调整 小
+- Fees and Expenses 大 - 会导致rolling return assessment变大
+- Representative sampling/optimisation 大 - 会导致rolling return assessment变大
+- Index Changes 当权重变的时候产生，但是会立刻调整 小 - 因为ETF is daily adjusted
 
 #### Capital Gain Distribution
 
@@ -37,14 +41,42 @@ The issue of **capital gains distributions affects all investors** in taxable ac
 
 Round-Trip Trading Cost (%) = One-way Commission * 2 + 1/2 Bid-Ask Spread * 2
 
-Total Fees = Round-Trip Trading Cost + Management Fees = One-way Commission * 2 + Bid-ask Spread + Management fee
+Total Fees = Round-Trip Trading Cost + % * Management Fees = One-way Commission * 2 + Bid-ask Spread + % * Management fee
+
+#### ETF Dividends
+
+"Although exchange traded funds (ETFs) are primarily associated with index-tracking and growth investing, there are many that offer income by owning dividend-paying stocks. When they do, they collect the regular dividend payments and then distribute them to the ETF shareholders. These dividends can be distributed **in two ways** at the discretion of the fund's management: **cash paid to the investors** or **reinvestments into the ETFs' underlying investments**."
+
+#### ETF Risks
+
+**Fund-closure risk** is the risk that an ETF may shut down. The reasons that lead to an ETF closing down often have to do with **changes in regulations, increased competition, and corporate activity** (merger and acquisition activity within the ETF industry).
+
+#### Smart Beta
+
+**Factor strategy ETFs** are usually benchmarked to an index created with predefined rules for screening and/or weighting stock holdings and are considered **longer-term, buy-and-hold investment** options **rather than tactical trading instruments**.
 
 ### Multi-factor Model
 
 $$r = \beta_0+\beta_1x_1x+\beta_2x_2+...+\beta_kx_k$$
 
-- $\beta_0$ is the expected return, mean return. / risk free rate
+- $\beta_0$ is the expected return, mean return. The **Expected Return** is the **Intercept**.
 - Compare each factors with the benchmark
+
+#### Between Fundamental Model & Macro-Factor Model
+
+A second distinction between macroeconomic multifactor models and fundamental factor models is that with the former, we develop the factor (surprise) series first and then estimate the factor sensitivities through regressions. With the latter, we generally specify the factor sensitivities (attributes) first and then estimate the factor through regressions.
+
+- Macro Model - 1st calculate surprise 2nd calculate sensitivity.
+    - Use **Surprise** as Factors.
+- Fundamental Model - 1st calculate sensitivity
+    - book-value-to-price ratio, market capitalisation, the price-to-earnings ratio, and financial leverage.
+
+#### Statistical Model
+
+In a statistical factor model, statistical methods are applied to historical returns of a group of securities to extract factors that can explain the observed returns of securities in the group. In statistical factor models, the factors are actually portfolios of the securities in the group under study and are therefore defined by portfolio weights.
+
+- An advantage of statistical factor models is that they make minimal assumptions. 
+- However, the interpretation of statistical factors is generally more difficult than the interpretation of macroeconomic and fundamental factor models.
 
 #### Information Ratio
 
