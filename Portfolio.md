@@ -98,6 +98,8 @@ $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}} = \frac{Avtive Return}{TrackingError
 
 Drawbacks: Do not consider the Liquidity, and thus VaR could underestimate the risks.
 
+Expected Shortfall: **Conditional VaR** is defined as the weighted average of all loss outcomes in the return distribution that exceed the VaR loss. 
+
 ### Economics and Investment Market
 
 - In recession, yield curve would be downward sloping.
@@ -119,7 +121,7 @@ $$ P = \sum \frac{CF_i}{(1+r)^i}$$
   - Intuitively, $m$ describe people's desire. If people desire more on current, then current is more attractive, then MU0 is greater than MU1.
   - E.G. In “good” economic condition, individuals may have relatively high levels of current income so that current consumption is high. In this case, the **utility** derived from **an additional unit of consumption** today will be relatively low. 
   - E.G. If $m$ is low. If bond price currently is too high, then less are affordable to people, so people invest less by buying bonds for future. They not invest future, and they consume  more today, so MU0 decrease, and $m$ gradually increase.
-- Real Risk Free Ratee, $1+R = \frac{1}{m} $. There higher the GDP growth, the higher $R$ - **One-period Real Interest Rate**.
+- Real Risk Free Rate, $1+R = \frac{1}{m} $. There higher the GDP growth, the higher $R$ - **One-period Real Interest Rate**.
     - $Nominal\  GDP\ Growth = Inflation+RealGrowth$
     - $R_f / Rate = Inflation + RealInterestRate$
 
