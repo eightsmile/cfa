@@ -58,6 +58,9 @@ Under the H-model, the growth rate drops **linearly** until it hits the terminal
 - DDM is most **suitable** when an investor takes a **noncontrol perspective** because he does **not** have the ability to meaningfully influence the timing or magnitude of a company’s **cash flows and is therefore reliant on dividend policy.** 
 - DCF could be used for controlling interest.
 
+- If a company has intense capital demands — for example a company does based on its investment cash flows exceeding its operating ones — it may have negative free cash flow and be unable to pay dividends. In this situation, a **residual income model** would be the most appropriate model to use.
+- The residual income model considers the opportunity cost to an investor of investing in a stock, not a dividend discount model.
+
 ### DCF 
 
 #### FCFF & FCFE
@@ -115,6 +118,8 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
 
     - $FC_{INV} = Net.PP\&E_t - Net.PP\&E_{t-1} +Dep$
 
+        - $Net.PP\&E_t = FC_{INV} +  Net.PP\&E_{t-1} - Dep$
+
     - $PP\&E_t$ is the Gross term, $Gross PP\&E = Net\ PP\&E +Accum.Dep$
 
     - **Disposal**: if there are **proceeds** from **Long-term Asset Disposal**:
@@ -127,7 +132,7 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
 
         $FC_{INV} = Purchase - Proceeds$
 
-        $ = \bigg( BV_t - BV_{t-1} + DisposalNBV + Dep\bigg) - \bigg(DIsposal NBV \pm G/L  \bigg)$
+        $ = \bigg( BV_t - BV_{t-1} + DisposalNBV + Dep\bigg) - \bigg(Disposal NBV \pm G/L  \bigg)$
 
 - **New Borrowing**:
 

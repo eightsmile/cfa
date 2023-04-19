@@ -39,7 +39,7 @@
 
 ### ESG
 
-**Proprietary method** to identify company and industry ESG factor is an approach that relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K
+**Proprietary method** to identify company and industry ESG factor is an approach that relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K 用10-K的数据获取ESG信息，但是主要问题是，10-K的披露说voluntary的，无法评定。
 
 **Principal-principal problem**: The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. 
 
@@ -47,7 +47,7 @@
 
 ​	Dual Class Share - AB股会导致 principal-principal problem.
 
-**CEO duality**: CEO and chairperson are not separate
+**CEO duality**: CEO and chairperson are not separate. The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders.
 
 **Family control** lowers the risks associated with principal-agent problems, but poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent.
 
