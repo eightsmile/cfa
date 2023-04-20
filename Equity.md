@@ -110,6 +110,8 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
 
 - **Fixed Capital Investment:** $FC_{INV} = CapEx - \text{Cash Received from Selling Long-term Assets}$
 
+- $FC_{INV}=Gross.FixedAsset_t - Gross.FixedAsset_{t-1}$ 注意是gross term
+
 - $FC_{INV} = Purchase - Proceeds$
 
     - Net of Proceeds from disposal of long-term assets.
@@ -146,6 +148,14 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
     - EBITDA is a **poor** proxy for **FCFF**, because it does **not** account for **depreciation tax shield**.
     - Net Income is a **poor** proxy for **FCFE**, because it does not include **non-cash** item.
     - Cash Dividends, Share Repurchases, and Share Issuances does not affect FCFF & FCFE, because they still belong to investors / shareholders.
+    
+- Normalised EPS:
+    
+    $\bar{ROE} \times BV.Equity_{without Preferred Share}$
+    
+- EV = Mkt.Debt+Mkt.Equity+Mkt.PreferredShare **- Cash - Short-termInvestment** 把流动性最高的俩资产减去。因为EV相当于，当被收购时可以直接抵钱的 所以cash等被剪掉
+
+- Non-recurring 要在NI中抵扣。因为并不算recurring 的，要抵减掉
 
 ### Residual Income Valuation
 
