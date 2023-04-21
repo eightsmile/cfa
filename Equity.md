@@ -26,6 +26,12 @@ $$PV_{growth} = PV_{NoGrowth}+PVGO$$
 
 $$PV_{Growth} - PVGO =\frac{E_1}{r}$$
 
+$$ Price_{Growth} = Price_{NoGrowth} + PVGO $$
+
+$$ \frac{Div_1}{r-g}=PVGO + \frac{E_1}{r} $$
+
+$$\frac{Div_0\times (1+g)}{r-g}=PVGO + \frac{E_0 \times (1+g)}{r}$$
+
 #### P/E
 
 - Leading PE = $\frac{P}{E_1}$
@@ -55,7 +61,9 @@ $$V_0 = \frac{D_0(1+g_2)}{r-g_2}+\frac{D_0H(g_1-g_2)}{r-g_2}$$
 
 Under the H-model, the growth rate drops **linearly** until it hits the terminal growth rate. Growth rate change in a **linear / steady rate**.
 
-- DDM is most **suitable** when an investor takes a **noncontrol perspective** because he does **not** have the ability to meaningfully influence the timing or magnitude of a company’s **cash flows and is therefore reliant on dividend policy.** 
+### Model Selection
+
+- DDM is most **suitable** when an investor takes a **non-control perspective** because he does **not** have the ability to meaningfully influence the timing or magnitude of a company’s **cash flows and is therefore reliant on dividend policy.** 因为非控制的不会影响div policy
 - DCF could be used for controlling interest.
 
 - If a company has intense capital demands — for example a company does based on its investment cash flows exceeding its operating ones — it may have negative free cash flow and be unable to pay dividends. In this situation, a **residual income model** would be the most appropriate model to use.
@@ -140,7 +148,7 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
 
     BASE: $Debt_{t-1}+\underbrace{NewIssuing - Repayment}_{NetBorrowing} = Debt_t$
     
-    Note Payables + Long-term debt
+    - Note Payables + Long-term debt
 
 #### Others
 
@@ -149,8 +157,8 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
     - Net Income is a **poor** proxy for **FCFE**, because it does not include **non-cash** item.
     - Cash Dividends, Share Repurchases, and Share Issuances does not affect FCFF & FCFE, because they still belong to investors / shareholders.
     
-- Normalised EPS:
-    
+- Normalised EPS
+  
     $\bar{ROE} \times BV.Equity_{without Preferred Share}$
     
 - EV = Mkt.Debt+Mkt.Equity+Mkt.PreferredShare **- Cash - Short-termInvestment** 把流动性最高的俩资产减去。因为EV相当于，当被收购时可以直接抵钱的 所以cash等被剪掉
@@ -172,6 +180,8 @@ MVA could also be a per-share terms, so $MVA = \frac{MV-BV}{\text{\# of shares}}
 #### Residual Income (RI)
 
 Residual Income is **net income less a charge** (deduction) for common shareholders’ opportunity cost in generating net income. It is the residual or remaining income **after considering the costs of all of a company’s capital**. (Debt + Equity)
+
+Rationale: 相当于是 $V_0 = B_0 + \sum \frac{RI}{1+r}$, 算出的$V_0$ 包含 Debt 和 Equity的两部分的。
 
 P.S. **Exclude** **Non-recurring Charges and Earnings.**
 
@@ -218,6 +228,8 @@ $$V_0 = B_0 +\sum\frac{RI_i}{(1+r)^i} + \frac{TerminalValue}{(1+r)^T}$$
 - RI continuous **indefinitely** at a positive level, $PV = \frac{RI_{t+1}}{r}$.
 - RI is **zero** from the terminal year forward.
 - RI declines to **zero** as ROE reverts to the **cost of equity**, $PV = \frac{RI_{t+1}}{1+r-\omega}$.
+    - 下一期的$RI_{t+1}$ 分母是 $1 + Cost of Equity - Persistence Factor$
+
 
 **Pros**
 
@@ -228,9 +240,11 @@ $$V_0 = B_0 +\sum\frac{RI_i}{(1+r)^i} + \frac{TerminalValue}{(1+r)^T}$$
 
 - Clean Surplus Relation need to be held.
 
-- The residual income model’s use of accounting income assumes that the
+- The residual income model’s use of accounting income assumes that the cost of debt capital is reflected appropriately by interest expense.
 
-    cost of debt capital is reflected appropriately by interest expense. ???
+    - 因为 RI accounts for cost of debt because EPS is derived from NI which already takes in consideration of cost of debt
+
+    - 但是 It is a weakness of residual income that interest expense may not reflect the true cost of debt capital.
 
 - Manipulations of accounting data.
 
