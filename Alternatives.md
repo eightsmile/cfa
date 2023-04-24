@@ -94,7 +94,7 @@ Buyout funds seek out companies with **stable cash flows**.
 
 #### Multiples
 
-- **DPI (**Disposable Personal Income实收已经分到的钱，包含历史多期已经收到的钱) 
+- **DPI** (Disposable Personal Income实收已经分到的钱，包含历史多期已经收到的钱) 
 
      DPI = Cumulative distributions / Cumulative invested capital 
 
