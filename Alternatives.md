@@ -7,7 +7,7 @@
 - Cost Approach, Property Value = Land + Building Replacement Cost - TotalDepreciation - Obsolescence - Deterioration
 - Sales Comparison
 - Income Approach
-    - Direct Capitalisation 用第一个月的  NOI / r-g
+    - Direct Capitalisation 用第一个月的  $\frac{NOI}{r-g} $
     - DCF
 
 #### Loan Amount
@@ -19,16 +19,22 @@
 
 #### Others
 
-- Shopping carters - require more management, such as tenant mix and promotion
+- Shopping centres - require more management, such as tenant mix and promotion
     - A shopping centres is a type of **retail property**. A percentage lease is a unique aspect of many retail leases, which requires the tenant to pay additional rent once its sales reach a certain level. The lease will typically specify a “minimum rent” that must be paid regardless of the tenant’s sales. Percentage rent may be paid by the tenant once the tenant’s sales reach a certain level or breakpoint.
 
 #### Absolute Valuation
 
-Net Asset Value, $NAV = \frac{NOI}{cap\ rate}+Cash-Debt$ / # of shares
+Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
+
+直接用下一期的 NOI / Cap Rate 
+
++Cash
+
+-Debt
 
 #### Relative Value Approach
 
-- FFO ( funds from operations ) $=NetIncome + Loss+Dep\&Amt$
+- FFO ( funds from operations ) $=NetIncome + Loss+DepAmt$
 - AFFO (Adjusted Funds from Operations) =
     - FFO 
     - **Minus** Non-Cash Rent Adjustment 
@@ -41,7 +47,12 @@ Net Asset Value, $NAV = \frac{NOI}{cap\ rate}+Cash-Debt$ / # of shares
 
 - CMBS - asset-backed securitised **debt** obligations that receive cash flow from portfolios of mortgage loans.
 - REITs - own properties that are income producing.
+    - REIT分为 Equity REITs 和 Mortgage / Debts REITs
+    - Equity type 直接 own buildings。
+    - Mortgage types 持有 debts
+
 - REOCs - Real estate operating companies generate cash inflows primarily from the **sale of developed or improved properties,** as opposed to recurring lease or rental income.
+- **Industrial REITs** is sensitive to **retail sales**, **Storage REITs** is sensitive to **Population growth**
 
 ### VC & LBOs
 
@@ -51,15 +62,17 @@ Net Asset Value, $NAV = \frac{NOI}{cap\ rate}+Cash-Debt$ / # of shares
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Primarily equity funded. Use of leverage is rare and very limited. | Extensive use of leverage consisting of a large proportion of senior debt and a significant layer of junior and/or mezzanine debt. |
 | Returns of investment portfolios are generally characterized by very high returns from a limited number of highly successful investments and a significant number of write-offs from low performing investments or failures. | Returns of investment portfolios are generally characterized by lower variance across returns from underlying investments. Bankruptcies are rare events. |
-| Venture capital firm monitors achievement of milestones defined in business plan and growth management. | Buyout firm monitors cash flow management and strategic and business planning. |
+| Venture capital firm monitors achievement of milestones defined in business plan and growth management. | Buyout firm monitors cash flow management and strategic and business planning. Buyout funds seek out companies with stable cash flows. |
 | Expanding capital requirement if in the growth phase.        | Low working capital requirement.                             |
 | Assessment of risk is difficult because of new technologies, new markets, and lack of operating history. | Risk is measurable (e.g., mature businesses, long operating history, etc.). |
+| Buy from Existed Shareholders                                | Buyout funds acquire most portfolio companies via auction, involving multiple potential acquirers. |
+| 获得minority shares                                          | the entire equity capital is acquired by the private equity purchasers |
 
 #### Calculations
 
 - TVPI, Total Value to Paid-in Capital， $ TVPI=\frac{Distributed + UnDistributed}{Cumulative InvestedCapital}$
-- DPI, Distributed to Paid-in Capital， $DPI=\frac{Cumulative Distributions}{Cumulated InvestedCapital}$ - 分配出去的 - **Realised Return**
-- RVPI, Residual Value to Paid-in Capital, $RVPI = \frac{NAV(afterDistribution)}{Cumulative Invested Capital}$ - **Unrealised Return**
+- DPI, Distributed to Paid-in Capital， $DPI=\frac{Cumulative Distributions}{Cumulated InvestedCapital}$ - 分配出去的 - **Realised Return**. 包括今年分配的，去年分配的，etc所以以前分配的都加一起
+- RVPI, Residual Value to Paid-in Capital, $RVPI = \frac{NAV(afterDistribution)}{Cumulative Invested Capital}$ - **Unrealised Return** 为当年剩下的NAV after distribution
 - TVPI = DPI + RVPI
 - High Water Mark - Carry Interest 跟此前最高的比的 diff * rate
 
@@ -74,9 +87,26 @@ Buyout funds seek out companies with **stable cash flows**.
 
 **Valuation Creation**: Rather than ownership and control being separate, as in most publicly quoted companies, **private equity concentrates ownership and control.** Key points:
 
-- (1) the ability to re-engineer the private firm to generate superior returns, 
-- (2) financial leverage and the ability to access credit markets on favorable terms, and 
+- (1) the ability to **re-engineer** the private firm to generate superior returns, 
+- (2) financial leverage and the ability to **access credit markets on favourable terms**, and 
 - (3) a better alignment of interests between private equity firm owners and the managers of the firms they control.
+- Private equity funds increase value by taking on high levels of debt on favourable terms. They are able to **offset their borrowing costs by superior reorganisation and re-engineering capabilities**.
+
+#### Multiples
+
+- **DPI (**Disposable Personal Income实收已经分到的钱，包含历史多期已经收到的钱) 
+
+     DPI = Cumulative distributions / Cumulative invested capital 
+
+     , which provides an indication of a fund’s realised return, 
+
+- **RVPI** (Residual Value to Paid-in-Capital, **Unrealised部分**因为未卖出，所以还呈现为unrealised gain/L的NAV形式. 实缴资本的剩余价值,是基金的剩余价值与实缴资本的比率) 
+
+     RVPI = NAV (after distributions) / Cumulative invested capital
+
+     , which provides an indication of a fund’s unrealised return. 
+
+- TPI = DPI + RVPI
 
 ### Commodities
 
@@ -102,6 +132,17 @@ Buyout funds seek out companies with **stable cash flows**.
 - Total Return = Price Return + Roll Return + Collateral Return
     -  Roll return 期货合同到期后续作新的时，挣的钱 $=\frac{F_0 - F_1}{F_0}$. $F_0$ 为到期的，$F_1$ 为续作的。
     -  $Roll return = \frac{\text{Near-term futures contract closing price} −\text{ Farther-term futures contract closing price}}{\text{Near-term futures contract closing price}}$
+        -  So, positive Calendar Spread & Roll Return for backwardation.
+    -  $Total Return = Price Return + RollReturn + Collateral Return$
+        -  $Price Reture = \frac{F_0-P}{F_0}$, 在t-1时刻进入future contract 价格为F_0，当前价格为P，所以Price Return 为挣得差价
+        -  $RollReturn = \frac{F_0-F_1}{F_0}$，续作现在的future contract。未来的future price F_0 减去 现在的future price F_1 注意是 近的 减 远的
+        -  Collateral Return = Annual rate × Period length as a fraction of the year
+    
 - Calendar Spread = Near Future - Long Future
     - A **positive calendar spread i**s associated with futures markets that are in **backwardation**, whereas a negative calendar spread is associated with futures markets that are in contango. Lumber futures have successively higher prices and are in contango.
+    
 - Basis = Near Spread - Spot
+
+- **People are confusing the long position with short position, in case of backwardation, long position would create positive roll returns but short position would end up with negative roll returns.**
+
+    
