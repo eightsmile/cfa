@@ -13,6 +13,7 @@ $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
 - $FP < S_0 \times (1+r_f)^T$ 
 - Long Forwards, Short Underlying.
+- long forward 的是 reverse 的
 
 #### Pricing and Valuation
 
@@ -25,11 +26,17 @@ $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
 ### Forward Rate Agreements - FRAs
 
+FRA transaction 不需要deposite，只swap net的部分就行
+
 Long - Borrow at the Forward Rate in the Future.`
 
 在 $t=0$ 时刻签订，在 $t=1$ 时刻可以以 FRA 的 rate 借钱到 $t=2$ 时刻。所以借钱的区间为 $1\to2$, 还需将他们折成PV到0时刻。
 
-An FRA has two **counterparties**, a **fixed-rate receiver** that is short Euribor and a **floating-rate receiver** that is long Euribor.
+#### Euribor Counterparty
+
+因为 Euribor 是一种浮动汇率，相当于Libor，所以 long Euribor 等价于 需要long float
+
+An FRA has two **counterparties**, a **fixed-rate receiver / float-rate payer** that is short Euribor and a **floating-rate receiver / fixed-rate payer** that is long Euribor.
 
 ### T-bond Futures 
 
@@ -37,9 +44,11 @@ Daily Settlement
 
 $$FP_{standard} = FP_i\times \frac{1}{CF_i}$$
 
-用CF - Conversion Factor 把持有的乱七八糟的债券，等价于 标准的 用于交割的 债券。
+用 CF - Conversion Factor 把持有的乱七八糟的债券，等价于 标准的 用于交割的 债券。
 
-$$Full\ Price = Clean\ Price + Accruial\ Interest$$
+CF 只作用于 clean price的，如果是 dirty 的要把 accrual interest 减去再除以 CF。（相反，compound只作用于dirty，因为更精准）
+
+$$Full\ Price = Clean\ Price + Accrual\ Interest$$
 
 $$V_{Full} =\underbrace{ FP^{clean}_{standard}\times CF }_{FP_i}+Accrual\ Interest$$
 
@@ -47,7 +56,7 @@ $$V_{Full} =\underbrace{ FP^{clean}_{standard}\times CF }_{FP_i}+Accrual\ Intere
 
 - $V$ here are the future value.
 - Hold the Future: $V = FP_{std} \times CF  + AI$
-- Hold the Bond: $V = (S_{clearn} + AI_0 )(1+r_f)^T - FVC$
+- Hold the Bond: $V = (S_{clean} + AI_0 )(1+r_f)^T - FVC$
 
 Bond price is usually quoted as **clean** price.
 
@@ -124,6 +133,8 @@ $$FloatRate = MRR$$
 
 $Value = EquityReturn \times NotionalAmount - FloatRate \times NotionalAmount $
 
+(1) PV of FCF (2) Current Index Price  (1) - (2)
+
 ### Options
 
 #### Risk Neutral Probability
@@ -161,6 +172,10 @@ $$Payoff_{t-1} = Payoff_t \times \bigg[\frac{1}{2}\times r_{ref}^{up}+\frac{1}{2
 
 In the two-period binomial model, **Node 0** represents the current state of the underlying instrument and the spot rate is the current market rate for the instrument. Therefore, the value of the underlying instrument at Node 0 is considered to be the **spot rate** because it represents the current market value of the instrument. 
 
+See this one below,
+
+<img src="/Users/mie/Desktop/Screenshot 2023-04-24 at 17.00.00.png" alt="Screenshot 2023-04-24 at 17.00.00" style="zoom:33%;" />
+
 #### BSM
 
 $$C = S_0\times N(d_1) - Xe^{-r_fT}\times N(d_2)$$
@@ -169,6 +184,21 @@ $$d_1 = \frac{ln(S_0/X) + (r_f +\frac{1}{2}\sigma^2) T}{\sigma \sqrt{T}}$$
 
 $$d_2 = d_1 - \sigma \times \sqrt{T}$$
 
+Note that BSM states the continuously compound return is normally distributed, not the annual return.
+
+"using out-of-money to hedge" means buying out-of-money put option at low strike price 
+"using out-of-money to long" means buying out-of-money call option at high strike price
+
+Vega is high when option is at the money.
+
+Theta is normally negative. The speed of the option value decline increases, however, as time to expiration decreases. 
+
+#### Black Model - Options on Futures
+
+Black’s model to value a call option on a futures contract is 
+
+$$c = e^{–rT}[F_0(T)\times N(d_1) – X\times N(d_2)]$$
+
 #### Swaption
 
 A swaption is an option to enter into a swap.
@@ -176,4 +206,7 @@ A swaption is an option to enter into a swap.
 - Payer Swaption is an option to enter into a swap as the **fixed-rate payer.**
     - Pay fixed, 所以interest rate提升，swaption value more.
 - A receiver swaption is an option to enter into a swap as the **fixed-rate receiver (the floating-rate payer)**.
-    - receive fixed，pay float，所以interest rate提升，swaption value less.sw
+    - receive fixed，pay float，所以interest rate提升，swaption value less.
+
+#### Interest Rate Option
+
