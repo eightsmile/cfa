@@ -95,6 +95,7 @@ Subsume from MRR.
 
 - **Value Additivity**: Whole = Sum of Parts
 - **Dominance**: a financial asset with a risk-free payoff in the future must have a positive price today.
+- **Rational**: **when the profit happens in year 0 only it's a value additivity arbitrage and when happens at year 1 it's a dominance arbitrage**.
 
 #### Binomial Interest Rate Tree - Arbitrage Free
 
@@ -112,7 +113,7 @@ Could be used if the Cash Flow is **path dependent**.
 
 #### Term Structure Models
 
-- Term Structure Model - describe how interest rate evolves. 用rate本身做mean reverting
+- Equilibrium Model - describe how interest rate evolves. 用rate本身做mean reverting
 
     - Cox-Ingersoll-Ross Model - CIR model
 
@@ -124,13 +125,11 @@ Could be used if the Cash Flow is **path dependent**.
 
 ​		They are both mean reverting. CIR model make the volatility proportional to the squared root of the short-term rate. That property make the volatility increase with the level of interest rate.
 
-- Arbitrage-Free Models - match the current market data 用市场的数据推算 rate
+- **Arbitrage-Free Models** - match the current market data 用市场的数据推算 rate - to **calibrate** 
 
     - Ho-Lee Model - simple S.D.E.
 
     $$ dr_t = \theta_t d_t + \sigma dX $$
-
-    ​	, where $\theta_t$ is time dependent to calibrate the market data.
 
     - Kalotay-Williams-Fabozzi (KWF) Model
 
@@ -138,9 +137,13 @@ Could be used if the Cash Flow is **path dependent**.
 
     ​	, the log term ensure the rate cannot be negative.
 
+    , where $\theta_t$ is time dependent to calibrate the market data, allow for time-varying parameter. Arbitrage-Free model is more accurate.
+
 ### Embedded Option Bond Valuation
 
 Volatility increase the value of options and so embedded option bond, but do not affect the value of straight bond.
+
+Option-free bond (包括MBS)不会收到 implied volatility影响，那
 
 #### OAS
 
