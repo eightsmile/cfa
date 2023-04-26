@@ -207,6 +207,3 @@ A swaption is an option to enter into a swap.
     - Pay fixed, 所以interest rate提升，swaption value more.
 - A receiver swaption is an option to enter into a swap as the **fixed-rate receiver (the floating-rate payer)**.
     - receive fixed，pay float，所以interest rate提升，swaption value less.
-
-#### Interest Rate Option
-
