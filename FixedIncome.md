@@ -63,7 +63,7 @@ Subsume from MRR.
 | Swap Spread        | Swap Rate - Treasury Yield                                   | Default Risk & Liquidity Risk               |
 | I - Spread         | $Yield_{i}$ - Swap Rate, with same maturity                  | Credit Risk & Liquidity Risk                |
 | Z - Spread         | $$P = \frac{C}{1+S_1+Z}+\frac{C}{(1+S_2+Z)^2}+\frac{C+Principal}{(1+S_3+Z)^3}$$ | Credit Risk & Liquidity Risk & Option Risk  |
-| TED Spread         | LIBOR - T-Bill, with same maturity                           | Default Risk in the system                  |
+| TED Spread         | $MRR - TBill$, with same maturity                            | Default Risk in the system                  |
 | Libor - OIS Spread | LIBOR - OIS rate  , where OIS rate 相当于隔夜拆借            | Risk and Liquidity of Money Market Security |
 
 ### Term Structure of Interest Rate
