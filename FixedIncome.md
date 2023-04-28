@@ -148,6 +148,8 @@ Option-free bond (包括MBS)不会收到 implied volatility影响，那
 
 #### OAS
 
+当只给 利率二叉树，还要算option embedded bond时，要在利率二叉树的基础上 + OAS
+
 把 embedded option bond 的现金流折成 without option bond 的spread
 
 $$ PV_{BondWithoutOption} = \frac{CF_1}{1+r+OAS} +\frac{CF_2}{(1+r + OAS)^2}+... +\frac{CF_n}{(1+r+OAS)^n}$$
@@ -173,6 +175,8 @@ $$PV_{BondWithoutOption} \pm  V_{option} = PV_{BondEmbedded Option}$$
 
 #### Effective Duration
 
+Effective duration indicates the sensitivity of a bond’s price to a **100 bps parallel shift** of the benchmark yield curve assuming no change in the bond’s credit spread.
+
 $$ ED = \frac{ P_+ - P_- }{2\times\Delta curve \times P_0} $$
 
 $$EC = \frac{P_- + P_+ - 2P_0}{(\Delta curve)^2 \times P_0}$$
@@ -182,6 +186,8 @@ $$EC = \frac{P_- + P_+ - 2P_0}{(\Delta curve)^2 \times P_0}$$
 
 - This calculation works well for option-free bonds, but the results can **be misleading in the presence of embedded options**.
 - The price sensitivity of bonds with embedded options is not symmetrical to positive and negative changes in interest rates of the same magnitude.
+- For the **Floater**, Effective Duration is close to the period. For example, a one-year set floater has ED = 1.
+- E.G. As **rates rise** the call is less likely to be called therefore increasing duration. Think of it like this straight bond - call option, because it is a benefit to the issuer. As interest rates rise, a call option moves out of the money, which **increases the value of the callable bond and lengthens its effective duration**.
 
 #### One-side Duration
 
@@ -189,10 +195,13 @@ One-side duration states the sensitivity of bond with embedded options is not sy
 
 One-side duration is better at capturing the interest rate sensitivity of a callable or putable bond than the (two-sided) effective durations, particularly when the embedded option is **near the money**.
 
+与ED相同，时parallel shift of yield curve，但是是单边的。
+
 #### Key-rate Duration
 
 - **Key rate durations** reflect the sensitivity of the bond’s price to changes in specific maturities on the benchmark yield curve.
 - help portfolio managers and risk managers **identify the “shaping risk” for bonds**—that is, the bond’s sensitivity to **changes in the shape** of the yield curve (e.g., **steepening and flattening**).
+- 可以用来分析 change of shape of yield curve。因为关键点变了，可以理解为整条线变了。
 
 #### Capped / Floored Floater
 
@@ -210,13 +219,14 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 ### Credit Risk
 
-- Expected Exposure
+- Expected Exposure: The expected exposure is the projected amount of money that an investor could lose if an event of default occurs, before factoring in possible recovery. The expected exposure for both Bond I and Bond II is 100 + 5 = 105. 如是 principal + coupon，与概率无关
 - Probability of Default (POD)
 - Loss Given Default (LGD) % = 1 - Recovery Rate
 - Expected Loss = Default Prob * Loss Severity given Default
 - Credit Valuation Adjustment (CVA)
 - Fair Value of Corporate Bond = VND - CVA
     - VND - Value if No Default
+- The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 当不太可能转换时，Convertible bond相当于bond，那么受interest rate影响。当很可能转时（换句话说，market price of share 比 convertible price大）则相当于share，受价格影响多。
 
 ##### Default Risk Model
 
