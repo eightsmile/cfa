@@ -76,6 +76,10 @@ Subsume from MRR.
 | Segmented market theory  | Yield is solely function of demand and supply                | • Independent maturity segment                               |
 | Preferred habitat theory | Forward rates=expectation of future rates + premium for moving out of the preferred habitats | • Explain almost any yield curve shape                       |
 
+The typical term structure of credit spreads is upward slowing because investors typically want more compensation for future credit uncertainty. 
+
+The two examples he gives for when credit term structure can be inverted are valid: high-yield issuers in cyclical industries at the bottom of a cycle where investors are looking past the bottom of the cycle and bonds that have a very high likelihood of default where a primary pricing mechanism is based on the recovery amount in default.
+
 ### Factors affecting Interest Rate
 
 1. Monetary Policy explains mostly in the short-term, and 1/3 in the long-term of bond yield variation. Long-term rate is mostly affected by inflation and economic activities.
@@ -228,6 +232,16 @@ One-side duration is better at capturing the interest rate sensitivity of a call
     - VND - Value if No Default
 - The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 当不太可能转换时，Convertible bond相当于bond，那么受interest rate影响。当很可能转时（换句话说，market price of share 比 convertible price大）则相当于share，受价格影响多。
 
+##### Credit Spread Migration Matrix
+
+$\Delta Expected Return=$Sum of % * (Spread_i - Base.Spread)    * (-1) Modified Duration
+
+$$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
+
+因为modified duration 转换 $\Delta rate$ 和 $\Delta price$ 的关系，其中$\Delta Price$ 就相当于 expected return.
+
+**Credit Spread Migration** typically has a **negative impact that reduces the expected return**, for mainly two reasons. **First**, the probabilities for rating changes are not symmetrically distributed around the current rating; they are **skewed toward a downgrade rather than an upgrade**. **Second**, the increase in the **credit spread is much larger for downgrades than is the decrease in the spread for upgrades**. 两个原因，一、降级的概率高。二、降级时spread的变化量大。
+
 ##### Default Risk Model
 
 - Structural Model - explain why default
@@ -245,6 +259,18 @@ One-side duration is better at capturing the interest rate sensitivity of a call
     - Reflect the changing business cycle.
     - Weakness: (1) result needs to be back-tested; (2) default comes as 'surprise'.
 
+#### Securitised Debt
+
+- Granularity - actual number of obligations 数量，约granular 约多
+- Homogeneity - Similarity 相似度，约homo约相似
+
+- Based on Statistics: (1) short-term, (2) Granular, (3) Homo
+    - E.G. Credit Card MBS, Trade Receivables MBS
+- Based on Portfolio: (1) mid-term, (2) Granular, (3) Homo
+    - E.G. Auto MBS
+- Loan by Loan: (1) non-granular / small number, (2) Hetero
+    - E.G. CMBS, CLO
+
 ### CDS
 
 Rationale: 
@@ -253,3 +279,41 @@ Rationale:
 - Sell Credit Enhanced ones. 卖风险减少的
 - Credit Deterioration Signals: Leverage Increase. 
 - Large CDS spread, large risks.
+- Cheapest-to-Deliver Obligation
+    - The payoff of the CDS is determined by the cheapest-to-deliver obligation, which is the debt instrument that can be purchased and delivered at the lowest cost but has the same seniority as the reference obligation.
+
+#### Type of CDS
+
+- **Single Name CDS** - The reference obligation is not the only instrument covered by the CDS. Any debt obligation issued by the borrower that is *pari passu* (ranked equivalently in priority of claims) or higher relative to the reference obligation is covered.
+    - 给一个reference，比这个好的，同一个borrower的 都是single name CDS
+    - Cheap-to-Deliver
+- **Index CDS** allows investors to take a position on the credit risk of multiple companies, although higher credit correlations make the index CDS more expensive to purchase.
+- **Tranche CDSs** also cover multiple borrowers, but losses are covered only up to a specific level.
+
+#### Settlement
+
+- Physical Settlement: 给loan，收CDS par value
+- Cash Settlement: 直接 收到 CDS par value 和 loan的差值。
+- 但是因为 cash settlement 可以有cheapest-to-deliver obligation原则。换句话说是 “收到 CDS par value 和 loan的差值”中loan可以选最便宜的loan，这样 可以收到更多的钱 然后把之前的loan 按市场价卖了。
+
+#### Credit Event
+
+- Bankruptcy
+- Failure to pay 不需要 formal bankruptcy filling, 只要没付，哪怕是coupon也算 credit event
+- Restructuring
+    - refers to a number of possible events, including **reduction** or **deferral of principal or interest**, **change in seniority** or **priority** of an obligation, or change in the currency in which principal or interest is scheduled to be paid.
+    - 在 US, Restructuring 不算 credit event
+
+#### Factor Affecting CDS Valuation
+
+- Prob of Default
+- Loss Given Default
+
+#### Pricing
+
+Upfront Premium 提起一次付的钱
+
+- Upfront premium on a CDS $ \approx (Credit Spread - Fixed Coupon) \times Duration$
+- CDS price can be quoted as ≈ 100-upfront premium (%)
+    - If the price of CDS > 100, the protection seller needs to pay upfront premium 
+    - If the price of CDS < 100, the protection buyer needs to pay upfront premium
