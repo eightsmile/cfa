@@ -104,6 +104,7 @@ $$i_L = i_H \times e^{2\sigma}$$
 - , where $\sigma$ is the volatility of the one-year rate. To proxy the volatility, we may use (1) Historical Interest rate's Volatility; (2) observed market prices of interest rate derivatives.
 - We assume equal probability of up and down.
 - Interest rate tree is referred as a log-normal tree, using lognormal random walk.
+- Number of Path is $2^{N-1}$, 如 4 期有 $2^3=8$ 条path.
 
 #### Monte Carlo Forward-Rate Simulation
 
