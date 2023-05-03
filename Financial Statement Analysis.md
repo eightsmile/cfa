@@ -363,16 +363,125 @@ IFRS:
 2. Lia
    - 加杠杆 借钱，增加lia，因为钱便宜了
 
+### Intefration of Financial Statement Analysis
+
+#### DuPont 5
+
+$ROE = \frac{NI}{EBT}\times \frac{EBT}{EBIT}\times \frac{EBIT}{Rev}\times \frac{Rev}{A}\times \frac{A}{E}$
+
+当去除Equity Inv的影响
+
+- Tax Burden = $\frac{NI - Equity Income}{EBT}$
+- Total Asset Turnover $= \frac{Rev}{A-Equity Inv}$
+
+#### Earning Quality <- Accurial 企业可操纵的部分
+
+1. Balance Sheet Approach
+
+​	$NOA = Operating.A - Operating.L$
+
+​	$NOA_{B/S} = \bigg( Total.A - Cash-Securities \bigg) - \bigg( Total.L - Debt \bigg)$
+
+​	$AggregateAccurial = \Delta NOA = NOA_t - NOA_{t-1}$
+
+​	$Accurial Ratio = \frac{\Delta NOA}{(NOA_0+NOA_1)/2}$
+
+2. CF/S Approach
+
+   $Accurial_{CF} = NI - \bigg( CFO+CFI \bigg)$
+
+   $Accurial Ratio = \frac{NI-(CFO+CFI)}{(NOA_0+NOA_1 )/2}$
+
+3. Reduced Form 
+
+​	$Earning_{t+1} = \beta_0 +\beta_1 Cash + \beta_2 Accurial +error$
+
+​	$\beta_1$ 越大越好，$\beta_2$ 越小越好
+
+#### CF Analysis
+
+- CFO & NI
+
+  - 因为CFO中扣了tax，所有与NI比时加回来
+
+    CFO + I + T = CFO before I&T 与NI比
+
 ### Financial Institute
+
+#### BASEL
+
+Basel III (2018) consider the liquidity
 
 #### CAMELS
 
 - Calpital Adequacy
+  - Tier 1: Common Stock, R/E, AOCI; Other Tier 1: Preferred Stock; Tier 2: Long-term Debt
   - Common Equity Tier 1 - 4.5%
   - Total Tier 1 Capital: - 6%
   - Total Capital (Tier 1 + Tier 2) - 8%
-- Asset Quality
-- Liquidity Position
-  - Liquidity Coverage Ratio = $\frac{HihglyLiquidyAssets}{Bank's ExpectedCFoutflow}$
+- Asset Quality: Liquidty Asset %
+- Mabagement Capability
+- Earning
+  - Earning 来源: 1. Net Interest Income 借贷利差 2. Trading Income 投资收益 3. Service Income 服务费
+  - 其中 Trading Income 是 Low Quality 因为 highly Volatile
+- Liquidity Positions
+  - Liquidity Coverage Ratio (流动性覆盖率) = $\frac{HihglyLiquidyAssets}{Bank's ExpectedCFoutflow (压力测试下30天流出的钱)}$
   - Net Stable Funding Ratio (NSFR) = $\frac{Stable Funding}{Bank'sRequiredStable Funding}$
-- Makert Risks
+- Sensitivity to Market Risks
+  - Exposure to Market Movement 期限错配
+    1. Mismatch in Duration of Loan
+    2. Reference Rating
+    3. Currency
+    4. Prepay Frequency
+  - VaR
+
+#### Insurance Company
+
+Aims to Protect Adverse Events
+
+- Rev 来源: 1. Premium 保费 2. Float 浮存金
+
+- P&C 财险 L&H 寿险
+
+| \                   | P&C                          | L&H                       |
+| ------------------- | ---------------------------- | ------------------------- |
+| Duration            | Short                        | Long                      |
+| Predicability       | Variable, Lumpier            | High                      |
+| Business Profile    | Loss on Property             | On Death & Saving Vehicle |
+| Invest Return       | Conservative 因为难预测+短期 | High Return               |
+| Liqidity            | High Liquid                  | Low                       |
+| Capital Requirement |                              |                           |
+
+- Profitability
+
+  1. Loss and Loss Adj Ratio $=\frac{LossExp + LossAdj Exp}{Net Premium Earned}$
+
+     越小越好，表示同样premium收入，费用（理赔费用+其他费用）越少
+
+     Implication: Indicate the Degree of Success in Estimating risk Insured
+
+  2. Underwriting Expense Ratio 承保费用 $= \frac{Undertaking Exp}{Net Premium Written} $
+
+     越小越好
+
+     Indicate the Efficiency of Money Spent in obtaining new Premium
+
+  3. Combined Ratio = 1 + 2
+
+     <1则effective
+
+### Evaluating Quality of Financial Report
+
+#### Qunantitive Tools
+
+1. Beneath Model 用 reg model to estimate prob of Earning Manipulation
+
+   - M-Score > -1.78 操纵
+
+2. Altman Model
+
+   - Z-score < 1.81  Bankrupt
+   - Z-score > 3      no Bankrupt
+   - between  (1.81, 3) unknown
+
+   
