@@ -6,7 +6,7 @@ FVTPL, FVOCI, Amt Cost   <->  Trading Security, AFS, HTM
 
 | Type             | FVTPL                                                        | FVOCI                                                        | Amt Cost                             |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------ |
-| Balance Sheet    | Fair Value                                                   | (1) Fair Value, <br /> 未实现的 (2) Unrealised G/L 进 OCI, <br />(3) 仅IFRS中，投资foreign bond的外汇变动可以进I/S | Amortised Cost                       |
+| Balance Sheet    | Fair Value                                                   | (1) Fair Value, <br /> (2) 未实现的 Unrealised G/L 进 OCI, <br />(3) 仅IFRS中，投资foreign bond的外汇变动可以进I/S | Amortised Cost                       |
 | Income Statement | (1) Interest, <br />(2 )Dividend, <br />(3) Realised/Unrealised G/L | 已实现的 <br />(1) Interest, <br />(2) Dividend, <br />(3) Realised G/L | (1) Interest, <br />(2) Realised G/L |
 
 #### Classification
@@ -25,16 +25,19 @@ FVOCI 垃圾桶不能重分类
 
 ### Equity Method - Associate (Investment in Associate)	
 
-#### Valuation by BASE rule
+1. **Valuation by BASE rule**
 
-- B/S: BASE: $ Begining + NI\times \% - Div\times \% = End $
-- I/S: $Inv.Income = NI \times \%$
+   - B/S: BASE: $ Begining + NI\times \% - Div\times \% = End $
 
-#### Cost 拆分: BV+ FV.appreciation + G.W.
+   - I/S: $Inv.Income = NI \times \%$
 
-#### NI: 将 BV 调整为 FV, so $NI: \quad BV\to FV$
 
-#### NI: 剔除 Unrealised Profit 内部交易带来的 (顺流逆流) 未实现的
+​	Cost 拆分: BV+ FV.appreciation + G.W.
+
+​	NI: 将 BV 调整为 FV, so $NI: \quad BV\to FV$
+
+2. **NI: 剔除 Unrealised Profit 内部交易带来的 (顺流逆流) 未实现的**
+   - **PPE (Fair Value - Book Value) / # Yr * %**
 
 #### Valuation by Fair Value Option
 
@@ -42,9 +45,9 @@ FVOCI 垃圾桶不能重分类
 
 #### Impairment
 
-|            | IFRS                                                         | USGAAP                       |
-| ---------- | ------------------------------------------------------------ | ---------------------------- |
-| Impairment | recoverable amount = max ( disposal value, value in use )<br />Carrying Amount 比 Recoverable Amount<br />差值为 valuation allowance 和 impairment loss | FairValue 比 Carrying Values |
+|            | IFRS                                                         | USGAAP                        |
+| ---------- | ------------------------------------------------------------ | ----------------------------- |
+| Impairment | recoverable amount = max ( disposal value, value in use )<br />Carrying Amount 比 Recoverable Amount<br />差值为 valuation allowance 和 impairment loss | Fair Value 比 Carrying Values |
 
 Reversal is prohibited. 都不能转回
 
@@ -54,20 +57,31 @@ Reversal is prohibited. 都不能转回
 - Acquisiton: A + B = (A+B) 只有此种情况才涉及 合并报表。
 - Consolidation: A + B = C
 
-#### Control <-
+#### Control <- B/S
 
 A 保持 Book Value， B 用 Fair Value。资产 和 负债 都100%合并，Asset放需要 减Payment。Equity不合并，倒挤。
 
+Asset = $BV.A_母$ - Purchase Pirce + Goodwill (Partial/Full) + $FV_子$
+
+Lia = $BV.Lia_母$ + $FV_子$
+
+Equity = $BV.E_母$ + Minority Interest
+
 - IF: Payment <= Equity (FV) of B， 则 B的Equity被记为 Minority Interest
-- IF: Payment > Equity (FV) of B， 则超出部分记为 Goodwill
+- IF: Payment > Equity (FV) of B， 则超出部分记为 Goodwill 
 
 - Full Goodwill = Partial Goodwill / %, Minority Interest 要随之调整，先算partial 再拿 % 反推
   - Full Goodwill 在 IFRS 和 USGAAP都可
-  - Partial Goodwill 仅在 IFRS
+  - **Partial Goodwill 仅在 IFRS**
 
 #### Income Statement
 
-从 BV -> 调整为 -> FV 后，最后的 Fair Vlaue of NI 乘 %
+- Equity Method = NI 母 + Equity Income (= NI被投 * %)
+- Acquisiton Method = NI母 + 100% NI子 -  Non-own/Minority NI (1-%  * NI子)
+
+母 子 的都加起来，最后调 non-own NI
+
+ BV -> 调整为 -> FV 后，最后的 Fair Vlaue of NI 乘 %
 
 - Inventory  ->  COGS
 - Fixed Asset  ->  **D**&A
@@ -103,7 +117,7 @@ Sales 增加 -> Net Profit Margin 下降
 
 ### SPE 在海外设立的的 子
 
-- IFRS 都合并
+- **IFRS 都合并**
 
 - USGAAP 
 
@@ -126,7 +140,9 @@ Sales 增加 -> Net Profit Margin 下降
 
 1. 在 t = 60，PMT = 2000, N = 20, I/Y = 10, FV = 0, **solve** PV
 2. 把 t = 60 的PV，除以 40，得到现在每工作一年，可以获得在 t = 40时现值的 pension。$Annual UnitCredit = \frac{PV\ at\ t=60}{40}$
+   - AUC 是未折现概念
 3. 之后每工作一年，Annual Unit Creidt * n
+4. Discount Rate = current rates of return on high-quality corporate bonds (or government bonds, in the absence of a deep market in corporate bonds) with currency and durations consistent with the currency and durations of the benefits.
 
 ##### ABO -与PBO一样，除了是基于当前工资算得
 
@@ -143,11 +159,19 @@ $$ PA_t = PA_{t-1} + EmployerContribution - Benefit PaidtoEmployee $$
 $$PBO_t = PBO_{t-1} + CSC + Int.Cost + PSC \pm Actuarial \ L/G - BenefitPaid$$
 
 - CSC - Current Service Cost
+  - CSC = AUC / (1+r)^t  把annual unit cost 折现
+
 - Interest Cost = $PBO_{t-1} \times r$
 - PSC - Past Service Cost - Plan Amendment during the Year. 如本来按最后一年工资的1%给，现在按2%给，带来的变化
 - Actuarial Losses / Gain
 
+##### Funded Status
+
 $FundedStatus = PA - PBO$, overfunded if FS>0, vice versa.
+
+Funded Status - Net Pension Liability (-) / Net Pension Asset (+)
+
+PBO - PVDBO
 
 #### I/S 核算
 
@@ -195,9 +219,9 @@ $$TPPC = \Delta F.S. - Contribution$$
 
 ##### 调整 I/S
 
-- CSC      -> SG&A
-- Int.Cost -> Int.Exp
-- -E(r)       -> Int.Income
+- CSC            -> SG&A
+- Int.Cost       -> Int.Exp
+- -E(r)             -> Int.Income
 - Amt.PSC     ->  Non-Operating
 - Acturial G/L ->  Non-Operating
 
@@ -213,11 +237,15 @@ TPPC 代表 CFO 因为pension确实是应该划入operating CF
 
   contribution 相当于 实际往pension里投的钱，TPPC相当于应该跟pension花的钱。实际花的更多，相当于其中一部分还给 pension ，相当于往CFO里注入资金
 
+  - Contribution <-> CFF多了，调减CFF
+
 - Contribution < TPPC
 
   Under Contribution: CFF调高，CFO调低
 
   相当于 融资的钱contribute 不够还给pension应该花的钱，所以往CFO借钱。
+
+  - Contribution <-> CFF少了，调增CFF
 
 - 调整的amount: $(Contribution -TPPC)\times (1-t)$ 差额要扣税调整
 
@@ -231,18 +259,6 @@ TPPC 代表 CFO 因为pension确实是应该划入operating CF
 
 E.G. Volatility 提升，Option Value 提升, NI 下降
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### FX Transaction
 
 - Reporting Currency - 母公司用的货币 USD
@@ -251,25 +267,27 @@ E.G. Volatility 提升，Option Value 提升, NI 下降
 
 如果 母&子 结合紧密，则 FC = RC，用temporal method
 
-如果 子 独立，则子用
+如果 子 独立，则子用 Current Rate Method
 
-#### Temporal Method
+IFRS requires that Ambleu disclose “the amount of exchange differences recognized in profit or loss” when determining net income for the period. Because companies may present foreign currency transaction gains and losses in various places on the income statement, it is useful for companies to disclose both the amount of transaction gain or loss that is included in income as well as the presentation alternative used.
 
-$Local Currency \to Functional Currency$
+#### Temporal Method - Exposure 来自 Monetary
+
+$Local Currency \to Functional Currency: Local. GBP \to Funcational. USD$ 用于更**不**自主和不独立的子
 
 先 B/S 再 I/S
 
 1. B/S 折算
    1. Asset
       - Monetary Asset: Current Rate
-      - Non-monetary Asset: Historical Rate
-   2. Liability 基本上所以 lia 都是monetary，除非题目有说明
+      - Non-monetary Asset: Historical Rate (Inventory, Fixed Asset, etc)
+   2. Liability 基本上所有 lia 都是monetary，除非题目有说明
       - Monetary Asset: Current
    3. Equity (A - Lia)
       - Capital: Historical 
-      - R/E: Equity - Capital
+      - R/E: 倒挤 Equity - Capital
       - P.S. 这个方法没有OCI
-2. I/S 折算
+2. I/S 折算 - 由 R/E _t  - R/E _t-1 倒挤出
    1. 由 1.2.的items 算出 NI before Translation G/L
       - COGS, D&A: Historical Rate
       - Others: Current
@@ -283,16 +301,18 @@ $Local Currency \to Functional Currency$
 
 ##### 判断 T.G/L  <-  Exposure
 
-$Exposure = M.A - M.L$
+$Exposure = M.A - M.L$, Exposure 来自 Net Monetary
 
 因为在temporal method下，non- monetary 不受FX rate change影响，所以只考虑 Monetary的
 
 - $Exposure >0 \to M.A >M.L$, 则 Asset 多。FX 涨 exposure 涨, Gain，vice versa
 - $Exposure < 0 \to M.A < M.L$, 则 Lia 多。FX 涨 exposure 跌, Loss，vice versa
 
-#### Current Rate Method
+#### Current Rate Method - Exposure 来自 Equity 
 
-$FunctionalCurrency \to Reporting Currency$
+$FunctionalCurrency \to Reporting Currency: Local.GBP\to Reporting .GBP$
+
+用于更加自主的 subsidies. The current rate method is utilized in instances where the [subsidiary](https://www.investopedia.com/terms/s/subsidiary.asp)isn't well integrated with the parent company, and the local currency where the subsidiary operates is the same as its [functional currency](https://www.investopedia.com/terms/f/functional-currency.asp). The current-rate translation method is ideal if the subsidiary is mainly independent of the parent company’s activities. It also applies where the functional and local currencies are the same.
 
 先折算 I/S 再折 B/S
 
@@ -342,3 +362,17 @@ IFRS:
    - 买 non-monetary asset
 2. Lia
    - 加杠杆 借钱，增加lia，因为钱便宜了
+
+### Financial Institute
+
+#### CAMELS
+
+- Calpital Adequacy
+  - Common Equity Tier 1 - 4.5%
+  - Total Tier 1 Capital: - 6%
+  - Total Capital (Tier 1 + Tier 2) - 8%
+- Asset Quality
+- Liquidity Position
+  - Liquidity Coverage Ratio = $\frac{HihglyLiquidyAssets}{Bank's ExpectedCFoutflow}$
+  - Net Stable Funding Ratio (NSFR) = $\frac{Stable Funding}{Bank'sRequiredStable Funding}$
+- Makert Risks
