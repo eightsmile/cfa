@@ -17,11 +17,10 @@ FVTPL, FVOCI, Amt Cost   <->  Trading Security, AFS, HTM
 
 #### Reclassification
 
-Equity 一律不能重分类
-
-Amt Cost + FVTPL 可以重分类
-
-FVOCI 垃圾桶不能重分类
+- Equity 一律不能重分类
+- Debt:
+    - Amt Cost + FVTPL 可以重分类
+    - FVOCI 垃圾桶不能重分类
 
 ### Equity Method - Associate (Investment in Associate)	
 
@@ -81,7 +80,7 @@ Equity = $BV.E_母$ + Minority Interest
 
 母 子 的都加起来，最后调 non-own NI
 
- BV -> 调整为 -> FV 后，最后的 Fair Vlaue of NI 乘 %
+ BV -> 调整为 -> FV 后，最后的 Fair Value of NI 乘 %
 
 - Inventory  ->  COGS
 - Fixed Asset  ->  **D**&A
@@ -121,7 +120,7 @@ Sales 增加 -> Net Profit Margin 下降
 
 - USGAAP 
 
-  - If VIE 则合并
+  - If VIE 则合并 Variable Interest Entity
   - If 不是 VIE，不合并
 
   VIE 的判断条件：（满足其一即是VIE, variable interest entity，VIE 相当于没有投票权的实体）
@@ -169,9 +168,9 @@ $$PBO_t = PBO_{t-1} + CSC + Int.Cost + PSC \pm Actuarial \ L/G - BenefitPaid$$
 
 $FundedStatus = PA - PBO$, overfunded if FS>0, vice versa.
 
-Funded Status - Net Pension Liability (-) / Net Pension Asset (+)
+Funded Status = Net Pension Liability (-) / Net Pension Asset (+)
 
-PBO - PVDBO
+PBO = PVDBO
 
 #### I/S 核算
 
@@ -192,7 +191,7 @@ P.S.
 - CSC
 - Int.Cost
 - \-  E(R) = PA * E(r)    Expected Return
-- Amortisation of PSC & Acturial G/L
+- **Amortisation** of PSC & Actuarial G/L
 
 P.S. 
 
@@ -208,7 +207,7 @@ P.S.
   - B/S: $PBO\downarrow ,\quad F.S. \uparrow$
   - I/S: $CSC\downarrow \quad and\quad Int.Cost \downarrow$
 - $E(r) \uparrow$ (USGAAP only)
-  - I/S: $PensionExpense \downarrow$
+  - I/S: $PensionExpense \downarrow$, so NI up
   - B/S: unaffected
 
 #### Analyst View
@@ -219,11 +218,11 @@ $$TPPC = \Delta F.S. - Contribution$$
 
 ##### 调整 I/S
 
-- CSC            -> SG&A
-- Int.Cost       -> Int.Exp
-- -E(r)             -> Int.Income
-- Amt.PSC     ->  Non-Operating
-- Acturial G/L ->  Non-Operating
+- CSC              -> SG&A
+- Int.Cost         -> Int.Exp
+- -E(r)               -> Int.Income
+- Amt.PSC       -> Non-Operating
+- Actuarial G/L -> Non-Operating
 
 ##### 调整 CF/S
 
@@ -259,15 +258,19 @@ TPPC 代表 CFO 因为pension确实是应该划入operating CF
 
 E.G. Volatility 提升，Option Value 提升, NI 下降
 
+#### Stock Grant
+
+不受 volatility影响，有vesting period
+
 ### FX Transaction
 
 - Reporting Currency - 母公司用的货币 USD
 - Local Currency - 子公司所在国家的货币 JPY
 - Functional Currency - 子公司开展业务的货币 如在日本做CNY交易
 
-如果 母&子 结合紧密，则 FC = RC，用temporal method
+如果 母&子 结合紧密，则 FC = RC，用temporal method，有T.G/L
 
-如果 子 独立，则子用 Current Rate Method
+如果 子 独立，则子用 Current Rate Method，有OCI
 
 IFRS requires that Ambleu disclose “the amount of exchange differences recognized in profit or loss” when determining net income for the period. Because companies may present foreign currency transaction gains and losses in various places on the income statement, it is useful for companies to disclose both the amount of transaction gain or loss that is included in income as well as the presentation alternative used.
 
@@ -301,7 +304,7 @@ $Local Currency \to Functional Currency: Local. GBP \to Funcational. USD$ 用于
 
 ##### 判断 T.G/L  <-  Exposure
 
-$Exposure = M.A - M.L$, Exposure 来自 Net Monetary
+$Exposure = M.A - M.L$, Exposure 来自 Net Monetary. Monetary A & Monetary L 哪个多，哪个易受 current FX rate影响。
 
 因为在temporal method下，non- monetary 不受FX rate change影响，所以只考虑 Monetary的
 
@@ -312,7 +315,7 @@ $Exposure = M.A - M.L$, Exposure 来自 Net Monetary
 
 $FunctionalCurrency \to Reporting Currency: Local.GBP\to Reporting .GBP$
 
-用于更加自主的 subsidies. The current rate method is utilized in instances where the [subsidiary](https://www.investopedia.com/terms/s/subsidiary.asp)isn't well integrated with the parent company, and the local currency where the subsidiary operates is the same as its [functional currency](https://www.investopedia.com/terms/f/functional-currency.asp). The current-rate translation method is ideal if the subsidiary is mainly independent of the parent company’s activities. It also applies where the functional and local currencies are the same.
+用于更加自主的 subsidies. The current rate method is utilised in instances where the [subsidiary](https://www.investopedia.com/terms/s/subsidiary.asp) isn't well integrated with the parent company, and the local currency where the subsidiary operates is the same as its [functional currency](https://www.investopedia.com/terms/f/functional-currency.asp). The current-rate translation method is ideal if the subsidiary is mainly independent of the parent company’s activities. It also applies where the functional and local currencies are the same.
 
 先折算 I/S 再折 B/S
 
@@ -321,13 +324,13 @@ $FunctionalCurrency \to Reporting Currency: Local.GBP\to Reporting .GBP$
    1. Assets: Current Rate
    2. Liability: Current Rate
    3. Equity: 
-      - Capital: Historical 
+      - **Capital: Historical** 
       - R/E: BASE:  $R/E_{t-1}+NI - Div = R/E_t$  
         - R/E t-1 来自上期报表
         - NI 来自 1 用 average rate折算
         - Div 为 div declare date 的当时rate
         - R/E t用前几个 deduce
-   4. OCI 倒挤
+   4. **OCI 倒挤**
 
 #### Temoral Method & Current Rate Method
 
@@ -374,35 +377,43 @@ $ROE = \frac{NI}{EBT}\times \frac{EBT}{EBIT}\times \frac{EBIT}{Rev}\times \frac{
 - Tax Burden = $\frac{NI - Equity Income}{EBT}$
 - Total Asset Turnover $= \frac{Rev}{A-Equity Inv}$
 
-#### Earning Quality <- Accurial 企业可操纵的部分
+#### Earning Quality <- Accrual 企业可操纵的部分
 
-1. Balance Sheet Approach
+- Cash 多，好（财报质量高），cash不好操纵
+- Accrual多，不好，可被操作
+- 所以, Accrual ratio 越大越不好
 
-​	$NOA = Operating.A - Operating.L$
+1. B/S Approach
 
-​	$NOA_{B/S} = \bigg( Total.A - Cash-Securities \bigg) - \bigg( Total.L - Debt \bigg)$
+​	$NOA(Net.OA) = Operating.A - Operating.L$
 
-​	$AggregateAccurial = \Delta NOA = NOA_t - NOA_{t-1}$
+​	$NOA_{B/S} = \bigg( Total.A - Cash-Securities \bigg) - \bigg( Total.L - Debt \bigg)$。 其中cash，security 和debt都是不可操纵的，减去。那么剩下的就是Earning中易被操纵的部分。
 
-​	$Accurial Ratio = \frac{\Delta NOA}{(NOA_0+NOA_1)/2}$
+​	$AggregateAccrual = \Delta NOA = NOA_t - NOA_{t-1}$
+
+​	$Accrual Ratio = \frac{\Delta NOA}{(NOA_0+NOA_1)/2}$, 流量比存量，存量ave
 
 2. CF/S Approach
 
-   $Accurial_{CF} = NI - \bigg( CFO+CFI \bigg)$
+   $Accrual_{CF/S} = NI - \bigg( CFO+CFI \bigg)$
 
-   $Accurial Ratio = \frac{NI-(CFO+CFI)}{(NOA_0+NOA_1 )/2}$
+   $Accrual Ratio = \frac{NI-(CFO+CFI)}{(NOA_0+NOA_1 )/2}$。 依然，流量比存量，存量ave
 
 3. Reduced Form 
 
-​	$Earning_{t+1} = \beta_0 +\beta_1 Cash + \beta_2 Accurial +error$
+​	$Earning_{t+1} = \beta_0 +\beta_1 Cash + \beta_2 Accrual +error$
 
 ​	$\beta_1$ 越大越好，$\beta_2$ 越小越好
+
+4. Accrual 内的分类 Discretionary自主的多，则manipulation多
+
+​	Earnings with a larger component of accruals are typically less persistent and of lower quality. An important distinction is between accruals that arise from normal transactions in the period (called non-discretionary) and accruals that result from transactions or accounting choices outside the normal (called discretionary accruals). The discretionary accruals are possibly made with the intent to distort reported earnings. Outlier discretionary accruals are an indicator of possibly manipulated—and thus low quality earnings. Thus, Martinez is primarily focused on discretionary accruals, particularly outlier discretionary accruals (referred to as abnormal accruals).
 
 #### CF Analysis
 
 - CFO & NI
 
-  - 因为CFO中扣了tax，所有与NI比时加回来
+  - 因为CFO中扣了tax，所以与NI比时加回来
 
     CFO + I + T = CFO before I&T 与NI比
 
@@ -437,13 +448,15 @@ Basel III (2018) consider the liquidity
 
 #### Insurance Company
 
+No Capital Adequacy requirements.  
+
 Aims to Protect Adverse Events
 
 - Rev 来源: 1. Premium 保费 2. Float 浮存金
 
 - P&C 财险 L&H 寿险
 
-| \                   | P&C                          | L&H                       |
+| Types               | P&C                          | L&H                       |
 | ------------------- | ---------------------------- | ------------------------- |
 | Duration            | Short                        | Long                      |
 | Predicability       | Variable, Lumpier            | High                      |
@@ -452,19 +465,19 @@ Aims to Protect Adverse Events
 | Liqidity            | High Liquid                  | Low                       |
 | Capital Requirement |                              |                           |
 
-- Profitability
+- Profitability - ratio 都是越小越好
 
   1. Loss and Loss Adj Ratio $=\frac{LossExp + LossAdj Exp}{Net Premium Earned}$
 
-     越小越好，表示同样premium收入，费用（理赔费用+其他费用）越少
+     越小越好，表示同样premium收入，费用（Loss.Exp理赔费用+Loss.AdjExp其他费用）越少
 
-     Implication: Indicate the Degree of Success in Estimating risk Insured
+     Implication: Indicate the **Degree of Success in Estimating risk Insured**
 
   2. Underwriting Expense Ratio 承保费用 $= \frac{Undertaking Exp}{Net Premium Written} $
 
      越小越好
 
-     Indicate the Efficiency of Money Spent in obtaining new Premium
+     Indicate the Efficiency of Money Spent in obtaining **new Premium**
 
   3. Combined Ratio = 1 + 2
 
@@ -476,7 +489,7 @@ Aims to Protect Adverse Events
 
 1. Beneath Model 用 reg model to estimate prob of Earning Manipulation
 
-   - M-Score > -1.78 操纵
+   - M-Score > **-1.78** 操纵，empirical statistical result 别问为啥
 
 2. Altman Model
 
@@ -484,4 +497,5 @@ Aims to Protect Adverse Events
    - Z-score > 3      no Bankrupt
    - between  (1.81, 3) unknown
 
-   
+
+- ROIC -  Return on invested capital is net operating profit minus adjusted taxes divided by invested capital, where invested capital is defined as operating assets minus operating liabilities. $ROIC = \frac{NetOperatingProfit - Adj.Tax}{OperatingA - OperatingL}$

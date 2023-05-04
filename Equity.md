@@ -4,7 +4,7 @@
 
 - Step 1: select a benchmark
 - Step 2: estimate the benchmark's beta.
-- Step 3: Unleveraged the benchmark's beta.
+- Step 3: Un-leveraged the benchmark's beta.
     - $\beta_U = \frac{E}{E+(1-t)D}\beta_E$
 - Step 4: Leverage up the target by the unleverage beta.
     - $\beta_E' = \frac{E'+(1-t)D'}{E'}\beta_U$

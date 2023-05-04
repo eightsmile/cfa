@@ -20,7 +20,7 @@
 #### Others
 
 - Shopping centres - require more management, such as tenant mix and promotion
-    - A shopping centres is a type of **retail property**. A percentage lease is a unique aspect of many retail leases, which requires the tenant to pay additional rent once its sales reach a certain level. The lease will typically specify a “minimum rent” that must be paid regardless of the tenant’s sales. Percentage rent may be paid by the tenant once the tenant’s sales reach a certain level or breakpoint.
+    - A shopping centres is a type of **retail property**. A percentage lease is a unique aspect of many retail leases, which requires the tenant to pay additional rent once its sales reach a certain level. The lease will typically specify a “**minimum rent**” that must be paid regardless of the tenant’s sales. **Percentage rent** may be paid by the tenant once the tenant’s sales reach a certain level or breakpoint.
 
 #### Absolute Valuation
 
@@ -38,9 +38,11 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
 - AFFO (Adjusted Funds from Operations) =
     - FFO 
     - **Minus** Non-Cash Rent Adjustment 
-    - **Minus**  Recurring Maintenance-type Capital Expenditures and Leasing Commissions.
-    - Adjusted funds from operations (AFFO) is a refinement of funds from operations (FFO), **which takes into consideration the leasing and maintenance-type capital expenditures necessary to maintain the economic income of a property.** 减掉了，所以考虑了
-    -  It is, however, **subject to more variation and error in estimation than FFO.** 
+    - **Minus** Recurring Maintenance-type Capital Expenditures and Leasing Commissions.
+    
+    Adjusted funds from operations (AFFO) is a refinement of funds from operations (FFO), **which takes into consideration the leasing and maintenance-type capital expenditures necessary to maintain the economic income of a property.** 减掉了，所以考虑了
+    
+    - It is, however, **subject to more variation and error in estimation than FFO.** 
     - Used to give a more accurate description about the current economic condition.
 
 #### Types
@@ -52,7 +54,7 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
     - Mortgage types 持有 debts
 
 - REOCs - Real estate operating companies generate cash inflows primarily from the **sale of developed or improved properties,** as opposed to recurring lease or rental income.
-- **Industrial REITs** is sensitive to **retail sales**, **Storage REITs** is sensitive to **Population growth**
+- **Industrial REITs** is sensitive to **retail sales**; **Storage REITs** is sensitive to **Population growth**
 
 ### VC & LBOs
 
@@ -68,7 +70,7 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
 | Buy from Existed Shareholders                                | Buyout funds acquire most portfolio companies via auction, involving multiple potential acquirers. |
 | 获得minority shares                                          | the entire equity capital is acquired by the private equity purchasers |
 
-#### Calculations
+#### Performance Calculations
 
 - TVPI, Total Value to Paid-in Capital， $ TVPI=\frac{Distributed + UnDistributed}{Cumulative InvestedCapital}$
 - DPI, Distributed to Paid-in Capital， $DPI=\frac{Cumulative Distributions}{Cumulated InvestedCapital}$ - 分配出去的 - **Realised Return**. 包括今年分配的，去年分配的，etc所以以前分配的都加一起
@@ -88,9 +90,14 @@ Buyout funds seek out companies with **stable cash flows**.
 **Valuation Creation**: Rather than ownership and control being separate, as in most publicly quoted companies, **private equity concentrates ownership and control.** Key points:
 
 - (1) the ability to **re-engineer** the private firm to generate superior returns, 
+
 - (2) financial leverage and the ability to **access credit markets on favourable terms**, and 
+
 - (3) a better alignment of interests between private equity firm owners and the managers of the firms they control.
-- Private equity funds increase value by taking on high levels of debt on favourable terms. They are able to **offset their borrowing costs by superior reorganisation and re-engineering capabilities**.
+
+- Private equity funds **increase value by taking on high levels of debt on favourable terms**. They are able to **offset their borrowing costs by superior reorganisation and re-engineering capabilities**. 
+
+    可以以低成本leverage，通过re-engineer 带来的return，对冲 leverage的成本
 
 #### Multiples
 
@@ -117,12 +124,17 @@ Buyout funds seek out companies with **stable cash flows**.
 
 #### Theories
 
-- **Insurance theory** predicts that the futures price has to be lower than the current spot price as a form of payment or remuneration to the speculator who takes on the price risk and provides price insurance to the commodity seller.
+- **Insurance theory** predicts that the futures price has to be **lower** than the current spot price as a form of payment or remuneration to the speculator who takes on the price risk and provides price insurance to the commodity seller. 
+
+    future小于current，因为持有commodity提供了insurance
+
 - **Theory of Storage**:
+    
     - When available inventory levels **(supply) of the commodity are high**, the buyers of that commodity keep their levels to the minimum. **Futures prices tend to be in  contango**. **The volatility of spot and futures prices tend to be low, and equal.**
     - When available inventory levels of the commodity are low (Scarcity), buyers of the commodity tend to stock up on the good. **Futures prices tend to be in backwardation.** **The volatility of nearby futures prices are raised** compared with the volatility of long term futures prices.
     - Storage Cost 大 -> future price 大
     - Convenience Yield 大 -> future price 小
+    
 - **Hedging Pressure Hypothesis**: hedging pressure occurs when both producers and consumers seek to protect themselves from commodity market price volatility by entering into price hedges to stabilise their projected profits and cash flows. **If consumers are more interested in hedging than producers are, the futures price will exceed the spot price.**
     - 买多 contango
     - 卖short多 backwardation

@@ -87,7 +87,7 @@ Growth rate in potential GDP = long-term growth rate of labor force + long-term 
 
 $$y=Ak^{\alpha}$$
 
-, where $k=\frac{K}{L}$, the per capital capital increase is called the **capital deepening**.
+, where $k=\frac{K}{L}$, the per capital capital. The increase in $k$ is called the **capital deepening**.
 
 Then, we take log, $log(y)=log(A)+\alpha  log(k)$, and differentiates it,
 
@@ -111,7 +111,7 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
 
     - There is a sustainable growth, $A(k)$. With the growth of per capita capital, technological progress improves as well.
     - Does not necessarily converge to a steady state rate of growth.
-    - Unlike the neoclassical model, **there are no diminishing marginal returns to capital** for the economy as a whole in the endogenous growth model. The endogenous growth model allows for the possibility of constant or even increasing returns to capital in the aggregate economy.
+    - Unlike the neoclassical model, **there are no diminishing marginal returns to capital** for the economy as a whole in the endogenous growth model. The endogenous growth model allows for the possibility of constant or even **increasing returns to capital** in the aggregate economy.
     - So increasing the saving rate **permanently** increases the rate of economic growth.
 
 #### Convergency
@@ -125,23 +125,26 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
 - Conditional convergence hypothesis
 
     - Convergence is **conditional on** the countries having the same **saving rate, population growth rate, and production function**.
-    - If these conditions hold, the neoclassical model implies **convergence** to the same **level** of per capita output as well as the same steady state growth **rate**.
+    - **If these conditions hold, the neoclassical model** implies **convergence** to the same **level** of per capita output as well as the same steady state growth **rate**.
 
 - Club convergence hypothesis
 
 ### Regulation
 
 - **Government-backed** regulatory bodies 由政府给权利
-    
+  
     - governmental departments and agencies: Enforce & Enact 有政府权力，有政府的钱
     - Independent regulator: but **not government agency** - do not rely on government funding. 有政府的enact，但没有政府的funding
     
         Is given its power to enforce regulations by government statute, yet it is not funded by the government, making it an independent regulator.
-- Industry Self-regulatory Body (SRB) 是private没有政府权力，没有政府funding，自己在industry筹钱
+- Industry Self-regulatory Body (SRB) 是private没有政府权力，没有政府funding，自己在industry筹钱 
+    
+    行业协会 - 如CFA Institute
+    
     - Independent of Gov
     - Derive authority from members
     - Not have the force of law (因为不是gov)
-
+    
 - SROs (self-regulating organisation) 本质上是private，但是有政府的权利，没政府funding
     - Not Industry Self-regulatory Body, because they have enforcement power.
     - is given legal authority by the government to enforce the new statute.

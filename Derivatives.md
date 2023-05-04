@@ -17,12 +17,12 @@ $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
 #### Pricing and Valuation
 
-|                                  | Price                                                        | Value                                                        |
+|                                  | Price, t=0                                                   | Value, t=t 折现到t时点的值。t可以=0                          |
 | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | T-bill Forwards                  | $FP=S_0\times (1+r_f)^T$                                     | $V=S_t - \frac{FP}{(1+r_f)^{T-t}}$                           |
 | Forward on Dividend-Paying Stock | $FP=(S_0-PVD_0)\times (1+r_f)^T$                             | $V=S_t - PVD_t-\frac{FP}{(1+r_f)^{T-t}}$                     |
 | Forward on Equity Index          | $FP=S_0\times e^{(r_c - \delta^c)\times T}$  $r^c = ln(1+r_f)$ | $V=S_t\times e^{-\delta^c\times (T-t)} - FP\times e^{-r^c\times (T-t)} $ $V=\frac{S_t}{e^{\delta^c\times (T-t)}} - \frac{FP}{e^{r^c\times (T-t)} } $ |
-| Forward on Coupon Bond           | $FP=(S_0-PVC_0)\times (1+r_f)^T$                             | $V = (S_t - PVC_t)-\frac{FP}{(1+r_f)^{T-t}}$                 |
+| Forward on Coupon Bond           | $FP=(S_0-PV.C_0)\times (1+r_f)^T$                            | $V = (S_t - PV.C_t)-\frac{FP}{(1+r_f)^{T-t}}$                |
 
 ### Forward Rate Agreements - FRAs
 
@@ -55,7 +55,7 @@ $$V_{Full} =\underbrace{ FP^{clean}_{standard}\times CF }_{FP_i}+Accrual\ Intere
 #### Non-Arbitrage for T-Bond
 
 - $V$ here are the future value.
-- Hold the Future: $V = FP_{std} \times CF  + AI$
+- Hold the Future: $V = FP_{std} \times CF  + AI -$
 - Hold the Bond: $V = (S_{clean} + AI_0 )(1+r_f)^T - FVC$
 
 Bond price is usually quoted as **clean** price.
@@ -81,7 +81,7 @@ $$ (PV_{clean}+AI^0)\times (1+r_f)^T - AI^T = FP_{std}\times CF $$
 
   ​	$$V^T_{full} = V^T_{clean} + AI^T = FP_{std}\times CF +AI^T$$
 
-- Compound 现货 (by $S_{clean} + Accrual\ Interest - PVC $)
+- Compound 现货 (by $S_{clean} + Accrual\ Interest - PVC $) 此时持有会有PV of Coupon
 
 ​			$$ (S^0_{clean} + AI^{t=0})(1+r_f)^T - FVC $$
 
@@ -189,7 +189,7 @@ Note that BSM states the continuously compound return is normally distributed, n
 "using out-of-money to hedge" means buying out-of-money put option at low strike price 
 "using out-of-money to long" means buying out-of-money call option at high strike price
 
-Vega is high when option is at the money.
+Vega is high when option is **at the money**.
 
 Theta is normally negative. The speed of the option value decline increases, however, as time to expiration decreases. 
 

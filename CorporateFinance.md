@@ -41,7 +41,7 @@
 
 **Proprietary method** to identify company and industry ESG factor is an approach that relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K 用10-K的数据获取ESG信息，但是主要问题是，10-K的披露说voluntary的，无法评定。
 
-**Principal-principal problem**: The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. 
+**Principal-principal problem**: The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. Shareholder 的大股东和小股东 之间。
 
 ​	The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders. This situation is known as the principal–principal problem.
 
@@ -53,7 +53,7 @@
 
 **Number of Independent Board**: OECD recommend 20-50%.
 
-Equity Analysis - **identify potential opportunities**  and  **identify potential opportunities** 
+Equity Analysis - **identify potential opportunities** and  **identify potential opportunities** 
 
 Fixed-income Analysis - **mitigate downside risk**
 
@@ -63,11 +63,11 @@ Fixed-income Analysis - **mitigate downside risk**
 
 $$r_e = \mathbb{E}(r_f)+Systematic ERP + Company ERP$$
 
-- Survivorship Bias 用index的historical data时
+- Survivorship Bias 用 index 的 historical data 时。因为活着才在index成分股里。
 
 #### Earnings Growth
 
-Earning Growth per Share= Expected Inflation + RealEconomicGrowth + changesinShare Outstanding
+Earning Growth per Share = Expected Inflation + RealEconomicGrowth + changes in Share Outstanding
 
 $$EarningGrowthPerShare = i + g + \Delta S$$
 
