@@ -8,16 +8,14 @@ Investors -> AP -> Portfolio Managers
 
 ETF intraday trading cost > arbitrage cost, then AP can create new ETF shares to earn the profits.
 
-Expected Holding Period Expense = Annual Cost * %ofYear + RoundTripTradingCost + Ask-bid Spread.
-
 #### Expense Ratios
 
-- Rolling Return Assessment - Tracking Difference. Allows for comparison with other annual metrics such as fund's expense ratio. 因为ETF的标的是benchmark，ETF performance是他是否与Benchmark return表现一致。所以**Rolling Return Assessment reflects the impact of portfolio rebalancing expenses and other fees, an investor should:**
+- Rolling Return Assessment - Tracking Difference. Allows for comparison with other annual metrics such as fund's expense ratio. 因为ETF的标的是benchmark，ETF performance是他是否与Benchmark return表现一致。所以 **Rolling Return Assessment reflects the impact of portfolio rebalancing expenses and other fees**.
 - ETF's Expense ratio does not reflect the cost of portfolio rebalancing or other fees.
 
 #### Tracking Error
 
-- Annualised Standard Deviation of daily (ETF returns - Benchmark Returns)
+- Annualised Standard Deviation of daily ( ETF returns - Benchmark Returns )
 
 It does not reveal whether the fund is over/under-performed, or whether that tracking error is concentrated over a few days.
 
@@ -64,7 +62,7 @@ $$r = \beta_0+\beta_1x_1x+\beta_2x_2+...+\beta_kx_k$$
 
 #### Between Fundamental Model & Macro-Factor Model
 
-A second distinction between macroeconomic multifactor models and fundamental factor models is that with the former, we develop the factor (surprise) series first and then estimate the factor sensitivities through regressions. With the latter, we generally specify the factor sensitivities (attributes) first and then estimate the factor through regressions.
+A second distinction between macroeconomic multi-factor models and fundamental factor models is that with the former, we develop the factor (**surprise**) series first and then estimate the factor sensitivities through regressions. With the latter, we generally specify the factor sensitivities (attributes) first and then estimate the factor through regressions.
 
 - Macro Model - 1st calculate surprise 2nd calculate sensitivity.
     - Use **Surprise** as Factors.
@@ -103,7 +101,12 @@ Expected Shortfall: **Conditional VaR** is defined as the weighted average of al
 ### Economics and Investment Market
 
 - In recession, yield curve would be downward sloping.
-- **Output Gap**: An economy operating with a **positive output gap**—that is, where the level of actual GDP exceeds potential GDP—is producing beyond its sustainable capacity. Positive output gaps are usually associated with high and/or rising inflation, while high levels of unemployment usually accompany negative output gaps.
+
+- **Output Gap**: An economy operating with a **positive output gap**—that is, where the level of actual GDP exceeds potential GDP—is producing beyond its sustainable capacity. 
+
+    - **Positive output gaps** are usually associated with high and/or rising inflation  经济好，actual output大，positive gap，高增长伴随高通胀
+
+    - , while high levels of unemployment usually accompany **negative output gaps**. 经济不好，negative gap 高失业
 
 #### PV Model
 
@@ -120,7 +123,7 @@ $$ P = \sum \frac{CF_i}{(1+r)^i}$$
   - Marginal Utility of Consumption at t=0 (current time) is normally larger than at t=1 (in the future), thus $m<1$.
   - Intuitively, $m$ describe people's desire. If people desire more on current, then current is more attractive, then MU0 is greater than MU1.
   - E.G. In “good” economic condition, individuals may have relatively high levels of current income so that current consumption is high. In this case, the **utility** derived from **an additional unit of consumption** today will be relatively low. 
-  - E.G. If $m$ is low. If bond price currently is too high, then less are affordable to people, so people invest less by buying bonds for future. They not invest future, and they consume  more today, so MU0 decrease, and $m$ gradually increase.
+  - E.G. If $m$ is low. If bond price currently is too high, then less are affordable to people, so people invest less by buying bonds for future. They not invest future, and they consume more today, so MU0 decrease, and $m$ gradually increase.
 - Real Risk Free Rate, $1+R = \frac{1}{m} $. There higher the GDP growth, the higher $R$ - **One-period Real Interest Rate**.
     - $Nominal\  GDP\ Growth = Inflation+RealGrowth$
     - $R_f / Rate = Inflation + RealInterestRate$
@@ -162,7 +165,7 @@ Real Risk Free Ratee, $1+R = \frac{1}{m} $. There higher the GDP growth, the hig
 
 Pay more attention to the **intuition of intertemporal substitution**. 
 
-- Assume GDP growth $\uparrow$. If desire more on current, then demand for future is less(invest in bond for future is less). So bond price is low, the return of saving/investing $R$ is high. Mathematically, if MU0 is larger, $m$ then is lower, $1+R = \frac{1}{m} \uparrow$, so the real default-free interest rate increase.
+- Assume GDP growth $\uparrow$. If desire more on current, then demand for future is less (invest in bond for future is less). So bond price is low, the return of saving/investing $R$ is high. Mathematically, if MU0 is larger, $m$ then is lower, $1+R = \frac{1}{m} \uparrow$, so the real default-free interest rate increase.
 
 Similarly, if volatility of GDP growth $\uparrow$, then desire of consume 
 
@@ -264,7 +267,7 @@ While the Sharpe ratio measures reward per unit of risk in ***absolute*** return
 
 Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
 
-- **IC - Skill / Forecast -**
+- **IC - Skill / Forecast**
 - **TC - Portfolio Construction**
 - **Breadth - number of independent decisions per year**
     - **Constraints**: an investment policy might not allow for short positions. Similarly, some securities are correlated with each other (such as all bonds being subject to duration risk), and thus **breadth is considerably less than the number of securities held in the portfolio.** **Breadth** is **overestimated** than truly the manager did.
@@ -291,7 +294,7 @@ $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − MidPrice\bigg) 
 
 #### Market Fragmentation
 
- **Increases** the potential for price and liquidity **disparities across venues** because buyers and sellers often are not in the same venues at the same time.
+**Increases** the potential for price and liquidity **disparities across venues** because buyers and sellers often are not in the same venues at the same time.
 
 #### Players and Notations
 
@@ -309,7 +312,7 @@ $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − MidPrice\bigg) 
     - **Leapfrogging quotes** - （小跳蛙**不是市场操纵**，因为是为了竞价购买或者卖出，在spread区间内，**大spread时适用**，当spread小则leap的可能性变小）When bid–ask spreads are wide, dealers often are willing to trade at better prices than they quote. They quote **wide spreads** because they hope to trade at more favorable prices. **When another trader quotes a better price, dealers often immediately quote an even better price.** If the spread is sufficiently **wide**, a game of leapfrog may ensue as the dealer jumps ahead again.
 - Market Manipulation: Improper operations and Distorting activities, such as
     - (1) Trading for market impact 操纵价格; 
-    - (2) **Rumourmongering**: 散布谣言dissemination of false info; 
+    - (2) **Rumour mongering**: 散布谣言dissemination of false info; 
     - (3) **wash trading: create the impression of market activity at a particular price**; 
     - (4) **Spoofing / Layering**: traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is, or to suggest to other traders that the security is under- or overvalued. 通过limit order造成liquidity的假象。
     - (5) **Bluffing**: influence other traders’ **perceptions** of value, especially **momentum** traders.

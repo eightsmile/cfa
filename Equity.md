@@ -21,7 +21,7 @@ Present Value of Growth Opportunities (PVGO)
 
 $$PV_{growth} = PV_{NoGrowth}+PVGO$$
 
-- $PV_{Growth}= \frac{D_1}{r-g}$, have dividends in part, and the other part of earning are retention to generate, that retention generates the growth opportunity.
+- $PV_{Growth}= \frac{D_1}{r-g}$, has dividends in part, and the other part of earning are retention to generate, that retention generates the growth opportunity.
 - $PV_{NoGrowth}=\frac{E_1}{r}$, there is no dividend retention, all earning are distributed as dividends, and thus no growth at all. 
 
 $$PV_{Growth} - PVGO =\frac{E_1}{r}$$
@@ -51,7 +51,7 @@ Leading PE: $\frac{P}{E_1} = \frac{D_1/(r-g)}{E_1}=\frac{PayoutRatio}{r-g}$
 
 #### H-Model
 
-$$V_0 = \frac{D_0(1+g_2)}{r-g_2}+\frac{D_0H(g_1-g_2)}{r-g_2}$$
+$$V_0 = \frac{D_0H(g_1-g_2)}{r-g_2}+ \frac{D_0(1+g_2)}{r-g_2}$$
 
 - $g_1$ - initial high growth rate.
 - $g_2$ - terminal growth rate.
@@ -63,10 +63,10 @@ Under the H-model, the growth rate drops **linearly** until it hits the terminal
 
 ### Model Selection
 
-- DDM is most **suitable** when an investor takes a **non-control perspective** because he does **not** have the ability to meaningfully influence the timing or magnitude of a company’s **cash flows and is therefore reliant on dividend policy.** 因为非控制的不会影响div policy
-- DCF could be used for controlling interest.
+- **DDM** is most **suitable** when an investor takes a **non-control perspective** because he does **not** have the ability to meaningfully influence the timing or magnitude of a company’s **cash flows and is therefore reliant on dividend policy.** 因为非控制的不会影响div policy
+- **DCF** could be used for controlling interest.
 
-- If a company has intense capital demands — for example a company does based on its investment cash flows exceeding its operating ones — it may have negative free cash flow and be unable to pay dividends. In this situation, a **residual income model** would be the most appropriate model to use.
+- **RI**: If a company has intense capital demands — for example a company does based on its investment cash flows exceeding its operating ones — it may have negative free cash flow and be unable to pay dividends. In this situation, a **residual income model** would be the most appropriate model to use.
 - The residual income model considers the opportunity cost to an investor of investing in a stock, not a dividend discount model.
 
 ### DCF 
@@ -74,7 +74,7 @@ Under the H-model, the growth rate drops **linearly** until it hits the terminal
 #### FCFF & FCFE
 
 - FCFE is easier and more straightforward to use in cases where the company’s capital structure is **not particularly volatile**. 如果公司capital structure变化，则E和D比例不确定，则FCFE不好用
-- FCFF 适用，如果E和D的比例
+- FCFF 适用，如果E和D的比例不确定。(有时CF负，则可以用RI)
 
 #### FCFF
 
@@ -366,13 +366,13 @@ $$Std.UE = \frac{UE}{\sigma_{UE}}$$
 
 #### Excess Earnings Method - EEM
 
-TotalEarning -FixedAssetEarning - WorkingCapitalEarning = IntangibleAsset Earning
+TotalEarning - FixedAssetEarning - WorkingCapitalEarning = IntangibleAsset Earning
 
 $$\frac{IntangibleAssetEarning}{r_{intangible}-g}$$
 
 #### Normalised Earning / Normalised Net Income
 
-为调整了所以 adjustments之后的NI 或者 earnings
+为调整了所以 adjustments之后的 NI 或者 earnings
 
 #### Build-up Method
 
@@ -394,6 +394,6 @@ $Discount of Control=\frac{1}{1+ControlPremium}$
 - Asset Add-on Approach for Start-up Firm.
 - Income Approach for High-growth Firm.
     - Income Approach contains three methods:
-        	1. FCF Method  -  DCF with going-concern assumption
-        	1. Capitalised CF Method  -   using a **single representative estimate of economic benefits** and dividing that estimate by an appropriate **capitalisation rate** to derive an indication of value.
-        	1. Residual Income Method / Excess Earnings Method  -  the excess earnings method consists of estimating the value of all of the company’s **intangible assets** by capitalizing future earnings in excess of the estimated return requirements associated with working capital and fixed assets. **The value of the intangible assets is added to the values of working capital and fixed assets to arrive at the value of the business enterprise.**
+        1. FCF Method  -  DCF with going-concern assumption
+        2. Capitalised CF Method  -   using a **single representative estimate of economic benefits** and dividing that estimate by an appropriate **capitalisation rate** to derive an indication of value.
+        3. Residual Income Method / Excess Earnings Method  -  the excess earnings method consists of estimating the value of all of the company’s **intangible assets** by capitalising future earnings in excess of the estimated return requirements associated with working capital and fixed assets. **The value of the intangible assets is added to the values of working capital and fixed assets to arrive at the value of the business enterprise.**

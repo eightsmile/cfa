@@ -28,10 +28,10 @@ Yield Curve is upward sloping: If the trader believe that the yield curve will n
 
 #### Par Curve
 
-YTM on **coupon-paying** **government bonds**, **priced at par**, over a range of maturities. 与spot不同的是，par curve用 coupon-paying bonds
+YTM on **coupon-paying** **government bonds**, **priced at par**, over a range of maturities。 与 spot 不同的是，par curve 用 coupon-paying bonds
 
 - Usually use **on-the-run** bonds, because newly issued ones have price close to the par.
-- **Zero-coupon rates** are determined by using the par yields, via via **forward substitution** known as **bootstrapping**.
+- **Zero-coupon rates** could be determined by using the par yields, via via **forward substitution** known as **bootstrapping**.
 
 #### YTM
 
@@ -39,7 +39,7 @@ A rate of return for a bond that is **held until its maturity**, assuming that a
 
 The YTM can provide a poor estimate of expected return, if 
 
-- interest rates are volatile; 
+- interest rates are volatile; 
 - the yield curve is steeply sloped, either upward or downward; 
 - there is significant risk of default; 
 - the bond has one or more embedded options (e.g., put, call, or conversion).
@@ -70,13 +70,13 @@ Subsume from MRR.
 
 | Type                     | Description                                                  | Shapes                                                       |
 | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Pure expectations theory | The forward rate is an unbiased predictor of the future spot rate. Fail to consider the riskiness of bond investing. | • Upward• Downward• Flat yield                               |
+| Pure expectations theory | The forward rate is an unbiased predictor of the future spot rate. Fail to consider the riskiness of bond investing. | • Upward <br />• Downward <br />• Flat yield                 |
 | Local expectation Theory | Expected return for bonds over short time periods is risk free | • Same with Pure expectations theory                         |
-| Liquidity theory         | Forward rates = expectation of future rates + liquidity premium | • Upward: either rising expected future rates or remain but liquidity premium added• Downward: fall |
+| Liquidity theory         | Forward rates = expectation of future rates + liquidity premium | • Upward: either rising expected future rates or remain but liquidity premium added <br />• Downward: fall |
 | Segmented market theory  | Yield is solely function of demand and supply                | • Independent maturity segment                               |
-| Preferred habitat theory | Forward rates=expectation of future rates + premium for moving out of the preferred habitats | • Explain almost any yield curve shape                       |
+| Preferred habitat theory | Forward rates = expectation of future rates + premium for moving out of the preferred habitats | • Explain almost any yield curve shape                       |
 
-The typical term structure of credit spreads is upward slowing because investors typically want more compensation for future credit uncertainty. 
+The **typical** term structure of credit spreads is upward sloping because investors typically want more compensation for future credit uncertainty. 
 
 The two examples he gives for when credit term structure can be inverted are valid: high-yield issuers in cyclical industries at the bottom of a cycle where investors are looking past the bottom of the cycle and bonds that have a very high likelihood of default where a primary pricing mechanism is based on the recovery amount in default.
 
@@ -91,15 +91,19 @@ The two examples he gives for when credit term structure can be inverted are val
 
 ##### Investors' View - Interest Rate & Bond Future Contract
 
-- Investors expecting **interest rates to fall** will generally **extend portfolio duration** relative to a benchmark to take advantage of bond price increases from falling rates, *vice visa*. 因为利率下降，如果duration大，则bond price提升多
+- Investors expecting **interest rates to fall** will generally **extend portfolio duration** relative to a benchmark to take advantage of bond price increases from falling rates, *vice versa*. 因为利率下降，如果duration大，则bond price提升多
 - To capitalise on a **steeper** curve, traders will **short long-term bonds** and **purchase short-term bonds**. Steep curve意味着 预期短期rate小长期rate大，则 预期短期price升，长期price降。所以short long-term，long short-term
 - Long-only investor 可以切换 Bullet Investment & Barbell Investment. E.G. Expected Bullish Flatten则预期长期rate下降，长期bond价格上升，则invest Barbell
 
 ### Arbitrage Opportuntiy
 
 - **Value Additivity**: Whole = Sum of Parts
+
 - **Dominance**: a financial asset with a risk-free payoff in the future must have a positive price today.
-- **Rational**: **when the profit happens in year 0 only it's a value additivity arbitrage and when happens at year 1 it's a dominance arbitrage**.
+
+- **Rational**: **when the profit happens in year 0 only, it's a value additivity arbitrage **
+
+    **and when happens at year 1 it's a dominance arbitrage**.
 
 #### Binomial Interest Rate Tree - Arbitrage Free
 
@@ -154,7 +158,7 @@ Option-free bond (包括MBS)不会收到 implied volatility影响，那
 
 当只给 利率二叉树，还要算option embedded bond时，要在利率二叉树的基础上 + OAS
 
-把 embedded option bond 的现金流折成 without option bond 的spread
+把 embedded option bond 的现金流折成 without option bond 的 spread
 
 $$ PV_{BondWithoutOption} = \frac{CF_1}{1+r+OAS} +\frac{CF_2}{(1+r + OAS)^2}+... +\frac{CF_n}{(1+r+OAS)^n}$$
 
@@ -166,7 +170,11 @@ $$PV_{BondWithoutOption} \pm  V_{option} = PV_{BondEmbedded Option}$$
 - 对于 call:  $V_{CallableBond} = V_{Bond} - V_{call}$
 - 对于 put: $V_{PutableBond} = V_{Bond}+V_{put}$
 
-所以，如果Volatility of Interest增大，Value of Option增大。则 $V_{CallableBond}$ 变小，所以OAS变大。$V_{PutableBond}$ 变大，所以OAS变小。
+所以，如果Volatility of Interest增大，Value of Option增大。则 $V_{CallableBond}$ 变小
+
+因为market value of bond remains the same, so we need a small OAS to discount the $V_{callableBond}$ to the current market value of bond, 所以OAS小。$V_{PutableBond}$ 变大，所以OAS变大。
+
+P.S.The price of the bond doesn’t change; it’s the market price of the bond. What changes is ***your assumption about interest rate volatility*** in ***your binomial tree***. The market doesn’t know about your binomial tree, and if it did know about it, it wouldn’t care.
 
 ##### Effect of Volatility on OAS
 
@@ -188,14 +196,14 @@ $$EC = \frac{P_- + P_+ - 2P_0}{(\Delta curve)^2 \times P_0}$$
 - Assuming **parallel shifts** in the benchmark yield curve.
 - Effective durations are normally calculated by averaging the changes resulting from shifting the benchmark yield curve up and down by the same amount. 
 
-- This calculation works well for option-free bonds, but the results can **be misleading in the presence of embedded options**.
+- This calculation works well for option-free bonds, but the results can **be misleading in the presence of embedded options**. 如果embedded option 则不好使
 - The price sensitivity of bonds with embedded options is not symmetrical to positive and negative changes in interest rates of the same magnitude.
 - For the **Floater**, Effective Duration is close to the period. For example, a one-year set floater has ED = 1.
 - E.G. As **rates rise** the call is less likely to be called therefore increasing duration. Think of it like this straight bond - call option, because it is a benefit to the issuer. As interest rates rise, a call option moves out of the money, which **increases the value of the callable bond and lengthens its effective duration**.
 
 #### One-side Duration
 
-One-side duration states the sensitivity of bond with embedded options is not symmetrical to interest rate increase / decrease.
+One-side duration states the sensitivity of bond with **embedded options** is not symmetrical to interest rate increase / decrease.
 
 One-side duration is better at capturing the interest rate sensitivity of a callable or putable bond than the (two-sided) effective durations, particularly when the embedded option is **near the money**.
 
@@ -224,13 +232,21 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 ### Credit Risk
 
 - Expected Exposure: The expected exposure is the projected amount of money that an investor could lose if an event of default occurs, before factoring in possible recovery. The expected exposure for both Bond I and Bond II is 100 + 5 = 105. 如是 principal + coupon，与概率无关
+
 - Probability of Default (POD)
+
 - Loss Given Default (LGD) % = 1 - Recovery Rate
+
 - Expected Loss = Default Prob * Loss Severity given Default
+
 - Credit Valuation Adjustment (CVA)
+
 - Fair Value of Corporate Bond = VND - CVA
     - VND - Value if No Default
-- The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 当不太可能转换时，Convertible bond相当于bond，那么受interest rate影响。当很可能转时（换句话说，market price of share 比 convertible price大）则相当于share，受价格影响多。
+    
+- The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 
+
+    当不太可能转换时，Convertible bond相当于bond，那么受interest rate影响。当很可能转时（换句话说，market price of share 比 convertible price大）则相当于share，受价格影响多。
 
 ##### Credit Spread Migration Matrix
 
@@ -245,7 +261,7 @@ $$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
 ##### Default Risk Model
 
 - Structural Model - explain why default
-    - Assume the Balance Sheet structure with options.
+    - Assume the **Balance Sheet structure with options**.
     - If the asset value falls below the barrier, the company defaults on the debt.
     - Probability of Default is endogenous
     - Provide an Option analogy: consider a company with asset financed by equity and zerocoupon debt. 
@@ -314,6 +330,6 @@ Rationale:
 Upfront Premium 提起一次付的钱
 
 - Upfront premium on a CDS $ \approx (Credit Spread - Fixed Coupon) \times Duration$
-- CDS price can be quoted as ≈ 100-upfront premium (%)
+- CDS price can be quoted as ≈ 100 - upfront premium (%)
     - If the price of CDS > 100, the protection seller needs to pay upfront premium 
     - If the price of CDS < 100, the protection buyer needs to pay upfront premium

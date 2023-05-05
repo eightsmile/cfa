@@ -43,11 +43,11 @@ Categorical Variable - 0 & 1, etc without ranking
 
 #### Scaling
 
-- Normalisation 归一化, rescale to [0,1]. Normalisation is applied when the distribution of data is not known.
+- **Normalisation** 归一化, rescale to [0,1]. Normalisation is applied when the distribution of data is not known.
 
 $$x_{normalised} = \frac{x_i - x_{min}}{x_{max} - x_min}$$
 
-- Standardisation 正态 <- 需要正态才用
+- **Standardisation** 正态 <- 需要正态才用
 
 $$x_{std} = \frac{x-\mu}{\sigma}$$
 
@@ -55,7 +55,7 @@ $$x_{std} = \frac{x-\mu}{\sigma}$$
 
 ##### TF: Very low and very high term frequency (TF) values should be removed. 
 
-Frequency measures can be used for vocabulary pruning to remove noise features by filtering the tokens with very high and low TF values across all the texts. Noise features are both the most frequent and most sparse (or rare) tokens in the dataset. On one end, noise features can be stop words that are typically present frequently in all the texts across the dataset. On the other end, noise features can be sparse terms that are present in only a few text files. Text classification involves dividing text documents into assigned classes. The frequent tokens strain the ML model to choose a decision boundary among the texts as the terms are present across all the texts (an example of underfitting). The rare tokens mislead the ML model into classifying texts containing the rare terms into a specific class (an example of overfitting). Thus, identifying and removing noise features are critical steps for text classification applications.
+Frequency measures can be used for vocabulary pruning to **remove** noise features by filtering the tokens with **very high and low** TF values across all the texts. Noise features are both the most frequent and most sparse (or rare) tokens in the dataset. On one end, noise features can be stop words that are typically present frequently in all the texts across the dataset. On the other end, noise features can be sparse terms that are present in only a few text files. Text classification involves dividing text documents into assigned classes. The frequent tokens strain the ML model to choose a decision boundary among the texts as the terms are present across all the texts (an example of underfitting). The rare tokens mislead the ML model into classifying texts containing the rare terms into a specific class (an example of overfitting). Thus, identifying and removing noise features are critical steps for text classification applications.
 
 - **没用的词** 像介词什么的 **删去**；
 - **TF特别小的词**，**删去**
@@ -65,10 +65,10 @@ Frequency measures can be used for vocabulary pruning to remove noise features b
 
 Text preparation and wrangling step.
 
-- (Step 1) Text Problem Formulation
-- (Step 2) Data Curation （curation的意思是 检索）
+- **(Step 1)** Text Problem Formulation
+- **(Step 2)** Data Curation （curation的意思是 检索）
     - The process of gathering relevant external text data via web services or web-spidering (scraping or crawling) programs that extract raw content from a source is known as data (text) curation
-- (Step 3) Cleanse and Preparation
+- **(Step 3)** Cleanse and Preparation
     - Regular Expression, Regex, delete HTML tags, Punctuation, Space, Numbers
     - Tokenisation: Split text into individual tokens.
     - Stemming 词干拆解
