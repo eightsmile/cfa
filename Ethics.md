@@ -135,4 +135,80 @@ Working in certain industry 的不一定是 profession
 
 - 完善制度
 
-    
+### V. Investment Analysis, Recommendation, and Action
+
+#### V(A). Dilligence and Reasonable Basis
+
+- 雇人要dd，用别人的report要dd
+- Third-Party / Second-Party Report 要 (1) verify soundness (2) dd
+- 如实report，发生loss 不violate，coz cannot guarantee future risks
+- 引用外部资料 要dd。引用他人观点要dd，专家的scenario analysis要dd
+- Quantitive Techniques要dd
+- Group Reach 只要同意过程 就可以署名， even if has different idea.
+  - 不能 disagree in public
+
+### V(B). Communicate with Clients and Prospect Clients
+
+- Must 告知 investment process
+- Identify risks, limitations, fators of impacts.
+- Distinguish facts and opinions
+  - Report Presentation (1) factors (2) citation of quant model
+
+#### V(C). Record Retention
+
+- retent electric & written forms are both fine
+- records assets, 离职带走要employer同意
+- 年数 = 7，优先按法律要求
+- Records belong to the firm, not individual. Also, the firm is responsible for maintain the record not individual
+
+### VI. Conflicts of Interests
+
+#### VI(A) Disclosure
+
+- Disclosure to Employer
+  1. Personal Situation
+  2. Conflict to Clients
+- Disclose to Clients
+  1. 个人持仓
+  2. Relationship to Firms
+  3. Fees: referral fee / incentive fee
+- Disclose Options, Disclose Comparative Schemes
+
+#### VI(B). Priority of Transaction
+
+- Family Accounts are equal
+- give time for trading
+
+#### VI(C). Referral Fee 
+
+- Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), disclose 
+- disclose before engagement
+
+### VII. About the Exam <- Don't Be Silly
+
+### GIPS
+
+1. Voluntary
+2. Firm Wide
+3. If conflicts with the law, then disclose the conflicts and follow the law.
+
+#### Composite
+
+1. Actual, (no simulated)
+2. Fee-paying
+3. Discretionary (Fund Manager 可以自主决定、控制的)
+4. Some Mandates/Objs/Strategies
+
+#### Verification
+
+1. Firm could choose **(voluntarily) to hire a third-party** to check the if the firm follows the law.
+2. Perform on the **entire** firm.
+3. Verify if complie with **all** GIPS standard.
+
+#### Time
+
+Initially, 5 Yr (no matter how long histroy the firm has)
+
+之后每年 +1 +1
+
+until 10 Yr (keep 10-Yr performance disclosure)
