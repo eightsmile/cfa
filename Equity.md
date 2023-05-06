@@ -161,6 +161,11 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
   
     $\bar{ROE} \times BV.Equity_{without Preferred Share}$
     
+    1. 用来剔除 non-recurring items的影响
+    2. 用来剔除 business cycle的影响
+    
+     To deal with **non-recurring items** and **business cycle** influences, "Analysts address this problem by normalising EPS—that is, estimating the level of EPS that the business could be expected to achieve under mid-cyclical conditions (normalised EPS or normal EPS). Please note that we are using the term “normalized earnings” to refer to earnings adjusted for the effects of a business cycle. Some sources use the term “normalised earnings” also to refer to earnings adjusted for nonrecurring items." 
+    
 - EV = Mkt.Debt+Mkt.Equity+Mkt.PreferredShare **- Cash - Short-termInvestment** 把流动性最高的俩资产减去。因为EV相当于，当被收购时可以直接抵钱的 所以cash等被剪掉
 
 - Non-recurring 要在NI中抵扣。因为并不算recurring 的，要抵减掉
@@ -178,6 +183,10 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
 MVA could also be a per-share terms, so $MVA = \frac{MV-BV}{\text{\# of shares}}$
 
 #### Residual Income (RI)
+
+Not affected by Operating Lease, 
+
+Non-recurring gains and losses are reflected in the value of assets in place 意思是 non- recurring item已经在BV中反映了，调整他对RI的value影响不大。
 
 Residual Income is **net income less a charge** (deduction) for common shareholders’ opportunity cost in generating net income. It is the residual or remaining income **after considering the costs of all of a company’s capital**. (Debt + Equity)
 

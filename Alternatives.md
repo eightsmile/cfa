@@ -129,7 +129,7 @@ Buyout funds seek out companies with **stable cash flows**.
     future小于current，因为持有commodity提供了insurance
 
 - **Theory of Storage**:
-    
+  
     - When available inventory levels **(supply) of the commodity are high**, the buyers of that commodity keep their levels to the minimum. **Futures prices tend to be in  contango**. **The volatility of spot and futures prices tend to be low, and equal.**
     - When available inventory levels of the commodity are low (Scarcity), buyers of the commodity tend to stock up on the good. **Futures prices tend to be in backwardation.** **The volatility of nearby futures prices are raised** compared with the volatility of long term futures prices.
     - Storage Cost 大 -> future price 大
@@ -140,6 +140,12 @@ Buyout funds seek out companies with **stable cash flows**.
     - 卖short多 backwardation
 
 #### Calculation
+
+For a long position, the total return consists of the price return ((current price – previous price)/previous price) plus the roll return ((near-term contract price – farther-term contract price)/near-term price) plus the collateral return. For a short position, it is the negative of the first two terms.
+
+$$Total R = Price R + Roll R + CollateralR$$
+
+$$TotalR = \frac{P_1-P_0}{P_0} + \frac{F_0-F_1}{F_0} + collateralR \times \%$$
 
 - Total Return = Price Return + Roll Return + Collateral Return
     -  Roll return 期货合同到期后续作新的时，挣的钱 $=\frac{F_0 - F_1}{F_0}$. $F_0$ 为到期的，$F_1$ 为续作的。

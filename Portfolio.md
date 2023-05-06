@@ -228,8 +228,8 @@ $$\Delta w_i = w_{p,i} - w_{B,i}$$
 
 Decompose the **Value Added \ Active Return**, there would be:
 
-- (1) Security Selection $w_A(R_{sub-portfolio} - R_B)$, 用**Active weights**, and
-- (2) Asset Allocation $(w_A - w_B)R_B$.
+- (1) **Value Added from Security Selection** $w_A(R_{sub-portfolio} - R_B)$, 用**Active weights**, and 
+- (2) **Value Added from Asset Allocation** $(w_A - w_B)R_B$.
 
 #### Sharpe Ratio is Unaffected by Leverage
 
@@ -260,7 +260,7 @@ While the Sharpe ratio measures reward per unit of risk in ***absolute*** return
 ### Fundamental Law of Active Management
 
 - **IC**: Information Coefficient: about **Forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
-- **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少active **weight**能转换成**anticipated return**。
+- **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少**anticipated return**能转换成active **weight**。
 - **BR**: Breath <- 独立的 个数，独立的次数（如monthly）。要求一定要是独立的，否则**overestimate** the BR. （assets之间互相corr 会降低有效的 "独立个数" 导致overestimate）。
 - $IR = TC\times IC\times \sqrt{BR}$
 - $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
@@ -268,7 +268,9 @@ While the Sharpe ratio measures reward per unit of risk in ***absolute*** return
 Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
 
 - **IC - Skill / Forecast**
-- **TC - Portfolio Construction**
+- **TC - Portfolio Construction** - 代表 investment constraint
+    - A low TC results from the formal or informal constraints imposed on the structure of the portfolio. In fact, at TC = 0.00, there would be no correspondence between the **active return forecasts** and **active weights taken** and thus no expectation of value added from active management. In contrast, TC = 1.00 (no binding constraints) represents a **perfect correspondence between active weights taken and forecasted active returns**. 预测了就能实现，代表 less constraint
+
 - **Breadth - number of independent decisions per year**
     - **Constraints**: an investment policy might not allow for short positions. Similarly, some securities are correlated with each other (such as all bonds being subject to duration risk), and thus **breadth is considerably less than the number of securities held in the portfolio.** **Breadth** is **overestimated** than truly the manager did.
     - 原则：有constraint的，能灵活支配的stocks少，所以breadth小，跟unconstraint的比。
@@ -292,7 +294,33 @@ $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − \frac{Ask price
 
 $$\text{Effective Bid-ask Spread}=2 \times \bigg(Trade price − MidPrice\bigg) $$
 
-#### Market Fragmentation
+- Average Effective Spread 直接 加起来/n 不用加权重平均
+- Volume-weighted average effective spread 按交易量加权平均
+
+#### True Transaction Cost
+
+##### Disadvantage of Effective Spread: 
+
+Effective spread transaction cost estimates are not well suited to measure the true transaction cost when an order is filled over several trades and there are market impact and delay costs. 
+
+当多笔交易时，effective spread不精准
+
+1. The effective spread is a poor estimate of transaction costs when traders split large orders into many parts to fill over time. Such orders often move the market and cause bid and ask prices to rise or fall. The impact of the order on market prices, called **market impact**, makes trading expensive—especially for the last parts to fill—but the effective spread will not fully identify this cost if it is computed separately for each trade. 因为买的太多带来对market price的影响（也叫market impact）并不能被 effective spread 解释。
+2. Effective spreads also do not measure **delay costs**(also called **slippage**) that arise from the inability to complete the desired trade immediately because of its size in relation to the available market liquidity. 另一个cons是effective spread不能解释delay，来自交易量过大，使市场不能消化造成的
+
+##### Disadvantage of volume-weighted average price (VWAP) 
+
+与effective spread一样，不能解释
+
+VWAP transaction cost estimates are not well suited to measure the true transaction cost when an order is filled over several trades and there are market impact and delay costs. The VWAP method of estimating transaction costs compares average fill prices to average market prices during a period surrounding the trade. It tends to produce **lower transaction cost estimates than does implementation shortfall** because it often does not measure the **market impact** of an order well. 
+
+##### Advantage of Implementation Shortfall
+
+Implementation Shortfall 好，因为算了隐性和显形的成本。考虑了 (1)  market impact cost (2) delay cost (3) opportunity cost
+
+The implementation shortfall method of measuring trading costs addresses the problems associated with the effective spread method. Implementation shortfall is also attractive because it views trading from an investment management perspective and measures the total cost of implementing an investment decision by **capturing all explicit and implicit costs**. The implementation shortfall method **includes the market impact costs and delay costs as well as opportunity costs**, which are often significant for large orders.
+
+### Market Fragmentation
 
 **Increases** the potential for price and liquidity **disparities across venues** because buyers and sellers often are not in the same venues at the same time.
 

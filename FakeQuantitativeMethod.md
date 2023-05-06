@@ -10,7 +10,15 @@ $$BP-TestStatistic =  n\times R^2_{residual}$$
 
 #### F-statistics
 
-$$F = \frac{(SSE_{restricted}-SSE_{un-restricted})/q}{SSE_{unrestricted}/(n-k-1)}$$
+$$F = \frac{(SSE_{restricted}-SSE_{un-restricted})/(DF_R - DF_U)}{SSE_{unrestricted}/DF_U}$$
+
+$DF_R = n-1$, where $1$ is the constant term, $DF_U = n-k-1$. $SSE_r$ is when restricting all coefficients of regressors to be zero, that would be our Total Sum Squared, and $SSE_u$ is without restriction, and that would be our Residual Sum Squared. 
+
+$$F = \frac{(SST-SSR)/k}{SSR/(n-k-1)}$$
+
+$$F = MSEstimate/MSResidual= \frac{SSE/DF_E}{SSR/DF_R} $$
+
+$$F = \frac{R^2 / k}{(1-R^2 ) / (n-k-1)}$$
 
 #### Leverage Measure
 

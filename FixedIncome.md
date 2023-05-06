@@ -260,7 +260,7 @@ $$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
 
 ##### Default Risk Model
 
-- Structural Model - explain why default
+- Structural Model - explain why default 
     - Assume the **Balance Sheet structure with options**.
     - If the asset value falls below the barrier, the company defaults on the debt.
     - Probability of Default is endogenous
@@ -286,6 +286,8 @@ $$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
     - E.G. Auto MBS
 - Loan by Loan: (1) non-granular / small number, (2) Hetero
     - E.G. CMBS, CLO
+
+"Investors, however, seek to benefit from greater diversification, more stable and predictable underlying cash flows, and a return that is greater than that of securities with similar ratings, which provide a reward for accepting the greater complexity associated with collateralised debt."  - For Auto MBS
 
 ### CDS
 

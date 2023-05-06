@@ -2,6 +2,10 @@
 
 ### Forward Contract
 
+If you are long a futures or forward contract and the price of the underlying has risen, the value of a futures contract is most likely lower than that of the equivalent forward contract.
+
+Because futures contracts are marked to market daily, profits are paid out and the value is reset to zero. As a result if you are long a contract and the price has risen, the forward contract will likely have a higher value than the futures contract.
+
 $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
 #### Cash-and-Carry Arbitrage
@@ -192,6 +196,27 @@ Note that BSM states the continuously compound return is normally distributed, n
 Vega is high when option is **at the money**.
 
 Theta is normally negative. The speed of the option value decline increases, however, as time to expiration decreases. 
+
+##### BSM Assumption
+
+1. The volatility of the return on the underlying is known and constant. 恒定的constant vol 
+
+    volatility can be predicted with certainty.
+
+2. The model includes the assumption that arbitrage opportunities do not exist: "No arbitrage opportunities are available in the marketplace." 市场无 arbitrage op
+
+3. The model is based on the assumption that prices do not move in discrete amounts as described in this statement. The reading states: "**Geometric Brownian motion** implies **continuous** prices, meaning that the price of the **underlying instrument does not jump from one value to another; rather, it moves smoothly from value to value.**" 连续的，price do not jump
+
+    - The underlying follows a statistical process called geometric Brownian motion, which implies that the **continuously compounded return is normally distributed**.
+    - Geometric Brownian motion implies continuous prices, meaning that the price of underlying instrument does not jump from one value to another; rather, it moves smoothly from value to value.
+
+4. The options are European-style, meaning that early exercise is not allowed.
+
+5. The continuously compounded risk-free interest rate is known and constant; borrowing and lending is allowed at the risk-free rate.
+
+6. If the underlying instrument pays a yield, it is expressed as a continuous known and constant yield at an annualised rate.
+
+7. Liquidity of trading. Short selling is permutable. No friction and trading cost. Leverage at continuously compound risk free rate is ok.
 
 #### Black Model - Options on Futures
 

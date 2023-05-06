@@ -2,12 +2,26 @@
 
 ### FX
 
+#### PPP
+
+- Absolute PPP - FX is determined purely by price level.
+
+- Relative PPP - percentage change in the spot exchange rate (%ΔS*f/d*) will be completely determined by the difference between foreign and domestic inflation rates (Π*f* -Π*d*) 
+
+    FX is determined by Inflation rate.
+
+    Ex ante PPP - FX is determined by Expected Inflation not actual inflation.
+
 #### Spread of Ask-bid
 
 - Large trade would increase the spread.
     -  **Transaction size** can affect the bid–offer spread. **Wider spreads on larger trades reflect the greater difficulty the dealer faces in “laying off” the FX risk in the interbank market.**
 - Credit Rating.
     - A client’s credit risk can be a factor because a client with a **poor credit profile may be quoted a wider bid–offer spread** than one with good credit, reflecting the greater settlement risk.
+    - If has other choice, credit rating is not the most important factor in deterring the spread
+- Currency Pair
+    - Popularity of currencies in the pair would matter.
+
 
 #### Current Account Imbalances and the Determination of Exchange Rates
 
@@ -138,7 +152,7 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
     
         Is given its power to enforce regulations by government statute, yet it is not funded by the government, making it an independent regulator.
 - Industry Self-regulatory Body (SRB) 是private没有政府权力，没有政府funding，自己在industry筹钱 
-    
+  
     行业协会 - 如CFA Institute
     
     - Independent of Gov

@@ -409,6 +409,8 @@ $ROE = \frac{NI}{EBT}\times \frac{EBT}{EBIT}\times \frac{EBIT}{Rev}\times \frac{
 
 ​	Earnings with a larger component of accruals are typically less persistent and of lower quality. An important distinction is between accruals that arise from normal transactions in the period (called non-discretionary) and accruals that result from transactions or accounting choices outside the normal (called discretionary accruals). The discretionary accruals are possibly made with the intent to distort reported earnings. Outlier discretionary accruals are an indicator of possibly manipulated—and thus low quality earnings. Thus, Martinez is primarily focused on discretionary accruals, particularly outlier discretionary accruals (referred to as abnormal accruals).
 
+we need to pay attention to the increase on absolute terms, not if it is +ve or -ve. 只要绝对值变大了，哪怕是越来越负了，也意味着accrual变多了
+
 #### CF Analysis
 
 - CFO & NI
@@ -499,3 +501,4 @@ Aims to Protect Adverse Events
 
 
 - ROIC -  Return on invested capital is net operating profit minus adjusted taxes divided by invested capital, where invested capital is defined as operating assets minus operating liabilities. $ROIC = \frac{NetOperatingProfit - Adj.Tax}{OperatingA - OperatingL}$
+- ROI = EBIT / Capital Expenditure
