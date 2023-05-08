@@ -387,6 +387,12 @@ $$\frac{IntangibleAssetEarning}{r_{intangible}-g}$$
 
 逐层累加rate，算出 discount rate
 
+build-up method 全都加 ，包括 industrial premium
+
+#### Expanded CAPM
+
+$R = r_f + \beta \times EquityRP  +  SmallStockPremium + Company-SpecificRP$
+
 #### Less Agency Cost for Private Firm
 
 #### Cost of Equity - Add-on Model
@@ -406,3 +412,9 @@ $Discount of Control=\frac{1}{1+ControlPremium}$
         1. FCF Method  -  DCF with going-concern assumption
         2. Capitalised CF Method  -   using a **single representative estimate of economic benefits** and dividing that estimate by an appropriate **capitalisation rate** to derive an indication of value.
         3. Residual Income Method / Excess Earnings Method  -  the excess earnings method consists of estimating the value of all of the company’s **intangible assets** by capitalising future earnings in excess of the estimated return requirements associated with working capital and fixed assets. **The value of the intangible assets is added to the values of working capital and fixed assets to arrive at the value of the business enterprise.**
+
+### Others
+
+- Survivor Bias inflation ERP
+
+  **Historical** Equity Risk Premium (ERP) = Excess return over risk free rate. Higher equity returns result in higher ERP (assume that Rf is flat). Inflated historic performance as result of survivorship bias or a string of positive surprises results in inflated historical ERP. That is why **historical** ERP should be adjusted downward.

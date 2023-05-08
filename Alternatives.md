@@ -8,6 +8,7 @@
 - Sales Comparison
 - Income Approach
     - Direct Capitalisation 用第一个月的  $\frac{NOI}{r-g} $
+      - $g$ = Required Return - Cap rate
     - DCF
 
 #### Loan Amount
@@ -34,6 +35,8 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
 
 #### Relative Value Approach
 
+The FFO-per-share ratio should be used in lieu of earnings per share (EPS) when evaluating REITs and other similar investment trusts.
+
 - FFO ( funds from operations ) $=NetIncome + Loss+DepAmt$
 - AFFO (Adjusted Funds from Operations) =
     - FFO 
@@ -44,6 +47,27 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
     
     - It is, however, **subject to more variation and error in estimation than FFO.** 
     - Used to give a more accurate description about the current economic condition.
+
+##### Drivers
+
+There are three main drivers that differentiate P/FFO, P/AFFO, and EV/EBITDA multiples among most REITs and REOCs:
+
+1. *Expectation for growth in FFO and AFFO*: The higher the expected growth, the higher the multiple or relative valuation. Growth can be driven by the following:
+
+   1. business model (e.g., REITs and REOCs successful in real estate development often generate above-average FFO and AFFO growth over time);
+   2. geography (e.g., having a concentration of properties in primary, supply-constrained markets, such as New York City or London, can give landlords more pricing power and higher cash flow growth than can be obtained in secondary markets); and
+   3. other factors (e.g., management skill or lease structure).
+
+   合理，g提升，提高p的估值，ffo是当期或下期影响不大。所以p/e 提升
+
+2. *Risk associated with the underlying real estate*: Cash flow volatility related to asset type, quality, and age; market conditions; lease types; and submarket location also affect valuation.
+
+   1. Example 1: Owning apartments is viewed as having less cash flow variability than owning hotels. As such, apartment-focused REITs tend to trade at relatively high multiples compared with hotel REITs.
+   2. Example 2: Shares of companies with young, well-maintained portfolios generally trade at higher multiples than stocks of companies with older or out-of-date properties with deferred maintenance that will require higher capital expenditures to sustain rent growth.
+
+   依旧 risk提升， p减少，ffo当期或下期影响不大。所以pe变小
+
+3. *Risks associated with the company’s capital structures and access to capital*: As financial leverage increases, equities’ FFO and AFFO multiples decrease because required return increases as risk increases. Higher leverage constrains a company’s incremental borrowing capacity and may create a stock overhang if investors avoid buying shares in anticipation of future equity offerings.
 
 #### Types
 

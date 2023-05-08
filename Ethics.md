@@ -100,6 +100,9 @@ Working in certain industry 的不一定是 profession
 - Keep (1) current (2) prior (3) prospect clients, except (1) 违法 (2) 法律要求 (3) 客户同意
 - Disclose - illegal
 - 若 accidentally disclose confidential info，可以补救
+- cite the name of people who is under investigation   also violate code and standard
+  - Kovi violated Standard III(E), Preservation of Confidentiality, by citing the name of the individual currently under the regulator’s investigation. 
+
 
 ### IV. Loyalty to Employer
 
@@ -134,6 +137,8 @@ Working in certain industry 的不一定是 profession
     - 如果employee违法，employer不dd，则employer也违法
 
 - 完善制度
+
+- 制度要能做到  prevent and detect 
 
 ### V. Investment Analysis, Recommendation, and Action
 
@@ -183,6 +188,7 @@ Working in certain industry 的不一定是 profession
 
 - Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), disclose 
 - disclose before engagement
+- At least **Quartly** disclose
 
 ### VII. About the Exam <- Don't Be Silly
 
