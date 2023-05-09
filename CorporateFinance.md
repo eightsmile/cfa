@@ -39,23 +39,22 @@
 
 ### ESG
 
-**Proprietary method** to identify company and industry ESG factor is an approach that relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K 用10-K的数据获取ESG信息，但是主要问题是，10-K的披露说voluntary的，无法评定。
+- **Proprietary method** to identify company and industry ESG factor is an approach that relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K 用10-K的数据获取ESG信息，但是主要问题是，10-K的披露说voluntary的，无法评定。
+- **Principal-principal problem**: The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. Shareholder 的大股东和小股东 之间。
+  - The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders. This situation is known as the principal–principal problem.
+  - Dual Class Share - AB股会导致 principal-principal problem.
 
-**Principal-principal problem**: The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. Shareholder 的大股东和小股东 之间。
-
-​	The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders. This situation is known as the principal–principal problem.
-
-​	Dual Class Share - AB股会导致 principal-principal problem.
-
-**CEO duality**: CEO and chairperson are not separate. The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders.
-
-**Family control** lowers the risks associated with principal-agent problems, but poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent.
-
-**Number of Independent Board**: OECD recommend 20-50%.
+- **CEO duality**: ceo和董事一起做 - 不好。CEO and chairperson are not separate. The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders. 
+- **Family control** lowers the risks associated with principal-agent problems, but poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent.
+- **Number of Independent Board**: OECD recommend 20-50%.
+- **Average board tenure** 在3.9-9.9 中间好。太长太短都不好
+- **Two-Tier Board** 有两批board 好，有助于 decision-making, build a more balanced, positive outlook on production, prevents a single board from getting overwhelmed with handling the management, system and function of a business.。一批人负责直接管理，一批负责远期决策
 
 Equity Analysis - **identify potential opportunities** and  **identify potential opportunities** 
 
 Fixed-income Analysis - **mitigate downside risk**
+
+**Greenwash** - is the risk that the bond’s proceeds are not actually used for a beneficial environmental or climate-related project. 用green bond 融钱，去做不green的事，不好
 
 ### Cost of Capital
 

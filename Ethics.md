@@ -59,8 +59,10 @@ Working in certain industry 的不一定是 profession
 
 促使公司 disclose Non-Public Info，公布后则可用
 
-- 对于 public firm，要尽可能公开
-- 对于 private firm，可以向member公开
+- The standard recommendation is for the analyst to work with the company to publicly release the material inside information. 要促使信息公开
+- The specificity of the information is a key factor in determining whether a particular piece of information fits the definition of material. 信息是否可信，信息是否明确
+  - 如没有 specify name，那么不算material
+
 
 #### II(B). Market Manipulation
 

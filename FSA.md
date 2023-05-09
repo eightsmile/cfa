@@ -172,6 +172,9 @@ Funded Status = Net Pension Liability (-) / Net Pension Asset (+)
 
 PBO = PVDBO
 
+- On the B/S, F.S. is reported as the lower of the Net Pension Asset/Lia & the **Ceiling**.
+  - Ceiling: the present value of future economic benefits, such as refunds from the plan or reductions of future contributions
+
 #### I/S 核算
 
 ##### IFRS
@@ -244,17 +247,30 @@ TPPC 代表 CFO 因为pension确实是应该划入operating CF
 
   相当于 融资的钱contribute 不够还给pension应该花的钱，所以往CFO借钱。
 
-  - Contribution <-> CFF少了，调增CFF
+  - Contribution <-> CFF少了，调增CFF (CFF inflow 增加 outflow减少)
 
 - 总的来说，TPPC代表CFO outflow （因为这个指标设计的意义就是把 pension 相关的进I/S & OCI 的expense 调回到 NI 中）。我们要做的是把 contribution 向 TPPC 调齐。tppc小，则把 contribution 调小，即把 CFF 调小。
 
 - 调整的amount: $(Contribution -TPPC)\times (1-t)$ 差额要扣税调整
+
+Another set of explanations
+
+- If a sponsoring company’s periodic **contributions** to a plan **exceed** the total pension costs of the period, the **excess** can be viewed from an economic perspective as a **reduction of the pension obligation**. The contribution covers not only the pension obligation arising in the current period but also the pension obligations of another period. **Such a contribution would be similar in concept to making a principal payment on a loan in excess of the scheduled principal payment.**  
+  - **所以 CFF 减少， 所以 CFF outflow 增加，或CFF inflow减少。 CFF减少，流入CFO**
+
+- Conversely, a periodic contribution that is less than the total pension cost of the period can be viewed as a source of financing.  
+  - **所以CFF 增加**
+
 
 ### Share-Based Compensation
 
 #### Call-Option
 
 将 option fair value 在 GrantDate-VestingDate之间摊销，按month
+
+compensation expense for restricted stock grants is measured as the fair value (usually market value) of the shares issued at the grant date. This compensation is allocated over the employee service period
+
+按 grant date 的 fair value 算价格， 然后摊销
 
 #### Greeks
 
