@@ -62,13 +62,13 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
 
 | **Venture Capital**                                          | **Buyout**                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Primarily equity funded. Use of leverage is rare and very limited. | Extensive use of leverage consisting of a large proportion of senior debt and a significant layer of junior and/or mezzanine debt. |
-| Returns of investment portfolios are generally characterized by very high returns from a limited number of highly successful investments and a significant number of write-offs from low performing investments or failures. | Returns of investment portfolios are generally characterized by lower variance across returns from underlying investments. Bankruptcies are rare events. |
-| Venture capital firm monitors achievement of milestones defined in business plan and growth management. | Buyout firm monitors cash flow management and strategic and business planning. Buyout funds seek out companies with stable cash flows. |
-| Expanding capital requirement if in the growth phase.        | Low working capital requirement.                             |
+| Primarily equity funded. Use of **leverage is rare and very limited.** | Extensive use of leverage consisting of a large proportion of senior debt and a significant layer of junior and/or mezzanine debt. |
+| Returns of investment portfolios are generally characterized by very high returns from a limited number of highly successful investments and a significant number of write-offs from low performing investments or failures. | Returns of investment portfolios are generally characterised by lower variance across returns from underlying investments. **Bankruptcies are rare events.** |
+| Venture capital firm monitors achievement of milestones defined in business plan and growth management. | Buyout firm monitors cash flow management and strategic and business planning. Buyout funds seek out companies with **stable cash flows.** |
+| **Expanding capital requirement** if in the growth phase.    | **Low working capital requirement.**                         |
 | Assessment of risk is difficult because of new technologies, new markets, and lack of operating history. | Risk is measurable (e.g., mature businesses, long operating history, etc.). |
-| Buy from Existed Shareholders                                | Buyout funds acquire most portfolio companies via auction, involving multiple potential acquirers. |
-| 获得minority shares                                          | the entire equity capital is acquired by the private equity purchasers |
+| **Buy from Existed Shareholders**                            | Buyout funds acquire most portfolio companies **via auction**, involving multiple potential acquirers. |
+| **获得minority shares**                                      | the entire equity capital is acquired by the private equity purchasers |
 
 #### Performance Calculations
 
@@ -124,18 +124,23 @@ Buyout funds seek out companies with **stable cash flows**.
 
 #### Theories
 
-- **Insurance theory** predicts that the futures price has to be **lower** than the current spot price as a form of payment or remuneration to the speculator who takes on the price risk and provides price insurance to the commodity seller. 
+- **Insurance theory** - about Insurance
+
+    predicts that the futures price has to be **lower** than the current spot price as a form of payment or remuneration to the speculator who takes on the price risk and provides price **insurance** to the commodity seller. 
 
     future小于current，因为持有commodity提供了insurance
 
-- **Theory of Storage**:
-  
+- **Theory of Storage** - about Holding
+
     - When available inventory levels **(supply) of the commodity are high**, the buyers of that commodity keep their levels to the minimum. **Futures prices tend to be in  contango**. **The volatility of spot and futures prices tend to be low, and equal.**
     - When available inventory levels of the commodity are low (Scarcity), buyers of the commodity tend to stock up on the good. **Futures prices tend to be in backwardation.** **The volatility of nearby futures prices are raised** compared with the volatility of long term futures prices.
     - Storage Cost 大 -> future price 大
     - Convenience Yield 大 -> future price 小
-    
-- **Hedging Pressure Hypothesis**: hedging pressure occurs when both producers and consumers seek to protect themselves from commodity market price volatility by entering into price hedges to stabilise their projected profits and cash flows. **If consumers are more interested in hedging than producers are, the futures price will exceed the spot price.**
+
+- **Hedging Pressure Hypothesis** - about Hedge
+
+    hedging pressure occurs when both producers and consumers seek to protect themselves from commodity market price volatility by entering into price hedges to stabilise their projected profits and cash flows. **If consumers are more interested in hedging than producers are, the futures price will exceed the spot price.**
+
     - 买多 contango
     - 卖short多 backwardation
 

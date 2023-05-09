@@ -21,7 +21,7 @@ $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
 #### Pricing and Valuation
 
-|                                  | Price, t=0                                                   | Value, t=t 折现到t时点的值。t可以=0                          |
+|                                  | Price, t=0                                                   | Value, t=t 折现到t时点的值。t可以=0<br />当然F的钱比 underlying小，F才有value |
 | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | T-bill Forwards                  | $FP=S_0\times (1+r_f)^T$                                     | $V=S_t - \frac{FP}{(1+r_f)^{T-t}}$                           |
 | Forward on Dividend-Paying Stock | $FP=(S_0-PVD_0)\times (1+r_f)^T$                             | $V=S_t - PVD_t-\frac{FP}{(1+r_f)^{T-t}}$                     |
@@ -77,7 +77,7 @@ $$ (PV_{clean}+AI^0)\times (1+r_f)^T - AI^T = FP_{std}\times CF $$
     - Step 2. Deduct the $AI^T$ to get the FV(clean price), as bond is always quoted at clean price.
 - RHS is the $FP_i$, is the future price.
 
-#### Derivation
+#### Derivation of the T-bond Future
 
 - 期货
 
@@ -201,22 +201,22 @@ Theta is normally negative. The speed of the option value decline increases, how
 
 1. The volatility of the return on the underlying is known and constant. 恒定的constant vol 
 
-    volatility can be predicted with certainty.
+    **volatility can be predicted with certainty**
 
 2. The model includes the assumption that arbitrage opportunities do not exist: "No arbitrage opportunities are available in the marketplace." 市场无 arbitrage op
 
-3. The model is based on the assumption that prices do not move in discrete amounts as described in this statement. The reading states: "**Geometric Brownian motion** implies **continuous** prices, meaning that the price of the **underlying instrument does not jump from one value to another; rather, it moves smoothly from value to value.**" 连续的，price do not jump
+3. The model is based on the assumption that prices do not move in discrete amounts as described in this statement. The reading states: "**Geometric Brownian motion** implies **continuous** prices, meaning that the price of the **underlying instrument does not jump from one value to another; rather, it moves smoothly from value to value.**" 连续的，**price do not jump** 因为 price GBM，所以 rate BM iid normal
 
     - The underlying follows a statistical process called geometric Brownian motion, which implies that the **continuously compounded return is normally distributed**.
     - Geometric Brownian motion implies continuous prices, meaning that the price of underlying instrument does not jump from one value to another; rather, it moves smoothly from value to value.
 
-4. The options are European-style, meaning that early exercise is not allowed.
+4. The options are **European-style**, meaning that early exercise is not allowed.
 
-5. The continuously compounded risk-free interest rate is known and constant; borrowing and lending is allowed at the risk-free rate.
+5. The **continuously compounded** risk-free interest rate is known and constant; borrowing and lending is allowed at the risk-free rate.
 
-6. If the underlying instrument pays a yield, it is expressed as a continuous known and constant yield at an annualised rate.
+6. If the underlying instrument pays a yield, it is expressed as a continuous known and constant yield at an **annualised rate**.
 
-7. Liquidity of trading. Short selling is permutable. No friction and trading cost. Leverage at continuously compound risk free rate is ok.
+7. **Liquidity of trading. Short selling is permutable. No friction and trading cost. Leverage at continuously compound risk free rate is ok.**
 
 #### Black Model - Options on Futures
 
@@ -226,7 +226,7 @@ $$c = e^{–rT}[F_0(T)\times N(d_1) – X\times N(d_2)]$$
 
 #### Swaption
 
-A swaption is an option to enter into a swap.
+A swaption is an option to enter into a swap for interest. 
 
 - Payer Swaption is an option to enter into a swap as the **fixed-rate payer.**
     - Pay fixed, 所以interest rate提升，swaption value more.
