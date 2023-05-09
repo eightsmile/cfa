@@ -188,3 +188,28 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
 - **Coase Theorem** 
 
     The Coase theorem states that **if an externality can be traded and there are no transaction costs**, then the allocation of property rights will be **efficient** and the resource allocation will not depend on the initial assignment of property rights
+
+### Others
+
+#### BEI (Break-Even Inflation)
+
+Break-even inflation is the difference between the nominal yield on a fixed-rate investment and the real yield (fixed spread) on an inflation-linked investment of similar maturity and credit quality. If inflation averages more than the break-even, the inflation-linked investment will outperform the fixed-rate. Conversely, if inflation averages below the break-even, the fixed-rate will outperform the inflation-linked.
+
+Calculation Formula:
+
+Comparable Fixed-Rate – Inflation-Linked Real Yield = Break-Even Inflation
+
+Calculation Example: $BEI = NominalBond - RealBond$
+
+A zero-coupon default-free **nominal bond** and on a zero-coupon default-free **real bond** of the same maturity is known as the break-even inflation (BEI) rate
+
+#### Taylor Rule
+
+$PolicyRate = r + \pi + \frac{1}{2}(\pi - \pi^*)+\frac{1}{2}(y-\bar{y})$
+
+- $r$ - real interest rate
+- $\pi$ - actual inflation rate 
+- $\pi^*$ - target inflation rate
+- $y$ - real GDP
+- $\bar{y}$ - potential GDP
+- $r+\pi$ - together is the neutral rate
