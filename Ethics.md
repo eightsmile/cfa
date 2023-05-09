@@ -59,18 +59,21 @@ Working in certain industry 的不一定是 profession
 
 促使公司 disclose Non-Public Info，公布后则可用
 
+- 对于 public firm，要尽可能公开
+- 对于 private firm，可以向member公开
+
 #### II(B). Market Manipulation
 
 - Info-based: Disseminate false / misleading info
 - Transaction based
-    - Distort the price, gunshot, volume/volatility manipulation 
+    - Distort the price, gunshot, volume/volatility manipulation, front running
 
 ### III. Duty to Clients
 
 #### III(A). Loyalty, Prudence, and Care
 
-- Fund背后的investor 才是 真正beneficiary
-- soft dollar 用作对客户有用的，CFA报名费 大咩
+- Fund 背后的 investor 才是 真正 beneficiary
+- soft dollar 用作对客户有用的，CFA 报名费 大咩
 
 #### III(B). Fair Dealing
 
@@ -84,7 +87,7 @@ Working in certain industry 的不一定是 profession
 
 #### III(C). Suitability
 
-- 推荐，要符合Risk Profiel，不能直接用。否则violate
+- 推荐，要符合Risk Profile，不能直接用。否则violate
 - IPS, annually update
 - 当客户要求与IPS不符
     - If mini impact, educate clients, then do
@@ -100,8 +103,8 @@ Working in certain industry 的不一定是 profession
 - Keep (1) current (2) prior (3) prospect clients, except (1) 违法 (2) 法律要求 (3) 客户同意
 - Disclose - illegal
 - 若 accidentally disclose confidential info，可以补救
-- cite the name of people who is under investigation   also violate code and standard
-  - Kovi violated Standard III(E), Preservation of Confidentiality, by citing the name of the individual currently under the regulator’s investigation. 
+- cite the name of people who is under investigation also violate code and standard
+  - Kovi violated Standard III(E), Preservation of Confidentiality, by **citing the name of the individual currently under the regulator’s investigation**. 
 
 
 ### IV. Loyalty to Employer
@@ -123,9 +126,10 @@ Working in certain industry 的不一定是 profession
 
 #### IV(B). Additional Compensation
 
+- 事前 + disclose
 - 客户 gift 要 disclose，同意后才能接
 - competitive兼职 disclose
-- 可以 事后 补disclose
+- 可以 事后 补 disclose
 - 非客户，可以 modest gift，客户 disclose 算作 additional compensation
 
 #### IV(C). Responsibility of Supervisors
@@ -181,12 +185,16 @@ Working in certain industry 的不一定是 profession
 
 #### VI(B). Priority of Transaction
 
+- Clients > Employers > Self
+    - 与fair dealing不同，因为fair dealing是指对所有客户。
+    - 但是 priority of transaction 是指，客户 雇主 雇员 之间
 - Family Accounts are equal
 - give time for trading
+    - 如 公布buy/sell后 给客户 1 day trading 可能不够，给1 week
 
 #### VI(C). Referral Fee 
 
-- Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), disclose 
+- Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), 无论是啥 都要 disclose 具体情况 金额 
 - disclose before engagement
 - At least **Quartly** disclose
 

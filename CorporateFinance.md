@@ -25,9 +25,9 @@
 
     - **Methods:**
 
-         1. **In open market**  -   gives the company maximum flexibility, because there is **no legal obligation** to undertake or complete the repurchase program; a company may not follow through with an announced program for various reasons, such as unexpected cash needs for liquidity, acquisitions, or capital expenditures.
+         1. **In open market**  -  gives the company maximum flexibility, because there is **no legal obligation** to undertake or complete the repurchase program; a company may not follow through with an announced program for various reasons, such as unexpected cash needs for liquidity, acquisitions, or capital expenditures.
 
-         2.  **fixed price tender offer**  -   typically at a premium to the current market price.
+         2. **fixed price tender offer**  -   typically at a premium to the current market price.
 
          3. **Dutch Auction**  -  **also a tender offer** to existing shareholders, but **instead** of specifying a fixed price for a specific number of shares, the company stipulates **a range of acceptable prices**.
 
@@ -35,7 +35,7 @@
 
             **Greenmail** - detrimental to remaining shareholders.
 
-- If no tax on dividends and repurchase(capital gain tax), then A decreases, E decreases, end with same wealth for equity-holders.
+- If no tax on dividends and repurchase(capital gain tax), then A decreases, E decreases, end with same wealth for equity-holders. $NI_{no-div} = NI_{after -div}+Div$
 
 ### ESG
 
@@ -64,6 +64,7 @@ Fixed-income Analysis - **mitigate downside risk**
 $$r_e = \mathbb{E}(r_f)+Systematic ERP + Company ERP$$
 
 - Survivorship Bias 用 index 的 historical data 时。因为活着才在index成分股里。
+- Survivorship Bias **inflate** the estimate of ERP.
 
 #### Earnings Growth
 

@@ -45,7 +45,7 @@ The YTM can provide a poor estimate of expected return, if
 - the bond has one or more embedded options (e.g., put, call, or conversion).
 - It's **not** realistic to re-invest at YTM.
 
-**Flat Yield Curve** - long / short term bond offer equivalent yields. So, there is no benefit to invest in longer-term one. 
+**Flat Yield Curve** - long / short term bond offer equivalent yields. So, there is **no benefit to invest in longer-term** one. 
 
 #### Swap Rate Curve
 
@@ -264,7 +264,7 @@ $$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
     - Assume the **Balance Sheet structure with options**.
     - If the asset value falls below the barrier, the company defaults on the debt.
     - Probability of Default is endogenous
-    - Provide an Option analogy: consider a company with asset financed by equity and zerocoupon debt. 
+    - Provide an Option analogy: consider a company with asset financed by equity and zero-coupon debt. 
         - call option on the asset with a strike price equal to the face value of debt (K).
     - It provides insight into the nature of credit risk. The company defaults when the value of its assets dips below the default barrier.
     - **Used for internal risk management**.
@@ -329,7 +329,7 @@ Rationale:
 
 #### Pricing
 
-Upfront Premium 提起一次付的钱
+Upfront Premium 提前一次付的钱
 
 - Upfront premium on a CDS $ \approx (Credit Spread - Fixed Coupon) \times Duration$
 - CDS price can be quoted as ≈ 100 - upfront premium (%)

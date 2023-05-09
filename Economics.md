@@ -4,13 +4,13 @@
 
 #### PPP
 
-- Absolute PPP - FX is determined purely by price level.
+- **Absolute PPP** - FX is determined purely by **price level**.
 
-- Relative PPP - percentage change in the spot exchange rate (%ΔS*f/d*) will be completely determined by the difference between foreign and domestic inflation rates (Π*f* -Π*d*) 
+- **Relative PPP** - percentage change in the spot exchange rate (%ΔS*f/d*) will be completely determined by the difference between foreign and domestic inflation rates (Π*f* -Π*d*) 
 
-    FX is determined by Inflation rate.
+    FX is determined by **Inflation rate**.
 
-    Ex ante PPP - FX is determined by Expected Inflation not actual inflation.
+- **Ex ante PPP** - FX is determined by **Expected Inflation not actual inflation**.
 
 #### Spread of Ask-bid
 
@@ -18,7 +18,7 @@
     -  **Transaction size** can affect the bid–offer spread. **Wider spreads on larger trades reflect the greater difficulty the dealer faces in “laying off” the FX risk in the interbank market.**
 - Credit Rating.
     - A client’s credit risk can be a factor because a client with a **poor credit profile may be quoted a wider bid–offer spread** than one with good credit, reflecting the greater settlement risk.
-    - If has other choice, credit rating is not the most important factor in deterring the spread
+    - If has other choice, credit rating is **not the most important** factor in deterring the spread
 - Currency Pair
     - Popularity of currencies in the pair would matter.
 
@@ -74,7 +74,7 @@ Three Channels
 
         Prices have limited flexibility in the short run but are fully flexible in the long run. 基于假设price level fixed in the short run. So exchange rate overshoots.
 
-        According to Dornbusch, with inflexible domestic prices in the short run, any decrease in nominal money supply will induce an increase in the domestic interest rate. This will encourage capital inflows and cause the exchange rate to overshoot to the upside in the short run, until domestic prices have a chance to react
+        According to Dornbusch, with inflexible domestic prices in the short run, any decrease in nominal money supply will induce an increase in the domestic interest rate. This will encourage capital inflows and cause the exchange rate to overshoot to the upside in the short run, until domestic prices have a chance to react.
 
     - **Portfolio Balance (Asset Market) Models**
 
@@ -121,6 +121,11 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
 
     Steady State (BGP): see my blog: https://eightsmilefy.com/?p=2018
 
+    - $\dot{K} : n+g$
+    - $\dot{Y}: n+g$
+    - $\dot{k} =\frac{K}{AL},\quad  \dot{y}=\frac{Y}{AL} = 0$
+    - $\dot{L}=n,\quad \dot{A}=g$
+
 - Endogenous Growth Theory
 
     - There is a sustainable growth, $A(k)$. With the growth of per capita capital, technological progress improves as well.
@@ -164,7 +169,7 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
     - is given legal authority by the government to enforce the new statute.
     - has member companies that accept the authorisation to set and enforce rules and standards.
     - Funded Independently.
-    - SROs differ from standard industry self-regulatory bodies in that they are given recognition and authority, including enforcement power, by a government body or agency. SROs are funded independently, rather than by the government. 
+    - **SROs differ from standard industry self-regulatory bodies in that they are given recognition and authority, including enforcement power, by a government body or agency.** SROs are funded independently, rather than by the government. 
 
 #### Regulatory Interdependency
 
