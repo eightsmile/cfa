@@ -246,6 +246,8 @@ TPPC 代表 CFO 因为pension确实是应该划入operating CF
 
   - Contribution <-> CFF少了，调增CFF
 
+- 总的来说，TPPC代表CFO outflow （因为这个指标设计的意义就是把 pension 相关的进I/S & OCI 的expense 调回到 NI 中）。我们要做的是把 contribution 向 TPPC 调齐。tppc小，则把 contribution 调小，即把 CFF 调小。
+
 - 调整的amount: $(Contribution -TPPC)\times (1-t)$ 差额要扣税调整
 
 ### Share-Based Compensation
