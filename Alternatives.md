@@ -96,6 +96,7 @@ There are three main drivers that differentiate P/FFO, P/AFFO, and EV/EBITDA mul
 
 #### Performance Calculations
 
+- 分母是 Cumulative Paid-in Capital
 - TVPI, Total Value to Paid-in Capital， $ TVPI=\frac{Distributed + UnDistributed}{Cumulative InvestedCapital}$
 - DPI, Distributed to Paid-in Capital， $DPI=\frac{Cumulative Distributions}{Cumulated InvestedCapital}$ - 分配出去的 - **Realised Return**. 包括今年分配的，去年分配的，etc所以以前分配的都加一起
 - RVPI, Residual Value to Paid-in Capital, $RVPI = \frac{NAV(afterDistribution)}{Cumulative Invested Capital}$ - **Unrealised Return** 为当年剩下的NAV after distribution
@@ -113,13 +114,13 @@ Buyout funds seek out companies with **stable cash flows**.
 
 **Valuation Creation**: Rather than ownership and control being separate, as in most publicly quoted companies, **private equity concentrates ownership and control.** Key points:
 
-- (1) the ability to **re-engineer** the private firm to generate superior returns, 
+- (1) the ability to **re-engineer** the private firm to generate superior returns, 一般 public firm有更好的 re-engineer 能力，所以 当 private takeovers public 时，re-engineer不是重要的 value add因素
 
 - (2) financial leverage and the ability to **access credit markets on favourable terms**, and 
 
 - (3) a better alignment of interests between private equity firm owners and the managers of the firms they control.
 
-- Private equity funds **increase value by taking on high levels of debt on favourable terms**. They are able to **offset their borrowing costs by superior reorganisation and re-engineering capabilities**. 
+- Private equity funds **increase value by taking on high levels of debt on favourable terms**. They are able to **offset their borrowing costs by superior reorganisation and re-engineering capabilities**. 主要的 value addition 是 leverage
 
     可以以低成本leverage，通过re-engineer 带来的return，对冲 leverage的成本
 
@@ -192,4 +193,19 @@ $$TotalR = \frac{P_1-P_0}{P_0} + \frac{F_0-F_1}{F_0} + collateralR \times \%$$
 
 - **People are confusing the long position with short position, in case of backwardation, long position would create positive roll returns but short position would end up with negative roll returns.**
 
-    
+### Others
+
+- $ROI= (1+IRR)^t$
+- $ROI = \frac{\text{Value of Equity at Exit}}{\text{Post-Money Valuation}}$
+- Post Money Valuation = Pre-Money Valuation + Net Equity Injection
+    - Vc投后的  =  vc投前的 + vc投的
+    - $VC fraction = \frac{NetEquity}{PostEquity}$
+- Exit Value = Rev_exit * multiple    (revenue multiple for rev-generating business in the industry)
+
+![Screenshot 2023-05-10 at 12.21.49](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-05-10 at 12.23.13.png)
+
+如果 A 投了占 25%
+
+之后一年 B 投了 占16%
+
+那么此时，B 投的份额确定，但是 A 投的份额被稀释了。A剩下的是 (1-16%) * 25%

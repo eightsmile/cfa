@@ -16,8 +16,11 @@ ETF intraday trading cost > arbitrage cost, then AP can create new ETF shares to
 #### Tracking Error
 
 - Annualised Standard Deviation of daily ( ETF returns - Benchmark Returns )
+- $s(R_p - R_B)$ , s.d. of portfolio return - benchmark return
 
 It does not reveal whether the fund is over/under-performed, or whether that tracking error is concentrated over a few days.
+
+$$IR = \frac{\bar{R_p}-\bar{R_B}}{s(R_p - R_B)}$$
 
 **Sources of Tracking Error**: 
 
@@ -73,7 +76,7 @@ A second distinction between macroeconomic multi-factor models and fundamental f
 
 In a statistical factor model, statistical methods are applied to historical returns of a group of securities to extract factors that can explain the observed returns of securities in the group. In statistical factor models, the factors are actually portfolios of the securities in the group under study and are therefore defined by portfolio weights.
 
-- An advantage of statistical factor models is that they make minimal assumptions. 
+- An advantage of statistical factor models is that they make **minimal assumptions**. 
 - However, the interpretation of statistical factors is generally more difficult than the interpretation of macroeconomic and fundamental factor models.
 
 #### Information Ratio
@@ -228,7 +231,10 @@ $$\Delta w_i = w_{p,i} - w_{B,i}$$
 
 Decompose the **Value Added \ Active Return**, there would be:
 
-- (1) **Value Added from Security Selection** $w_A(R_{sub-portfolio} - R_B)$, 用**Active weights**, and 
+- (1) **Value Added from Security Selection** - factor tilt
+
+    $w_A(R_{sub-portfolio} - R_B)$, 用**Active weights**, 
+
 - (2) **Value Added from Asset Allocation** $(w_A - w_B)R_B$.
 
 #### Sharpe Ratio is Unaffected by Leverage
@@ -239,7 +245,9 @@ SR is **unaffected by cash**. CML slope，怎么延长斜率都不变。所以�
 
 #### Information Ratio - aggressiveness of active weights
 
-Active Return relative to a benchmark with volatiltiy of the active reutrn.
+Active Return relative to a benchmark with volatility of the active return. 
+
+Active return per unit of active risk taken from its investment decisions 记得 要减 benchmark return
 
 $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}}=\frac{R_A}{\sigma_A}=\frac{ActiveReturn}{ActiveRisks}$$
 
@@ -250,6 +258,20 @@ $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}}=\frac{R_A}{\sigma_A}=\frac{ActiveRet
 $$SR_p^2 = SR_B^2+IR^2$$
 
 While the Sharpe ratio measures reward per unit of risk in ***absolute*** returns, the information ratio measures reward per unit of risk in *benchmark **relative*** returns.
+
+##### Active Risk Squared
+
+Active Risk Squared = $s^2(R_p - R_B)$ = Active Factor Risk + Active Specific Risk
+
+Active Specific Risk <-> Security Selection Risk
+
+##### Factor Tilt
+
+$FactorTilt = \sum (Portfolio_i -benchmark)\times \beta$
+
+为 每个因素与benchmark的差 * beta 加和
+
+Factor Tilt 的意义是，security selection. 它只代表选了的是啥，不代表选了的 投多少比例。
 
 #### Closet Return / Closet Portfolio
 
@@ -351,9 +373,21 @@ The implementation shortfall method of measuring trading costs addresses the pro
     - **Quote matchers** are **parasitic** traders (做front running) who base their predictions about future prices on information they obtain about orders that other traders intend to fill. Buy-side traders and their brokers are aware of the efforts quote matchers make to detect and front run their orders. Accordingly, they submit orders at random times and in various sizes in order to make detection more difficult.
     
 
-#### Nouns
+#### Others
 
 - **Bluffers** often prey on momentum traders, who buy when prices are rising and sell when prices are falling.
 - **Spoofing** is a trading practice in which traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is or to suggest to other traders that the security is under- or overvalued.
 - **Wash trading** consists of trades arranged among commonly controlled accounts to create the impression of market activity at a particular price. The purpose of wash trading is to fool investors into believing that a market is more liquid than it truly is and to thereby increase investors’ confidence both in their ability to exit positions without substantial cost and in their assessments of security values.
 - Algorithmic trading generally **decrease** the impact of large trades and the cost of executions. 因为 algorithm trading可以拆单子
+
+- Multi-factor Model:
+    - the return is the base return in addition to the sum of the factor returns multiplied by the factor sensitivities.
+    - Expected Return + sum factor * beta
+
+#### Multi-factor Model
+
+A second **distinction** between macroeconomic multi-factor models and fundamental factor models is that with the former, we develop the factor (surprise) series first and then estimate the factor sensitivities through regressions. With the latter, we generally specify the factor sensitivities (attributes) first and then estimate the factor returns through regressions. 宏观多因子的 x 是 surprise
+
+- Fundamental Multi-factor Model - 用的都是 ratio rate yield duration credit currency geographic 等
+
+    

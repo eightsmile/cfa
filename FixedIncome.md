@@ -243,6 +243,8 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 - Fair Value of Corporate Bond = VND - CVA
     - VND - Value if No Default
+    - VND 由 二叉树算出
+    - CVA 由 default exposure recovery discount 那个表算出来
     
 - The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 
 
