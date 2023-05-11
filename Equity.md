@@ -428,3 +428,5 @@ $Discount of Control=\frac{1}{1+ControlPremium}$
   **Historical** Equity Risk Premium (ERP) = Excess return over risk free rate. 
   
   Higher equity returns result in higher ERP (assume that Rf is flat). Inflated historic performance as result of survivorship bias or a string of positive surprises results in inflated historical ERP. That is why **historical** ERP should be **adjusted downward.**
+  
+- 用 上一期的 B_0 去算 ROE

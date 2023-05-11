@@ -113,8 +113,16 @@ Slight regularisation occurs when the prediction error on the training dataset i
 ### Algorithm
 
 - SVM - (1) Binary Target Variable, not continuous (2) no hyper-parameters
-- CART (Classification and Regression Tree)
+- CART (Classification and Regression Tree) supervised, gives visualised results
 - LASSO Least Absolute Shrinkage and Selection Operator
+- KNN - supervised, sensitive to feature, so don't auto-selection & add irrelevant feature.
+- Ensemble Learnings 几个方法捏在一起，如情况 A 则 SVM 情况 B 则 KNN
+  - Random Forest
+
+- Unsupervised
+  1. PCA
+  2. Clustering
+  3. K-means
 
 #### Overfitting & Model Error
 
@@ -124,3 +132,5 @@ Slight regularisation occurs when the prediction error on the training dataset i
     1. **Bias error**, or the degree to which a model fits the training data. Algorithms with erroneous assumptions produce high bias with poor approximation, causing underfitting and high in-sample error.
     2. **Variance error**, or how much the model’s results change in response to new data from validation and test samples. Unstable models pick up noise and produce high variance, causing overfitting and high out-of-sample error.
     3. **Base error** due to randomness in the data.
+  
+  
