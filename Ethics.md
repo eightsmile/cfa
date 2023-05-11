@@ -39,6 +39,7 @@ Working in certain industry 的不一定是 profession
 - Travel Funding 尽可能自己付
 - Gift: Modest Gift only 
     - If 来自客户，视为 additional compensation, 收之前 disclose to employers
+    - 不能收 也不能送。送的话也违背
 
 #### I(C). Misrepresentation
 
@@ -67,6 +68,8 @@ Working in certain industry 的不一定是 profession
 #### II(B). Market Manipulation
 
 - Info-based: Disseminate false / misleading info
+    - 只要是 等信息公开immediately就可以trade了，这样就不算violate
+
 - Transaction based
     - Distort the price, gunshot, volume/volatility manipulation, front running
 
@@ -199,6 +202,7 @@ Working in certain industry 的不一定是 profession
 - Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), 无论是啥 都要 disclose 具体情况 金额 
 - disclose before engagement
 - At least **Quartly** disclose
+- Appropriate disclosure means that members and candidates must advise the client or prospective client, **before entry into any formal agreement for services**, of any benefit given or received from the recommendation of any services provided by the member or candidate.” In this case, the disclosure does not occur until
 
 ### VII. About the Exam <- Don't Be Silly
 
