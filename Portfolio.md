@@ -215,6 +215,8 @@ Other things being equal, we would also expect these interest rates to be higher
 
 #### Active Return (Value Added) & Alpha
 
+<img src="https://pic2.zhimg.com/80/v2-add3f7541f6c40b93659e9238bf21099_1440w.webp" alt="img" style="zoom: 25%;" />
+
 **Alpha Return** and **Alpha** are not the same.
 
 - $R_A = R_p - R_B$
@@ -288,6 +290,8 @@ Factor Tilt 的意义是，security selection. 它只代表选了的是啥，不
 - $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
 
 Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
+
+<img src="https://pic1.zhimg.com/80/v2-12e126a5b0346b45b59b6a62449bb150_1440w.webp" alt="img" style="zoom:25%;" />
 
 - **IC - Skill / Forecast**
 - **TC - Portfolio Construction** - 代表 investment constraint
@@ -375,7 +379,7 @@ The implementation shortfall method of measuring trading costs addresses the pro
 
 #### Others
 
-- **Bluffers** often prey on momentum traders, who buy when prices are rising and sell when prices are falling.
+- **Bluffers** often prey on momentum traders, who buy when prices are rising and sell when prices are falling. 虚张声势，杀 momentum trader
 - **Spoofing** is a trading practice in which traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is or to suggest to other traders that the security is under- or overvalued.
 - **Wash trading** consists of trades arranged among commonly controlled accounts to create the impression of market activity at a particular price. The purpose of wash trading is to fool investors into believing that a market is more liquid than it truly is and to thereby increase investors’ confidence both in their ability to exit positions without substantial cost and in their assessments of security values.
 - Algorithmic trading generally **decrease** the impact of large trades and the cost of executions. 因为 algorithm trading可以拆单子
