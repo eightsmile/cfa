@@ -198,7 +198,9 @@ Residual Income is **net income less a charge** (deduction) for common sharehold
 
 Rationale: 相当于是 $V_0 = B_0 + \sum \frac{RI}{1+r}$, 算出的$V_0$ 包含 Debt 和 Equity的两部分的。
 
-P.S. **Exclude** **Non-recurring Charges and Earnings.**
+P.S. **Exclude** **Non-recurring Charges and Earnings.** The forecast of future residual income based on recurring items. 所以当提出Non- recurring时，会调整 NI， 但是 BV 不需要调 non-recurring iterm，但是 BV 要调 Off- balance 表外
+
+如 restructure charge 就是 non- recurring
 
 For the **Residual Income**, (we denote $B_0$ as the book value of equity) ($V_0$ is the intrinsic value of stocks).
 
@@ -430,3 +432,13 @@ $Discount of Control=\frac{1}{1+ControlPremium}$
   Higher equity returns result in higher ERP (assume that Rf is flat). Inflated historic performance as result of survivorship bias or a string of positive surprises results in inflated historical ERP. That is why **historical** ERP should be **adjusted downward.**
   
 - 用 上一期的 B_0 去算 ROE
+
+- Enterprise Value  = Mkt.LongTermDebt + Mkt.Preferred Share + Mkt.CommonShare - Cash
+
+    - 注意，只有 Lia 只有 long-term debt，Equity 只有 common share & preferred share 没有 R/E
+    
+- Normalised EPS = Average ROE * BVPS
+
+    - BVPS = Total Equity - Preferred Share     / #
+
+- 算 EPS ，用 diluted EPS，剔除 non-recurring G/L 的影响。不剔除 recurring items

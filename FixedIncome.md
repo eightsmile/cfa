@@ -119,6 +119,7 @@ $$i_L = i_H \times e^{2\sigma}$$
 Could be used if the Cash Flow is **path dependent**.
 
 - MBS is path dependent on the interest rate. MBS can not be properly valued with the binomial model or any other model that employs the backward induction methodology.
+- 当用 Monte Carlo 测 bond时，如果bond 没有 embedded option，那么 volatility of Monte Carlo 不会对 bond估值有影响。提高 simulation num 到一定程度后，不会再提高模型精准度。此时， 每期 tree + constant
 
 #### Term Structure Models
 
@@ -211,7 +212,7 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 #### Key-rate Duration
 
-- **Key rate durations** reflect the sensitivity of the bond’s price to changes in specific maturities on the benchmark yield curve.
+- **Key rate durations** reflect the sensitivity of the bond’s price to changes in specific maturities on the benchmark yield curve. 用来衡量 yield curve 形状的变化
 - help portfolio managers and risk managers **identify the “shaping risk” for bonds**—that is, the bond’s sensitivity to **changes in the shape** of the yield curve (e.g., **steepening and flattening**).
 - 可以用来分析 change of shape of yield curve。因为关键点变了，可以理解为整条线变了。
 
@@ -231,7 +232,10 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 ### Credit Risk
 
-- Expected Exposure: The expected exposure is the projected amount of money that an investor could lose if an event of default occurs, before factoring in possible recovery. The expected exposure for both Bond I and Bond II is 100 + 5 = 105. 如是 principal + coupon，与概率无关
+- Expected Exposure: The expected exposure is the projected amount of money that an investor could lose if an event of default occurs, before factoring in possible recovery. 
+
+    - The expected exposure for both 1-Yr Bond I and Bond II is 100 + 5 = 105. 如是 principal + coupon，与概率无关
+    - t=0时是price or value，把时间逐步往回推到 t = 1， t = 2，etc。算当时的 expected cf sum。记得当前的 coupon不用折现了
 
 - Probability of Default (POD)
 
@@ -243,18 +247,27 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 - Fair Value of Corporate Bond = VND - CVA
     - VND - Value if No Default
-    - VND 由 二叉树算出
+    - VND 由 二叉树算出，或者由折现算出。正常算出的值就是 VND
     - CVA 由 default exposure recovery discount 那个表算出来
-    
+
 - The **risk–return characteristics** of a convertible bond depend on the market price of the issuer’s common stock (underlying share price) relative to the bond’s conversion price. When the underlying **share price is well below the conversion price**, the convertible bond exhibits mostly **bond risk–return characteristics**. **In this case, the price of the convertible bond is mainly affected by interest rate movements and the issuer’s credit spreads.** In contrast, when the underlying share price is above the conversion price, the convertible bond exhibits mostly stock risk–return characteristics. 
 
     当不太可能转换时，Convertible bond相当于bond，那么受interest rate影响。当很可能转时（换句话说，market price of share 比 convertible price大）则相当于share，受价格影响多。
+
+- A Statement:
+
+    The **actual default probabilities** do not include the default risk premium associated with the uncertainty in the timing of the possible default loss. The **observed spread over the yield** on a risk-free bond in practice does include liquidity and tax considerations, in addition to credit risk.
+
+- Credit Spread = VND对应rate - (VND - CVA)对应的rate
 
 ##### Credit Spread Migration Matrix
 
 $\Delta Expected Return=$Sum of % * (Spread_i - Base.Spread)    * (-1) Modified Duration
 
-$$\%\Delta \mathbb{E}(r_i) = Mod.Duration \times \sum (CS_{base} - CS_i )P$$
+$$\%\Delta \mathbb{E}(r_i) = - Mod.Duration \times \sum (CS_{base} - CS_i )P$$
+
+- 记得是乘 负的 mod.Duration
+- 注意是 diff of rate 即 拿 matrix 算出来的 - 原来的的差 * 负Mod.Duration，得到结果为 rate 的变化量，再加上原来的 YTM，得到的即是 next year expected return
 
 因为modified duration 转换 $\Delta rate$ 和 $\Delta price$ 的关系，其中$\Delta Price$ 就相当于 expected return.
 

@@ -133,6 +133,8 @@ Sales 增加 -> Net Profit Margin 下降
 
 #### Pension
 
+DC plan 没有 PBO PA。只有 DB Plan 有
+
 ##### PBO -基于退休前的工资算得  DB
 
 20岁开始工作，60岁退休，活到80，每年2000。工作40年，拿退休金20年
@@ -142,6 +144,8 @@ Sales 增加 -> Net Profit Margin 下降
    - AUC 是未折现概念
 3. 之后每工作一年，Annual Unit Creidt * n
 4. Discount Rate = current rates of return on high-quality corporate bonds (or government bonds, in the absence of a deep market in corporate bonds) with currency and durations consistent with the currency and durations of the benefits.
+
+![image-20230511133911835](/Users/mie/Library/Application Support/typora-user-images/image-20230511133911835.png)
 
 ##### ABO -与PBO一样，除了是基于当前工资算得
 
@@ -337,7 +341,7 @@ $FunctionalCurrency \to Reporting Currency: Local.GBP\to Reporting .GBP$
 
 先折算 I/S 再折 B/S
 
-1. I/S折算 -> average rate -> NI
+1. I/S折算 -> average rate -> NI (记得用 期间平均 rate)
 2. B/S折算: 
    1. Assets: Current Rate
    2. Liability: Current Rate
@@ -428,6 +432,12 @@ $ROE = \frac{NI}{EBT}\times \frac{EBT}{EBIT}\times \frac{EBIT}{Rev}\times \frac{
 ​	Earnings with a larger component of accruals are typically less persistent and of lower quality. An important distinction is between accruals that arise from normal transactions in the period (called non-discretionary) and accruals that result from transactions or accounting choices outside the normal (called discretionary accruals). The discretionary accruals are possibly made with the intent to distort reported earnings. Outlier discretionary accruals are an indicator of possibly manipulated—and thus low quality earnings. Thus, Martinez is primarily focused on discretionary accruals, particularly outlier discretionary accruals (referred to as abnormal accruals).
 
 we need to pay attention to the increase on absolute terms, not if it is +ve or -ve. 只要绝对值变大了，哪怕是越来越负了，也意味着accrual变多了
+
+##### 财报质量
+
+- Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. 
+- Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. 
+- An increase (not a decrease) in discounts and returns would be a warning sign.
 
 #### CF Analysis
 
