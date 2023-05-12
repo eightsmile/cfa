@@ -122,6 +122,8 @@ $$ P = \sum \frac{CF_i}{(1+r)^i}$$
 
 #### Inter-temporal Rate of Substitution
 
+$1+r_f = \frac{1}{m}=\frac{1-P_{t,1}}{P_{t,1}}$
+
 - $ m = \frac{MU_{1}}{MU_0}$, there are each marginal utility of consumption in time 0 or 1
   - Marginal Utility of Consumption at t=0 (current time) is normally larger than at t=1 (in the future), thus $m<1$.
   - Intuitively, $m$ describe people's desire. If people desire more on current, then current is more attractive, then MU0 is greater than MU1.

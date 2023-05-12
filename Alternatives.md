@@ -11,10 +11,18 @@
       - $g$ = Required Return - Cap rate
     - DCF
 
+![Screenshot 2023-05-12 at 09.42.06](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-05-12 at 09.42.06.png)
+
 #### Loan Amount
 
-- Loan to Value ratio $=\frac{Loan}{Value}$
-- debt service coverage ratio $=\frac{NOI}{Debt Interest Expense}$
+Maximum Loan:
+
+- **Method 1**: Loan to Value ratio $=\frac{Loan}{Value}$
+- **Method 2**: debt service coverage ratio $=\frac{NOI}{Debt Interest Expense}$
+
+    ​					Loan = Debt Interest Exp / Mortgage Rate
+
+Method 1 & Method 2 小的  为maximum loan
 
 用以上两个反推
 
@@ -209,3 +217,13 @@ $$TotalR = \frac{P_1-P_0}{P_0} + \frac{F_0-F_1}{F_0} + collateralR \times \%$$
 之后一年 B 投了 占16%
 
 那么此时，B 投的份额确定，但是 A 投的份额被稀释了。A剩下的是 (1-16%) * 25%
+
+- Exit Value for LBO
+
+    ![image-20230512095606302](/Users/mie/Library/Application Support/typora-user-images/image-20230512095606302.png)
+
+    ![image-20230512095525770](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-05-12 at 09.55.38.png)
+
+- Roll Forward
+
+    Sell near future, buy long future 
