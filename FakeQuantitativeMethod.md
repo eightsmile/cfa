@@ -37,6 +37,35 @@ Mean Reversion of $AR(1)$ is setting $y_t = y_{t-1}=y_c$, then $y_c = \frac{\the
 
 The Series is stationary after taking a first different, then that series is $I(1)$, and thus has an **unit root**.
 
+#### Violation 1: Heteroskedasticity - unbiased & consistent but not best - 让F和T检验 unreliable
+
+##### BP-Test
+
+$nR^2_{residual}$
+
+#### Violation 2: Serial Correlation Test - unbiased & consistent, but volatility (uncertainty) is underestimated 所以 F 高估 - Type I error 高估
+
+We also say that the error term is ***autocorrelated**.* The covariance is positive when on average positive (negative) errors tend to be followed by positive (negative) errors; and the covariance is negative when positive (negative) errors are followed by negative (positive) errors.
+
+In either case, a covariance that is different from zero will happen when the dependent variable ***Yt* is correlated over time and the regression model does not include enough lagged dependent variables to account for the serial correlation in *Yt***. The presence of serial correlation invalidates the Gauss Markov theorem. **The OLS estimator can still be *unbiased* and *consistent* (large sample property), but it is no longer the best estimator, the *minimum variance estimator.*** More importantly, the OLS standard errors are not correct, and consequently the t-tests and F-tests are invalid.
+
+- Error Term 中有没放进来的 lag，导致OLS not BLUE。Still Unbiased & Consistent，but not Best <- Variance inflated
+- 一般，正serial correlation 会导致 underestimate the uncertainty. 会使 error term underestimated。那么使得 如 F检验 overestimate
+
+##### Dubin-Waston Test
+
+reg residual_t on residual_{t-1}
+
+$$DW = 2(1-r)$$
+
+The test statistics is tricky, because it is not Gussian Distributed.
+
+There are two critical values, dL and dU. The decision rules are as follows: if d<dL, then reject the null hypothesis (that there is no serial correlation); that is, if d<dL, then the serial correlation is statistically significant. If d>dU, then accept the null hypothesis. If d is between dL and dU, the test is inconclusive.
+
+#### Violation 3: Multicollinearity - consistent unbiased but inflated s.e.
+
+![image-20230514232632593](/Users/meowmeow/Library/Application Support/typora-user-images/image-20230514232632593.png)
+
 ### Machine Learning
 
 #### Supervised & Un-Supervised
