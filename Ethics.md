@@ -53,6 +53,7 @@ Working in certain industry 的不一定是 profession
 - 影响正常工资
 - Bankrupt 不算，但是 Bankrupt due to Fraud 算
 - Personal Bankruptcy 不用 disclose
+- 不能被 accuse 和 investigate
 
 ### II. Integrity to the Market
 
@@ -69,20 +70,29 @@ Working in certain industry 的不一定是 profession
 
 - Info-based: Disseminate false / misleading info
     - 只要是 等信息公开immediately就可以trade了，这样就不算violate
-
+    - information manipulation
+    - 如 manipulate model input, in good scenario
+    - 如 create rumor
+    
 - Transaction based
     - Distort the price, gunshot, volume/volatility manipulation, front running
+    - raising volume / price   --  violate
 
 ### III. Duty to Clients
 
 #### III(A). Loyalty, Prudence, and Care
 
 - Fund 背后的 investor 才是 真正 beneficiary
+- When use Somebody as exclusively Broker, it must be **on the best interest of clients**.
 - soft dollar 用作对客户有用的，CFA 报名费 大咩
 
 #### III(B). Fair Dealing
 
 - Fair != Equal
+- Information should be sent to clients at the same time.
+    - Widely disseminate the recommendation and provided the information to all his clients prior to discussing it with a select few 给所有人发布后，给Institutional investor打电话，可以，不violates
+
+- Trade and Transaction Allocation should be fair.
 - In the Block Trade, every participant (clients) should receive same execution price & fee. Not base on size & pro rata. (Pro rata <=> proportionally)
 - 当客户行为不端，advice them。若客户简直，则继续执行
 - Investment Action
@@ -94,7 +104,7 @@ Working in certain industry 的不一定是 profession
 
 - 推荐，要符合Risk Profile，不能直接用。否则violate
 - IPS, annually update
-- 当客户要求与IPS不符
+- 当客户要求与IPS不符，要 follow the investment mandate
     - If mini impact, educate clients, then do
     - If material impact, update IPS
 
@@ -102,6 +112,8 @@ Working in certain industry 的不一定是 profession
 
 - Accurate & Complete
 - Portfolio success may be **from team not from person**.
+- A co states to complince with GIPS, but not report return as GIPS.
+- Disclose when **performance calculation** / **Attribution** method changed.
 
 #### III(E). Preservation of Confidentiality 保密
 
@@ -117,17 +129,21 @@ Working in certain industry 的不一定是 profession
 #### IV(A). Loyalty
 
 - Cannot solicit former clients
+    - Solicit Former Clients 招揽前客户 （Solicit 拉客） 
+
 - 副业
     - Competitive - disclose to employer
     - Non-competitive - not need to disclose
 - 离职 
-    - 有竞业协议，不竞业
+    - 有竞业协议 noncompete agreement，不竞业
     - 不带走 name list
     - 可以招募原顾客，但是不能用name list，可以用公开渠道联系
+    - 在离职前不能招募
     - File & Model 带走要雇主同意
 - Social Media 离职后归还
 - Whistleblowing 可以接发原雇主不正当行为，但是不能因私
     - 多次discuss无果，可以 whistleblowing
+    - Having been unsuccessful in finding a resolution with her supervisor and the compliance officer, Rasmussen should consult the firm’s whistleblowing policy to determine the appropriate next step toward informing management of her concerns. The potentially unethical actions of the investment management division are appropriate grounds for further disclosure, so Rasmussen’s whistleblowing would not represent a violation of Standard IV(A).
 
 #### IV(B). Additional Compensation
 
@@ -161,10 +177,11 @@ Working in certain industry 的不一定是 profession
 - Group Reach 只要同意过程 就可以署名， even if has different idea.
   - 不能 disagree in public
 
-### V(B). Communicate with Clients and Prospect Clients
+#### V(B). Communicate with Clients and Prospect Clients
 
 - Must 告知 investment process
 - Identify risks, limitations, fators of impacts.
+- Notify any Changes / Errors / Risks & Limitations
 - Distinguish facts and opinions
   - Report Presentation (1) factors (2) citation of quant model
 
