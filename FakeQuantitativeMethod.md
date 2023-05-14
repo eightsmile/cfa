@@ -135,7 +135,7 @@ F1 score is more appropriate (than accuracy) when there is unequal class distrib
 
 Overfitting: prediction error on the training dataset is small but on the cross-validation dataset is large.
 
-That facts have three conclusions: (1) Overfitting, (2) high variance error, (3) slight regularisation 为此，可以考虑加入正则化项 L1 or L2 to constraint the number of weights, and avoid the overfitting.
+That facts have three conclusions: (1) Overfitting, (2) **high variance error,** (3) slight regularisation 为此，可以考虑加入正则化项 L1 or L2 to constraint the number of weights, and avoid the overfitting.
 
 Slight regularisation occurs when the prediction error on the training dataset is small, while the prediction error on the cross-validation data set is significantly larger. This difference in error is variance. High variance error, which typically is due to too many features and model complexity, results in model overfitting.
 
@@ -153,6 +153,10 @@ Slight regularisation occurs when the prediction error on the training dataset i
   2. Clustering
   3. K-means
 
+### AUC
+
+Higher the AUC, better the model performance.
+
 #### Overfitting & Model Error
 
 - **Data scientists express the trade-off between overfitting and generalization as a trade-off between cost** (the difference between in- and out-of-sample error rates) **and complexity**. They use the trade-off between cost and complexity to calibrate and visualize under- and overfitting and to optimize their models
@@ -161,5 +165,7 @@ Slight regularisation occurs when the prediction error on the training dataset i
     1. **Bias error**, or the degree to which a model fits the training data. Algorithms with erroneous assumptions produce high bias with poor approximation, causing underfitting and high in-sample error.
     2. **Variance error**, or how much the model’s results change in response to new data from validation and test samples. Unstable models pick up noise and produce high variance, causing overfitting and high out-of-sample error.
     3. **Base error** due to randomness in the data.
+  
+  
   
   
