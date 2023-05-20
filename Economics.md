@@ -47,6 +47,8 @@ Three Channels
 
 - **Mundell-Fleming Model**
 
+    https://policonomics.com/is-lm-bp/
+
     States that Monetary and Fiscal Policy affect the level of interest, economic activities, etc and finally affect the exchange rate.
 
     **Similar to IS-LM**
@@ -125,6 +127,9 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
     - $\dot{Y}: n+g$
     - $\dot{k} =\frac{K}{AL},\quad  \dot{y}=\frac{Y}{AL} = 0$
     - $\dot{L}=n,\quad \dot{A}=g$
+    - $y=Ak^{\alpha}$, so, $\frac{\Delta y}{y}=\frac{\Delta A}{A}+\alpha \frac{\Delta k}{k}$. As $\frac{\Delta y}{y}=\frac{\Delta k}{k}$, then $(1-\alpha)\frac{\Delta y}{y}=\frac{\Delta A}{A}$
+      - $g=\frac{\Delta y}{y}=\frac{\Delta k}{k}=\frac{\theta}{1-\alpha}$. 
+      - The equilibrium sustainable growth rate of output per capita is $g$.
 
 - Endogenous Growth Theory
 
@@ -206,6 +211,10 @@ A zero-coupon default-free **nominal bond** and on a zero-coupon default-free **
 #### Taylor Rule
 
 $PolicyRate = r + \pi + \frac{1}{2}(\pi - \pi^*)+\frac{1}{2}(y-\bar{y})$
+
+$Policy Rate = realR + Inf + 0.5(ActInf-ExpedInf)+0.5(ActGDP - Potential GDP)$
+
+相比于 nominal rate, policy rate如果真实inf高，加息，如果positive output gap，加息。
 
 - $r$ - real interest rate
 - $\pi$ - actual inflation rate 
