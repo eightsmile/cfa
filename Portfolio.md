@@ -102,7 +102,7 @@ $$IR = \frac{R_p - R_B}{\sigma_{R_p - R_B}} = \frac{Avtive Return}{TrackingError
 
 #### Three Types
 
-- Macro  - Factors are **Surprise** .Consider Last
+- Macro  - Factors are **Surprise**. Consider Last
 - Fundamental - Consider Firstly
 - Statistics - Explain Historical Return Covariance
 
@@ -158,6 +158,8 @@ Inflation = Expected Inflation $\pi$ + Risk Premium for Uncertainty, $\theta$
 $$r_{long} = R +\pi + \theta$$
 
 $$r_{short} = R +\pi $$
+
+nominal interest rate = Real Interest Rate + Inflation + vol (if long-term)
 
 短期，不考虑uncertainty $\theta$， 因为 uncertainty is not realised，但是长期需要考虑
 
@@ -227,7 +229,7 @@ Other things being equal, we would also expect these interest rates to be higher
 
 ### Notes
 
-1. Real interest rates are high when the **expected consumption growth** is high (intertemporal substitution) or when risk is low (precautionary saving).
+1. Real interest rates are high when the **expected consumption growth** is high (inter-temporal substitution) or when risk is low (precautionary saving). 经济好，对现在消费多，对未来消费少，所以 bond price 小，所以 rate 大
 2. During **good economic times**, current consumption is high since individuals have relatively high current income. This makes the **marginal utility of consumption low today**.
 3. As **wealth increases**, investors’ **marginal utility of consumption declines since they have already satisfied their basic needs.** Investors would, therefore, benefit more from an asset that pays off more in bad economic times relative to one that pays off in good economic times.
 4. A risk-averse individual is one who demands compensation for uncertainty. An investor’s **absolute risk aversion decreases with an increase in wealth or income.** In particular, an investor **invests more in risky assets as their wealth or income increases**. This decreases the marginal utility of holding risky assets.
@@ -371,11 +373,13 @@ Implementation Shortfall 好，因为算了隐性和显形的成本。考虑了 
 
 The implementation shortfall method of measuring trading costs addresses the problems associated with the effective spread method. Implementation shortfall is also attractive because it views trading from an investment management perspective and measures the total cost of implementing an investment decision by **capturing all explicit and implicit costs**. The implementation shortfall method **includes the market impact costs and delay costs as well as opportunity costs**, which are often significant for large orders.
 
+In sum, effective spread 不好，VWAP不好，因为这俩不能解释 market impact 和 delay cost. Implementation shortfall 好，因为可以考虑到所有 implicit & explicit cost
+
 ### Market Fragmentation
 
 **Increases** the potential for price and liquidity **disparities across venues** because buyers and sellers often are not in the same venues at the same time.
 
-#### Players and Notations
+### Players and Notations
 
 - Electronic Front Runner - low-latency trader who use AI to identify orders and trades. 抢在大订单前先下单（可能是内幕消息，可能是AI算出来的），需要系统low latency
     - Break Orders into Pieces
