@@ -2,7 +2,9 @@
 
 ### ETFs
 
-Investors -> AP -> Portfolio Managers
+Sponsor <- AP <- Portfolio Investor
+
+AP takes redemption & creation cost, investors take trading cost
 
 在US：投资者 只能找AP买二级ETF。 只有AP可以一级create / redemption ETF 通过拿 a basket of stocks 换
 
@@ -26,7 +28,7 @@ $$IR = \frac{\bar{R_p}-\bar{R_B}}{s(R_p - R_B)}$$
 
 - Fees and Expenses 大 - 会导致rolling return assessment变大
 - Representative sampling/optimisation 大 - 会导致rolling return assessment变大
-- Index Changes 当权重变的时候产生，但是会立刻调整 小 - 因为ETF is daily adjusted
+- Index Changes 当权重变的时候产生，但是会立刻调整   - has smallest impact on tracking error - 因为ETF is daily adjusted
 
 ### Optimal Active Risk
 
@@ -310,8 +312,8 @@ Factor Tilt 的意义是，security selection. 它只代表选了的是啥，不
 
 ### Fundamental Law of Active Management
 
-- **IC**: Information Coefficient: about **Forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
 - **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少**anticipated return**能转换成active **weight**。是否有 **constraint**
+- **IC**: Information Coefficient: about **Forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
 - **BR**: Breath <- 独立的 个数，独立的次数（如monthly）。要求一定要是独立的，否则**overestimate** the BR. （assets之间互相corr 会降低有效的 "独立个数" 导致overestimate）。
 - $IR = TC\times IC\times \sqrt{BR}$
 - $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
@@ -321,7 +323,7 @@ Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times
 <img src="https://pic1.zhimg.com/80/v2-12e126a5b0346b45b59b6a62449bb150_1440w.webp" alt="img" style="zoom:25%;" />
 
 - **IC - Skill / Forecast**
-- **TC - Portfolio Construction** - 代表 investment constraint
+- **TC - Portfolio Construction** - 代表 **investment constraint**
     - A low TC results from the formal or informal constraints imposed on the structure of the portfolio. In fact, at TC = 0.00, there would be no correspondence between the **active return forecasts** and **active weights taken** and thus no expectation of value added from active management. In contrast, TC = 1.00 (no binding constraints) represents a **perfect correspondence between active weights taken and forecasted active returns**. 预测了就能实现，代表 less constraint
 
 - **Breadth - number of independent decisions per year**
@@ -334,12 +336,6 @@ Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times
 $$SR_p^2 = SR^2_B + IR^2$$
 
 The above equation implies that the **active portfolio with the highest (squared) information ratio** will also have the **highest (squared) Sharpe ratio.** 
-
-For unconstrained portfolios, the level of active risk that leads to the optimal result,
-
-$$\sigma_{R_A} = \frac{IR}{SR_B}\sigma_{B}$$
-
-$$\frac{R_B-r_f}{\sigma^2_B}=\frac{SR}{\sigma_B} = \frac{IR}{\sigma_A}=\frac{R_A}{\sigma^2_A}$$
 
 ### Trading Cost 记得*2
 

@@ -9,11 +9,12 @@
 - Sales Comparison
 
 - Income Approach
-    
+  
 - Asset Value Approach
-    
+  
     - Adjusted NOI / Cap Rate + Other Asset - Lia
     - NAV = Above / #
+    - NOI: net operating income
     
 - $CapRate = r-g$
 

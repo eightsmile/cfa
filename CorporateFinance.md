@@ -1,11 +1,19 @@
 ## Corporate Finance
 
+without tax: $r_E = r_0 + (r_0-r_d)\times \frac{D}{E}$
+
+With tax: $r_E = r_0 + (r_0+r_D)\times \frac{D}{E}(1-t)$
+
+$V_L=V_{UL}+t\times D$
+
+$WACC = w_D r_D(1-t)+w_Er_E + w_Pr_P$
+
 ### Stock Manipulate
 
 - **Stock Dividends:** 
 
     1. **R/E -> Capital** Contribution. 
-    2. Only **Price per Share** increase.
+    2. Only **Price per Share** decrease.
     3. 因为有付div的能力，与 initiation相反的是omission和reduction而不是retention for growth。所以是个好的指标。Dividend initiations convey positive information and are associated with future earnings growth, whereas dividend omissions or reductions convey negative information and are associated with future earnings problems.
     4. **Bad Signal!** Dividend omissions or reductions convey negative information and are associated with future earnings problems.
 
@@ -31,11 +39,11 @@
 
          3. **Dutch Auction**  -  **also a tender offer** to existing shareholders, but **instead** of specifying a fixed price for a specific number of shares, the company stipulates **a range of acceptable prices**.
 
-         4. **Repurchase by direct negotiation**  -  a company may negotiate with a major shareholder to buy back its shares, often at a **premium** to the market price. The company may do this to **keep a large block of shares from overhanging the market** (and thus acting to dampen the share price).  **Prevent an “activist”**.  
+         4. **Repurchase by direct negotiation**  -  a company may negotiate with a major shareholder to buy back its shares, often at a **premium** to the market price (but could be at discount). The company may do this to **keep a large block of shares from overhanging the market** (and thus acting to dampen the share price).  **Prevent an “activist”**.  
 
             **Greenmail** - detrimental to remaining shareholders.
 
-- If no tax on dividends and repurchase(capital gain tax), then A decreases, E decreases, end with same wealth for equity-holders. $NI_{no-div} = NI_{after -div}+Div$
+- If no tax on dividends and repurchase(capital gain tax), then A decreases, E decreases, end with same wealth (div + after-div NI) for equity-holders. $NI_{no-div} = NI_{after -div}+Div$
 
 ### ESG
 
@@ -50,15 +58,15 @@
 - **Average board tenure** 在3.9-9.9 中间好。太长太短都不好
 - **Two-Tier Board** 有两批board 好，有助于 decision-making, build a more balanced, positive outlook on production, prevents a single board from getting overwhelmed with handling the management, system and function of a business.。一批人负责直接管理，一批负责远期决策
 
-Equity Analysis - **identify potential opportunities** and  **identify potential opportunities** 
+Equity Analysis - **identify potential opportunities**.
 
-Fixed-income Analysis - **mitigate downside risk**
+Fixed-income Analysis - **mitigate downside risk**.
 
 **Greenwash** - is the risk that the bond’s proceeds are not actually used for a beneficial environmental or climate-related project. 用green bond 融钱，去做不green的事，不好
 
 ### Cost of Capital
 
-#### ERP - Expected Risk Premium
+#### ERP - Equity Risk Premium
 
 $$r_e = \mathbb{E}(r_f)+Systematic ERP + Company ERP$$
 

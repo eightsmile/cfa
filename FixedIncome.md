@@ -350,3 +350,9 @@ Upfront Premium 提前一次付的钱
 - CDS price can be quoted as ≈ 100 - upfront premium (%)
     - If the price of CDS > 100, the protection seller needs to pay upfront premium 
     - If the price of CDS < 100, the protection buyer needs to pay upfront premium
+
+### Others
+
+- OAS - Tree moves
+- Effective Duration - Curve moves
+- Key Rate Duration - Shapen changes

@@ -64,9 +64,15 @@ There are two critical values, dL and dU. The decision rules are as follows: if 
 
 #### Violation 3: Multicollinearity - consistent unbiased but inflated s.e.
 
-![image-20230514232632593](/Users/meowmeow/Library/Application Support/typora-user-images/image-20230514232632593.png)
+<img src="/Users/meowmeow/Library/Application Support/typora-user-images/image-20230514232632593.png" alt="image-20230514232632593" style="zoom:33%;" />
+
+#### Sum
+
+![Screenshot 2023-05-20 at 21.09.15](/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 21.09.15.png)
 
 ### Machine Learning
+
+<img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 21.01.15.png" alt="Screenshot 2023-05-20 at 21.01.15" style="zoom: 50%;" />
 
 #### Supervised & Un-Supervised
 

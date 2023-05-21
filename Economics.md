@@ -16,11 +16,12 @@
 
 - Large trade would increase the spread.
     -  **Transaction size** can affect the bid–offer spread. **Wider spreads on larger trades reflect the greater difficulty the dealer faces in “laying off” the FX risk in the interbank market.**
-- Credit Rating.
-    - A client’s credit risk can be a factor because a client with a **poor credit profile may be quoted a wider bid–offer spread** than one with good credit, reflecting the greater settlement risk.
-    - If has other choice, credit rating is **not the most important** factor in deterring the spread
 - Currency Pair
     - Popularity of currencies in the pair would matter.
+- Timing
+- Credit Rating (Not that important)
+    - A client’s credit risk can be a factor because a client with a **poor credit profile may be quoted a wider bid–offer spread** than one with good credit, reflecting the greater settlement risk.
+    - If has other choice, credit rating is **not the most important** factor in deterring the spread
 
 
 #### Current Account Imbalances and the Determination of Exchange Rates
@@ -127,6 +128,9 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
     - $\dot{Y}: n+g$
     - $\dot{k} =\frac{K}{AL},\quad  \dot{y}=\frac{Y}{AL} = 0$
     - $\dot{L}=n,\quad \dot{A}=g$
+
+    Or,
+
     - $y=Ak^{\alpha}$, so, $\frac{\Delta y}{y}=\frac{\Delta A}{A}+\alpha \frac{\Delta k}{k}$. As $\frac{\Delta y}{y}=\frac{\Delta k}{k}$, then $(1-\alpha)\frac{\Delta y}{y}=\frac{\Delta A}{A}$
       - $g=\frac{\Delta y}{y}=\frac{\Delta k}{k}=\frac{\theta}{1-\alpha}$. 
       - The equilibrium sustainable growth rate of output per capita is $g$.
@@ -175,6 +179,8 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
     - has member companies that accept the authorisation to set and enforce rules and standards.
     - Funded Independently.
     - **SROs differ from standard industry self-regulatory bodies in that they are given recognition and authority, including enforcement power, by a government body or agency.** SROs are funded independently, rather than by the government. 
+    
+- Non-SRO: 如 CFA institute
 
 #### Regulatory Interdependency
 
@@ -192,7 +198,7 @@ $$\frac{dy}{y}=\frac{dA}{A}+\alpha \frac{dk}{k}$$
 
 - **Coase Theorem** 
 
-    The Coase theorem states that **if an externality can be traded and there are no transaction costs**, then the allocation of property rights will be **efficient** and the resource allocation will not depend on the initial assignment of property rights
+    The Coase theorem states that **if an externality can be traded and there are no transaction costs**, then the allocation of property rights will be **efficient** and the resource allocation will not depend on the initial assignment of property rights. 如碳交易，可以帮助实现green的目标
 
 ### Others
 
