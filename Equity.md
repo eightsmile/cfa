@@ -113,12 +113,12 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
      - $CA $ 扣去cash & cash equivalent
      - $CL$ 扣去Note Payables, current portion of long-term debt.
      - $-\Delta CA +\Delta CL$
-         - CL中包含 **A/P**, **Accrued** Tax&Expense
+         - CL中包含 **A/P**, **Accrued** Tax & Expense
          - P.S. Note Payable 算borrowing，因为有单据。
 
 - **Fixed Capital Investment:** $FC_{INV} = CapEx - \text{Cash Received from Selling Long-term Assets}$
 
-- $FC_{INV}=Gross.FixedAsset_t - Gross.FixedAsset_{t-1}$ 注意是gross term
+- $FC_{INV}=Gross.FixedAsset_t - Gross.FixedAsset_{t-1}$ 注意是 gross term
 
 - $FC_{INV} = Purchase - Proceeds$
 
@@ -164,7 +164,7 @@ If a company’s capital structure is relatively stable, using FCFE to value equ
     1. 用来剔除 non-recurring items的影响
     2. 用来剔除 business cycle的影响
     
-     To deal with **non-recurring items** and **business cycle** influences, "Analysts address this problem by normalising EPS—that is, estimating the level of EPS that the business could be expected to achieve under mid-cyclical conditions (normalised EPS or normal EPS). Please note that we are using the term “normalized earnings” to refer to earnings adjusted for the effects of a business cycle. Some sources use the term “normalised earnings” also to refer to earnings adjusted for nonrecurring items." 
+    To deal with **non-recurring items** and **business cycle** influences, "Analysts address this problem by normalising EPS—that is, estimating the level of EPS that the business could be expected to achieve under mid-cyclical conditions (normalised EPS or normal EPS). Please note that we are using the term “normalized earnings” to refer to earnings adjusted for the effects of a business cycle. Some sources use the term “normalised earnings” also to refer to earnings adjusted for nonrecurring items." 
     
 - EV = Mkt.Debt+Mkt.Equity+Mkt.PreferredShare **- Cash - Short-termInvestment** 把流动性最高的俩资产减去。因为EV相当于，当被收购时可以直接抵钱的 所以cash等被剪掉
 
@@ -198,7 +198,7 @@ Residual Income is **net income less a charge** (deduction) for common sharehold
 
 Rationale: 相当于是 $V_0 = B_0 + \sum \frac{RI}{1+r}$, 算出的$V_0$ 包含 Debt 和 Equity的两部分的。
 
-P.S. **Exclude** **Non-recurring Charges and Earnings.** The forecast of future residual income based on recurring items. 所以当提出Non- recurring时，会调整 NI， 但是 BV 不需要调 non-recurring iterm，但是 BV 要调 Off- balance 表外
+P.S. **Exclude** **Non-recurring Charges and Earnings.** The forecast of future residual income based on recurring items. 所以当提出Non-recurring 时，会调整 NI， 但是 BV 不需要调 non-recurring iterm，但是 BV 要调 Off- balance 表外
 
 如 restructure charge 就是 non- recurring
 
@@ -300,6 +300,10 @@ Also, the **Clean Surplus Relation** matters. That relation assumes changes in B
 - **Intangible assets, such as Goodwill and R&D**, have a significant effect on BV of equity.
 - **Nonrecurring items and other aggressive accounting practices**.
 - **Accounting standards differ internationally**.
+
+#### In sum
+
+For RI, BV does not adjust Non-recurring item. NI adjusts non-recurring items.
 
 ### Multipliers
 
@@ -419,7 +423,7 @@ $Discount of Control=\frac{1}{1+ControlPremium}$
 - Asset Add-on Approach for Start-up Firm.
 - Income Approach for High-growth Firm.
     - Income Approach contains three methods:
-        1. FCF Method  -  DCF with going-concern assumption
+        1. FCF Method  -  DCF with going-concern assumption.
         2. Capitalised CF Method  -   using a **single representative estimate of economic benefits** and dividing that estimate by an appropriate **capitalisation rate** to derive an indication of value.
         3. Residual Income Method / Excess Earnings Method  -  the excess earnings method consists of estimating the value of all of the company’s **intangible assets** by capitalising future earnings in excess of the estimated return requirements associated with working capital and fixed assets. **The value of the intangible assets is added to the values of working capital and fixed assets to arrive at the value of the business enterprise.**
 

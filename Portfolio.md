@@ -2,7 +2,9 @@
 
 ### ETFs
 
-Investors -> AP -> Portfolio Managers
+Sponsor <- AP <- Portfolio Investor
+
+AP takes redemption & creation cost, investors take trading cost
 
 在US：投资者 只能找AP买二级ETF。 只有AP可以一级create / redemption ETF 通过拿 a basket of stocks 换
 
@@ -26,7 +28,24 @@ $$IR = \frac{\bar{R_p}-\bar{R_B}}{s(R_p - R_B)}$$
 
 - Fees and Expenses 大 - 会导致rolling return assessment变大
 - Representative sampling/optimisation 大 - 会导致rolling return assessment变大
-- Index Changes 当权重变的时候产生，但是会立刻调整 小 - 因为ETF is daily adjusted
+- Index Changes 当权重变的时候产生，但是会立刻调整   - has smallest impact on tracking error - 因为ETF is daily adjusted
+
+### Optimal Active Risk
+
+**For Unconstraint portfolio,**
+
+$\sigma^*_A = \frac{IR}{SR_B}\times \sigma_B = \frac{(r_A - r_b)/\sigma_A}{(r_B -r_f)/\sigma_B}\sigma_B$
+
+- $\sigma^*_A$ is the **optimal active risk**.
+- $\sigma_A$ is the active risk.
+
+**For Constrainted Portfolio,**
+
+$\sigma^*_A = TC\times \frac{IR}{SR_B}\times \sigma_B $	
+
+- TC < 1
+
+<img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 17.37.43.png" alt="Screenshot 2023-05-20 at 17.37.43" style="zoom:33%;" />
 
 #### Capital Gain Distribution
 
@@ -157,6 +176,10 @@ nominal interest rate = Real Interest Rate + Inflation + vol (if long-term)
 
 #### Risk-covariance
 
+<img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 18.00.18.png" alt="Screenshot 2023-05-20 at 18.00.18" style="zoom:33%;" />
+
+Cov 一般为负数
+
 $P_t = E(P_{t+1}\times m)=E(P_{t+1})E(m) + cov(P_{t+1},m)$
 
 $1+R = \frac{1}{m}$, so $m=\frac{1}{1+R}$, so $P_t=\frac{E(P_{t+1})}{1+R} + cov(P_{t+1},m)$
@@ -176,7 +199,9 @@ Pay more attention to the **intuition of intertemporal substitution**.
 
 Similarly, if volatility of GDP growth $\uparrow$, then desire of consume 
 
-#### BEI 
+#### BEI  = $\pi + \theta$
+
+Definition: Expected Inflation + Premium for Uncertainty
 
 BEI = zero coupon **Nominal** Bond  -  zero coupon **Real** Bond = $\pi$ + $\theta$, equals to the sum of expected inflation + volatility of inflation (the premium of uncertainty of inflation).
 
@@ -287,8 +312,8 @@ Factor Tilt 的意义是，security selection. 它只代表选了的是啥，不
 
 ### Fundamental Law of Active Management
 
+- **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少**anticipated return**能转换成active **weight**。是否有 **constraint**
 - **IC**: Information Coefficient: about **Forecasting** returns: $IC = Corr(\frac{R_A}{\sigma_i},\frac{\mu_i}{\sigma_i})$ -  represents the extent to which the portfolio manager’s expectations are realised. (**Risk-adjusted active return**, corr to **Risk-ajusted Anticipated Return**). **多少anticipated return能实现为active return。**
-- **TC**: Transfer Coefficient in **portfolio construction**: $TC = Corr(\frac{\mu_i}{\sigma_i},\Delta w_i\sigma_i)$ -  how well the anticipated (*ex ante*), risk-adjusted returns correlate with the risk-adjusted active weights. 多少**anticipated return**能转换成active **weight**。
 - **BR**: Breath <- 独立的 个数，独立的次数（如monthly）。要求一定要是独立的，否则**overestimate** the BR. （assets之间互相corr 会降低有效的 "独立个数" 导致overestimate）。
 - $IR = TC\times IC\times \sqrt{BR}$
 - $\mathbb{E}(R_A) = TC\times IC\times \sqrt{BR}\times \sigma_A$
@@ -298,7 +323,7 @@ Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times
 <img src="https://pic1.zhimg.com/80/v2-12e126a5b0346b45b59b6a62449bb150_1440w.webp" alt="img" style="zoom:25%;" />
 
 - **IC - Skill / Forecast**
-- **TC - Portfolio Construction** - 代表 investment constraint
+- **TC - Portfolio Construction** - 代表 **investment constraint**
     - A low TC results from the formal or informal constraints imposed on the structure of the portfolio. In fact, at TC = 0.00, there would be no correspondence between the **active return forecasts** and **active weights taken** and thus no expectation of value added from active management. In contrast, TC = 1.00 (no binding constraints) represents a **perfect correspondence between active weights taken and forecasted active returns**. 预测了就能实现，代表 less constraint
 
 - **Breadth - number of independent decisions per year**
@@ -311,12 +336,6 @@ Value Added is decomposed by four elements: $\mathbb{E}(R_A) = TC\times IC\times
 $$SR_p^2 = SR^2_B + IR^2$$
 
 The above equation implies that the **active portfolio with the highest (squared) information ratio** will also have the **highest (squared) Sharpe ratio.** 
-
-For unconstrained portfolios, the level of active risk that leads to the optimal result,
-
-$$\sigma_{R_A} = \frac{IR}{SR_B}\sigma_{B}$$
-
-$$\frac{R_B-r_f}{\sigma^2_B}=\frac{SR}{\sigma_B} = \frac{IR}{\sigma_A}=\frac{R_A}{\sigma^2_A}$$
 
 ### Trading Cost 记得*2
 
@@ -386,13 +405,36 @@ In sum, effective spread 不好，VWAP不好，因为这俩不能解释 market i
 #### Others
 
 - **Bluffers** often prey on momentum traders, who buy when prices are rising and sell when prices are falling. 虚张声势，杀 momentum trader
+
 - **Spoofing** is a trading practice in which traders place exposed standing limit orders to convey an impression to other traders that the market is more liquid than it is or to suggest to other traders that the security is under- or overvalued.
+
 - **Wash trading** consists of trades arranged among commonly controlled accounts to create the impression of market activity at a particular price. The purpose of wash trading is to fool investors into believing that a market is more liquid than it truly is and to thereby increase investors’ confidence both in their ability to exit positions without substantial cost and in their assessments of security values.
+
 - Algorithmic trading generally **decrease** the impact of large trades and the cost of executions. 因为 algorithm trading可以拆单子
+
+- stuffing: fill with random trading orders
+
+- layers: one hidden buy, and several decreasing price sell for the algorithm trader.
+
+- wash trading: executing simultaneous buy and sell orders on the same financial instrument.
 
 - Multi-factor Model:
     - the return is the base return in addition to the sum of the factor returns multiplied by the factor sensitivities.
     - Expected Return + sum factor * beta
+    
+- Among active portfolios with similar strategy, the portfolio with the highest information ratio need not have the highest Sharpe ratio. 
+
+    - False. **Similar Strategy** means **same benchmark**. In this case, $SR_A^2 = SR_B^2 + IR^2$, $SR_B$ the benchmark sharpe ratio is the same, then IR 大 SR_A 一定大
+
+- $\frac{BV}{MktV}$ - Value, $\frac{MktV}{BV}$ - growth
+
+- Active Risk Squared = Active Factor Risk + Active Specific Risk   
+
+    ​				 <=> Asset Allocation 资产配置 + Security Selection 个股选择
+
+- **Order Book**:
+
+    <img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 17.25.52.png" alt="Screenshot 2023-05-20 at 17.25.52" style="zoom:33%;" />
 
 #### Multi-factor Model
 

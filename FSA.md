@@ -315,7 +315,7 @@ $Local Currency \to Functional Currency: Local. GBP \to Funcational. USD$ 用于
 2. I/S 折算 - 由 R/E _t  - R/E _t-1 倒挤出
    1. 由 1.2.的items 算出 NI before Translation G/L
       - COGS, D&A: Historical Rate
-      - Others: Current
+      - Others: Average rate
       - NI before Translation G/L
    2. 用 BASE,  $R/E_{t-1} + NI - Div = R/E_t$
       - R/E t-1 来自上年
@@ -378,7 +378,7 @@ IFRS:
 - Non-Monetary Item, Equity, I/S/ Items: 根据物价变化重溯
   1. Restate
   2. 重新折算
-- 不进 OCI，直接进 I/S
+- **不进 OCI，直接进 I/S**
 
 如何抗通胀？
 
@@ -435,9 +435,9 @@ we need to pay attention to the increase on absolute terms, not if it is +ve or 
 
 ##### 财报质量
 
-- Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. 
-- Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. 
-- An increase (not a decrease) in discounts and returns would be a warning sign.
+- 不好 Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. 
+- 不好 An increase (not a decrease) in discounts and returns would be a warning sign.
+- 好 Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. 
 
 #### CF Analysis
 
@@ -463,7 +463,7 @@ Weighted Risk Asset: Risky Assets are assigned more weights than risk-free ones.
   - Total Tier 1 Capital: - 6%
   - Total Capital (Tier 1 + Tier 2) - 8%
 - Asset Quality: Liquidty Asset %
-- Mabagement Capability
+- Management Capability
 - Earning
   - Earning 来源: 1. Net Interest Income 借贷利差 2. Trading Income 投资收益 3. Service Income 服务费
   - 其中 Trading Income 是 Low Quality 因为 highly Volatile

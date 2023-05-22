@@ -5,11 +5,26 @@
 #### Valuation Approach 
 
 - Cost Approach, Property Value = Land + Building Replacement Cost - TotalDepreciation - Obsolescence - Deterioration
+
 - Sales Comparison
+
 - Income Approach
+  
+- Asset Value Approach
+  
+    - Adjusted NOI / Cap Rate + Other Asset - Lia
+    - NAV = Above / #
+    - NOI: net operating income
+    
+- $CapRate = r-g$
+
+    所以要折现的的时候 可以用 cap rate + g 反推 required return of equity
+
     - Direct Capitalisation 用第一个月的  $\frac{NOI}{r-g} $
       - $g$ = Required Return - Cap rate
     - DCF
+
+- NOI = rental income + other income - vacancy loss - management fee
 
 ![Screenshot 2023-05-12 at 09.42.06](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-05-12 at 09.42.06.png)
 
@@ -17,23 +32,34 @@
 
 Maximum Loan:
 
-- **Method 1**: Loan to Value ratio $=\frac{Loan}{Value}$
+- **Method 1**: Loan to Value ratio: $LTV=\frac{Loan}{Value}$
 - **Method 2**: debt service coverage ratio $=\frac{NOI}{Debt Interest Expense}$
 
     ​					Loan = Debt Interest Exp / Mortgage Rate
+    
+    ​					$DSCR = \frac{NOI_1}{Interest} = \frac{NOI_1}{Loan \times rate}$
 
 Method 1 & Method 2 小的  为maximum loan
 
 用以上两个反推
 
+- Equity Dividend rate 指的是 自有资金的投资回报率 = 收益/自有资金。
+  - 房子的总价 = Debt + Equity，用 DSCR 和 LTV算出更小的 debt，用total value - debt 即为 equity
+  - 收益 = NOI - Debt * Rate，   即 NOI为挣的钱，减去 debt的interest cost
+
 #### Others
 
 - Shopping centres - require more management, such as tenant mix and promotion
     - A shopping centres is a type of **retail property**. A percentage lease is a unique aspect of many retail leases, which requires the tenant to pay additional rent once its sales reach a certain level. The lease will typically specify a “**minimum rent**” that must be paid regardless of the tenant’s sales. **Percentage rent** may be paid by the tenant once the tenant’s sales reach a certain level or breakpoint.
+- index: appraisal based / transaction based
+    - Appraisal based : 1. 有滞后，因为每个季度估值，会有空档 2. turn to smooth 因为只有时点，所有时点间的波动被smooth了
+    - transaction based : 随机，实时
+        - Index: hedonic index are transaction based, so with more tradings the hedonic index would be more accurate.
 
-#### Absolute Valuation
 
-Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
+#### Absolute Valuation - 用NOI
+
+Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$        / # of shares
 
 直接用下一期的 NOI / Cap Rate 
 
@@ -41,7 +67,10 @@ Net Asset Value, $NAV = \frac{NOI_{1}}{cap\ rate}+Cash-Debt$ / # of shares
 
 -Debt
 
-#### Relative Value Approach
+#### Relative Value Approach 用FFO
+
+- FFO = NI + D&A + Loss - Gain
+- AFFO = FFO - Non-cash Adj - Recurring Maintainance-Type Cap Exp 
 
 The FFO-per-share ratio should be used in lieu of earnings per share (EPS) when evaluating REITs and other similar investment trusts.
 
@@ -84,7 +113,8 @@ There are three main drivers that differentiate P/FFO, P/AFFO, and EV/EBITDA mul
     - REIT分为 Equity REITs 和 Mortgage / Debts REITs
     - Equity type 直接 own buildings。
     - Mortgage types 持有 debts
-
+    - REITs 可以避税，但是与REITs相关的其他业务 不能避税
+    
 - REOCs - Real estate operating companies generate cash inflows primarily from the **sale of developed or improved properties,** as opposed to recurring lease or rental income.
 - **Industrial REITs** is sensitive to **retail sales**; **Storage REITs** is sensitive to **Population growth**
 
@@ -104,7 +134,7 @@ There are three main drivers that differentiate P/FFO, P/AFFO, and EV/EBITDA mul
 
 #### Performance Calculations
 
-- 分母是 Cumulative Paid-in Capital
+- 分母是 Cumulative Paid-in Capital (所有 called down 的加和)
 - TVPI, Total Value to Paid-in Capital， $ TVPI=\frac{Distributed + UnDistributed}{Cumulative InvestedCapital}$
 - DPI, Distributed to Paid-in Capital， $DPI=\frac{Cumulative Distributions}{Cumulated InvestedCapital}$ - 分配出去的 - **Realised Return**. 包括今年分配的，去年分配的，etc所以以前分配的都加一起
 - RVPI, Residual Value to Paid-in Capital, $RVPI = \frac{NAV(afterDistribution)}{Cumulative Invested Capital}$ - **Unrealised Return** 为当年剩下的NAV after distribution
@@ -181,6 +211,8 @@ Buyout funds seek out companies with **stable cash flows**.
 
 For a long position, the total return consists of the price return ((current price – previous price)/previous price) plus the roll return ((near-term contract price – farther-term contract price)/near-term price) plus the collateral return. For a short position, it is the negative of the first two terms.
 
+roll return 在 长期 multi period影响大，比single period	
+
 $$Total R = Price R + Roll R + CollateralR$$
 
 $$TotalR = \frac{P_1-P_0}{P_0} + \frac{F_0-F_1}{F_0} + collateralR \times \%$$
@@ -205,6 +237,8 @@ $$TotalR = \frac{P_1-P_0}{P_0} + \frac{F_0-F_1}{F_0} + collateralR \times \%$$
 
 - $ROI= (1+IRR)^t$
 - $ROI = \frac{\text{Value of Equity at Exit}}{\text{Post-Money Valuation}}$
+    - ROI = 未来的估值 / 今天的估值。   相当于已知未来会值多少钱，可以通过ROI反推出 今天值多少钱
+
 - Post Money Valuation = Pre-Money Valuation + Net Equity Injection
     - Vc投后的  =  vc投前的 + vc投的
     - $VC fraction = \frac{NetEquity}{PostEquity}$
