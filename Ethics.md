@@ -31,6 +31,7 @@ Working in certain industry 的不一定是 profession
 - Follow the most strict one
 - Consult the Legal & Compliance Advisors
 - Inaction 视为违法
+- Dissociate
 
 #### I(B). Independence & Objectivity
 

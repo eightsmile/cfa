@@ -437,7 +437,7 @@ we need to pay attention to the increase on absolute terms, not if it is +ve or 
 
 - 不好 Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. 
 - 不好 An increase (not a decrease) in discounts and returns would be a warning sign.
-- 好 Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. 
+- **好** Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. 
 
 #### CF Analysis
 
@@ -463,7 +463,7 @@ Basel III (2018) consider the liquidity
 - Asset Quality: Liquidty Asset %
 - Management Capability
 - Earning
-  - Earning 来源: 1. Net Interest Income 借贷利差 2. Trading Income 投资收益 3. Service Income 服务费
+  - Earning 来源: 1. Net Interest Income 借贷利差; 2. Trading Income 投资收益; 3. Service Income 服务费.
   - 其中 Trading Income 是 Low Quality 因为 highly Volatile
 - Liquidity Positions
   - Liquidity Coverage Ratio (流动性覆盖率) = $\frac{HihglyLiquidyAssets}{Bank's ExpectedCFoutflow (压力测试下30天流出的钱)}$

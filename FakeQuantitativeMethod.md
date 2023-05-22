@@ -72,7 +72,7 @@ There are two critical values, dL and dU. The decision rules are as follows: if 
 
 ### Machine Learning
 
-<img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 21.01.15.png" alt="Screenshot 2023-05-20 at 21.01.15" style="zoom: 50%;" />
+<img src="/Users/meowmeow/Documents/GitHub/cfa/pic/Screenshot 2023-05-20 at 21.01.15.png" alt="Screenshot 2023-05-20 at 21.01.15" style="zoom: 67%;" />
 
 #### Supervised & Un-Supervised
 

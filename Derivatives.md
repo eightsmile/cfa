@@ -195,7 +195,7 @@ Note that BSM states the continuously compound return is normally distributed, n
 
 Vega is high when option is **at the money**.
 
-Theta is normally negative. The speed of the option value decline increases, however, as time to expiration decreases. 
+Theta is normally negative. The speed of the option value decline increases, as time to expiration decreases. 
 
 ##### BSM Assumption
 

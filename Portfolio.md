@@ -84,6 +84,8 @@ $$r = \beta_0+\beta_1x_1x+\beta_2x_2+...+\beta_kx_k$$
 
 #### Between Fundamental Model & Macro-Factor Model
 
+For the Multi-factor model, the intercept is the expected return (However, for the APT model, the intercept is the risk-free rate).
+
 A second distinction between macroeconomic multi-factor models and fundamental factor models is that with the former, we develop the factor (**surprise**) series first and then estimate the factor sensitivities through regressions. With the latter, we generally specify the factor sensitivities (attributes) first and then estimate the factor through regressions.
 
 - Macro Model - 1st calculate surprise 2nd calculate sensitivity.
