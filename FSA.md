@@ -453,6 +453,8 @@ we need to pay attention to the increase on absolute terms, not if it is +ve or 
 
 Basel III (2018) consider the liquidity
 
+Weighted Risk Asset: Risky Assets are assigned more weights than risk-free ones.
+
 #### CAMELS
 
 - Calpital Adequacy
