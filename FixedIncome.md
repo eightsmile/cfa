@@ -155,6 +155,8 @@ Volatility increase the value of options and so embedded option bond, but do not
 
 Option-free bond (包括MBS)不会收到 implied volatility影响，那
 
+All else being equal, as the **yield curve flattens**, the value of call option in callable bond increases, which makes callable bond increase in a lower value than a straight bond. As the yield curve flattens, the value of the put option in puttable bond declines, therefore the value of the putable bond will not rise as much as a straight bond.
+
 #### OAS
 
 当只给 利率二叉树，还要算option embedded bond时，要在利率二叉树的基础上 + OAS
@@ -186,7 +188,7 @@ P.S.The price of the bond doesn’t change; it’s the market price of the bond.
 
 ### Durations
 
-#### Effective Duration
+#### Effective Duration - Curve Move
 
 Effective duration indicates the sensitivity of a bond’s price to a **100 bps parallel shift** of the benchmark yield curve assuming no change in the bond’s credit spread.
 
@@ -202,7 +204,7 @@ $$EC = \frac{P_- + P_+ - 2P_0}{(\Delta curve)^2 \times P_0}$$
 - For the **Floater**, Effective Duration is close to the period. For example, a one-year set floater has ED = 1.
 - E.G. As **rates rise** the call is less likely to be called therefore increasing duration. Think of it like this straight bond - call option, because it is a benefit to the issuer. As interest rates rise, a call option moves out of the money, which **increases the value of the callable bond and lengthens its effective duration**.
 
-#### One-side Duration
+#### One-side Duration - Curve Move (better than two-side one for embedded option bond)
 
 One-side duration states the sensitivity of bond with **embedded options** is not symmetrical to interest rate increase / decrease.
 
@@ -210,7 +212,7 @@ One-side duration is better at capturing the interest rate sensitivity of a call
 
 与ED相同，时parallel shift of yield curve，但是是单边的。
 
-#### Key-rate Duration
+#### Key-rate Duration - shape of yield curve
 
 - **Key rate durations** reflect the sensitivity of the bond’s price to changes in specific maturities on the benchmark yield curve. 用来衡量 yield curve 形状的变化
 - help portfolio managers and risk managers **identify the “shaping risk” for bonds**—that is, the bond’s sensitivity to **changes in the shape** of the yield curve (e.g., **steepening and flattening**).
@@ -282,6 +284,9 @@ $$\%\Delta \mathbb{E}(r_i) = - Mod.Duration \times \sum (CS_{base} - CS_i )P$$
     - Provide an Option analogy: consider a company with asset financed by equity and zero-coupon debt. 
         - call option on the asset with a strike price equal to the face value of debt (K).
     - It provides insight into the nature of credit risk. The company defaults when the value of its assets dips below the default barrier.
+    - The structural model is under the assumption that the issuing company's assets trade in a frictionless market.
+    - Under the structural model’s debt option analogy, owning a company’s debt is economically equivalent to owning a riskless bond that pays K dollars at time T, plus simultaneously selling a European put option on the assets of the company with maturity T and strike price K.
+    
     - **Used for internal risk management**.
 - Reduced Form Model - explain when
     - the default is an **exogenous** (external) variable that occurs randomly.

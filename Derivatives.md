@@ -8,6 +8,8 @@ Because futures contracts are marked to market daily, profits are paid out and t
 
 $$FP=S_0(1+r_f)^T + CarryingCost-Carrying Benefits$$
 
+At the interception, the value of forward should be zero.
+
 #### Cash-and-Carry Arbitrage
 
 - $FP > S_0 \times (1+r_f)^T$ 

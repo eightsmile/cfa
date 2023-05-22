@@ -97,7 +97,7 @@ $NCC$ is the non-cash charge - Depreciation and Amortisation.
 
 $$FCFE = FCFF - I\times(1-T)+NetBorrowing$$
 
-$$FCFE=NI+NCC−FC_{INV}−WFC_{INV}+Net Borrowing$$
+$$FCFE=NI+NCC−FC_{INV}−WC_{INV}+Net Borrowing$$
 
 $$EquityValue = \frac{FCFE_1}{r-g}=\frac{FCFE_0\times (1+g)}{r-g}$$
 
@@ -401,7 +401,7 @@ $$\frac{IntangibleAssetEarning}{r_{intangible}-g}$$
 
 逐层累加rate，算出 discount rate
 
-build-up method 全都加 ，包括 industrial premium
+build-up method 全都加 ，包括 industrial premium 不乘beta
 
 #### Expanded CAPM
 
