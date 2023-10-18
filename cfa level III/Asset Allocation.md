@@ -293,3 +293,23 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 ![Screenshot 2023-10-18 at 16.58.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png)
 
 ### Goals-Based Asset Allocation
+
+### Heuristic and Other Approaches
+
+- 120 - age
+- 60/40 stock/bond
+- Endowment Model (Yale Model)
+  - High allocation to non-tradition assets (alternatives)
+  - Seek to earn illiquidty premium
+  - Commitment to active management
+  - long time horizon
+
+### Risk Budgeting and Risk Parity
+
+#### Risk Parity 
+
+每个资产给组合的风险贡献 $\frac{1}{n}\sigma_p$
+
+#### Risk Budgeting
+
+每承担1单位的风险，获得的最高风险补偿/收益 
