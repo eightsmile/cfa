@@ -27,7 +27,7 @@ Economic Net Worth = Net Worth (Financial Asset - Fin Lia) + 1,2,3
 | **Extended Assets**: PV of Expected Contribution | **Extended Liabilities**: PV of Expected Future Support |
 |                                                  | **Net Worth**                                           |
 
-<img src="/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-10-12 at 13.32.36.png" alt="Screenshot 2023-10-12 at 13.32.36" style="zoom:25%;" />
+![Screenshot 2023-10-18 at 12.44.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.44.59.png)
 
 ## Asset Allocation Approach
 
@@ -114,7 +114,7 @@ As the value of puts and calls is positively related to volatility, such a posit
 
 $$ U = \mathbb{E}(R_m) - 0.005 \lambda \sigma^2_m $$
 
-<img src="C:\Users\zh-zhaofy\AppData\Roaming\Typora\typora-user-images\image-20231017160825929.png" alt="image-20231017160825929" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.43.55.png" alt="Screenshot 2023-10-18 at 12.43.55" style="zoom: 33%;" />
 
 if the non-negative constraint is made, then there are points on the efficients frontier becoming unavailable. The efficient frontier becomes non-continuous. To approximate the standard deviation of those points, we use **adjacent corner portfolios**.
 
@@ -139,16 +139,157 @@ Cons:
 5. no consider **liability or consumption stream** *(use ALM instead)*
 6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS instead)*
 
+#### Pros and Cons of MVO
+
+Pros: commonly, widely, easily, used
+
+Cons:
+
+1. The optimisation process make output **highly sensitive** to inputs
+2. Outputs are **highly concentrated** 结果weights集中在某个资产上 *(apply constraints)*
+3. MVO assume standard normal **dist**, so **not account for Skewness and Kurtosis** *(use other dist instead)*
+4. **sources of risks may not be diversified** *(use factor-based model instead)*
+5. no consider **liability or consumption stream** *(use ALM instead)*
+6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS instead)*
+
 #### Overcome those Cons
 
-- **Constraints**: incorporate real-world constraints, can restrict percentage of asset class. 
-    - Non-negative constraint, percentage constraint, upper limits
-    - **However**, if constraint is made, the problem is no longer optimisation of the original. 不再是原来的 Optimisation, 而是 optimisation with constraints.
-- **Resample**: resampling uses **MCS** to estimate a large number of potential capital market assumptions, simulated frontiers are saved and averaged to get the **resampled frontier**.
-    - As multi paths are simulated, the resampled frontier would be smoothed not in-continuous.
-    - **However**, there might be 
-        1. **concave bump** where expected return decreases as expected risk increases
-        2. Risky asset allocations are **over-diversified**. (as there are simulations)
-        3. inherit estimation errors. (有estimate by Monte Carlo 就有estimation errors)
-        4. Lack of theoretical foundation.
+##### Constraints
 
+incorporate real-world constraints, can restrict percentage of asset class. 
+
+- Non-negative constraint, percentage constraint, upper limits
+- **However**, if constraint is made, the problem is no longer optimisation of the original. 不再是原来的 Optimisation, 而是 optimisation with constraints.
+
+##### Resample
+
+resampling uses **MCS** to estimate a large number of potential capital market assumptions, simulated frontiers are saved and averaged to get the **resampled frontier**.
+
+- As multi paths are simulated, the resampled frontier would be smoothed not in-continuous.
+- **However**, there might be 
+    1. **concave bump** where expected return decreases as expected risk increases
+    2. Risky asset allocations are **over-diversified**. (as there are simulations)
+    3. inherit estimation errors. (有estimate by Monte Carlo 就有estimation errors)
+    4. Lack of theoretical foundation.
+
+##### Reverse Optimisation
+
+to cope with the problem that the expected return of expected return and standard deviation are not reliable. We use:
+
+- Way 1:
+    - Allocation Weights of Global Market Portfolio (Mkt Cap %) $\to$ by Reverse MVO, max Utility s.t. constraint $\to$ Implied Return
+    - Input: Implied Return $\to$ by MVO output Weights
+- Way 2: Reverse Beta
+    - use the weights of asset class (or index) to form a **working version of the global market portfolio**;
+    - use the **beta** of each asset relative to the global market portfolio.
+    - use CAPM to infer expected return
+    - run a MVO
+
+##### Black-Litterman Model
+
+view adjusted
+
+- Like a weights average of $w\times r_{impliedReturn} + (1-w)\times View$, with uncertainty. (See my CQF Notes)
+
+##### Non-normal Optimisation
+
+As normal dist has only two parameter, mean and variance, the first and second moment, it do not account for further moments, such as
+
+- Skewness - the asymmetric ~ity
+- Kurtosis - the thickness of tail
+- Other optimisation could be use to account for the non-normal return dist characteristics: (1) mean-semivariance opt, (2) mean-condition VaR  opt (3) mean-variance-skewness opt; (4) mean-var-skew-kurt opt. etc
+
+##### Factor-Based Model
+
+use investment factors. 
+
+requires three sets of inputs: returns, risks (s.d.), correlations
+
+- Pair-wise correlations with the market and with one another are generally low. Constructing factors in this manner removes most market exposure from the factors because of the short positions that offset long positions
+
+##### Monte Carlo Simulation MCS
+
+MCS is the complements of the MVO. MVO can only do with **single-period**. However, MCS can grapple with **a range of practical issues**:
+
+- path dependence, and 
+- taxes triggered by rebalance.
+
+#### Liquidity Consideration
+
+- Liquid Asset Classes: publicly listed equity and bond
+- Less Liquid: direct real estate, infrastructure, and PE
+
+To solve the illiquid problem, practical options include
+
+1. exclude less liquid asset classes
+2. model input by representing the highly diversified characteristics. such as use REITs instead of direct real estate.
+3. ?? Include less liquid asset classes in the asset allocation decision and attempt to model the inputs to represent the specific risk characteristics associated with the likely implementation vehicles. 
+
+### Liability-relative Asset Allocations 
+
+The asset allocation with considering the investor's Liability.
+
+#### Surplus Optimisation
+
+We consider the **Surplus**. $SurplusReturn = \frac{\Delta A}{initial A} - \frac{\Delta L}{initial A}$. Note that the Liability is subtracted.
+
+The objective function becomes the follow, where we use the surplus expected return and surplus variance instead.
+
+$$ U_{LiaRelative} = \mathbb{E}(R_{surplus}) - 0.005 \lambda \sigma^2_{surplus} $$
+
+##### ALM Efficient Frontier
+
+Asset Liability Management (ALM) approach minimise the difference between assets and liabilities at each level of risks
+
+![Screenshot 2023-10-18 at 13.01.17](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2013.01.17.png)
+
+##### Difference between Surplus & Asset-only
+
+1. Expected Surplus & Variance of Surplus
+2. ALM Efficient Frontier & Efficient Frontier
+3. Minimum Surplus Variance Portfolio & Global Minimum Variance Portfolio
+    - The Minimum Surplus Variance Portfolio might be negative
+4. ALM MVO - minimise surplus variance & AO MVO - minimise portfolio variance.
+5. $r_f$: ALM: corporate bond & AO: T-bill
+
+##### Comparison
+
+- The **most conservative mix** of **Surplus Efficient Frontier** consists mostly of **US corporate bond** 因为要考虑 -L，需要正收益的资产对冲。而the most conservative mix of Asset only is **Cash**
+- 当risk 提升时，Surplus & Asset-only have **identical** **aggressive portfolio** (PE), 两者一样当aggressive时
+- 当expected surplus提升到一定程度时，持有的bond将disappear，因为return不足以
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2013.19.26.png" alt="Screenshot 2023-10-18 at 13.19.26" style="zoom:25%;" />
+
+##### Hedging / Return-seeking Portfolio Approach ( Two-portfolio Approach )
+
+###### ***Basic***: A > L (hedge fully, or called True Hedge)
+
+The Liability-relative Asset Allocation task is divided into two parts (1) **hedging portfolio**, (2) **return-seeking portfolio**.
+
+- Hedging Portfolio is used to hedge **fully** Liability
+- Return-Seeking Portfolio can be managed **independently** of the hedging portfolio (e.g. using MVO). 
+
+###### ***Variant***: A < L (hedge partially)   - Aggressive or less conservative
+
+Not fully hedge the Liability. **Partially** hedge the liability, and use the other to do AO-MVO
+
+##### ***Variant of Variant***: An Alternative
+
+use Asset to purchase derivative and use derivative to hedge the change of liability
+
+##### Integrated Asset-Liability Approach (might be better)
+
+- **Integrate or jointly optimise** asset and liability decision.
+- Has to potential to **improve the institution's surplus**.
+- Can be implemented in a **factor-based** model
+
+##### Comparison
+
+###### Surplus Optimisation & Two Portfolio
+
+- **Surplus Optimisation** approach links assets and the present value of liabilities through a correlation coefficient. 用Correlation算Surplus Efficient Frontier, 而 **Two-portfolio Approch**不需要
+- Two Portfolio (Basic) needs over-funded, (Variant) need not. 而Surplus Optimisation method 不考虑overfunded or not
+
+![Screenshot 2023-10-18 at 16.58.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png)
+
+### Goals-Based Asset Allocation
