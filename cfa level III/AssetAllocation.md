@@ -29,6 +29,8 @@ Economic Net Worth = Net Worth (Financial Asset - Fin Lia) + 1,2,3
 
 ![Screenshot 2023-10-18 at 12.44.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.44.59.png)
 
+---
+
 ## Asset Allocation Approach
 
 1. Asset Only - MVO
@@ -41,7 +43,7 @@ Economic Net Worth = Net Worth (Financial Asset - Fin Lia) + 1,2,3
 | Liability relative            | Models legal and quasi-liabilities             | Fund liabilities and invest excess assets for growth         | Penalty for not meeting liabilities highBanksDefined benefit pensionsInsurers | focus on the risk of having insufficient assets to pay obligations when due |
 | Goals based                   | Models goals                                   | Achieve goals with specified required probabilities of success | Individual investors                                         | concerned with the risk of failing to achieve goals          |
 
-## Asset Classification Rationale
+### Asset Classification Rationale
 
 1. Homogenous. Assets in the same class have similar attributes.
 2. Mutually Exclusive. Not Overlapping.
@@ -57,6 +59,8 @@ Asset classes often include:
 4. Real assets: includes assets that provide sensitivity to inflation, such as private real estate equity, private infrastructure, and commodities. Sometimes, global inflation-linked bonds are included as a real asset rather than fixed income because of their sensitivity to inflation.
 
 ( Inflation-Linked Bonds are a proxy for REAL interest rate, because inflation linked bonds' prices vary with inflation so if you remove the effect of inflation, you should end up with the real rate.
+
+---
 
 ## Strategic Asset Allocation
 
@@ -94,8 +98,6 @@ Two Approaches:
         5. Belief in Momentum: has momentum, high corridor. **Positive**
         6. Liquidity: Less liquidity, higher cost, high corridor. **Negative**
 
----
-
 ### Rebalance Frequency
 
 - The narrower the corridor, the more frequent to rebalance
@@ -107,6 +109,8 @@ Two Approaches:
 In the case of a portfolio consisting of a risky asset and a risk-free asset, the return to a rebalanced portfolio **can be replicated by** creating **a buy-and-hold position in the portfolio**, writing out-of the-money puts and calls on the risky asset, and investing the premiums in risk-free bonds. 
 
 As the value of puts and calls is positively related to volatility, such a position is called being short volatility
+
+---
 
 ## Principal of  Asset Allocation
 
@@ -145,12 +149,12 @@ Pros: commonly, widely, easily, used
 
 Cons:
 
-1. The optimisation process make output **highly sensitive** to inputs
-2. Outputs are **highly concentrated** 结果weights集中在某个资产上 *(apply constraints)*
+1. The optimisation process make output **highly sensitive** to inputs *(see 2)*
+2. Outputs are **highly concentrated** 结果weights集中在某个资产上 *(1. apply constraints, 2. Resample, 3. Reverse Optimisation, 4. Black-Litterrman)*
 3. MVO assume standard normal **dist**, so **not account for Skewness and Kurtosis** *(use other dist instead)*
-4. **sources of risks may not be diversified** *(use factor-based model instead)*
-5. no consider **liability or consumption stream** *(use ALM instead)*
-6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS instead)*
+4. **sources of risks may not be diversified** *(use factor-based model)*
+5. no consider **liability or consumption stream** *(use ALM, Surplus MVO)*
+6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS)*
 
 #### Overcome those Cons
 
@@ -190,6 +194,7 @@ to cope with the problem that the expected return of expected return and standar
 view adjusted
 
 - Like a weights average of $w\times r_{impliedReturn} + (1-w)\times View$, with uncertainty. (See my CQF Notes)
+- 如果没有view，则为 implied return 即与 reverse opt结果相同
 
 ##### Non-normal Optimisation
 
@@ -229,7 +234,7 @@ To solve the illiquid problem, practical options include
 
 The asset allocation with considering the investor's Liability.
 
-#### Surplus Optimisation
+#### Surplus Optimisation / Surplus MVO
 
 We consider the **Surplus**. $SurplusReturn = \frac{\Delta A}{initial A} - \frac{\Delta L}{initial A}$. Note that the Liability is subtracted.
 
@@ -260,16 +265,16 @@ Asset Liability Management (ALM) approach minimise the difference between assets
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2013.19.26.png" alt="Screenshot 2023-10-18 at 13.19.26" style="zoom:25%;" />
 
-##### Hedging / Return-seeking Portfolio Approach ( Two-portfolio Approach )
+#### Hedging / Return-seeking Portfolio Approach ( Two-portfolio Approach )
 
-###### ***Basic***: A > L (hedge fully, or called True Hedge)
+##### ***Basic***: A > L (hedge fully, or called True Hedge)
 
 The Liability-relative Asset Allocation task is divided into two parts (1) **hedging portfolio**, (2) **return-seeking portfolio**.
 
 - Hedging Portfolio is used to hedge **fully** Liability
 - Return-Seeking Portfolio can be managed **independently** of the hedging portfolio (e.g. using MVO). 
 
-###### ***Variant***: A < L (hedge partially)   - Aggressive or less conservative
+##### ***Variant***: A < L (hedge partially)   - Aggressive or less conservative
 
 Not fully hedge the Liability. **Partially** hedge the liability, and use the other to do AO-MVO
 
@@ -277,13 +282,15 @@ Not fully hedge the Liability. **Partially** hedge the liability, and use the ot
 
 use Asset to purchase derivative and use derivative to hedge the change of liability
 
-##### Integrated Asset-Liability Approach (might be better)
+#### Integrated Asset-Liability Approach (might be better)
 
-- **Integrate or jointly optimise** asset and liability decision.
-- Has to potential to **improve the institution's surplus**.
+- **Integrate or jointly optimise** asset and liability decision
+- Has to potential to **improve the institution's surplus**
 - Can be implemented in a **factor-based** model
+- 因为Asset和Lia一起考虑，所以decision可能更加 紧密，也因此有可能 improve institution's surplus
+- 可以考虑 multi-period
 
-##### Comparison
+#### Comparison
 
 ###### Surplus Optimisation & Two Portfolio
 
@@ -292,12 +299,21 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 
 ![Screenshot 2023-10-18 at 16.58.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png)
 
+与 lia一起考虑，即为非线性
+
 ### Goals-Based Asset Allocation
+
+- Apply best to Individuals
+- Allocate capital to **sub-portfolio**, **pick the highest probability**, use horizon-adjusted discount rate to discount the expected CF, obtain **lowest initially required capital** for each goal
+
+![Screenshot 2023-10-18 at 22.36.55](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2022.36.55.png)
+
+Drawback of Goal Based: (1) inefficient, (2) not consider correlation between asset class
 
 ### Heuristic and Other Approaches
 
 - 120 - age
-- 60/40 stock/bond
+- 60 / 40 stock/bond (Noway Sovereign Fund)
 - Endowment Model (Yale Model)
   - High allocation to non-tradition assets (alternatives)
   - Seek to earn illiquidty premium
@@ -306,10 +322,79 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 
 ### Risk Budgeting and Risk Parity
 
-#### Risk Parity 
+#### Risk Budgeting
+
+![_cgi-bin_mmwebwx-bin_webwxgetmsgimg](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%253F%253F%2526MsgID%253D6268719542435932561%2526skey%253D%40crypt_df70b197_26e8fd2fe06b2899556fa708fc188e62%2526mmweb_appid%253Dwx_webfilehelper.png)
+
+1. MCTR Goal: maximise the return per unit of risk 每承担一单位风险获得的收益
+2. 投资 MCTR 最低的 portfolio
+3. $\frac{r_A - r_f}{MCRT_A} > \frac{r_B - r_f}{MCRT_B}$, **risk budget is optimal** if the **ratio of excess return to MCTR is the same**
+
+- **MCTR**, Marginal Contribution to Total Risks
+
+    $MCTR = \frac{\partial \sigma_p}{\partial w_i} = \frac{cov(i,p)}{\sigma_p}$ the definition
+
+    As, $\beta_{i,m} = \frac{cov(i,m)}{\sigma^2_m}$, so $\beta_{i,p} = \frac{cov(i,p)}{\sigma^2_p}$
+
+    Thus, $MCTR = \sigma_p \beta_{i,p}$
+
+- **Ratio of Excess Return to MCTR** = $\frac{ExpectedReturn - R_f}{MCTR}$
+
+- **ACTR**, Absolute Contribution to Total Risks, how much it contributes to portfolio return volatility.
+
+    $ACTR = MCTR \times \$ amount$, but in the CFA notes,
+
+    $ACTR = MCTR \times w_i = w_i \beta_i \sigma_p = \frac{1}{n}\sigma_p$
+
+    multiply $\sigma_p$ from the both side, $w_i \beta_i \sigma^2_p =\frac{1}{n}\sigma_p^2 = w_i \ cov(i,p)$
+
+#### Risk Parity
 
 每个资产给组合的风险贡献 $\frac{1}{n}\sigma_p$
 
-#### Risk Budgeting
+Each asset (asset class or risk factor) should **contribute equally** to the total risk of the portfolio for a portfolio to be well **diversified**. 每个asset class贡献同样的资产，那么比如有 bond, equity, commodity, 因为bond的风险小，那么portfolio中配置的就bond就更多，这样可以达到1/3 portfolio total risk
 
-每承担1单位的风险，获得的最高风险补偿/收益 
+#### Pros and Cons
+
+- **Pros**: risks are diversified
+- **Cons**: as we include more bonds by the risk parity, risks are diversified, but expected returns are scarified.
+- **Cons**: Dependent on the ability to use extremely large amounts of leverage at low borrow rates 
+
+---
+
+## Real-World Constraint
+
+### Assets Size
+
+Large Asst: (1) illiquidity, (2) make small-cap stock price wildly fluctuate, (3) reluctant organisational hierarchies.
+
+### Liquidity
+
+Life-Insurance has long time horizon, so less liquidity demand. Bank has higher liquidity demand.
+
+### Taxable Investors
+
+$\sigma_{at} = \sigma_{pt} (1-t)$, at-after-tax, pt-pre-tax by $r_{at} = (1-t)r_{pr}$
+
+#### Rebalance Corridor
+
+tax 大 $\to$ cost 大 $\to$ Corridor 大, so
+
+$range_{at} = \frac{range_{pt}}{1-t}$
+
+因为 after tax range 大，所以 除以 1-t
+
+#### Tax-Deferred Account (TDA)
+
+$v_{at} = v_{pt} (1-t)$
+
+### Deal with Behavioural Bias
+
+#### Identify Anomalies
+
+1. Loss-aversion bias: **Goal Based**
+2. Illusion of Control (cognitive bias): **global portfolio performance**
+3. Mental Accounting: **Goal Based**
+4. Representative / Recency（representative problem 的三个层次：（1）过去好的投资，将来也是好的；（2）好公司就是好的投资；（3）只看了短期收益就认为是好的基金经理）: **Governance**
+5. Framing Bias: **多角度看。看return同时看risk，Sharpe ratio， max drawdown等**
+6. Availability Bias (买的是最先想到的股票): **global portfolio**
