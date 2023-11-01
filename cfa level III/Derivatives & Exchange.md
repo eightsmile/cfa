@@ -159,3 +159,35 @@ Gamma is the **maxima** while option is **at-the-money**.
 #### Rho < w.r.t. risk-free rate, >0 for call, <0 for put
 
 ---
+
+### Volatility Smile
+
+1. The Black-Sholes model assumes constant Volatility
+
+2. Emperically for **foreign currency options**, when at-the-money, implied volatility is lowest
+
+   ![Screenshot 2023-11-01 at 21.59.45](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 21.59.45.png)
+
+3. Equity Option, Skew (Smirk)
+
+   ![Screenshot 2023-11-01 at 22.06.49](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 22.06.49.png)
+
+4. Reasons for the Smile in Equity Options
+
+   1. Crashophbia 崩盘 market crash 可能，因为option就是用来应对危机的
+   2. Leverage. As equity declines in value, company's leverage increases.
+   3. Volatility Feedback Effect. 反身性，相当于 负向 accelerator
+
+5. OTM Put 的 vol 低, OTM Call 的 vol 高. Buy OTM Call (underpriced) and sell OTM put (overpriced) 
+
+6. **Implied Volatility** is compared with $\frac{K}{S_0}$ or  $\frac{K}{F_0}$ (相当于去除量纲)
+
+---
+
+## Swaps, Forward, Futures
+
+### Manage Interest Rate Risks
+
+#### Interest Rate Swap 
+
+![Screenshot 2023-11-01 at 22.47.14](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2022.47.14.png)
