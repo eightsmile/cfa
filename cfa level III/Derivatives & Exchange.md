@@ -190,4 +190,25 @@ Gamma is the **maxima** while option is **at-the-money**.
 
 #### Interest Rate Swap 
 
+Payer and Receiver 都指的是 对Float 的 pay / receive
+
 ![Screenshot 2023-11-01 at 22.47.14](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2022.47.14.png)
+
+##### Duration of the Swap
+
+$D_{payerFloat} = D_{Fix} - D_{Float}$, vice veresa
+
+- The d**uration of float bond is nearly zero**, thus the **duration of payer float is positive**, the **duration of the receiver Float is negative**.
+
+- Empirically, **float-rate bond duration = time period of reset** . E.G. if half-year to reset, then duration = 0.5
+
+##### Market Value Risks and Cash Flow Risks
+
+- Float Bond is s.t. Cash Flow Risks 因为每一期现金流都不确定
+- Fixed Bond is s.t. Market Value Risks 因为pay fixed 的部分，受 market rate 影响
+- **If change from float to fixed, then CF risks is neutralised and then be s.t. market value risks. Vice Versa.** 如果通过swap 把float 换成了 fixed，那么从 expose cf risks 转为 expose to market value risks
+
+##### Formula
+
+$MV_p \times MD_r = MD_p + N_s \times MD_s$
+
