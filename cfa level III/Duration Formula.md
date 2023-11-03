@@ -40,4 +40,27 @@ $N_s = \frac{MDur_t - MDur_p}{MDur_s} MV_p$
 
 - Implication:
 
-  $D_t - D_p $ 与 $D_{swap}$ 同向
+  $D_t - D_p $ 与 $D_{swap}$ 同向变动
+
+##### Interest Rate Forwards (FRA)
+
+##### Interest Rate Future (Euro-Dollar Future)
+
+- As it is future, it's standard (not OTC as FRA). 
+- Guaranteed by a clearinghouse, so counterparty risk is nearly zero. 有保证金，所以交易对手方风险基本上为0
+    - Cash settled
+
+- P.S. interest rate futures are short-term, but fixed-income futures are more long time.
+
+Euro Dollar Futures have fixed notional value and fixed term (, as it is standardised). 
+
+- Notional value: 1 million USD
+- Term: 3 months
+
+$\$1,000,000 \times \frac{90}{360}\times 1bp = \$25$
+
+---
+
+### Fixed-Income Futures
+
+Treasury-bond is the underlying asset, we do not use corporate bond as there is less liquidity and more credit risks.
