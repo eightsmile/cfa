@@ -709,6 +709,8 @@ Assume $d/f$ direct quote, the base is foreign currency. 我们担心外币贬�
 
 #### Forward Contracts 
 
+Roll Yield / Roll Return $=\frac{F-S}{S}$
+
 ##### Over/Under Hedged
 
 i.g. 在未来会收到 100 US Asset，then enter a forward contract 卖100 USD 换 CNY

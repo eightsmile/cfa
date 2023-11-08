@@ -93,20 +93,141 @@ Using Derivatives to adjust the duration of liability portfolio 用于调整 dur
 
 #### Total Return Mandates (Index Based)
 
-因为 bond liquidity 比 equity 的低，所以mimic index bonds by purchasing the same bonds 可能比较难以操作。 所以 mimic returns
+因为 bond liquidity 比 equity 的低，所以mimic index bonds by purchasing the same bonds 可能比较难以操作。 所以 mimic **Risk Factors**
 
-Risks:
+Risks Factors:
 
-- **Interest Rate Risks**: exposure to parallel shift in the Yield Curve. Measured by **Portfolio Duration**
-- **Spread Risks**: exposure to changes in spreads between Treasuries and non-Treasuries. Measured by **Spread Duration**.
-    -  (YTM = Benchmark Yield + Spread), so spread 涨1%带来的YTM 增加与 Benchmarked涨1%带来的YTM增加一致。thus spread duration = portfolio duration，as 都通过YTM影响 price
-    - P.S.国债没有 spread
-- **Yield Curve Risks**: exposure to a twist in the Treasury Yield Curve. Measured by **Key Rate Duration & PV of Distribution of CF**
-- **Credit Risks**: exposure to downgrades and defaults. Measured by contribution to **duration by credit rating**
-- **Optionality Risks**: exposure to changes in CF due to call/put features. Measured by **Portfolio Delta**
+1. **Interest Rate Risks**: exposure to parallel shift in the Yield Curve. Measured by **Portfolio Duration**
+
+2. **Spread Risks**: exposure to changes in spreads between Treasuries and non-Treasuries. Measured by **Spread Duration**.
+
+   - (YTM = Benchmark Yield + Spread), so spread 涨1%带来的YTM 增加与 Benchmarked涨1%带来的YTM增加一致。thus spread duration = portfolio duration，as 都通过YTM影响 price
+
+   - P.S.国债没有 spread
+
+3. **Yield Curve Risks**: exposure to a twist in the Treasury Yield Curve. Measured by **Key Rate Duration & PV of Distribution of CF**
+
+4. Credit Risks**: exposure to downgrades and defaults. Measured by contribution to **duration by credit rating
+
+5. Optionality Risks**: exposure to changes in CF due to call/put features. Measured by **Portfolio Delta**
 
 **Mandates:**
 
 - Pure Indexing
 - Enhanced Indexing
 - Active Management
+
+![Screenshot 2023-11-08 at 19.34.02](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2019.34.02.png) 
+
+Recall:
+
+- Maculay Duration: weighted averaged years
+- Modified Duration: percentage price change given the YTM yield changes
+- Effective Duration: the sensitivity of bond price to a change in benchmarket yield (**parallel shift in the benchmark yield curve**)
+- Key Rate Duration: identify the sensitivity of shape of benchmark yield curve
+- Empirical Duration: regressopm pf bond price on benchmarket yield curve
+- Spread Duration: sensitivity to change in credit spread, $YTM = Benchmark + Spread$
+- Money Duration: 利率变 1%， 价格波动的amount
+- PVBP (Price Value of a Basis Point): 利率变动1bp，带来的价格波动
+- Convexity: second order Derivatives of Price w.r.t. yield
+
+##### Correlation
+
+Below-investment-grade securities are affected more by changes in spread than by changes in general interest rate and exhibit stronger ocrrelations with equity markets.
+
+##### Portfolio Duration in TOtal Return Mandates
+
+- **Top-down** approach to establish the large **risk factors** (mimic the risk factors)
+- **Bottom-up** to **adjust individual security selection**
+- Use the **spread duration** to gauge the portfolio’s sensitivity to changes in credit spreads.
+- A **second way** to increase the portfolio credit exposure is to **reduce the average credit rating of the portfolio**.
+
+### Bond Market Liquidity
+
+Yield & Liqudity are negative correlated
+
+---
+
+### Fixed-Income Returns
+
+We introduced previously
+
+1. Coupon
+2. $\Delta P$
+3. Reinvestment
+
+$\mathbb{E}(R)\approx Yield\ Income + Rolldown\ Return + E_1 -E_2 + E_3$
+
+- $Yield Income = \frac{Annual\ Coupon\ Payment}{Current\ Bond\ Price}$
+
+  - Annual Coupon Payment = Coupon + Reinvestment Income
+
+- $Rolldown Return = \frac{BondPrice_e - BondPrice_b}{BondPrice_b}$
+
+  (P.S. $Roll\ Yield = Yield\ Income + Rollowdown\ Return$)
+
+- $E_1 = \text{Changes in Price based on Investors' view yields and yield spread}$
+
+- $E_2 = Credit\ Loss$
+
+- $E_3 = Currency \ Gains \ or \ Losses$
+
+$\mathbb{E}(\Delta P) = - Mod.Dur \times \Delta Yield + \frac{1}{2}\times Convexity \times (\Delta Yield)^2 $
+
+---
+
+### Leverage
+
+##### Leveraged Portfolio **Return**
+
+$r_p = \frac{Portfolio\ Return}{Portfolio\ Equity} = \frac{r_1 \times V_E + V_B - V_B\times r_B}{V_E} = r_i + \frac{V_B}{V_E} \times (r_I - r_B)$
+
+- $V_E$ value of Portfolio Equity
+  - $r_I$ investment funds return
+- $V_B$ borrowed funds
+  - $r_p$ levered portfolio returns
+- The last eqution, and the last term represent the leverage effects on returns.
+- if $r_I > r_B$, then leverage increase total portfolio return
+- if $r_I < r_B$, then leverage decrease total portfolio return
+
+##### Leverage Effects on Duration
+
+$D_p = D_I + \frac{V_B}{V_E}(D_I - D_B)$
+
+##### Derivatives
+
+- Futures:
+  - if $i$ increase, then price decrease, FP also decrease
+- Swap:
+  - Fixed-rate payer: long float short fix 因为 float 不影响duration，所以short fixed 会减少 duration。此时 i 提升， duration 负，则 value increase
+  - Fixed-rate receivers: long fix short float 为duration增加。此时 i 提升，duration 为正，value 减少
+
+##### Repo
+
+**Repo Margin**: A 给 B asset，值100； B 给 A cash，为95 。 此时 B 少给的 5 为 Repo Margin，B少付的相当于是A给B的保证金
+
+**Repo Rate**: 结束后，A 给 B cash，为 97；B 把 Asset = 100 还给 A。那么97-95=2，多出的 2 为 repo rate，相当于借款利息	
+
+##### Securtities Lending
+
+![Screenshot 2023-11-08 at 21.50.02](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2021.50.02.png)
+
+Rebate Rate = Collateral Earning Rate - Securitiy Lending Rate
+
+#### Risks of Leverage
+
+- Force Liquidation
+  - Fire Sale: forced liquidations at prices that are below fair value as a result of the seller’s need for immediate liquidation.
+- Higher level of Risks
+
+---
+
+### Taxation
+
+Coupon: tax is higher
+
+Captial Gain: tax is lower
+
+Short-term Captial Gain tax > Long term Capitla Gain
+
+Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
