@@ -48,9 +48,9 @@ $Duration = Horizon$
 
 买 zero-coupon bond 最好，因为不涉及不用考虑中间 coupon reinvest的问题，但是 zero-coupon bond 只有短期。要匹配长期，只能买 coupon bearing fixed income bond
 
-##### Duration Matching (Classic Immunisation)
+### Duration Matching (Classic Immunisation)
 
-###### For Single Lia Immunisation
+#### For Single Lia Immunisation
 
 Make price risks and reinvestment risks cancel each other.
 
@@ -65,7 +65,7 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 - If $Port Duration > Horizon$: 在收到 interim CF 之前就给买了，所以investment horizon小，那么受制于 reinvestment risks 小，因为没 reinvest 就卖了，反而受 price risks 影响大
 - If $Port Duration = horizon = Lia Matuiry$, then Great
 
-**Immunisation Risks**: 
+##### Immunisation Risks: 
 
 - 此策略不能 cover Non-parallel changes **in interest rate** 因为 duration 衡量的是 利率的平行移动，所以如果不平行移动，则 duration match 失效
     - bond 的 CF流入有 (1) Barbell 两边流入多，中期流入少，易受 non-parallel shifts 影响 (2) Bullet 仅一期大的流入，受 non-parallel shifts 影响小。**In sum， invest 更多bullet bonds**
@@ -76,7 +76,7 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 - 只匹配了 duration ，没有 匹配 convexity
     - 没啥解决办法，忽略 convexity
 
-###### For Multi-Liabilities Immunisation
+##### For Multi-Liabilities Immunisation
 
 1. $PV_A = PV_{Lia}$
 2. $Duration_A = Duration_{Lia}$
@@ -85,7 +85,7 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 3. （增加一条 for multi-lia ）$Range_{A} > Range_{Lia}$ 资产的周期要能覆盖 lia port的周期，为了保证最后一期有足够的现金流能 cover liability payments
 
-##### Cash Flow Matching
+### Cash Flow Matching
 
 先 cover 最后一笔负债，从后往前一层一层的剥离。先匹配长期的bond 是因为 买 asset 匹配长期的 lia 的时候，asset也会产生 interim cf，那么在匹配短期的时候，这些cf inflow将被合并考虑
 
@@ -110,7 +110,7 @@ Why not buy back and retire the liability early?
 - Might be illiquid
 - Corporate has motive to improve the credit rating by doing CF matching, so do not buyback earlier.
 
-##### Contingent Immunisation
+### Contingent Immunisation
 
 Allow active management for the surplus amount of assets over liability 用surplus 的部分做 active management，其他正常部门 immunisation
 
@@ -120,28 +120,45 @@ Allow active management for the surplus amount of assets over liability 用surpl
 
 $Asset \ BPV \times \Delta Asset\ Yields + Hedge\ BPV \times \Delta\ Hedge \ Yield \approx Lia\ BPV \times \Delta Lia \ Yield$
 
-###### Using Forwards
+#### Using Forwards
 
 - Required Number of Future Contract: $N_f = \frac{Lia\ Portfolio \ BPV - Asset \ Portfolio \ BPV}{futures\ BPV}$
 - $Futures BPV = \frac{BPV_{CTD}}{CF}$  cheapest to Deliver
 
-###### Using Interest Swap
+#### Using Interest Swap
 
 - Notional Principal: $NP = \frac{LiaBPV - Asset BPV}{Swap BPV/100}$
 
-###### Swaption
+#### Swaption
 
 - increase duration: enter a receiver swaption
 - Decrease duration: enter a payer swaption
 
 Using Derivatives to adjust the duration of liability portfolio 用于调整 duration 不用于构建 asset portfolio
 
-###### Hedge Ratio
+#### Hedge Ratio
 
 - Non hedge, Hedge ratio = 0%
 - Fully Immunised, Hedge ratio = 100%
 
-#### Total Return Mandates (Index Based)
+- If interest rate is low, then 有利率上升到风险，资产价值可能下降，then have higher heding ratio
+
+- ### if interest rate is higher, then 有利率下降风险，资产价值可能上升， 所以 then lower hedging ratio
+
+### Risks in LDI
+
+1. Model Risks: model assumptions are wrong
+2. Interest Rate Risks: $Dur_A = Dur_L$, duration explains (95%) most of price movement of bonds
+3. Yield Curve Risks: non-parallel shifs of the yield curve. Minimise the dispersion of CF can mitigate this risks.
+4. Spread Risks: $YTM = Base Yield(Treasury Yield) + Spread$
+   - yield on high-quality corporate bond are less volatilty than more liquid treasuries
+5. Counterparty Credit Risks
+6. Collateral Exhaustion Risks 由于 collateral不足，导致被平仓的risks
+7. Liquidity Risks 
+
+---
+
+### Total Return Mandates (Index Based)
 
 因为 bond liquidity 比 equity 的低，所以mimic index bonds by purchasing the same bonds 可能比较难以操作。 所以 mimic **Risk Factors**
 
