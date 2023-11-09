@@ -29,6 +29,10 @@
 
 #### Liability Based Mandate
 
+1. Duration Matching
+2. Cash Flow Matching
+3. Contingent Immunisation
+
 Bonds earn: (1) Coupon (2) Reinvestment (3) Price Changes
 
 其中 Coupon 是固定的，但是 Reinvestment 和 Price Changes 受interest rate变动
@@ -42,12 +46,18 @@ So, we need to let
 
 $Duration = Horizon$
 
-##### Duration (Classic Immunisation)
+买 zero-coupon bond 最好，因为不涉及不用考虑中间 coupon reinvest的问题，但是 zero-coupon bond 只有短期。要匹配长期，只能买 coupon bearing fixed income bond
+
+##### Duration Matching (Classic Immunisation)
 
 ###### For Single Lia Immunisation
 
-1. Portfolio Duration = Liability Duration
-2. PV of Port = PV of Lia
+Make price risks and reinvestment risks cancel each other.
+
+1. Portfolio Duration = Liability Duration   <- price risks
+2. PV of Port = PV of Lia                     <- reinvestment risks
+
+-  以上两个条件可以合并为: same Money Duration (BPV) or (PVBP)
 
 Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
@@ -59,9 +69,10 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 - 此策略不能 cover Non-parallel changes **in interest rate** 因为 duration 衡量的是 利率的平行移动，所以如果不平行移动，则 duration match 失效
     - bond 的 CF流入有 (1) Barbell 两边流入多，中期流入少，易受 non-parallel shifts 影响 (2) Bullet 仅一期大的流入，受 non-parallel shifts 影响小。**In sum， invest 更多bullet bonds**
-    - $Convexity = \frac{Mac.Dur^2 + Mac.Dur + Dispersion}{(1+yield)^2}$ 如果 dispersion越大，相当于 barbell，受收益率曲线 非平行移动（斜率变）影响大。If dispersion 大 =>  Convexity 大。 **所以 降低 portfolio's convexity 可以降低 non-parallel shift 影响**
+    - 用 convexity 判断组合是 bullet 还是 barbell。$Convexity = \frac{Mac.Dur^2 + Mac.Dur + Dispersion}{(1+yield)^2}$ 如果 dispersion越大，相当于 barbell，受收益率曲线 非平行移动（斜率变）影响大。If dispersion 大 =>  Convexity 大。 **所以 降低 portfolio's convexity 可以降低 non-parallel shift 影响**， **Structural risks 小**
 - Duration 会变化 （time 变化， interest rate 变化，会使Duration变化）
     - **定期 rebalance 去平衡 duration 变化的影响**
+    - 但是 rebalance 太过频繁会增加 transaction costs
 - 只匹配了 duration ，没有 匹配 convexity
     - 没啥解决办法，忽略 convexity
 
@@ -69,11 +80,21 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 1. $PV_A = PV_{Lia}$
 2. $Duration_A = Duration_{Lia}$
+
+- 1.2 可以合并为 Money Duration (BPV) 一样 or PVBP 一样
+
 3. （增加一条 for multi-lia ）$Range_{A} > Range_{Lia}$ 资产的周期要能覆盖 lia port的周期，为了保证最后一期有足够的现金流能 cover liability payments
 
 ##### Cash Flow Matching
 
 先 cover 最后一笔负债，从后往前一层一层的剥离。先匹配长期的bond 是因为 买 asset 匹配长期的 lia 的时候，asset也会产生 interim cf，那么在匹配短期的时候，这些cf inflow将被合并考虑
+
+- Year 5: $L_4 = P_A + C_A$
+- Year 4: $L_4 - C_A = P_B+ C_B$
+- Year 3: $L_3 - C_A - C_B = P_C+ C_C$
+- $\vdots$
+
+, where $P_A,C_A$ are for the bond A, 5-year. and bond B is 4-year, bond C is 3-year, etc
 
 ![Screenshot 2023-11-08 at 10.13.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.35.png)
 
@@ -81,15 +102,44 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 Pros: 精确度高，可以很好匹配现金流 
 
-Cons: 成本高，因为要买匹配日期的 bonds，若没有匹配的，只能买提前到期的bond，那么会损失提前到期日和pay lia日之间的时间价值
+Cons: 成本高，因为要买匹配日期的 bonds，若没有匹配的，只能买提前到期的bond，那么会损失提前到期日和pay lia日之间的时间价值。这段时间可能只能投低收益 risk- free 流动性强的资产。
+
+Why not buy back and retire the liability early?
+
+- Buyback is difficult and costly
+- Might be illiquid
+- Corporate has motive to improve the credit rating by doing CF matching, so do not buyback earlier.
 
 ##### Contingent Immunisation
 
-Allow active management for the surplus amount of assets over liability
+Allow active management for the surplus amount of assets over liability 用surplus 的部分做 active management，其他正常部门 immunisation
 
 ##### Derivatives Overlay
 
+前三个(1) duration matching (2) CF matching (3) contingent immunisation是用来构建组合。但是 Derivatives Overly 不是用于构建，而是用来 adjust. **Rebalance the immunisation portfolio to keep it on its target duration.**
+
+$Asset \ BPV \times \Delta Asset\ Yields + Hedge\ BPV \times \Delta\ Hedge \ Yield \approx Lia\ BPV \times \Delta Lia \ Yield$
+
+###### Using Forwards
+
+- Required Number of Future Contract: $N_f = \frac{Lia\ Portfolio \ BPV - Asset \ Portfolio \ BPV}{futures\ BPV}$
+- $Futures BPV = \frac{BPV_{CTD}}{CF}$  cheapest to Deliver
+
+###### Using Interest Swap
+
+- Notional Principal: $NP = \frac{LiaBPV - Asset BPV}{Swap BPV/100}$
+
+###### Swaption
+
+- increase duration: enter a receiver swaption
+- Decrease duration: enter a payer swaption
+
 Using Derivatives to adjust the duration of liability portfolio 用于调整 duration 不用于构建 asset portfolio
+
+###### Hedge Ratio
+
+- Non hedge, Hedge ratio = 0%
+- Fully Immunised, Hedge ratio = 100%
 
 #### Total Return Mandates (Index Based)
 
@@ -127,7 +177,7 @@ Recall:
 - Key Rate Duration: identify the sensitivity of shape of benchmark yield curve
 - Empirical Duration: regressopm pf bond price on benchmarket yield curve
 - Spread Duration: sensitivity to change in credit spread, $YTM = Benchmark + Spread$
-- Money Duration: 利率变 1%， 价格波动的amount
+- Money Duration (BPV): 利率变 1%， 价格波动的amount
 - PVBP (Price Value of a Basis Point): 利率变动1bp，带来的价格波动
 - Convexity: second order Derivatives of Price w.r.t. yield
 
@@ -231,3 +281,12 @@ Captial Gain: tax is lower
 Short-term Captial Gain tax > Long term Capitla Gain
 
 Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
+
+---
+
+## Liability-Driven and Index-based Strategies
+
+### Types of Lia
+
+![Screenshot 2023-11-09 at 12.28.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png)
+
