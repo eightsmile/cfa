@@ -178,13 +178,50 @@ Risks Factors:
 
 5. Optionality Risks**: exposure to changes in CF due to call/put features. Measured by **Portfolio Delta**
 
+**Matching a FI Portfolio to an Index**
+
+- **Tracking Risks**: deviation of returns on the selected portfolio from bond market index returns.
+    - Tracking Error: $Active Return = Portfolio Return - Benchmark Index Return$
+
+FX market is difficult to track, because of size and breadth, wid array of security characteristics, and unique issuance and trading pattern.
+
+- 买 ETF 可以不用 mimic all funds, and have greater liquidity. ETF can be purchased and sold throughout the trading day at discount or premium to NAV
+
 **Mandates:**
 
-- Pure Indexing
-- Enhanced Indexing
-- Active Management
+- **Pure Indexing:** 做一模一样的指数 replicate an existing market index by purchasing all of the constituent securities, to minimise tracking risks
+
+    - Passive Investment: pros: diversification, cons: neither feasible nor cost-effective
+    - Could be done by mutual fund, ETFs, Total Return Swap (TRS)
+
+- **Enhanced Indexing**: 与指数有不同（买部分 or Mirror 主要风险因子） the investor purchases fewer securities than the full set of index constituents but matches primary risk factors reflected in the index.
+
+    Way 1: purchase most import index
+
+    Way 2:  Mirror Risks Factors
+
+    - Mirror most important index characteristics, more effective than full replication
+
+    - Risks Factors for primary indexing:
+
+        - Interest Rate Risks: 保证 portfolio Effective duration 与 index一致
+
+        - Yield Curve Risks: 
+
+            1. 保证 portfolio Key rate duration与index 一致 - gauge the non-parallel yield curve shifts
+            2. PVD ( present value of distribution of CF)保证 PVD 与index一致
+
+            ![Screenshot 2023-11-10 at 13.16.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.16.42.png)
+
+            ![Screenshot 2023-11-10 at 13.17.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.17.20.png)
+
+    - Spread Risk 保证 Spread  duration 匹配
+
+- **Active Management**: involves taking positions in primary risk factors that deviate from those of the index in order to generate excess return
 
 ![Screenshot 2023-11-08 at 19.34.02](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2019.34.02.png) 
+
+---
 
 Recall:
 
@@ -307,3 +344,19 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 
 ![Screenshot 2023-11-09 at 12.28.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png)
 
+### Primary Indexing Risks Factors
+
+- Risks Factors for primary indexing:
+    - Interest Rate Risks: 保证 portfolio Effective duration 与 index一致
+    - Yield Curve Risks: 
+        1. 保证 portfolio Key rate duration与index 一致 - gauge the non-parallel yield curve shifts
+        2. PVD ( present value of distribution of CF)保证 PVD 与index一致
+- Spread Risk 保证 Spread  duration 匹配
+
+### Benchmark Selection
+
+### Laddered Portfolio
+
+![Screenshot 2023-11-10 at 13.34.46](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png)
+
+CF spreads and is diversified across the life of the bond.
