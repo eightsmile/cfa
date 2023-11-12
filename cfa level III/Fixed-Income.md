@@ -360,3 +360,149 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 ![Screenshot 2023-11-10 at 13.34.46](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png)
 
 CF spreads and is diversified across the life of the bond.
+
+---
+
+## Yield Curve Strategy
+
+### Primay Yield Curve Risks Factors
+
+- **Level**: parallel shifts in the yield curve
+- **Slope**: twist / non-parallel shifts ($Y_{long-run} - Y_{short-run}$)
+- **Shape or Curvatures** (butterfly movement): $2Y_m - Y_s - Y_L$
+  - postive butterly: concave
+
+- **Duration**:
+
+  - **Maculy Duration**: weighted Average Time
+  - **Modified Duration**: yield and percentage of price cgabges 
+  - **Effective Duration**: yield and percentage of price changes for **options embeded bonds**
+  - **Key Rate Duration**: **at a specific time point**
+
+- Convexity (second order)
+
+  - effecitve convexioty : for option embedded bonds
+
+  ![Screenshot 2023-11-12 at 15.00.20](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 15.00.20.png)
+
+### Strategies
+
+- **Static Yield Curve:** 
+
+  1. buy and hold:
+     - in upward sloping curve, active mangetment
+  2. riding the yield curve: buy long-term bond, sell short-term bond
+     - in upward sloping curve, active mangetment
+  3. Carry Trade (repo): buy security or long term bond, borrowing at low rate / or Repo to earn the spread between two rates
+     - reqiure the yield curve to be static.
+  4. Derivatives
+     1. Long Future Position (用衍生品可以增加 leverage)
+     2. Receive Fixed Swap  相当于carry trade，支付利率 short term MRR 比 收到利率 fixed 低，挣spread
+
+- **Dynamic Yield Curve**
+
+  - 1. **Level** Changes (parallel shifts)
+
+    - if interest rate fall, then price incrase, then strategy should be to increase the duration
+    - if interest rate increase, then price decrase, then strategy should be to decrease the duration
+    - Ways to reduce Duration: 
+      1. sell cash bond, bullet
+      2. Pay-fixed (interst raet swap)
+      3. short future position
+
+  - 2. **Slope** Changes
+
+    - if getting **steepen**, then long term rate incrase, long-term bond price decrase, short-term rate decrase, short term bond price increase
+
+    - then three strategies in three situations:
+
+      ![Screenshot 2023-11-12 at 15.46.53](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 15.47.25.png) ![Screenshot 2023-11-12 at 15.49.56](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png)
+
+    - if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
+
+      - Long bullet, short barbell 
+
+    - if under **bear steepen**, then long term rate increase more than short-term rate increase, and rates are all increased, so prices are all decrase, but long-term price decrease more. We decrase duration
+
+    - if under **bull steepen**, we want earn from steepen, then increase duration.
+
+    - Risk is the yield curve moves unlike our expectation that didn't get steepen.
+
+    - Vice Versa for **Flattening**
+
+  - 3. **Shape** Changes (curvture) (diverge rate changes)
+
+    $Butterfly\ Spread = 2Y_m - Ys- Y_L$
+
+    - negative butterfly means 蝴蝶肚子朝上 butterfly spread increase, then mid increase, long and short term decrase, 
+      - then long long barbell, short bullet
+    - Positve Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
+
+  - 4. **Volatility Changes** Strategies
+
+    - Reduce in volatility, then short options 
+      - long callable bonds
+    - Incrase in volatility, then long options and option value incrase
+      - long putable bonds
+
+- **Adjust the Duration** (**increase** duration and convexity)
+  - long receiver swaption, have the right to receive fixed
+  - long call option on bond future, have the right to take forward bond
+  - long bond call, have to right to take a bond
+  - decrease duration by the opposite trading
+
+### Evaluatiing Yield Curve Strategies
+
+$\mathbb{E}(R)$:
+
+	1. Coupon Return: coupon + reinvestment
+	1. Rolldown Return: when $\Delta y$, how much $\Delta P$
+	1. Return: when $ \Delta y$ changes, how much $\Delta P$
+	1. Credit Loss
+	1. FX G/L
+
+---
+
+## Credit Strategy
+
+- Credit Risks:
+  - Spread Risks -> measured by Spread Duration
+  - Default Risks -> measured by CVA
+  - Credit Migration -> measured by Credit Rating
+
+#### Spread curve differs in differnt macro environments
+
+High Yield bond and Low Yield bond behave different at differnt econ environment.
+
+![Screenshot 2023-11-12 at 20.03.27](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 20.03.27.png)
+
+- Low credit level issuers tend to have greater slope and level changes at different econ cycle.
+- In strong econ growth situation, low/high credit rated spread converges.
+- In bad econ envir, people buy gov bond. Gov bond and high-yield bond become negative correlated.
+
+- **Emperical Duration**: benchmark rate 对 price 实际的影响
+
+  $\underbrace{BondYield}_{Duration} = \underbrace{Risk-freeRate}_{Benchmark Duration}+ \underbrace{Spread}_{Spread Duration}$
+
+  - Theoretically, benchmark duration and spread duration have same impacts w.r.t. interest rate changes
+  - Empirically, (in practice), credit spread tend to be **negatively corr with risk-free rate**.
+    - Most of yield changes are from spread changes. (Spread duration should be higher) <- that is the **empirical duration**
+    - **Highly rated bond such as gov bond has low credit spread, is mostly affected by benchmark risks, has greater empirical duration**
+    - **Juck bond or Corporate bond, are less affected by benchmark risks, (they are affected by spread risks), so negative empirical duration**
+
+##### Types of Spread
+
+- Benchmark Spread = Yield on Credit Security - Yield on Benchmark Bond
+  - use for pricing
+  - disadv: might have maturity mismatch
+- G-Spread = Yield on Credit Security - Yield on Gov Bond
+  - disadv: maturity mismatch ( could use interpolate to estimate the yield)
+- I-Spread = YTM - Swap Rate
+  - swap rate is more flexible and has different maturity then gov bond
+- Asset Swap Spread (ASW) = Coupon Rate - Spread
+- Z-Spread: $PV = \frac{PMT}{1+r_1+Z}+ \frac{PMT}{(1+r_2+Z)^2} + \frac{PMT+FV}{(1+r_N+Z)^N}$
+  - Parallel shifts of the YTM
+- CDS basis = CDS spread - Z-Spread
+  - <=> CDS fee
+- Option-Adjusted Spread (OAS): for option embedded bond
+  - 剔除了 option 后之后的 spread，用于比较 含权债券和不含权债券
