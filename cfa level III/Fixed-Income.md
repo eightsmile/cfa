@@ -506,3 +506,13 @@ High Yield bond and Low Yield bond behave different at differnt econ environment
   - <=> CDS fee
 - Option-Adjusted Spread (OAS): for option embedded bond
   - 剔除了 option 后之后的 spread，用于比较 含权债券和不含权债券
+- Floating-Rate Note Credit Spread: 
+  - a Float Rate Note (FRN) pays interest (coupon) $= MRR + \underbrace{Constant\ Yield\ Spread}_{Quoted Margin}$
+  - Discount rate = $MRR+DiscountMargin$
+  - => $Quoted Margin$ v.s. $Discount Margin$ 相当于 coupon rate  v.s. discount rate
+    - QM = DM, at par
+    - QM > DM, at premium
+
+#### Impacts of Yield Spreads on Portfolio Return
+
+n
