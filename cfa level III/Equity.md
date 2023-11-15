@@ -70,12 +70,12 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
 
 ### Stock Construction
 
-- Stock Inclusion
+- #### **Stock Inclusion**
 
     1. Exhaustive 穷举选取一定范围内所有的stock
     2. Selective Approach 选取特定的stock
 
-- Weighting Methods
+- #### **Weighting Methods**
 
     1. Market-Cap Weighting (**S&P500**) (偏向large cap stock)
 
@@ -95,7 +95,7 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
 
         - 高价股权重会更高，对 index 影响更大。growth stock 往往 price 更高，所以 growth stock 在 index 中权重更大
         - 拆股 split 等影响 price，会影响 price weighting。但 拆股不会影响 market cap，所以不影响 market-cap weighting。
-        - Re-measure weights 因为拆股会带来价格减半，但是实际上 index 不应受到影响，所以要调整 被拆 stock 的 weight 使得拆股前后 index 数值一致，然后反推 weights。所以 price weighting 会调整 weights
+        - Rebalance weights 因为拆股会带来价格减半，但是实际上 index 不应受到影响，所以要调整 被拆 stock 的 weight 使得拆股前后 index 数值一致，然后反推 weights。所以 price weighting 会调整 weights
 
     3. Equal Weighting （偏向小盘股 small cap stocks）
 
@@ -121,5 +121,107 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
         2. Market-cap weighted & Fundamentally weighted
             - Shared characteristics: low cost, rules-based, transparency
             - Different: market-cap-weight is based on EMH 在 CML 上。但 fundamentally weights exploit inefficiencies in market pricing.
+    
+- #### **Rebalancing and Reconstitution** 
 
-56.00
+    - **Rebalance**: reweighs
+    - **Reconstitution**: add or remove new stocks
+    - **Rebalance and Reconstitution create turnover and transaction costs **这俩都会带来 transaction cost 成本提升
+        - turnover for **developed country's stocks** & **large-cap** index are infrequent so less cost
+        - benchmark using **stock selection** rather than **exhaustive inclusion** makes high turnover.
+
+- #### Concentration
+
+    - Effective # Number of Stocks 真正在市场上能影响股票价格 的 #，所以
+        - the greater the efficient #, the more diversified
+        - the lower the efficient #, the more concentrated
+        - Effective # <=> $1 / HHI = \frac{1}{\sum w^2}$
+        - if equal weighted, $w = 1/n$, then HHI is lowest, and effective # is highest. Thus, Equal Weighting would generating greatest diversification, lowest concentration.
+
+
+![Screenshot 2023-11-15 at 21.35.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-15%20at%2021.35.44.png)
+
+### Passive Investment Strategy (Smart Beta)
+
+![Screenshot 2023-11-15 at 21.40.43](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-15%20at%2021.40.43.png)
+
+因为是 passive strategy ，所以目的是与 benchmark 收益一致。
+
+但是 实际操作上 要 face transaction cost, bid-ask spread etc。
+
+所以 T.C. (transaction cost) 会导致portfolio 收益降低。
+
+那么为了保证 port return 与 benchmark return 一样，就需要做一部分的 active management。如多投好的factor，挣positive active return；或者少投差的factor，挣positive active return
+
+只需要一点点的盘子，做 active 来 cover transaction cost，所以主要还是 passive，smart beta 部分只有一点点
+
+#### Factors
+
+- Growth factor
+- Value
+- Size
+- Yield
+- Momentum
+- Quality
+- Volatility
+
+#### Three Strategies
+
+1. Reutrn Oriented Strategy 为了挣钱 
+
+   - Divident Yield Strategy
+   - Momentum Strategy
+   - Fundamentally Weighted Strategy (value > Growth)
+
+2. Risk-Oriented Strategy 为了降低组合的风险
+
+   - Volatility Weighting $w = 1/\sigma_i$
+   - Minimum Variance Investing
+
+   Pros: lower risks
+
+   Cons: use historical data may not indicate future
+
+3. Diverisifcation-oriented Strategy
+
+#### Pros and Cons of Smart Beta
+
+- **Pros**: 
+  1. pure exposure to specific segments
+  2. less costly T.C. than active management
+  3. can have factor rotation that incorporate investors' view
+- **Cons**:
+  1. concentrate risk exposure
+  2. have tracking error
+  3. T.C. or management fee is less than active management but greater than passive cap-weighted investing 
+
+### Pooled Investment
+
+(1) open-end mutual fund
+
+(2) ETFs
+
+#### 对比 mutual fund & ETFs
+
+![Screenshot 2023-11-15 at 22.17.16](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-15%20at%2022.17.16.png)
+
+#### ETFs v.s. Mutual Funds
+
+- ETFs' redemption 拿钱换股，所以其他人 包括 NAV不会被影响，所以 redemption is more cheap and efficient, but Mutual Funds 会拿钱换stock
+- ETF s higher transaction costs from commission and bid-ask spread. 因为可以在二级交易 and might be illiquid in some secondary market
+
+###  Derivatives
+
+- Completion Overlays: 用于建仓
+- Rebalancing Overlays: 用于调仓
+- Currency Overlays: 用于调整 FX risks
+
+- **Pros**:
+  1. Quick, efficient, cheap
+  2. liquid
+  3. Easy to leverage
+- **Cons**:
+  1. need **roll over**
+  2. position limit
+  3. mgiht not be qualified to be traded in exchange. 可能无法在 交易所交易. OTC might be exposed to counterparty risk
+  4. basis risks can increase trading error 当 future/forward 的 selling date != expire date 可能会有 tracking error
