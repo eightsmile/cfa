@@ -225,3 +225,135 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
   2. position limit
   3. mgiht not be qualified to be traded in exchange. 可能无法在 交易所交易. OTC might be exposed to counterparty risk
   4. basis risks can increase trading error 当 future/forward 的 selling date != expire date 可能会有 tracking error
+
+### Portfolio Construction
+
+#### Full Replication
+
+Full replication is preferred for indexes with small numbers of liquid stocks 因为 less liquid stock 会大幅增加交易成本T.C.
+
+- **Pros**: Closely matches the index return, and simple
+- **Cons**: Index does not consider trading cost, but build your own portfolio would take T.C.. Those T.C. would bring Tracking Error T.E.
+    - whenever the index changes and we have to fully replicate by rebalancing or reconstituting, there would be T.C. and T.E. 当指数变带来重组和调权重的时候，会带来T.E.
+
+![Screenshot 2023-11-16 at 08.28.25](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-16%20at%2008.28.25.png)
+
+如果复制的 stocks 少，则复制的不准确，T.E. 大，如果复制的stocks 多，则 T.C. 大，T.E. 大。That is a tradeoff
+
+#### Stratified Sampling 分组抽样
+
+把 constituent stock 分为 subset，之后从中选取。 Create strata that are mutually exclusive and exhaustive 遍历但不重叠的分组
+
+- Pros: avoid high cost of full replication, easy
+- Cons: size of strata might be matter, and high tracking error
+
+#### Optimisation
+
+Using Algorithm to find parameter $w$ weights that can optimise the objective func.
+
+- **Pros**:
+    - lower tracking error than stratified sampling 
+    - Can account for the covariance / correlation for diversification**Cons**:
+- **Cons**
+    - Historical data, corr might change
+    - Dynamic optimisation would also be costly
+    - Might be **mean-variance inefficient** 如果 objective func 不是 mean-var optim。解决 可以先mean-var optim 再走别的 opti
+
+#### Blended Approach
+
+1
+
+### Causes of Tracking Error T.E.
+
+- Number of Constituents
+    - Number of constituents 成分股数越多, Tracking Error 越大。因为 illiquidity 大，且 T.C. 来自 rebalance and reconstitution 大
+- Fees and Trading Costs
+    - Management Fees, Commissions or Bid-ask Spread
+    - illqudity
+    - Higher Expense Ratio
+- Cash Drag 
+    - 由于指数不含cash，但是portfolio中往往有cash，且cash 部分没有 return，因此 portfolio 整体的return 会被拉低
+- Intra-day Trading
+    - index往往是用 Close price 算，但是自己构建 portfolio 是要自己交易的，价格为 intra-day price，与close price 可能不同
+
+In no cost world, Full replication produce lowest T.E., but real world there has be a tradeoff between # of constituents and Cost.
+
+- Control Tracking Error by
+    - Minimising the trading cost
+    - Netting investor cash inflows and redemptions 以减少 cash drag 的影响
+    - Using equalisation tools like derivatives to compensate for cash drag 用 cash 去买 derivative 叫 equitisation，减少 cash drag 的影响
+
+### Sources of Return and Risks
+
+1. Attribution Analysis 见后面reading
+2. Security lending 借给 short seller
+    - The securities lending income can be an additional return, and then reduce T.C. and T.E.
+    - 但是 由于借出了stock，会面临 credit risks, mkt risks, liquidity, etc 所以可能要 collateral 去弥补风险
+3. Activism and Engagement 
+    - Passive Investment 也可以有 积极的股东主义 去 increase return
+
+---
+
+## Active Equity Investing
+
+(1) Fundamental Approach (2) Quantitative Approach
+
+### Fundamental & Quantitative Approach
+
+#### Fundamental Approach
+
+- **Pitfall in Fundamental Investing** (more subjective 更主观)
+    1. Behavioural Biases
+    2. Value Trap 不能只因为 P/E 低就买，它PE低可能是因为 该公司要完蛋了，人们都在卖
+    3. Growth Trap 不能因为 expected growth 高就买，可能 expected growth 虽然高，但是可能不达预期，或者 timing 不合时宜
+
+#### Quantitative Approach
+
+- Quantitative Approach (more objective 更加客观，由algorithm确定，但是 model building phase依然要主观判断参与)
+
+- Investment Process:
+
+    1. Define the market opportunity
+
+    2. Acquire and Process Data
+
+    3. Back-testing the strategy
+
+        - Information Coefficient (IC) 用 信息系数，factor 与未来return的相关性。 衡量 factor 怎么样
+            - Pearson IC: $\rho(S_t, R_{t+1})$ , 是factor score 和下一期return 的相关系数corr。 where $S_t$ is the factor score (expected return), and $R_{t+1}$ is the real return at t+1
+                - sensitive to outlier 容易受异常值影响，如在算相关系数的时候有一期的数打错了，那么影响会挺大
+            - Spearman IC 计算相关系数 corr between factor score 和 forward return 的排序值.
+                - 计算的是排序值，所以outlier的影响会被减少
+
+    4. Evaluating the Strategy 用 out of sample data去评价，因为 algorithm 会学习已有的数据
+
+        - Avoid overfitting (overfitting 也叫做 data mining bias )
+
+    5. Portfolio Construction
+
+        - Model Risks: estimation error
+
+            $\sigma^2_y = \beta^2_1\sigma^2_{x_1} + \beta^2_2\sigma^2_{x_2} + 2\beta_1\beta_2cov_{1,2} + \sigma^2_{\epsilon}$ 
+
+            The error of the error term would contribute to the overall risks of model
+
+        - Periodic Optimisation by algorithm may give different weights, rebalancing create costs
+
+- **Pitfall in Quantitative Investing**
+    - Selection Bias:
+        - Survivorship bias
+        - Look-ahead bias
+    - Overfitting (data-mining bias)
+    - Constraints
+        - Constraints on turnover
+        - Lack of availability of borrowing / shorting
+        - Transaction cost
+        - Quant overcrowding (many quants conduct similar strategy 策略用的多了就失效了)
+
+#### Comparison
+
+![Screenshot 2023-11-16 at 13.26.12](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-16%20at%2013.26.12.png)
+
+Quantitative model consider correlation between factors, so it consider risks at portfolio level.
+
+### Active Strategies
