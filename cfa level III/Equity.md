@@ -357,3 +357,62 @@ In no cost world, Full replication produce lowest T.E., but real world there has
 Quantitative model consider correlation between factors, so it consider risks at portfolio level.
 
 ### Active Strategies
+
+#### Bottom-up
+
+##### Value-Based Approach 价值型，关注未来的 div 收益
+
+- **Relative value**: 投 low multiple 的
+- **Contrarian Investing**: Purchasing or selling securities against prevailing market sentiment.
+- **High-quality value**: warren buffet 投 intrinsic value 高的 high quality 龙楼
+- **Income Investing**: invest high dividend yields or high div growth rate firm
+- **Deep-value investing**: focus on low valuation or firms with financial distress 面临退市风险的股票
+- **Restrucuring and Distressed debt investing**: invest prior to or during an expected bankruptcy filing
+- **Special Situation**: M&A, etc
+
+##### Growth-Based Approach 成长型 关注未来的 增长
+
+- Consistent long-term growth 长期增长 
+- Short-term earning momentum 短期增长
+- GARP (growth at a reasonable price): e.g. P/E-to-growth ($PEG = \frac{P/E}{g}  $)
+
+#### Top-Down
+
+从宏观分析到行业
+
+1. Country / Geography allocation
+2. Industry Sector Rotation
+3. Thematic Investment Strategies: Focus on opportunities presented by new technologies, changes in regulations, and economic cycles.
+4. Volatility-based Strategies: Volatility trading can be conducted through VIX futures, variance swap, option volatility strategy
+
+#### Factor-Based Strategies
+
+- **Rewarded Factors**: factors have **been shown** to be positively associated with a long-term return premium, such as size, value, momentum
+- **Unrewared Factors**: Factors that **have not been empirically proven** to offer a persistent return premium.
+
+54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
