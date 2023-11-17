@@ -362,11 +362,11 @@ Quantitative model consider correlation between factors, so it consider risks at
 
 ##### Value-Based Approach 价值型，关注未来的 div 收益
 
-- **Relative value**: 投 low multiple 的
+- **Relative value**: 投 low multiple (P/E, P/B) 即price 低的 为 value investment
 - **Contrarian Investing**: Purchasing or selling securities against prevailing market sentiment.
 - **High-quality value**: warren buffet 投 intrinsic value 高的 high quality 龙楼
 - **Income Investing**: invest high dividend yields or high div growth rate firm
-- **Deep-value investing**: focus on low valuation or firms with financial distress 面临退市风险的股票
+- **Deep-value investing**: focus on low valuation or firms with financial distress 投 multiple 非常低的，面临退市风险的股票
 - **Restrucuring and Distressed debt investing**: invest prior to or during an expected bankruptcy filing
 - **Special Situation**: M&A, etc
 
@@ -388,31 +388,223 @@ Quantitative model consider correlation between factors, so it consider risks at
 #### Factor-Based Strategies
 
 - **Rewarded Factors**: factors have **been shown** to be positively associated with a long-term return premium, such as size, value, momentum
-- **Unrewared Factors**: Factors that **have not been empirically proven** to offer a persistent return premium.
+- **Unrewarded Factors**: Factors that **have not been empirically proven** to offer a persistent return premium.
 
-54
+##### Hedged Portfolio Approach (Fama & French)
 
+$R = R_f + \beta_i^{mkt} \times (R_{mkt - R_f}) + \beta_i^{size}\times (R_{small} - R_{big})+ \beta_i^{value}(R_{HighBooktoMarket} - R_{lbm})$
 
+- Construction Process
+    1. Rank stocks by factors
+    2. Divide the list into quantiles
+    3. Long best quantile short worst quantile
+    4. Track the performance overtime
+- Drawbacks
+    1. Middle quantiles is ignored
+    2. Cannot capture non-linear relationship between factors and stocks (as there is only rank, which is linear)
+    3. It's not a **pure** factor portfolio, as there are many other factors not exposed to a single factor
+    4. Portfolio is concentrated.
+    5. Assume no short limitations
 
+##### Factor-tilting portfolio
 
+Long only. Will expose to a factor. Controlled level of tracking error 因为只expose to a factor
 
+##### Factor-Mimicking Portfolio (FMP)
 
+Implement a pure factor portfolio 找只暴露一种risk factor 的stocks
 
+##### Factor Timing 因子则时
 
+Equity Style Rotation
 
+#### Activist Strategies 积极的股东主义
 
+taking stakes in companies and pushing for companies to make changes that are expected to enhance the value of the activist’s stake. 通过参股，参与公司运营决策，推动公司战略向为股东好的方向走
 
+Target Companies 大原则是经营不太好的公司，这样才有改进的空间
 
+- Slower revenue & earning growth 增长慢的
+- Suffer negative share price momentum
+- Have weaker-than-average corporate governance
 
+Tactics
 
+- Seeking board representation
+- Writing open letters to management
+- Proposing changes
+- Proposing financial restructuring
+- Reducing extravagant management compensation
+- Launching legal proceedings
+- Launching a media campaign
+- Breaking up a large inefficient conglomerate
 
+Ending
 
+- Growth increase
+- 为了提升 ROE ，借钱，发debt，leverage提升
+- Price 提升，因为empirically activist strategy 确实会带来好的收益
 
+#### Other Strategies
 
+1. Statistical Arbitrage: mean-reverting, exploit pricing inefficiency
+    - Market microstructure-based arbitrage strategies (high frequency)
+    - Pairs trading (highly correlated stocks)
+2. Event Driven
 
+    - M&A
+    - Earnings on Restructuring announcements
+    - Share buybacks, special div, etc
 
+    Risks: deal fails, deal duration is long, overestimated
 
+### Style Classification 分辨基金经理的投资风格
 
+- Holding Based Approach 
 
+    人工划分 portfolio 中的个体持仓 stock 应该归属于哪个 style ，然后加总看整个portfolio是什么风格
 
+    - look at the attributes of each individual stock in a portfolio
+    - aggregates these attributes to conclude the overall style of the portfolio.
 
+- Return-Based Approach 
+
+    拿 portfolio return 跟 各种指数回归，判断受那个 style index 影响大
+
+    - Regress portfolio return On returns of style index
+
+- Self-identification
+
+    - 根据基金经理 self-described 自己的描述，看是什么style的投资风格
+
+---
+
+## Active Equity Investing
+
+### Active Return
+
+- Overweights outperformed securities 多配好股票
+- Underweights underperformed securities 少配差股票
+
+$R_A = \sum \Delta W \times R_i$
+
+#### Sources of Active Returns
+
+We all play with **factors** (not stocks) in this part.
+
+By regression,
+
+(1) for the portfolio: $R_p = \beta_0^p + \beta_1^p F_1 + \beta_2^p F_2 +\epsilon_p$
+
+(2) for the benchmark: $R_B = \beta_0^B + \beta_1^B F_1 + \beta_2^B F_2 +\epsilon_B$
+
+(1) - (2): $R_A = \beta_0^p -\beta_0^B + (\beta_1^p-\beta_1^B) F_1 + (\beta_2^p-\beta_2^B) F_2 +\epsilon_p - \epsilon_B$
+
+The intercepts are approximately equal, so we get the 
+
+$R_A =  \sum(\beta_i^p - \beta_i^B) F_i + \epsilon_p - \epsilon_B$
+
+$R_A =  \sum(\beta_i^p - \beta_i^B) F_i +\alpha+\epsilon$
+
+Let $\epsilon_p - \epsilon_b = \alpha + \epsilon$  把 error 拆解为active return & pure error
+
+According to the above function, we decompose it into three parts.
+
+1. Return from factor weighting:
+
+     $R_A = \sum(\beta_i^p - \beta_i^B) F_i $
+
+2. Return from identifying misplacing, Alpha $\alpha$
+
+    - Sustainable 可持续，取决于基金经理的能力
+
+3. Idiosyncratic Return, $\epsilon$ <- luck
+
+    - Un-sustainable 不可持续，为 Luck
+
+- $\alpha , \epsilon$ 都为regression不能解释的部分。不在 R-squared 中
+
+#### Three Building
+
+1. Factor Weighting 多配好的，少配差的
+
+2. Alpha Skills
+
+    1. CME: **factor timing **根据宏观经济择时配置 factors (配置 rewarded factors)
+    2. Unrewarded Factors (thematic exposure) 选择了不常规用的factors
+
+3. Sizing Position 权衡购置单一因子的权重 balance confidence in alpha and factors insights
+
+    如控制 factor weighting 与 alpha skill 的权重，体现 level of confidence of analytics
+
+    - A **factor-orientated manager** 主要从weighting获利的投资者，unexplained part $\alpha , \epsilon$ 都比较小 who spreads their portfolio across many assets is likely to minimise the impact of idiosyncratic risk.
+
+        Systematic manager 不做 factor timing
+
+    - A **stock-picker**, with **higher confidence** 更愿意投资个股，所以$\alpha , \epsilon$,对于个股（看好的stock）position的集中度也比较高 in her analysis of individual securities, is likely to hold more concentrated positions and assume a higher degree of idiosyncratic risk.
+
+        所以discretionary managers are likely to run concentrated portfolio
+
+4. Breadth of Experience (BR) 
+
+    $InformationRatio = \frac{R_A}{\sigma_A}$
+
+    $IR = IC\times TC\times \sqrt{BR}$ , and combine those two 
+
+    $\mathbb{E}(R_A)= IR\times \sigma_A = IC\times TC\times \sqrt{BR}\times \sigma_A $
+
+### Portfolio Construction Approaches
+
+![Screenshot 2023-11-17 at 16.05.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-17%20at%2016.05.21.png)
+
+#### Relative Risks
+
+Relative risk is measured w.r.t. the benchmark. There are two measures of the benchmark-relative risks.
+
+1. Active Share: $=\frac{1}{2}\sum |w_p - w_b|$ 主动偏离benchmark投资的份额。 	
+
+    - 要除以 2 因为有主动偏离的部分，需要有其他share 让开匀给 active部分，所以要/2
+
+    - **% of portfolio assets deployed the same as benchmark**
+
+        ​	$=1-active\ share$
+
+        ​	即为 一个 portfolio 中，和 benchmark 表现一致的部分
+
+    - Between (0,1)
+
+    - Sources 来源：(1) 与 benchmark 中成分股不同 (2) weights 不同。P.S. 如果 portfolio 中 stocks 数比 index 少很多，那么active share一定会大，因为如果数少，则 concentration 集中度大
+
+2. Active Risks ( Tracking Error )
+
+    - Source of Risks
+
+        Recall: 
+
+        $R_A =  \sum(\beta_i^p - \beta_i^B) F_i + \epsilon_p - \epsilon_B$	
+
+        $R_A =  \underbrace{\sum(\beta_i^p - \beta_i^B) F_i}_{1} +\underbrace{\alpha}_{2}+\underbrace{\epsilon}_{3}$
+
+        收益被拆成了 3 部分（或者说 2 部分，即 1 和 2+3，同理 风险也将被拆成 2 部分
+
+        $\sigma^2_A = \underbrace{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg)}_{factor \ exposure} + \underbrace{\sigma^2_e}_{idiosyncratic \ risks}$
+
+        $\sigma_A = \sqrt{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg) + {\sigma^2_{\epsilon}} }$
+
+        	1. 与 factor exposure 相关的
+        	1. 和与 个股相关的
+
+    - Active Share v.s. Active Risks
+
+        1. The level of active risk will rise with an increase in factor and idiosyncratic volatility 
+        2. High net exposure to a risk factor will lead to a high level of active risk, irrespective of the level of idiosyncratic risk 即 weights diff 会提升 $\sigma_A$ active risks
+        3. A portfolio with **neutralised factor exposure** will have active risk attributed entirely to Active Share. 因为 factor neutral 所以 factor exposure risk 为 0，idiosyncratic risks 贡献了所有的 active risks
+        4. If # of stocks 小，那么 concentration 小， active weights 小，所以 active share 小，active risks 也小
+        5. Correlation 会影响 active risks 但是不影响 active share
+
+![Screenshot 2023-11-17 at 17.01.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-17%20at%2017.01.42.png)
+
+- Diversified : active share is low, 
+- Concentrated: active share is high
+- Factor Bets: active risks is high
+- Factor Neutral: active risks is low
