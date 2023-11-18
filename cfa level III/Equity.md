@@ -608,3 +608,23 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 - Concentrated: active share is high
 - Factor Bets: active risks is high
 - Factor Neutral: active risks is low
+
+### Risk Budgeting
+
+#### Absolute and Relative Risks
+
+- **Absolute Risk Measure**: express in terms of total return
+
+  1. Sources of Absolute Risks
+
+     $\sigma^2_p = w^2_1\sigma_1^2 + w^2_2\sigma_2^2 +2w_1 w_2 \ cov_{1,2}$
+
+     for Asset 1: $CV_1 = w_1^2\sigma_1^2 + w_1 w_2 cov_{1,2}$
+
+     for Asset 1: $CV_2 = w_2^2\sigma_2^2 + w_1 w_2 cov_{1,2}$
+
+     Contribution of each asset to total $=\frac{CV_1}{\sigma_p^2}$
+
+- Relative Risk Measure: relative to the benchmark
+
+18min
