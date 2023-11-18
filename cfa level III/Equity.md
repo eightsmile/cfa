@@ -624,6 +624,14 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
      for Asset 1: $CV_2 = w_2^2\sigma_2^2 + w_1 w_2 cov_{1,2}$
 
      Contribution of each asset to total $=\frac{CV_1}{\sigma_p^2}$
+     
+     - For a Portfolio in regression model $y = \beta_0 + \beta_1 F_1 + \beta_2 F_2  + \epsilon $
+     
+       $\sigma^2_p = \beta_1^2 \sigma_{F_1}^2 + \beta_2^2 \sigma_2^2 + 2\beta_1\beta_2 cov_{1,2} + \sigma^2_{\epsilon}$ , there shall be also the derivatives of the error term.
+     
+       $CV_1 = \beta_1^2 \sigma_1^2 + \beta_1\beta_2 cov_{1,2}$
+     
+       $CV_2 = \beta_2^2 \sigma_2^2 + \beta_1\beta_2 cov_{1,2}$
 
 - Relative Risk Measure: relative to the benchmark
 
