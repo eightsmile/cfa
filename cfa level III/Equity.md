@@ -635,4 +635,82 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
 - Relative Risk Measure: relative to the benchmark
 
-18min
+  - Derivatives
+
+    $R_p = \beta_0^p + \beta_1^p F_1 + \beta_2^p F_2 + \epsilon^p$
+
+    $R_b = \beta_0^b + \beta_1^b F_1 + \beta_2^b F_2 + \epsilon^b$
+
+    $R_A = R_p - R_b$
+
+    $R_A = (\beta_0^p - \beta_0^b) + (\beta_1^p - \beta_1^b)F_1 + (\beta_b^p - \beta_b^b)F_2 + (\epsilon^p - \epsilon^b) $
+
+  - $\sigma^2_{R_A} = (\beta_1^p - \beta_1^b)^2\sigma^2_{F_1} + (\beta_b^p - \beta_b^b)^2\sigma^2_{F_2} + 2(\beta_1^p - \beta_1^b)(\beta_b^p - \beta_b^b) cov_{F_1,F_2} + (\epsilon^p)^2 + (\epsilon^b)^2$
+
+  - $CV_1 = (\beta_1^p - \beta_1^b)^2\sigma^2_{F_1} + (\beta_1^p - \beta_1^b)(\beta_b^p - \beta_b^b) cov_{F_1,F_2}$
+
+  - $\% = \frac{CV_1}{\sigma_A^2}$
+
+
+#### Allocating the Risk Budget 
+
+- For **Cash**, it naturally has no total risks. However, if there are more cash in the portfolio, the portfolio would definitely deviate from the bechmark (and there are low corr ). Then there would be active risks 如果组合中有 cash，那么组合一定会与benchmark偏离，即带来 active risks
+- Active Portfolio Variance can be segmented into two parts:
+  1. Variance Explained by factor exposures
+  2. Unexplained ($\alpha + \epsilon$)
+
+#### Risk Constraints
+
+1. Heuristic Risk Constraint
+   - Liquidity Constraint 
+   - Allocation Constraint
+     - $Allocation Constraint = AUM \times MaximumPosition SizeTHreshold$
+     - Index Weight Constraint
+2. Formal Risk Constraint
+   - VaR (Conditional VaR, Incremental VaR, Marginal VaR, etc)
+   - Drawdown 
+
+- P.S. the distinction between formal and heuristic risks
+- Other Considerations:
+  - Leverage
+  - Risk Measures
+
+#### Market Inpacts Cost
+
+由于买卖时推高或者拉低price Slippage 带来的价格变化，而产生的成本
+
+Factors affects the market impact cost
+
+1. AUM v.s. Market Cap （交易规模越大，价格会被推的越高
+2. Higher Portfolio Turnover and shorter invetment horizon （交易越频繁，cost越多
+3. the tading signal is informative to the mkt
+
+#### Strategy
+
+- Long-only Investment
+
+  - Long term risk premium 历史看 涨多跌少
+  - Capacity and Scalability 一般 买股票的 liquidity 比short大的好
+  - Limited Lagal Liability Laws 损失是limited，不同于short方 损失时无限的
+
+- Long/short Investing
+
+  - Gross Exposure = Long Position + Short Position
+  - Net Exposure = Long Position **- Short Position**
+    - if net exposure < 0 , net short exposure
+  - i.e.  
+    - 130/30 funds 为long 130，short 30
+    - market neutral portfolio, 为 remove market exposure 
+  - Benefits of Long/Short Strategies
+    1. Express negative ideas
+    2. use leverage
+    3. remove mkt risks
+    4. control exposure to risk factors
+  - Drawbacks
+    1. Complex
+    2. Costs are higher coz there need more management
+    3. not personal ideology
+    4. leverage might be unacceptable
+    5. might have losses on the short position, short squeeze 由于price increase 导致保证金需要补充
+
+  
