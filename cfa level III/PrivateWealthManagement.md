@@ -127,10 +127,89 @@ Asset 不能 cover Liability 的方法
 
 ### IPS (Investment Policy Statement)
 
-- Building Blocks
-    1. Background and Investment Objectives (R, for Return)
-    2. Investment Parameters (RTTLLU, r for risks)
-    3. Portfolio Asset Allocation
-    4. Portfolio Management
-    5. Duties and Responsibilities
-    6. IPS Appendix
+1. **Background and Investment Objectives (R, for Return)**
+
+   1. **Clearify the objectives**
+
+      know the background Information, (name, age, personal financial info, etc). Retirement, family member etc
+
+   2. the investment objectives should be **detailed and quantified** Prioritise the Objectives Conduct Capacity sufficiency Analysis
+
+   3. **capital sufficiency analysis, revise the objectiv**e
+
+   4. **IPS should include the market value of the portfolio and of the accounts that make uo the portfolio** (Taxable, TDA)
+
+   5. **any other investment assets** (timberland)
+
+   6. **Any cash flows from external sources** (trust / inheritance)
+
+2. **Investment Parameters (RTTLLU, r for risks)**
+
+   1. RIsk Tolerance (willingness and ability)
+   2. Investment Time Horizon, (might be a range not a number)
+   3. Asset Class Preferences
+   4. Other Investment Preference (ESG, or Legacy, endownment bias)
+   5. Liquidty Preference
+   6.  Constraints
+
+3. **Portfolio Asset Allocation (SAA, TAA)**
+
+   1. Strategic AA  (long-term), define the target allocation and upper / lower bonds
+   2. Tactic AA (short-term), class target ranges not specific percentage
+
+4. **Portfolio Management (Discretionary or Passive)**
+
+   1. Discretionary 可以自主决策的百分比
+   2. Reblancing 将当期情况，向 target 调整
+   3. Tactical Changes 什么时候能偏离 SAA
+   4. Implementation: investment vehicles
+
+5. **Duties and Responsibilities**
+
+   1. wealth management responsibilities
+   2. IPS review
+
+6. **IPS Appendix (Simulation)**
+
+### Portfolio Construction and Monitoring
+
+- Portfolio Construction
+
+  1. Traditional Approach: MVO, etc
+  2. Goals Based Approach: 详见AA
+
+- Portfoio Reporting and Review <- periodically (monthly) review
+
+  here below is what should be reported
+
+  - Report
+    1. Strategic Asset Allocation Target
+    2. Performance Summary during the current period
+    3. Detailed performance report (asset class and individual securities)
+    4. Historical Performance Report
+    5. Contribution and Withdrawl
+    6. Purchase and Sales
+    7. Currency Exposure
+  - Review
+    - Review 是否 满足 clients' objectives, risk tolerance, time horizon
+    - AA 是否一致
+
+- Evaluation of Success or Achievement
+
+  1. Goal Achievement: 是否 meet the long-term objectives
+  2. Process Consistency 真实流程与设计流程是否一致
+     - third-party fund managers' performance relative to benchmark
+     - reduce cost
+     - taxation isses
+     - etc
+  3. Portfolio Performance (absolute & relative)
+  4. definition of success 如果前3点都不达成，被判定为 success
+
+### Ethical and Compliance Consideration (不重要)
+
+- Fiduciary Duty
+- Know Your Customer (KYC)
+- Confidentiality
+- Conflicts of Interests
+
+### Private Client Segments 给个人投资者分类
