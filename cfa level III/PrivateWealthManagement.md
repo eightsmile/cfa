@@ -213,3 +213,197 @@ Asset 不能 cover Liability 的方法
 - Conflicts of Interests
 
 ### Private Client Segments 给个人投资者分类
+
+![Screenshot 2023-11-21 at 12.12.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-21%20at%2012.12.28.png)
+
+---
+
+## Taxation
+
+### Tax Classes
+
+- Income Tax = % of taxable income
+
+- Gain Tax: based on price appreciation (capital gain)
+
+- Wealth or Property Tax: tax on the Real Estate
+
+- Stamp Duties: on the process of purchasing equity or properties 
+
+    - 相当于邮票，有这个流程，需要贴个stamp的税
+
+    - 外国人的 比 本国人的贵
+
+- Wealth Transfer Tax
+
+    - estate or inheritance
+
+Scenario
+
+- Double Taxation (,income is taxed twice 收入被税两次)
+- Qualified Dividends: In the U.S., if common stock is held for at least 60 days, then lower tax rate
+- Cross-border investments: withholding taxes 预扣税
+
+Capital Gain Taxes
+
+- Tax Basis = price * # + all related other costs
+- Step-up on Death: 拿 inheritance 时，tax basis 调整为 fair market value of the asset
+
+Tax Jurisdiction
+
+- Tax haven: no tax for foreign investors
+- Territorial Tax System: only locally-sourced income is tax 只有本地的tax
+- Worldwide Tax System: all income regardless the source 不管人在哪，只要有收入就征税 产生 double-taxation
+    - Residence Rules 用于判定人是哪个国家的 taxable resident
+    - 当一个人属于多个国家时，Tax Treaties  (tie-breaker rules) 防止全额的 double-taxation，部分减少税
+
+### Tax Efficiency
+
+- Equity is more tax efficient
+    - Dividend receive preferential tax treatment
+    - Capital Gain tax is lower 因为 capital gain 未实现的时候不交税
+    - Flexible to sell
+- Equity 比 Alternatives  derivatives 省税，
+- Low turnover is more tax-efficient than high turnover
+- Low yield is more tax-efficient than high yield
+- Style-box approach is not tax efficient 这是的fund manager有特定的style范围，如果出了box of style 要rebalance or reconstitute，这个过程税多
+
+#### Measurement
+
+- After-tax Holding Period Return
+
+    No consider tax: $R = \frac{V_1-V_0 +Income}{V_0}$
+
+    Consider Tax: $R' = \frac{V_1-V_0 +Income- T}{V_0}$
+
+    ​	$R' = R - \frac{T}{V_0}$
+
+- Cumulative After Tax Return, $R_G$
+
+    $(1+R'_1)\cdots(1+R'_n) = (1+R'_G)^n$
+
+    $1+R'_G =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) }$
+
+- After-tax Post-liquidation Return, $R_{PL}$
+
+    $1+R'_{PL} =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) -\frac{Liquidation Tax}{Final Value}}$
+
+    $LiquidationTax = (FinalValue-TaxBasis)\times t_{CapitalGain}$
+
+- After-Tax Excess Return
+
+    - $x=\text{Pre-tax excess return}=R-B$
+    - $x'=\text{After-tax excess return}=R'-B'$
+    - ,  where $R$ is the portfolio return, $B$ is the benchmark return. $R'$ is after-tax return, and $B'$ is the after-tax benchmark return
+    - Tax Alpha = $x'-x $
+
+- Tax-Efficiency Ratio (TER)
+
+    $TER = \frac{R'}{R}=\frac{税后return}{税前return}$
+
+    Not working is return is negative
+
+### Tax-Aware Approaches to Planning
+
+#### Three Accounts
+
+三个阶段：放入，capital gain，取出
+
+- Taxable Account: 交两次税，放入要交税，capital gain交税，取出不交税
+- Tax-Deferred Account (TDA): 交一次税，只有取出时交withdraw tax
+- Tax-Exempt Account (TEA): 交一次税，放入时交
+
+- Value, FV
+    - Taxable Account , $FV = (1+R')^n$ , $R'=R(1-t)$
+    - TDA, $FV = (1+R)^n(1-t)$ 最后整体 (1-t)
+    - TEA, $FV=(1+R)^n$, no tax
+
+#### Asset Location
+
+Rule of Thumb:
+
+- Tax-Efficient Assets -> Taxable Account
+- Tax-Inefficient Assets -> TEA or TDA
+
+I.E.
+
+- Equity -> Taxable Account 
+    - 因为 equity本身就是 tax efficient，主要收益来自于 capital gain，capital gain本身就是realise时候交
+    - 但如果 high turnover 那么就变成 tax-inefficient了，那么放入TDA TEA
+- Bond -> TDA
+
+#### Decumulation Strategies for a Retirement Account
+
+- **Retirement Accounts are TEA or TDA**, so their compounding rate would not be s.t. tax, so higher rate of compounding
+
+Therefore, **the rule of thumb**, withdrawals from the taxable account first and allow the retirement account to continue to compound.
+
+先取taxable account的钱，因为retirement account 的钱 compound的快，所以后取
+
+- **Under progressive tax regimes**, a more tax-efficient strategy may be to withdraw from the retirement account until the lowest tax brackets have been fully utilised. 在累积税率时，工资收入高，所以税率高，所以先取 retirement account 的话税高。而退休之后取税低
+
+#### Assets for Charitable Giving
+
+Gifts: Cash or Equity
+
+- Appreciated securities can be gifted to a qualified charity without triggering the capital gain. 把 tax basis 最低的捐了，因为 capital gain = price - tax basis 大。charity可以免税
+    - Gifting low-cost- basis assets from taxable accounts is preferred.
+
+### Tax Management Strategies 如何进行税务管理
+
+Tax avoidance 为合法避税， tax evasion 偷税 is illegal不合法
+
+- Selection of Investment Vehicle
+
+    1. Partnership (开办合伙制大企业，交个人税，不用交公司税。这样可以避免双重征税，先公司税后再个人税的问题)
+
+    2. Mutual Funds 
+
+        - Co-investors are influenced 所有人共同承担税务，因为赎回时，卖share 换钱，capital gain的部分将被税，所以shareholder都会被税
+
+        - When new shareholders buy into the fund, they are also buying a share of the unrealised capital gains accrued in prior periods. 因为 fund manager的tax basis为最开始的price，所以中途买入的话，不管买入价是多少，tax basis都是最开始的值。
+
+            所以最好买此前captial gain 升值少的 stocks
+
+        - Potential Capital Gain Exposure
+
+            $PCGE = \frac{Net\ G/L}{Total NetAsset}=\frac{gains - distribtuion-losses}{startPrice+(G-Distribution)}$
+
+            这ratio越低越好，因为越低意味着gain少，所以**PCGE越小，tax efficiency越好**
+
+    3. ETFs 可以在二级市场交易，所以只有赎回的人被税，其他shareholder不受影响
+
+#### Tax Lot Accounting
+
+track how much you paid when you bought it记录买入时的价格为 tax basis
+
+The Tax Lot Method is for prioritising the realisation of G/L by
+
+- FIFO 默认，但是由于一般first in 的tax basis 小，所以 tax inefficient 
+- LIFO
+- HIFO (highest in first out)
+- Specified-lot method 指定选择
+
+#### Tax Harvesting
+
+realise a loss that can be used to **offset** gains or other income 用loss 的 stock 抵税
+
+- To avoid the **wash sale rule** (为了抵税，卖了，再在31天内买回来) in the United States, you must **hold cash or some other security for 31 days**. There are **two issues**:
+    1. Cash Drag 由于现金收益低，被拉低return
+    2. 如果这31天用cash 买ETF，为了挣 return 的话，由于short holding period 所以 high capital gain tax
+    3. **Tax Loss Harvesting** is tax-**deferral** strategy 
+        - 相当于晚交税
+        - 晚交的税 可以 compound
+
+#### Quantitative Method
+
+Set objective function to be used to minimize taxdrag and investment risk.
+
+- Mini tracking error / min trading cost
+- Max realised loss / min realised gain
+- Etc
+
+- Different Types of quantitative methods
+    - Transitions: avoid realising taxes during holding period
+    - Tax-Optimised Loss Harvesting: continuously look for losses harvesting opportunities
+    - Gain-Loss Matching Optimisation
