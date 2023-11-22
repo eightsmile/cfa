@@ -112,4 +112,109 @@ Estate 财产传承规划，death后传给下一代
         5. Lifetime gifts 在活着的时候 lifetime of donor
     - forced heirship laws 法定继承权。如：妻子1/3，孩子们1/3，剩下的才按 will 分配
 
-10min
+#### Objectives of Wealth Transfer
+
+1. Maintaining sufficient income and liquidity
+2. Decide the control
+3. asset protection, protect assets from creditor 债务保护
+4. Transferring assets in a tax-aware manner
+   - Estate Tax: levied on the total value, tax before the distribtuions of beneficiaries 是死后对总资产先交，分配给个人后还要再交
+   - Inheriitance Tax: paid by each beneficiary 个人获得分配后自己再交
+   - Generation-skipping tax 直接交给孙子一次性的tax，比先交给儿子后儿子再交给孙子分阶段的多。保证整个过程给到孙子的时候都是tax一样的
+5. Preservation of Family Wealth
+6. Business Succession
+7. Achieve Charitable Goals
+
+#### Estate Tax 遗产税的计算
+
+- Flat Rate, 为固定的税率，不累计
+
+- tax after the deduction of a Statutory Allowance 超过 S.A.的部分才税
+
+   $TaxAmount=(Total - S.A.)\times t$
+
+#### Gift v.s. Bequest
+
+- Tax-Free Gift 算相对价值，哪个方式的Final Value高，那个方法合适
+
+  1. If estate is taxed:
+
+     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{\big[1+r_g(1-t_g)\big]^n}{\big[ 1+r_e(1-t_e)\big]^n(1-T_e) }$
+
+  2. If the pre-tax return and effective tax rates are equal for both the recipient and donor
+
+     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{1}{1-T_e }$
+
+  3. If recipient also pay gift tax
+
+     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{\big[1+r_g(1-t_g)\big]^n(1-T_g)}{\big[ 1+r_e(1-t_e)\big]^n(1-T_e) }$
+
+  4. If the pre-tax return and effective tax rates are equal for both the recipient and donor
+
+     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{1-T_g}{1-T_e }$
+
+#### Estate Planning Tools
+
+1. Trust
+
+   Grantor 富B   把钱给   Trustee 管理者   把收益给 Beneficiary
+
+   - Revocable Trust & Irrevocable 可以跟grantor隔离preotect assets from claim
+   - Fixed Trust & Discretionary 有trustee自由决定给受益人多少钱不由beneficiary决定，跟beneficiary隔离
+
+2. Fundation 机构投资者章节会着重讲
+
+   Private foundations may be required to make certain **minimum annual distributions**. 政府为了防止逃税，要求foundation每年必须distribute的额度
+
+   Pros:
+
+   - Income Tax Deduction
+   - Favorable Tax Treatment of Investment Returns
+   - Protection of Assets from Estate Tax
+
+3. Life Insurance 保寿险 按约定的 cover 付给 beneficiary
+
+   - 由于 death benefit 人都死了, so tax exempt
+   - Life Insurance 可以和 Trust 结合 transfer assets to the beneficiaryes outside of the probate process 可以跳过 probate过程（税高），通过 trust 和寿险的方式把钱给 beneficiary
+
+4. Companies (Controlled Foreign Corporation, CFC)
+
+   不能不交税，但是可以把 tax defer 把税递延
+
+#### Across Multiple Generation 隔代转移
+
+1. General Principles of Family Governance 定规矩
+2. Family Conflict Resolution 防止家族冲突，规定家族规定 family constitution，通过写入有法律约束力的家族文件中，违反就不给钱，而制定 legally binding
+3. Family Dynamics in the Context of Business Exit
+
+---
+
+## Individual Lifetime
+
+### Human Capital & Financial Capital
+
+让 Human Capital 和 Financial Capital uncorrelated 可以分散风险
+
+$HC_0 = \sum \frac{Prob_t\times w_{t-1}\times (1+g_t)}{(1+r_f+y)^t}$
+
+- $w_{t-1}(1+g_t)$, is previous wage times growth = current period wage
+- y is risk adjustment (like the risk premium)
+
+### Financial Stages of Life for an Individual
+
+Tables
+
+### Net Worth
+
+Net Wealth = Net Worth + PV of Future Earning + Pension Plan
+
+- Traditional Balance Sheet
+- Economic (Holistic Balance Sheet): include also 
+  1. humand capital
+  2. pension value 
+  3. PV of Lifetime Consumption Needs 
+  4. Bequests
+
+#### Risk Management Strategy
+
+29min
