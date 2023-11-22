@@ -45,6 +45,7 @@
     - Sell and diversify
     - Staged diversification
     - Completion portfolio 卖一部分集中的，买 diversified equities
+
 2. Tax-Optimised Equity Strategies
     - Equity monetisation. Advantages 见下
         - avoid triggering the capital gains tax, 
@@ -56,6 +57,59 @@
         - Pros: protects against downside risk
         - Cons: has a limited upward potential
     - Covered Call
-3. Tax-Free Exchanges
-    - Exchange Funds 各公司创始人创建exchange fund，按比例在fund中换基金份额（包含其他公司的股）
 
+3. Tax-Free Exchanges
+    - Exchange Funds 各公司创始人创建exchange fund，按比例在fund中换基金份额（包含其他公司的股）达到diversified的目的
+    - Cons: 要求入股的stocks存续7年以上，提前取出费用高
+
+4. Charitable Remainder Trust 
+
+    投资慈善信托，由于有慈善性质，可以减税
+
+    - Revocable Donation: 所有权还属于 donor/grantor，没有破产保护
+    - Irrevocable donation, receive a tax deduction for the gift. 所有权不属于grantor，与本人隔离了
+        - 有破产保护 bankruptcy protection
+        - prevent liability claim
+    - **Without** incurring a **capital gain tax**. 
+    - But beneficiary would **own income tax** for the income
+
+#### 管理过集中的 Private Equities
+
+- Personal Line of Credit Secured by Company Shares 
+    - 以自己的名义把公司stock抵押贷款 arrange a personal loan secured by the private company's share
+- Leveraged Recapitalisation 分步退出
+    - For owner who are not yet ready to exit entirely and still have desire to continue to grow the business 对于还想继续business 不完全退出的。
+    - 先出一部分股权，留一部分。留下的部分可以签合同，之后设置条件（对赌）更高价卖出。
+    - Cons: 
+        1. 收到现金流
+        2. diversified assets
+        3. Incentive to the owner to still manage the firm 因为还有 minority ownership interest
+- Employee Stock Ownership Plan (ESOP)
+    - 把一部分公司股票卖给公司的 养老金计划。
+    - Pros: 
+        1. Deter capital gain tax
+        2. Retain control of the firm
+        3. Maintain upside potential
+
+#### Managing Concentrated Positions in Real Estate
+
+- Mortgage Financing
+    - Resource  有追索权，即若房价跌了，borrower要pay别的东西来补充抵押物的价值。so less risks for banks
+    - Non-recourse 无追索权，对银行来说违约风险高
+- Real Estate Monetisation for the Charitably Inclined 把房地产捐给DAF。DAF免税，然后把钱gift给beneficiary
+
+### Wealth Transfer Planning
+
+Estate 财产传承规划，death后传给下一代
+
+1. Will for Testament 遗嘱
+2. Inteste 无设置遗嘱，那么会进行 Probate (遗嘱认证) 流程，即为法院判定 legal process。流程长，费用高。
+    - 避免 Probate 的方法
+        1. Joint Ownership 在房产证上jointly 写父子的名字
+        2. Living Trust，在生前作为 grantor 给 trust 钱做 probate
+        3. retirement plan 在养老金计划中写其他受益人
+        4. life insurance 理赔给 beneficiary。理赔部分不需要税，且不走 probate程序
+        5. Lifetime gifts 在活着的时候 lifetime of donor
+    - forced heirship laws 法定继承权。如：妻子1/3，孩子们1/3，剩下的才按 will 分配
+
+10min
