@@ -202,7 +202,9 @@ $HC_0 = \sum \frac{Prob_t\times w_{t-1}\times (1+g_t)}{(1+r_f+y)^t}$
 
 ### Financial Stages of Life for an Individual
 
-Tables
+![Screenshot 2023-11-23 at 12.44.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-23%20at%2012.44.00.png)
+
+![Screenshot 2023-11-23 at 12.44.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-23%20at%2012.44.10.png)
 
 ### Net Worth
 
@@ -210,11 +212,102 @@ Net Wealth = Net Worth + PV of Future Earning + Pension Plan
 
 - Traditional Balance Sheet
 - Economic (Holistic Balance Sheet): include also 
-  1. humand capital
+  1. humans capital
   2. pension value 
   3. PV of Lifetime Consumption Needs 
   4. Bequests
 
 #### Risk Management Strategy
 
-29min
+- Procedure
+
+    1. Specify the Objective
+    2. Identify Risks
+    3. Evaluate Risks and Select Appropriate methods to manage the risks
+    4. Monitor outcomes and risk exposures
+
+- Risk Management Techniques
+
+    ![Screenshot 2023-11-23 at 12.45.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-23%20at%2012.45.37.png)
+
+### Individual Risk Exposures
+
+- Earnings risk (insure with disability insurance 工作能力丧失了赔钱的保险)
+- Premature death risk (insure with life insurance 防止提前挂了家庭没有收入了的保险)
+- Longevity risk (insure with annuities 防止活太长了钱不够花弥补pension)
+- Property risk (insure with property insurance 财产险如车险)
+- Liability risk (insure with liability insurance 责任险，如把赔钱的责任转移给保险公司)
+- Health risk (insure with health insurance 医保)
+
+### Life Insurance 寿险
+
+- Life Insurance  寿险，可以重复投保
+    - 死亡险 Temporary Life Insurance 定期死亡险，在一定时间內死才保 Permanent Life Insurance 保永久。所以贵
+    - Annuity 年金
+        - Immediate v.s. Deferral 立刻拿payment 或 将来拿
+        - Fixed v.s. variables 拿固定的钱 或 跟指数变动
+    - Universal 全险 = 保障 + 投资
+        - 如年轻的时候更多在投资账户 growth大，老了把钱放保障账户。flexible
+- Non-life Insurance  不能重复投保
+    - cata 灾难险
+    - Property insurance 有 deductible 部分 用于规避 moral hazard比如买了保险之后乱撞车，反正保险给赔
+    - Medical insurance
+
+Basic Elements
+
+- Terms 保险的周期
+- Coverage 保额
+- Premium 保费
+- Policy Owner 投保的人 负责付premium。投保人和受益人要有 insurable  interest 可保利益，要是亲戚才给买寿险。
+- Insured people 被保险的，被设定了condition的
+- Beneficiary 受益人，收coverage的
+- 条款
+    - Elimination / Waiting Period 等待期，给保险公司调查真相 有没有骗保
+    - Non-forfeiture Clause 不丧失现金价值。退保的时候可以退还 cash value
+    - guaranteed insurability 其他杂毛条款，如续保
+
+付钱
+
+- Net Premium 
+
+    - the discounted value of the future death benefit.
+    - 假设发生了理赔，（负）投资者每年付的premium折现  + 保险公司理赔coverage折现
+
+- Gross Premium 
+
+    - 平滑了之后，实际交的保费。
+
+        1. 平滑。因为一般人越老，prob of death越高，保费越高。年轻时候交的少，年老了交的多。Gross Premium 是平滑了实际交的之后，每年应付premium 
+
+        2. 实际交的。 + Expense 保险公司运营的费用（销售费用、提成etc） + Profits 给保险公司赚的钱
+
+            ![Screenshot 2023-11-23 at 13.19.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-23%20at%2013.19.44.png)
+
+            因为提成第一年多，越到未来越少。所以前几年的 费用将被抵扣掉（cash value 剩下的少），以后越交累积的越多 These cash values build up very slowly in the early years, during which the company is making up for its expenses.
+
+        - Cash Value 可以做抵押贷款，抵押出去换成钱再来投资。相当于加杠杆，套现，用更少的钱获得保险保障
+
+算钱
+
+Net Premium = Gross Premium - 总收益
+
+![Screenshot 2023-11-23 at 13.25.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-23%20at%2013.25.10.png)
+
+- Net Premium Cost Index 不考虑第三步的cash value，因为我们假设在25th year 发生了理赔
+- Surrender Cost Index（退保），即没发生保险触发条件，在最后要把cash value还给投保人
+
+### Annuity
+
+年轻时候买，用来老了退休了收到 annuity payment
+
+2 * 2 + 1
+
+Deferred & Immediate * Fixed & Variable  两两组合，一共四种结果
+
+- Deferred variable annuities
+- Deferred fixed annuities
+- Immediate variable annuities
+- Immediate fixed annuities
+- Advanced life deferred annuities 最后一种是 高龄年金，给老人买，付的钱不多，但是能收到钱的年份也少了，因为活得时间短了
+
+1h29min
