@@ -99,3 +99,335 @@ Know Your Customers
     - Workforce of the employer is older
     - Funded status 如果 fund status 为正，相当于 A > L，倾向于提出钱来，liquidity needs大
     - Ability to switch or withdraw 
+    
+- Caluculation PBO <- DB liability
+
+    $PBO = \sum \frac{Prob\times 1\% \times w_0 (1+g)^T\times T}{(1+r)^t}$
+
+    Prob of Alive * ratio * final wage * working year
+    
+    final wge = initial wage * (1+g)^T
+    
+    分子$ 1\% \times w_0 (1+g)^T\times T$ 为pension benefits，乘每期活着的概率，因为活着才给钱
+    
+    Funded Ratio = $\frac{PensionAsset}{PensionLia}$ 如果>1说明能A覆盖负债。同理 Funded Status =A-L 如果 > 0 说明 A多
+    
+    由公式可以看出影响 PBO的因素
+    
+    ![Screenshot 2023-11-25 at 20.48.58](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252049751.png)
+    
+    P.S. additional contributions 增加不是好现象，因为若公司运营正常，则一般不愿意往 Pension Plan 里注入更多的钱，因为钱有更好的去处，如公司日常经营。所以 contribution 多往往意味着不好的情况。
+    
+    对于 pension plan，contribution变多，意味着未来给员工的pension benefits越多，所以公司要pay的多，则PBO Liability大
+    
+- Investment Horizon
+
+    - 投资期限越长，意味着 ability to tolerate volatility of contribution rates 越大。能承受更多风险
+        - people are more mature or older, might have less risk tolerance 越老承担风险多能力越低
+        - frozen 的养老金计划（没有新人增加的），此时随着时间过去，老人变老，承担风险能力变低
+    
+- Externalty
+
+    - Regulation 要披露 fees and costs both internally and externally
+    - tax perspetives
+    - accounting rules 在B/S上披露 net funded status
+
+- Risk Consideration 承担风险的多能力 5个影响承担风险能力的因素
+
+    1. plan status 目前上 surplus or deficites, higher surplus implies greater risk tolerance
+    2. Firm's financial status and profitability: 公司经营越好，pension承担风险能力越低。因为公司可以contribute.  greater firm's profitability, less the debt ratio, then greater ability to tolerent risks
+    3. Sponsor and pension fund rosk exposure  公司和pension 相关性corr越小，则两者风险可以diversified，risk tolerance强
+    4. Plan features 提前退休 earky retirement & lump sum distribtion 一笔大提款，会降低 risk tolerance
+    5. workforce characteristics 人员结构相关的 人越年轻 risk tolerence 越好
+
+- Investment Objective 
+
+    1. Meet Pension Liabilties
+    2. Minimise Contribtuion
+
+### Pension Asset Allocation
+
+1. 如果 pension 的lia payment 稳定，所以要有稳定的asset匹配支出。所以买 bonds
+2. 如果 time horizon 长，可以承担更多risks，为了减少contribution可以增加高收益的，买 equity
+3. 如果为了抗通胀 (1) risk tolerance低，买TIPS 通胀债券 (2) risk tolerance 高，如人员年轻 可以买 RE Commodity
+
+### DC Plan
+
+Plan Sponsors 不负责 investment risks
+
+---
+
+## SWF Sovereign Wealth Funds
+
+### Types
+
+- Budget Stablisation Funds 平准基金 用于平衡budget & economy稳定基金 from commodity price volatility and external shocks
+  - Chile: Economic and Social Stabilization Fund; Timor-Leste Petroleum Fund; Russia’s Oil Stabilization Fund
+- Development Funds 发展基金，造桥修路 infrastructure，由 project 项目主导
+  - Mubadala (UAE); Iran’s National Development Fund; Ireland Strategic Investment Fund
+- Saving Funds 储蓄基金，用于把能源开采提前赚的钱投资起来，避免将来能源枯竭了没钱了
+  - Abu Dhabi Investment Authority; Kuwait Investment Authority; Qatar Investment Authority; Russia’s National Wealth Fund 如沙特
+- Reserve Funds 外汇储备基金，用于稳定外汇，reduce the negative carry costs of holding reserves or earn returns on ample reserves
+  - China Investment Corporation; Korea Investment Corporation; GIC Private Ltd. (Singapore)
+- Pension Reserve Funds 为了保证国家pension outflows
+  - National Social Security Fund (China); New Zealand Superannuation Fund; Future Fund of Australia
+
+### Risks Tolerence
+
+![Screenshot 2023-11-25 at 21.53.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252154641.png)
+
+### Investment Objectives
+
+![Screenshot 2023-11-25 at 21.58.36](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252158395.png)
+
+### Asset Allocation
+
+- **Budget stabilization funds.** 
+
+  The majority of fixed income and cash is due to the defensive nature of the fund.
+
+- **Development funds.** 
+
+  These are driven by the socioeconomic mission of the fund (e.g., investment in local infrastructure projects).   
+
+- **Savings funds.** 
+
+  A long investment horizon means relatively high allocations toward equities and alternative investments, such as private equity and real assets.   
+
+- **Reserve funds.** 
+
+  Allocations are similar to those of savings funds, but with lower allocation to alternatives due to the potentially higher liquidity needs.  大多数为低风险的，因为 RT(risk tolerence)低，但是为了挣收益还需要配少部分alternative高收益
+
+- **Pension reserve funds.** 
+
+  These have high allocations to equities and alternatives due to a long investment horizon and low liquidity needs in the accumulation phase.
+
+---
+
+## Endowment 如校园基金会
+
+- **Stakeholder**: Student Alumni, employees 因为免税，所以没有 government作为 stakeholder
+
+- **Time Horizon**: perpetual
+
+- **Pending Rules**: 
+
+  ​	$Spending_{t+1} = w\times (1+inflation)+(1-w)\times (spending\ rate \times  average \ AUM)$
+
+  ​	$w$ : weight of the prior year's spending
+
+  - **Constant Growth Rule**: if w = 1, then $Spending_{t+1} = (1+inflation )Spending_{t}$ 保持伴随通胀增长PPP，支出在调整通胀后与去年相同
+  - **Market Value Rule**: if w = 0, then $Spending_{t+1} = SpendingRate \times Average \ AUM$，用开支比例 * 平均以前的情况
+  - Hybrid Rule: $w\in(0,1)$
+
+- Liqudity Needs
+
+  $LN = CF\ Outflows - CF\ Inflow$
+
+  - Liquidty Related Factors:
+
+   1. Fundraising from donors 
+
+      	1. Donation 有钱，对流动性的需求低
+          	2. Dependency of Donation 对donation对需求低，LN低
+
+   2. Reliance of Spending from Endowment 对使用endowment开支对依赖性越高 LN越高
+
+   3. Capability of endowment  or debt insurance 
+
+      对debt issue 的需求高 对 endowment需求高，则LN高
+
+- Investment Objectives
+
+  1. Maintain Purchase Power 保持不亏钱
+  2. Maintain the level of Spending 保持有钱花spending时有钱
+
+- Asset Allocation
+
+  - 为了赚钱 可以配 alternative investment in majority > 50%
+  - (small US unversisty endownment may exposure to home bias, as would like to buy more US equity and US alternatives)
+
+### Private Fundation 
+
+由个人 或者由公司设立，慈善性质低
+
+为了operation 或者 community 相关的，为公众和慈善减税(变成了endowment )
+
+### Difference Between US Foundations and Unversity Endowment
+
+ 
+
+|                                         | US Foundations 主要是慈善                                    | US University Endowment 主要是维持运营                       |
+| --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Purpose                                 | **Grant-making** for social, educational, and charitable purposes; principal preservation focus. | General **support of institution** or restricted support; principal preservation focus. |
+| Stakeholders                            | Founding family, donors, grant recipients, and broader community that may benefit from foundation’s activities. **有政府** | Current/future students, alumni, university faculty and administration, and the larger university community. **无政府** |
+| Liabilities/ Spending                   | Legally mandated to spend **5%** of assets + investment expenses + 100% of donations (flow- through). | Flexible spending rules (headline spending rate between 4% and 6% of assets) with smoothing. **无spending rule但是一般在4-6** |
+| Other liability considerations 收入来源 | Future **gifts and donations**, or just one-time gift?       | **Gifts and donations**, percentage of operating budget supported by endowment, and ability to issue debt. |
+| Investment time horizon                 | Very **long**-term/**perpetual** (except limited-life foundations). | **Perpetual**                                                |
+| Risk                                    | **High** risk tolerance with some short-term liquidity needs. | **High** risk tolerance with low liquidity needs.            |
+| Liquidity needs                         | Annual net spending is **at least 5%** of assets.            | Annual net spending is typically **2% to 4%** of assets, after alumni gifts and donations. |
+
+---
+
+## Banks
+
+![Screenshot 2023-11-25 at 23.14.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252314907.png)
+
+银行会面临 Asset Lia 期限错配的问题，久期错配 $Dur_A > Dur_L$
+
+- Stakeholder
+  - shareholders
+  - Customer: Borrower & Depositor
+  - Internal stakeholders: employees, managers, director
+- Investment Objectives
+  1. Manage Liquidty Needs, reduce risk mismatch
+  2. establish a ALM committee that sets the IPS, monitor performance, etc
+- Constraints
+  - Legal and Regulatory perspectives: 因为银行时 systematically important 所以有更多的监管
+  - typically are fully taxable entities
+  - Accountancy Perspective 也是因为银行重要，所以一般会做三份报表
+    1. **standard financial report** by GAAP or IFRS 由于很多银行时上市公司，报表要符合准则
+    2. **statutory accounting** by regulatory 由监管要求的，一般会conservative
+    3. **True Economic Accounting** using market value 反应其真实经济情况的
+
+### Insurers 保险公司 见individual的章节
+
+- Life Insurers 寿险 
+  - 死亡险 whole & term 保终身 & 保一段时间
+  - annuity 年金 Fixed & Variable * immediate & delayed 2*2
+- Property and Causlty (P&C) Insurers 
+  - 车险
+  - 房屋险
+  - 巨灾险
+- Diff 在于能否重复投保 
+- Stakeholders
+  - Publicly listed companies 上市公司
+  - Multual companies 互助公司 由投保人设立 owned by their policyholders, either retaining profits as a surplus against potential losses or distributing them to policyholders through dividends or premium reductions.
+  - general account 投资风险 investment risks 由 insurer 保险公司承担
+  - separate account 在这个账户内 投资产品由policyholder受保人选择，所以 investment risk 由 policyholder 自己承担
+
+#### Difference between Life Insurance & PC Insurance
+
+1. Time Horizon 寿险长，PC短
+
+2. 巨灾险损失
+
+   1. long tailed 
+   2. 理赔周期长 3-6个月
+
+3. Replacement coverage 只有 PC可以抗通胀
+
+4. Underwriting Cycle 寿险周期长 受econ cyc影响小
+
+5. LN流动性需求，PC险大
+
+6. Asset Allocation
+
+   ![Screenshot 2023-11-26 at 00.25.39](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311260025690.png)
+
+7. 相对利率敏感性 寿险周期长，久期高，所以 r 变化对寿险影响大
+
+#### Investment Objectives
+
+- Manage Liquidity 
+- Reduce risk mismatch
+- 定量计算
+  - $R_{minimumRequired} = \underbrace{R_{L}}_{折现率}+ \underbrace{Div}_{投保人}+股东收益 $
+- 退保 Surrender
+  - 当利率 r 上升，由于 liability 和 asset 的 duration 不同，资产的久期一般比负债的大，那么利率上升，资产减数更大，会造成资不抵债
+  - 解决办法 1. 不处理 。$D_A>D_L$, $r\uparrow$ => $A<L$ 最终 shortfall risks 增加
+  - 解决办法 2. 处理。$D_A \downarrow $ 则应该卖 bonds， 但由于 r 提升，bond价值下降，卖bond又会亏钱。最终Total Cost 提升
+
+### Bank & Insurers: Balance Sheet Management
+
+LDI (Liability Driven Investing)
+
+$A = L+E$
+
+$1 = \frac{L}{A}+\frac{E}{A}$
+
+$E = A- L$
+
+$\frac{E}{A} = 1- \frac{L}{A}$
+
+#### Return of Equity $r_e = \frac{\Delta E}{E}$
+
+For the portfolio (total portfolio is "E")
+
+$r_e = w_A r_A + w_L r_L$
+
+$w_A = \frac{A}{E}$ , $w_L = -\frac{L}{E}=-\frac{A-E}{E}=1-\frac{A}{E}$
+
+$r_E = \frac{A}{E}\times r_A + (1-\frac{A}{E})\times r_L$
+
+$r_E = \frac{A}{E}\times r_A - (\frac{A}{E}-1)\times r_L$
+
+$r_A$ is postively correlated $r_E$. leverage ratio $A/E$ is negative correlated with $r_E$
+
+#### Portfolio Duration
+
+Generally, 
+
+$r_d = \frac{\Delta P}{P} = -D\times \Delta y$
+
+$D = \frac{\Delta P}{P\times \Delta y}$
+
+So, $D_A = \frac{\Delta A}{A \Delta y}$, $D_L = \frac{\Delta L}{L\Delta i}, but\ wrong \ for\ Lia !$,  $\Delta y$ is replaced by the $\Delta i$ for the duration of $D$. However, the equation only gives us $D_L = \frac{\Delta L}{L\Delta y}$, we need to adjust it to be  $D_L = \frac{\Delta L}{L\Delta i}$.
+
+So, $D_L = \frac{\Delta L}{L\Delta y}\times \frac{\Delta i}{\Delta i}=\frac{\Delta L}{L\Delta i}\times \frac{\Delta i}{\Delta y}$
+
+In a portfolio $D_E = w_A D_A + w_L D_L = \frac{A}{E}D_A - (\frac{A}{E}-1)D_L$
+
+$D_E = \frac{A}{E}\frac{\Delta A}{A \Delta y}  - (\frac{A}{E}-1) \frac{\Delta L}{L\Delta i}\frac{\Delta i}{\Delta y}$
+
+$\frac{\Delta E}{E\Delta y} = \frac{A}{E}\frac{\Delta A}{A \Delta y}  - (\frac{A}{E}-1) \frac{\Delta L}{L\Delta i}\frac{\Delta i}{\Delta y}$
+
+or,
+
+$D_E = \frac{A}{E}D_A - (\frac{A}{E}-1)D_L\frac{\Delta i}{\Delta y}$
+
+#### Portfolio RIsks
+
+$w_A = \frac{A}{E}$
+
+$W_L = \frac{A}{E}-1$
+
+$\sigma^2_E = \sigma^2_p= w_A^2 \sigma_A^2+w_L^2 \sigma_L^2 + 2w_Aw_L\sigma_A \sigma_L \rho_{(A,L)}$
+
+$\sigma^2_E = (\frac{A}{E})^2 \sigma_A^2 + (\frac{A}{E}-1)^2\sigma^2_L - 2 \frac{A}{E}(\frac{A}{E}-1)\sigma_A\sigma_L \rho_{(A,L)}$
+
+#### 影响因素
+
+![Screenshot 2023-11-26 at 22.41.09](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262241769.png)
+
+![Screenshot 2023-11-26 at 22.42.07](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262242620.png)
+
+---
+
+## Liquidity Management
+
+### Liquidity Profiling and Time-to-Cash Table
+
+| Time to Cash | Liquidity Classification | Liquidity Budget (% of the port) |
+| ------------ | ------------------------ | -------------------------------- |
+| < 1 Week     | Highly Liquid            | At least 10%                     |
+| < 1 Quarter  | Liquid                   | At leasr 35%                     |
+| < 1 Year     | Semi-Liquid              | At least 50%                     |
+| > 1 Year     | Illiquid                 | Up to 50%                        |
+
+### Rebalancing and Commitments
+
+- Systematic rebalancing policy. based on discipline 依据准则，如calendar, percent-range rebalancing
+- Automatic Rebalancing 在自己portfolio中，高流动性和低流动性大权重调整
+
+### Stress Testing
+
+1. use historical data
+2. use statistical assumption, Monte Carlo, VaR
+3. scenario analysis
+
+### Derivatives
+
+Sell Stocks <=> Short Derivatives
+
+### Earning an Illiquidty Premium
