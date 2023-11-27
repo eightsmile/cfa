@@ -33,4 +33,4 @@ $Index\ Cost = \frac{Index VWAP - Index\ Arrival Price}{Index\ Arrival Price} \t
 
 #### Trade Government 交易政策描述
 
-List of Policy, boring
+List of Policy, Borning
