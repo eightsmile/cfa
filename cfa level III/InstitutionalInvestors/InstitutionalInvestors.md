@@ -428,6 +428,12 @@ $\sigma^2_E = (\frac{A}{E})^2 \sigma_A^2 + (\frac{A}{E}-1)^2\sigma^2_L - 2 \frac
 
 ### Derivatives
 
-Sell Stocks <=> Short Derivatives
+Sell Stocks <=> Short Derivatives (short futures)
+
+没有直接买卖股票，所以没有realised gain/loss
 
 ### Earning an Illiquidty Premium
+
+- Illiquid Asst Price = Marketable Asset Price - Put Price
+    - 因为只要能买到put，就能保证一定等把它卖掉，可以保证流动性
+- Illiqudity Premium(%)=Expected Return on Illiquid Asset % - Expected Return on Marketable Asset % 即流动性差的 - 流动性好的 return 的差值
