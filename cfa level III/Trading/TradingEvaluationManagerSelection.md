@@ -78,8 +78,74 @@
 
 - Price Target Benchmark  自己定制的
 
-### Trade Implementation Choices 
+### Trade Implementation Choices  交易平台
 
-交易平台选择
+- Higher-touch Approaches 人工参与的交易平台
+    - Principal Trades 由 人工作为做市商 dealer 参与，做市商即意味着会自己有持仓。dealer挣 bid-ask spread
+    - Agency Trades 由 broker 挣佣金 commission fees，撮合交易。因为dealer承担更多风险，所以一般 bid-ask spread更大一点
+- Low-touch automated execution strategies 低参与的电子化的平台
+    - Alternative Trading Systems ATS (Non-exchange trading venues)
+    - DMA Direct Market Access
+    - Dark Pools 不会披露交易信息，匿名交易，便于机构投资者 做大笔的交易
+- Algorithmic Trading
+    - Execution Algorithms 用于执行
+    - Profit-seeking Algorithms 通过交易挣超额收益的算法
 
-51min
+#### Execution Algorithm 电子化 execution trading 的五个交易方法
+
+1. Scheduled (POV, VWAP, TWAP) 适用小订单，不适用大订单，有可能完不成交易如果illiquid
+
+    - POV (percentage of volume) 如 交易量为市场交易量的1%
+        - Pros: take advantage of increase liquidity 因为与市场保持一致
+        - Cons: Higher Trading Cost 由于自己与市场一致，所以价格会被推高 ，有T.C.
+        - Cons: trade may not be complete 无法保障交易达成
+    - VWAP 按交易量 （前一天的交易量分时点给做权重）然后按权重分配到此次交易中，对订单拆分
+        - 由于empirically，一个trading day 开始和结束时交易多，所以为VWAP curve 是 U shape
+        - Pros: 能 compete the trade
+        - Cons: 对于 illiquid stock 还是可能完不成交易
+        - Cons: 无法控制 outlayer
+    - TWAP 按时间 equal-weighted time schedule
+
+2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股
+
+    Take advantage of market liquidity **across multiple venues by trading faster** when liquidity exists at a favourable price.
+
+    - Pros: Appropriate for **large order**, coz can execute quickly without substantial impacts
+    - Cons: Prices are likely to move unfavourably during the trade horizon
+
+3. Arrival Price
+
+    trade close to current market prices 尽可能按市场价格完成交易
+
+    - Front-loaded strategy 一开始可能快速成交，然后流动性没了，就交易不出去了
+
+    - 适合 Trade Urgency 高的投资者
+    - 适合 prices are likely to move unfavourably during the trade horizon 适合着急买，预期价格会变差，所以赶紧交易的投资者
+
+4. Dark Strategies / Illiquidity Aggregators
+
+    - Dark Aggregator Algorithm  适合需要匿名交易
+    - Appropriate 适合 for: 
+        - 大单 large order size, 
+        - illiquid asset with higher ask-bid spread, 
+        - no need to execute the order entirely
+
+5. Smart Order Routers (SORs)
+
+    交给algorithm自己算，把所有的单都执行出去
+
+    - 寻求 highest probability of executing, best market price
+
+### Comparison of Markets
+
+交易平台 看 (1) Size (2) liquidity
+
+- 流动性差， Size 高 => 选 high-touch 人工交易
+    - Principal (dealer risks 挣 spread 多): Urgency高的在此交易
+    - Agency (broker without risks 挣 commission 少) : Urgency低的在此交易，T.C.低
+
+- 流动性好，size 小 => 选 low-touch 电子化平台
+    - （5个 algorithm）
+
+- P.S. (on-the-run) Treasury 国债，可以选 Algorithm 交易，因为流动性好
+
