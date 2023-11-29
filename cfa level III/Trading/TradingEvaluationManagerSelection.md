@@ -149,3 +149,151 @@
 
 - P.S. (on-the-run) Treasury 国债，可以选 Algorithm 交易，因为流动性好
 
+## Trade Evaluation
+
+### Implementation Shortfall IS 执行落差 显性+隐性
+
+- IS Formulation
+
+  $IS = Execution\ Cost + Opportunity\ Cost + Fees$
+
+- Expanded Implementation Shortfall
+
+  $Expanded \ IS = Delay\ Cost + Trading\ Cost + Opportunity\ Cost+ Fees$
+
+- Delay Cost 决策和下单时间不一样，降低方法：减少时间
+
+- 减少opp costr的方法：Appropriate Order size => minimise the opportunity cost
+
+#### Calculation
+
+- Cost in Dollar per share: $Cost(\$/share) = Side \times (\bar{P}-P^*)$
+- Cost in Total Dollar: $Cost(\$) = Side \times (\bar{P}-P^*) \times Shares $
+- Cost in Basis Points (bps): $Cost (bps) = Side\times \frac{\bar{P}-P^*}{P^*} \times 10,000bp$
+- $P^*$ is the reference price
+- $\bar{P}$ is the average execution price
+
+#### Market Adjusted Cost
+
+用于 separate the trading cost from the general market movement 把由于市场price变动带来的trading cost 拆开
+
+$Market-Adjusted\ Cost (bps) = Arrival Cost (bps) - \beta \times Index \ Cost (bps)$
+
+相当于自己的成本比市场贵多少
+
+$Index\ Cost = \frac{Index VWAP - Index\ Arrival Price}{Index\ Arrival Price} \times 10^4bps$
+
+#### Trade Government 交易政策描述
+
+List of Policy, Borning
+
+---
+
+## Performance Evaluation
+
+$Active \ Return \leftrightarrow \alpha$
+
+- Arithmetic Attribution <- Single period (default situation in this part)
+
+  $A = R-B$
+
+- Geometric Attribtuion <- Multi-period
+
+  $(1+G)(1+B)=1+R$
+
+  - G: geometric attribution
+  - B: benchmark
+  - R: portfolio return
+
+  $G = \frac{1+R}{1+B}-1=\frac{R-B}{1+B} =\frac{A}{1+B}$
+
+### Performance Attribution
+
+1. Return-based attribtuion 
+
+   用 total portfolio return 总收益 来算，有的产品如 hedge funds 不会公布 return 那么 return based attrituion 就不能用
+
+   **Pros:** Easy
+
+   **Cons:** Least accurate
+
+   **Cons:** can be manipulate 因为没有分配到个股，total port容易被操纵
+
+2. Holding-based attribution 会考虑个体持仓，个体的收益率
+
+   **Pros:** more accurate 
+
+   **Cons:** fails to capture the impact of transaction 只考虑了起初期末，期中的交易没考虑到
+
+   也因此，适用于 passive strategy 因为turnover低，适用于短期的，也是因为 turnover 低
+
+3. Transaction-based attribtuon 考虑了 both holdings and transaction
+
+   **Pros:** accurate
+
+   **Cons:** difficult to calculate
+
+### Return Attribtuon
+
+#### Equity
+
+##### Brinson Model 画长方形 asset allocation + securities selection
+
+- BHB Model
+
+  起点是 0
+
+  ![Screenshot 2023-11-29 at 20.50.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292050277.png)
+
+- BF Model
+
+  纵坐标起点是 B <- 整个benchmark 的总收益率 P.S. B_i 为各行业的 benchmark return
+
+  ![Screenshot 2023-11-29 at 21.27.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png)
+
+##### Carhart 4 Factor Model
+
+$R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML + \epsilon$ 
+
+通过回归拆出来，哪个因子对 portfolio return 贡献更大，从而分享组合因为什么因素，带来的收益
+
+- RMRF = the return on a value-weighted equity index in excess of the one-month T-bill rate
+
+- SMB = small minus big, a **size (market-capitalization) factor** (SMB is the average return on three small-cap portfolios minus the average return on three large-cap portfolios)
+
+- HML = high minus low, a **value factor** (HML is the average return on two high-book-to-market portfolios minus the average return on two low-book-to-market portfolios) 
+
+  Fama French 用的是 $\frac{BV}{MV}$ ，相当于一单位的market value 能买到 多少  book value。一般 market value 越接近 BV，则为 价值股。market value 远高于 BV 的为成长股 growth stock
+
+  WML = **winners minus losers**, a **momentum factor** (WML is the return on a portfolio of the past year’s winners minus the return on a portfolio of the past year’s losers)
+
+####   Fixed-Income
+
+1. Exposure Decomposition - Duration Based 使用给clients画饼
+
+   把 gov 和 corporate debt 拆分 Top Down
+
+   按 duration 把债券分为 长中短期
+
+   - Duration Effects
+   - Curve Effects
+
+2. Yield Curve Decomposition - Duration Based 适用于分析师
+
+   可 Top-down 可 bottom-up
+
+   $Total Return = Income Return +Price Return$
+
+   $Price Return = - Duration \times \Delta YTM$
+
+3. Yield Curve Decomposition - Full Repricing Based 过程复杂但精确，适用professional
+
+   计算每个时点 sport rate 对价格的影响 
+
+   Bottom-up
+
+#### Return Attribution Analysis at Multiple Levels
+
+- Macro Attribution: determine the impact of the **fund sponsor’s** decisions
+- Micro Attribution: determine the impact of the **portfolio managers’** decisions on total fund performance
+- 用 BF 模型画矩形，BF模型纵坐标从B开始
