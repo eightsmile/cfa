@@ -297,3 +297,17 @@ $R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML +
 - Macro Attribution: determine the impact of the **fund sponsor’s** decisions
 - Micro Attribution: determine the impact of the **portfolio managers’** decisions on total fund performance
 - 用 BF 模型画矩形，BF模型纵坐标从B开始
+
+### Risk Attribution 风险归因
+
+$Active Risks = \sigma_A = \sqrt{\frac{\sum (R_A^i-\bar{R})^2}{n-1}}$
+
+Type of Attribution Analysis
+
+| Investment Decision Making Process | Relative (vs. Benchmark)                                     | Absolute                                                     |
+| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Bottom up 从个体security 看        | Position’s marginal contribution to tracking risk            | Position’s marginal contribution to total risk               |
+| Top down 由行业看到个体            | Attribute tracking risk to relative allocation and selection decisions | Factor’s marginal contribution to total risk and specific risk |
+| Factor based 四因子                | Factor’s marginal contribution to tracking risk and active specific risk | Same as the above                                            |
+
+### Benchmarking Investments and Managers
