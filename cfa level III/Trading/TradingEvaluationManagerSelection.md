@@ -311,3 +311,160 @@ Type of Attribution Analysis
 | Factor based 四因子                | Factor’s marginal contribution to tracking risk and active specific risk | Same as the above                                            |
 
 ### Benchmarking Investments and Managers
+
+- Asset-Based Benchmark
+- Liability-Based Benchmark
+
+#### Property of being a Good Benchmark
+
+- Specified in Advanced 事先确定
+- Appropriate 能否反应 portfolio style
+- Measurable
+- Un-ambiguous 权重 weights are clearly identifiable
+- Reflective of Current Investment Opinions 让benchmark能够对应portfolio的特征，如积极的投资者，benchmark也要相对积极，且有对应的 factor exposures
+- Accountable
+- Investable
+
+#### Asset-Based Benchmarks
+
+- Absolute return benchmarket
+
+  minimum target return, 比如 hurdle rate
+
+  Cons: 问题在于 不能做到 un-ambiguous 因为为指定的rate，没有成分的weights
+
+- Broad Market Indexes 用大盘指数 做benchmark
+
+  Cons: 不 appropriate 可能无法反应portfolio的风格
+
+- Style Index 比较好的选择，可以反映风格
+
+  Cons: 无法分散化，因为集中于某个 style
+
+- Factor-Model-Based Benchmark 随便取factors
+
+  通过回归构建一个模型，作为benchmark
+
+  Cons: not intuitive 无解释效益
+
+  Ambiguous 因为不同模型会有不同结果 ，misspecificed
+
+- Return-Baed Benchmark 固定有 style factor 作为因子，如 Four Factors
+
+  Cons: 能反映style，但是不能反映 what they own 持仓
+
+  Cons: 不能反映 style 改变
+
+- Manger Universe, Manager Peer Group 投资经理们的业绩比较
+
+  Cons: survivor bias , cannot be specified in advance, not investable
+
+- Custom 自己定制 benchmark
+
+### Evaluating Benchmark Quality
+
+$P=M+S+A$
+
+B 左边 相当于 与基金经理能录无关
+
+B 右边 相当于基金经理通过自己能力挣的钱
+
+![Screenshot 2023-11-30 at 16.59.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301659035.png)
+
+- P - Portfolio Returns
+- M - Market Index Return
+- S - Style Return
+- A - Active Management Return
+- E = (P-M), difference between the portfolio and the broad market index
+- If the benchmark is a broad market index, then $S$ is assume to be zero. Then, $P = M+A$
+
+If 一个benchmark好，要能把A、S区分开。那么 A 与 S 的相关性要低, $\rho(A,S)=0$。因为 A 为基金经理的能力， S 不为能力
+
+If 一个benchmark好，$\rho(S,E) = \rho(S,S+A) $ 高，这个相关系数高与上式一致，意味着 S & A的相关性低$\rho(A,S)=0$，则$\rho(S,E) = \rho(S,S+A) $ 高
+
+### Benchmark for Alternatives Investment
+
+Rationale
+
+- 因为 Alternative 的 Liquidity 低， 所以用 Appraisal 价格评估，
+
+  We smooth the data, 这样会导致 sigma 数据的方差或标准差被低估，会导致 diversification 分散度被高估
+
+- 因为没有要求披露业绩，是自愿披露的 Self-Reported，那么会有 
+
+  1. survivorship bias 愿意披露的恰好是表现好的
+  2. Backfill Bias 高业绩的会被包含进来
+
+- 因为 Leverage 大，所以收益率高。此时用有杠杆的和无杠杆的 port & benchmark 比，是不可比的
+
+### Performance Appraisal
+
+- Sharpe Ratio
+
+  $Sharpe = \frac{\bar{R_A}-\bar{r_f}}{\hat{\sigma_A}}$
+
+  Risk -> excess return
+
+  Cons: Risks have upside and downside, only downside vol worries
+
+- Treynor Ratio
+
+  $Treynor = \frac{\bar{R_A}-\bar{r_f}}{\hat{\beta_A}}$
+
+  Beta represents the **systematic risk**, so excess retrun per unit of systematic risks
+
+- Infomration Ratio
+
+  $IR = \frac{R_A}{\sigma_A} = \frac{R_p-R_b}{\sigma{(R_p-R_b)}}$
+
+  Active return per unit of active risk
+
+- Appraisal Ratio (AR)
+
+  $AR = \frac{\alpha}{\sigma_{\epsilon}}$
+
+  $R_p - R_f = \alpha + \beta (R_m-R_f)+\epsilon$ CAPM regression
+
+  , where $\alpha$ is the abnormal return, and $\sigma_{\epsilon}$ is the s.d. of error term
+
+  $\alpha = R_p - CAPM\ Return$ <- Jensen's Alpha
+
+  $\sigma_p^2 = \beta^2\sigma_m^2 + \sigma_{\epsilon}^2$
+
+  $\sigma_{\epsilon}= \sqrt{\sigma_p^2 - \beta^2\sigma_m^2 + }$
+
+  abnormal return per unit of abonormal risks (as the return is portfolio return in excess of CAPM, the market), so what left with is the unsystematic return
+
+  So, the ratio measure, excess reutrn per unit of unsystematic returns
+
+- Sortino Ratio
+
+  $Sor R = \frac{R_p - R_T}{\sigma_{Downside}}$
+
+  - $R_T$ is the minimum required return, e.g. hurdle rate
+
+  - $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
+
+    ![Screenshot 2023-11-30 at 19.01.05](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301901297.png)
+
+    Excess return w.r.t. Target, per unit of downside return 
+
+- Capture Ratio
+
+  $CR = \frac{UC}{DC}$
+
+  - $UpsideCapture = \frac{R_p}{R_b}$ benchmark上涨1，portfolio上涨的比率为UC，UC大于一好
+
+  - $DownsideCapture = \frac{R_p}{R_b}$ benchmark下跌1，portfolio下跌的比率为DC，DC小于一好
+
+  - 综上 CR 越大越好
+
+  - CR > 1 : positive asymmetric, convex 涨多跌少，为convex
+
+  - CR < 1 : negative asymmetric, concave 
+
+    ![Screenshot 2023-11-30 at 19.19.42](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-11-30 at 19.19.42.png)
+
+- Drawdown: peak-to-trough loss
+
+- Drawdown Duration 从peak最高点跌下来，再回到peak的时间
