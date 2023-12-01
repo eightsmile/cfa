@@ -463,8 +463,89 @@ Rationale
 
   - CR < 1 : negative asymmetric, concave 
 
-    ![Screenshot 2023-11-30 at 19.19.42](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-11-30 at 19.19.42.png)
+    ![Screenshot 2023-12-01 at 13.28.23](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-01%20at%2013.28.23.png)
 
 - Drawdown: peak-to-trough loss
 
 - Drawdown Duration 从peak最高点跌下来，再回到peak的时间
+
+---
+
+## Manager Selection Process
+
+- Manager Universe 先确定可选的范围
+
+    所有 feasible manager 可选的基金经理
+
+    The manager universe 提前根据 **IPS** filter了符合的 
+
+    1. suitability
+    2.  style, 
+    3. passive/active suitable
+
+    特别扯淡part Type I and Type II errors in manager selection
+
+    - Null Hypothesis: the manager is not skillful 基金经理skill=0
+
+    - Type I: 去真，reject the null when it is true。FM是垃圾，但是还是雇了他（reject the true null）
+    - Type II: 纳伪，accept the null when it is false。FM nb 但是没雇
+    - Decision Makers worry more about Type I errors than Type II errors. coz
+        1. Psychologically, people seek to avoid feelings of regret 因为 type I 是做错了， type ii 是错过了。人们容易忽略错过了，而放大做错的
+        2. Type I errors are straightforward to measure 因为与雇员业绩相关，共容易观测
+        3. Type I errors liked to decision makers' compensation 与雇人相关，会给工资的
+    - 影响 expected cost的因素，size, shape, mean, dispersion, etc. 
+        - 如 skilled & un-skilled FM 的 mean 差距小, dispersion 大（方差大），则cost的差距小
+    - 市场越有效，超额收益越少，opportunity cost of hiring a unskilled FM 越小
+
+- Quantitative
+
+    - Investment Due Diligence (dd) 
+        - Attribution and appraisal
+            - Style analysis 时刻关注是否FM的投资style 有变化
+                - Returns-Based Style Analysis (RBSA) 回归 Top-Down，用 style factor做 regressor ，比较基金的收益和 那个style factor  的beta 大，那么port就是哪个style
+                    - Pros: 可以纵向比较，看FM不同时间的style
+                    - Not subject to window dressing 不受持仓的影响，因为不看持仓
+                    - Cons: 对于 illiquid securities， 由于样本量小，return data is fluent 被平滑, may understate the risks exposure
+                - Holding-based style analysis (HBSA)
+                    - Bottom up 选某个时点的weights
+                        - Cons: s.t. window dressing 受制于粉饰，
+        - Capture Ratio 见此前提到 UC/DC
+        - drawdown 见此前提到 
+
+- Quality 
+
+    - Investment dd
+        - Philosophy 投资理念
+            - Passive Strategy seek to capture return from systematic risk premium
+            - Active Strategy seek return from misplacing. The Inefficiency is from (1) behavioural and (2) structural
+        - Process, People, Portfolio 投资团队为people
+            - Investment Decisional Process:
+                - Signal Creation 市场有信号
+                - Signal Capture 根据信号产生idea
+                - Portfolio Construction 建仓
+                - Portfolio Monitor 后期
+    - Operational dd 定性分析公司**运营、治理情况**，制度等
+        - Process and Procedure 制度是否完善
+        - Firm & terms 企业文化 条款条例等
+        - Investment vehicle 
+            - (1) individual separate account SMA 可以定制的，自己玩的 
+                - Owner 归客户
+                - 可 customised
+                - tax efficiency 可以做税务筹划
+                - transparency  账户情况可以给client公开
+                - Cons: cost 贵因为客制化，tracking risk高因为客制化，
+            - (2) pooled vehicles 大家一起玩
+        - Monitoring
+
+### Management Fee
+
+- AUM Fee = $AUM \times \%$
+
+- Performance-based Fees
+
+    1. Symmetric Structure 利润profit为正，收fee，为负扣钱
+    2. Bonus Structure with limited exposed to the downside and fully exposed to upside 挣钱有奖励，亏了不罚钱
+    3. Bonus structure with limited exposed to either the downside or the upside 上下两端都有limit，亏有限，奖有限
+
+    - 看题目思考分析，没有固定的收费标准，因为每个公司都不一样
+
