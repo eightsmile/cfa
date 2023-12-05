@@ -81,3 +81,21 @@ Compliance Officer
 ---
 
 ## GIPS
+
+### Key Terms
+
+- **Composite**: an aggregate of one or more portfolio 很多个 portfolio 的集合
+- **Segregated Account (SMA**): a portfolio owned by a single client. 
+- Pooled Fund
+  - Broad distribution: mutual funds
+  - Limited distribution: hedge fund
+- **Fair representation and full disclosure**, **GIPS is voluntar**y 自愿的，不是强制的
+- GIPS consist of (1) **requirements** which must be followed, (2) **recommendations** which are **optional**
+- when GIPS conflict with law, then **comply with the law, and disclose the conflicts**
+- GIPS is applied **Firm-wide**
+- **Total Firm Assets** refers to the **aggregate FV of all assets**, including sub-advisors, but not including advisory-only assets (committed capital)
+- Changes in firm's orgamosatopm are not permitted, to lead to changes in historical performance 不能通过改 organisation 去改变 historical return，return不能重溯
+- Discretionary Portfolio 指 FM 能管控的，non-discretionary 指受限的restricted investment process，不能由 FM 决定，所以 non-discretionary 的表现不能代表公司业绩的好坏
+  - Although both discretionary and non-discretionay portfolios are included in total firm assetes, **only discretionary portfolios are included in composites** 指把 discretionary 的纳入 composite 中
+- GIPS reports need to be given to the potential clients
+- not like actual performance to historical theoretical performance 不能混淆历史和模拟的return 与 真实的 return
