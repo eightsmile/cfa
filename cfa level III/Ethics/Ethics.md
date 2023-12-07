@@ -220,3 +220,43 @@ Two reports:
 4. The Amount of total firms assets at the end of each period
 5. A measure of internal dispersion of individual portfolio returns for each annual period if the composite contains >= 6 portfolio
 6. If monthly composite returns are available, a three-year annualised ex post s.d. of the composite and benchmark returns as the end of each annual period.
+
+##### Portability
+
+Performance from the target may be used to represent the historical performance of the new or acquiring firm and linked to the performance of the acquirer if the firm meets the following requirements on a composite-specific or pooled fund-specific basis
+
+在 A 收购 B后，是否要把 B 的业绩展示出来？如果符合以下 ABC（意味着the target 被收购后还是可以独立自主投资，原班人马不变，记录有保存），则可以展示B的业绩
+
+1. A: All investment decisions makers must be employed by the acquirer A雇用了B所以做投资决策的人
+2. B: Decision-making process must remain substantially **intact** and **independent** within the acquirer B的投资人依然可以 完整 独立 于A去做投资决策
+3. C: The acquirer must have records to support the performance
+4. D: there must be no break in the track record between the target and the acquirer
+
+(ABC) 其一不满足，则不满足。如果ABC都满足了，只有D不满足即Acquirer和target的记录有断档，可以展示Target的 performance, but the two performance records may not be linked
+
+if a GIPS-compliant firm acquires the target, the firm is given a one-year to bring any non-compliant target into compliance for future reporting periods. 如果
+
+##### Valuation Hierarchy
+
+Apply a **fair value methodology** while valuing assets. 在用Fair Value 估值时，应该如何估
+
+1. The valuation must be determined using the **objective, observable, unadjusted quoted market price** for an **identical investment** in an active market on the measurement date. 第一层次，用可获得的 market price of identical investment
+2. If unavailable, GIPS recommend the alternative methods in declining order: 如果不能达成，用一下顺序推测 fair value
+    1. Quoted price for **similar** investment in **active** markets
+    2. Quoted price for identical or similar investments in **non-active** market
+    3. **Market-based inputs**, other than quoted pries, that are observable for the investment 再次者，由于无quoted price了，只能用 market-based inputs
+    4. **Subjective, unobservable inputs.** 最次者，用在主观
+
+#### Verification
+
+GIPS **recommend** the verification, but not compulsory 推荐不强求verification
+
+Verification must be **performed by a qualified and independent third party** 需要有第三方来验证
+
+A single verification report is issued only w.r.t. the whole firm, not on single composite or pooled fund 需要验证整个公司，不能只是一个composite
+
+##### Scope of Verification
+
+If a firm does not meet all the requirements of GIPS standards, it may not state it's in compliance with GIPS 如果有不符合GIPS的要求，就不要说自己符合。是整个公司都不符合，不能只说是一个 composite不符合
+
+Verified firms could choose to have a **detailed performance examination**
