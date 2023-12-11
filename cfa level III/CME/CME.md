@@ -232,9 +232,9 @@ Reason of cyclical business activities
     4. Real estate: Neutral impact with typical rates of return
 - **Inflation above or below expectations:**
     1. Cash equivalents: Positive (negative) impact with increasing (decreasing) yields 
-    2. Bonds: Longer-term yields more volatile than shorter-term yields 
+    2. Bonds: Longer-term yields more volatile than shorter-term yields  与通胀负相关，由于 fixed income，deflation时会比较划算。通胀降低，bond更好
     3. Equity: Negative impact given the potential for central bank action or falling asset prices, though some companies may be able to pass rising costs on to customers
-    4. Real estate: Positive impact as real asset values increase with inflation
+    4. Real estate: Positive impact as real asset values increase with inflation 与通胀正相关，通胀越高，房产越贵
 - **Deflation:**
     1. Cash equivalents: Positive impact if nominal interest rates are bound by 0% 
     2. Bonds: Positive impact as fixed future cash flows have greater purchasing power (assuming no default on the bonds) 
@@ -461,7 +461,7 @@ $r_i - r_f = RP = \beta (r_m - r_f) = \frac{cov_{i,m}}{\sigma^2_m}(r_m - r_f)$
 
 $r_i - r_f = \rho_{i,m} \frac{\sigma_i}{\sigma_m}(r_m - r_f)$
 
-$RP = r_i - r_f = \rho\ \sigma _m SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
+$RP = r_i - r_f = \rho\ \sigma _i SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
 
 - M: Global Market Portfolio (GMP)
 
@@ -476,7 +476,13 @@ $RP = r_i - r_f = \rho\ \sigma _m SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
 
 ###  Real Estate
 
-**illiquidy**, **hetergenous** (各个不一样), **maintainance and operation cost**, **Appreaisals**
+Do historical analysis on real estate return 的问题
+
+1. Data is infrequent, use appraisal data
+2. Each property is different, so it is said to be exogenous.
+3. The returns calculated from appraisals represent weighted averages of unobservable returns. Published return series is too smooth and the sample volatility understates the true volatility of returns. It also distorts estimates of correlations.
+
+**illiquid**, **heterogeneous** (各个不一样), **maintenance and operation cost**, **Appraisals**
 
 - Real Estate Cycles: high quality properties are less cyclical, low quality properties are more cyclical 
 
@@ -517,16 +523,20 @@ term premium, credit premium, equilty risk premium (cap gain), liquidity premium
 - REITs use significant **leverage**, to make it compare with direct real estate, REITs should be unlevered first
 - **after adjusting the leverage of REITs, it has higher return and low volatility**
 
-An estimate of the long-run expected or required return for commercial real estate **equals** the sum of the capitalization rate (cap rate) plus the growth rate (constant) of net operating income (NOI). 
+An estimate of the long-run expected or required return for commercial real estate **equals** the **sum** of the **capitalisation rate (cap rate)** plus the growth rate (constant) of net operating income **(NOI**).  Plus the percentage change of NOI.
 
-$Expected\ Required\ Rate = Cap\ Rate+NOI$
+ Expected\ Required\ Rate: $\mathbb{E}(R_{re}) = Cap\ Rate+NOI_{Nominal}-\%\Delta CapRate$
+
+$NOI_{nominal} = NOI_{real }+ Inflation$
 
 ###  Exchange Rate
 
-#### Current Acount: Three factors
+#### Current Account: Three factors
 
 - **Trade Flows: small impacts**. As trade has normally has financial hedge, the effects are hedged. Large trade ﬂows without large financing ﬂows in foreign exchange markets likely indicates a crisis.
 - **PPP: less impacts in short-term**. Inflation and exchange are correlated through UIP
+    - 根据PPP的原理，一个国家通胀越高，则货币贬值越多。
+
 - **Current Account: large impacts.** if 国内（本币）贵, import foreign, CA deficits 本币流出 未来本币贬值。vice versa.
 
 #### Capital Mobility
@@ -627,3 +637,7 @@ To **overcome** those drawbacks, we would use those three methods.
 
             ​	We need $1 - \alpha + \beta >1$ to make the expectation of var is positive over time
 
+---
+
+- **Prudence trap**: 过分谨慎带来的误差 is the tendency to be cautious when making decisions that could be potentially expensive or damaging to the decision maker’s career.
+- **Anchoring trap**: occurs when there is **a particular initial point of view that dominates an analysis**.
