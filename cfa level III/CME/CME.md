@@ -2,61 +2,59 @@
 
 ## Framework and Macro Considerations
 
-### Economic Forecasting - Econometric Analysis
+- Economic Forecasting - Econometric Analysis	
 
-- Structural Model: based on economic theory 有理论
-- Reduced-form: might be without theory, base on data and correlation 无理论支撑，数据之间的关系
+  - Structural Model: based on economic theory 有理论
+  - Reduced-form: might be without theory, base on data and correlation 无理论支撑，数据之间的关系
 
-#### Pros and Cons
+  - Pros and Cons
+  - Pros: 
+    1. Many factors, 
+    2. Quantative, 
+    3. Has a model, so can easily generate output, 
+    4. Discipline consistency
 
-Pros: 
+  - Cons: 
+    1. Complex and Time-consuming
+    1. Data input might be hard to forecast
+    1. Model is static, model might be mis-specified. Model is based on past data, so the model is static, cannot be updated while the market regime changed 因为模型基于过去数据，所以模型是static的，不能随市场情况更新
+    1. False sense of precision 模型model cannot forecast future well
+    1. Not forecast turning points 无法或者滞后的预测turning points
 
-1. Many factors, 
-2. Quantative, 
-3. Has a model, so can easily generate output, 
-4. Discipline consistency
 
-Cons: 
+- Indicators
 
-1. Complex and Time-consuming
-2. Data input might be hard to forecast
-3. Model is static, model might be mis-specified. Model is based on past data, so the model is static, cannot be updated while the market regime changed 因为模型基于过去数据，所以模型是static的，不能随市场情况更新
-4. False sense of precision 模型model cannot forecast future well
-5. Not forecast turning points 无法或者滞后的预测turning points
+  - Leading indicators. A composite of leading indicators is called a **diffusion index**
 
-### Indicators
+  - Coincident 
 
-- Leading indicators. A composite of leading indicators is called a **diffusion index**
-- Coincident 
-- Lagging
+  - Lagging
 
-#### Pros and Cons
+  - Pros and Cons
 
-Pros: 
+    - Pros: 
+      1. Simple, 
+      1. Could **forecast turning points**
+      1. Easy to Track, good availability of indicator data
+    - Cons:
+      1. Time lag滞后, revised指标可能修正, rebased基期变化
+      1. 单一指可能给出 false signals
+      1. 多个指标可能结果不一致，no binary guidance
 
-1. Simple, 
-2. Could **forecast turning points**
-3. Easy to Track, good availability of indicator data
 
-Cons:
+- Checklist Approach 问卷调查
 
-1. Time lag滞后, revised指标可能修正, rebased基期变化
-2. 单一指可能给出 false signals
-3. 多个指标可能结果不一致，no binary guidance
+  - Pros:
+    1. Simple
+    1. Flexible 咋问都可以
 
-### Checklist Approach 问卷调查
 
-Pros:
+  - Cons:
+    1. Subjective 主观
+    1. Time Consuming
+    1. Manual Process limits depth analysis
+    1. No consistency of analysis
 
-1. Simple
-2. Flexible 咋问都可以
-
-Cons:
-
-1. Subjective 主观
-2. Time Consuming
-3. Manual Process limits depth analysis
-4. No consistency of analysis
 
 ### Challenges in Forecast
 
@@ -93,7 +91,7 @@ Factors cause the exogenous shocks
 - Discovery of natural resources
 - Financial crisis
 
-#### Application
+#### Application (Grinold and Kroner Model)
 
 ![Screenshot 2023-10-20 at 13.06.51](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-20%20at%2013.06.51.png)
 
@@ -184,7 +182,7 @@ Reason of cyclical business activities
 
 - high confidence and high employment
 - No Output Gap: Actual GDP > Potential GDP
-- CB reduce the growth of Money Supply
+- CB reduce the growth of Money Supply (restrictive moneytary policy)
     - Short-term rate increasing 
     - **bond yield increase, so bond price decrease**
     - **stock price achieve the top, sell stocks**
@@ -269,7 +267,7 @@ Reason of cyclical business activities
 
 - **Automatic Stabliser**: 
 
-    1. Progressive Tax: 
+    1. **Progressive Tax**: 
 
         Expansion => Income increase => tax increase => consumption decrease
 
@@ -303,7 +301,7 @@ If **Current Account Surplus**, => Net Export (export > import), => capital infl
 
 If **Current Account Deficits**, Import > Export, 需要借外汇来进口, **Capital Account inflow (Surplus)**
 
-- Therefore, Current Account & Captial Account negative correlated
+- **Therefore, Current Account & Captial Account negative correlated**
 
 ### Interest Rate/Exchange Rate Linkages
 
@@ -325,6 +323,8 @@ Thus, $NX = \underbrace{S-I}_{\text{Net Private Saving}} + \underbrace{T-G}_{\te
 - Unrestricted Capital Flow 自由的资本流动
 - Fixed Exchange Rate 
 - Independent Monetary Policy
+
+Text Sample: Eastland currently has a fixed exchange rate pegged to Northland with unrestricted capital flows. Eastland is unable to pursue an independent monetary policy with interest rates in Eastland equal to the interest rates prevailing in Northland (the country to which the currency is pegged). If Eastland allows the exchange rate to float, it will now be able to run an independent monetary policy with interest rates determined in its domestic market.
 
 ---
 
@@ -510,10 +510,16 @@ term premium, credit premium, equilty risk premium (cap gain), liquidity premium
 
 ##### REITs
 
+短期像 equity，长期才像 real estate
+
 - strongly correlated with equity in the **short term**
 - only correlated with direct real estate in the **long term**
 - REITs use significant **leverage**, to make it compare with direct real estate, REITs should be unlevered first
 - **after adjusting the leverage of REITs, it has higher return and low volatility**
+
+An estimate of the long-run expected or required return for commercial real estate **equals** the sum of the capitalization rate (cap rate) plus the growth rate (constant) of net operating income (NOI). 
+
+$Expected\ Required\ Rate = Cap\ Rate+NOI$
 
 ###  Exchange Rate
 
