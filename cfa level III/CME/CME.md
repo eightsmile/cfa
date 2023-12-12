@@ -2,7 +2,9 @@
 
 ## Framework and Macro Considerations
 
-- Economic Forecasting - Econometric Analysis	
+### Economic Forecasting
+
+- Econometric Analysis	
 
   - Structural Model: based on economic theory 有理论
   - Reduced-form: might be without theory, base on data and correlation 无理论支撑，数据之间的关系
@@ -65,7 +67,7 @@
     -  Survivorship bias. The survivorship bias might overestimate returns 如PE知有表现好的时候才公布收益，所以 survivorship bias 高估 return
     - Appraisal data. The higher the frequency of data, the lower the correlation, because data become no smoothy. Lower the correlation, higher the risks 数据频率越高，corr越低，则 risk 越低。 Return smoother biases downward the risks
 3. Limitations of historical estimates
-    - Regime changes make data non-stationary. 由于 regime changes，造成 data non- stationary
+    - Regime changes make data non-stationary. 由于 regime changes，造成 data non-stationary
     - Non-stationary make data statistically non-predictable.
     - Long time period & large dataset are preferable. Asynchronous data (high frequency data) underestimate correlation and underestimate risks.
 4. Ex-post (将来) risk as a biased risk measure ex-ante (过去的) risk
@@ -324,7 +326,7 @@ Thus, $NX = \underbrace{S-I}_{\text{Net Private Saving}} + \underbrace{T-G}_{\te
 - Fixed Exchange Rate 
 - Independent Monetary Policy
 
-Text Sample: Eastland currently has a fixed exchange rate pegged to Northland with unrestricted capital flows. Eastland is unable to pursue an independent monetary policy with interest rates in Eastland equal to the interest rates prevailing in Northland (the country to which the currency is pegged). If Eastland allows the exchange rate to float, it will now be able to run an independent monetary policy with interest rates determined in its domestic market.
+Text Sample: Eastland currently has **a fixed exchange rate pegged to** Northland with unrestricted capital flows. Eastland is **unable to pursue an independent monetary policy** with interest rates in Eastland equal to the interest rates prevailing in Northland (the country to which the currency is pegged). If Eastland **allows the exchange rate to float, it will now be able to run an independent monetary policy** with interest rates determined in its domestic market.
 
 ---
 
@@ -353,7 +355,8 @@ Text Sample: Eastland currently has a fixed exchange rate pegged to Northland wi
 
     - **Duration Gap = "MI" = Maculy Duration - Investment Period**
 
-        - if DG > 0, Daculy Duration is larger, price risks dominates. Thus, market rate increase, impacts of $\Delta P$ > impacts of $RI$, => thus $r$ increase
+        - if DG > 0, Maculy Duration is larger, **price risk dominates**. Thus, market rate increase, impacts of $\Delta P$ > impacts of $RI$, => thus $r$ increase
+        - If DG < 0, **reinvestment risk dominates**
 
 #### Risk Premium Approach
 
@@ -402,7 +405,7 @@ $r = r_f + TP + CP + LP$
 
         LGD increase -> CP increase
 
-    2. **Default Risks**: Default Risks increase increase, CP increase
+    2. **Default Risks**: Default Risks increase, CP increase
 
     3. **Credit Rating**: Low Credit Rating -> high credit premium
 
@@ -443,7 +446,7 @@ $GGM: r_e = \frac{D_1}{P_0}+g$
 
 - **Step 3**: **Repricing Return**: $\% \Delta P/E$
 
-- Thus, $r_e = \frac{D_1}{P_0} - \%\Delta S + g_{real} + \%\Delta P/E$
+- **Thus**, $r_e = \frac{D_1}{P_0} - \%\Delta S + \%\Delta E + \%\Delta P/E$
 
 ##### Pros and Cons
 
