@@ -91,7 +91,7 @@ Factors cause the exogenous shocks
 - Discovery of natural resources
 - Financial crisis
 
-#### Application (Grinold and Kroner Model)
+#### Application 
 
 ![Screenshot 2023-10-20 at 13.06.51](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-20%20at%2013.06.51.png)
 
@@ -421,7 +421,7 @@ $r = r_f + TP + CP + LP$
 
 ### Equity Return
 
-#### GK model (DCF) - Supply Side (from the firm side)
+#### GK model (DCF) - Supply Side (from the firm side) Grinold and Kroner Model
 
 GGM -> 3 steps -> GK model
 
@@ -443,7 +443,18 @@ $GGM: r_e = \frac{D_1}{P_0}+g$
 
 - **Step 3**: **Repricing Return**: $\% \Delta P/E$
 
-- Thus, $r_e = \frac{D_1}{P_0} - \%\Delta S + g_{real} + \%\Delta P/E$
+- Thus, 
+
+    - $r_e = \frac{D_1}{P_0}- \%\Delta S  + \%\Delta E + \%\Delta P/E$
+
+    - $r_e = \frac{D_1}{P_0} - \%\Delta S  + g_{real} + \pi + \%\Delta P/E$
+
+- P.S. Sample Text: Grinold–Kroner model states that the **expected return on equity is the sum of** the **expected income return** (2.4%), the **expected nominal earnings growth return** (7.3% = 2.3% from inflation + 5.0% from real earnings growth) and **the expected repricing return** (−3.45%). The expected change in market valuation of −3.45% is calculated as the percentage change in the P/E level from the current 14.5× to the expected level of 14.0×: (14 − 14.5)/14.5 = −3.45%. Thus, the expected return is 2.4% + 7.3% − 3.45% = 6.25%.
+
+    - Expected Cash Flow (Income) Return = $D/P - \%\Delta S$
+    - Expected Nominal Earnings Growth Return = $\%\Delta E$ (Inflation + Real Earning Growth)
+    - Expected Repricing Return = $\%\Delta P/E$
+
 
 ##### Pros and Cons
 
@@ -451,7 +462,7 @@ $GGM: r_e = \frac{D_1}{P_0}+g$
 - Cons: the model assume **infinite time horizon**
     - coz in the long run, $\%\Delta P/E = 0$ and $\%\Delta S =0$
 
-#### ST model (risk premium) - Demand Side (from the consumer side)
+#### ST model (risk premium) - Demand Side (from the consumer side) Singer Terhaar Approach
 
 CAPM -> internation CAPM
 
@@ -461,7 +472,9 @@ $r_i - r_f = RP = \beta (r_m - r_f) = \frac{cov_{i,m}}{\sigma^2_m}(r_m - r_f)$
 
 $r_i - r_f = \rho_{i,m} \frac{\sigma_i}{\sigma_m}(r_m - r_f)$
 
-$RP = r_i - r_f = \rho\ \sigma _m SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
+$RP = r_i - r_f = \rho\ \sigma_i SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
+
+$RP = \rho \sigma_i \frac{RP}{\sigma_m}$
 
 - M: Global Market Portfolio (GMP)
 
@@ -473,6 +486,12 @@ $RP = r_i - r_f = \rho\ \sigma _m SR_m$ by $SR _m = \frac{r_m - r_f}{\sigma_m}$
     - **Step 2:** Fully Seperate: $\phi = 0$ , and because of fully seperation, asset classes are not and cannot be diversified, so $\rho = 1$, so $RP_{seperated} = r_i - r_f = \sigma _m SR_m$
     - **Step 3**: True RP is the weighted average, $RP = \phi RP_{I} + (1-\phi )RP_S$
     - **Step 4**: $r_i = r_f + RP$
+
+Sample Text:
+
+- All else being equal, the Singer–Terhaar model implies that when a market becomes more globally integrated (segmented), its required return should decline (rise). As prices adjust to a lower (higher) required return, the market should deliver an even higher (lower) return than was previously expected or required by the market. Therefore, the allocation to markets that are moving toward integration should be increased. If a market is moving toward integration, its increased allocation will come at the expense of markets that are already highly integrated. This will typically entail a shift from developed markets to emerging markets.
+- If hot money flows out, then CB is likely to sell foreign currency to limit domestic currency depreciation. So, CB sell foreign currency for domestic currency (卖外汇买本币，本比增加), （然后用买了的本比，买本国bond，叫 sterilise）buy domestic govenment bond (provide liquidity) => impact on both bank reserves and interest rates.
+- the Composition of each country's currency portfolio. 外国人持有本币的形式，如果持有的 equity 那么比较好，但是 持有 domestic debt 不好，因为如果本国还不上钱，那么 主权违约。**supportive of the currency**: Public debt is less supportive because it has to be serviced and must be either repaid or refinanced, potentially triggering a crisis. Some types of flows and holdings are considered to be more or less supportive of the currency. Investments in private equity represent long-term capital committed to the market and are most supportive of the currency. Public equity would likely be considered the next most supportive of the currency. Debt investments are the least supportive of the currency.
 
 ###  Real Estate
 
@@ -595,7 +614,8 @@ To **overcome** those drawbacks, we would use those three methods.
         Thus, $Var(r_t) = \frac{1-\lambda^2}{(1-\lambda)^2}Var(R_t) = \frac{1+\lambda}{1-\lambda}Var(R_t)$
 
         - As the coefficient must be greater than 1, $Var(r_t) > Var(R_t) $
-        - The greater the $\lambda$, the more $Var(r_t) >> Var(R_t)$
+        - The greater the $\lambda$, the more $Var(r_t) >> Var(R_t)$ 
+        - 意味着smooth的越多，则estimate 的 var 比真实的小的越多
 
 3. **ARCH** Autoregressive Condition Heteroskedasticity
 
