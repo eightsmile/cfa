@@ -66,11 +66,13 @@ Asset classes often include:
 
 $$ \max_w U=\mathbb{E}(r_p) - \frac{1}{2}A\sigma^2_p,\quad s.t. w^T\mathbb{1}=1, w\geq 0$$
 
-And allocation between the portfolio and risk-free asset.
+An allocation between the portfolio and risk-free asset.
 
 $$\max_w r_pw + r_f(1-w) - \frac{1}{2}A w^2\sigma_p^2$$
 
-F.O.C. w.r.t. $w$, $r_p - r_f -w\cdot A \cdot \sigma_p^2 = 0$
+F.O.C. w.r.t. $w$, 
+
+$r_p - r_f -w\cdot A \cdot \sigma_p^2 = 0$
 
 $$w = \frac{1}{A}\frac{r_p - r_f}{\sigma_p^2}$$
 
@@ -79,7 +81,7 @@ $$w = \frac{1}{A}\frac{r_p - r_f}{\sigma_p^2}$$
 - Passive Management: **does not react** to changes in the investor’s CME or insights into individual investments; 
 - Active Management **will respond** to changing CME
 
-### Tactical asset allocation (TAA) and dynamic asset allocation (DAA) 
+### Tactical Asset Allocation (TAA) and Dynamic Asset Allocation (DAA) 
 
 - TAA involves deliberate **short-term deviations** from the SAA; 
 - DAA incorporates **deviations from the SAA that are motivated by longer-term valuation signals or economic views.**
@@ -89,10 +91,10 @@ $$w = \frac{1}{A}\frac{r_p - r_f}{\sigma_p^2}$$
 Two Approaches: 
 
 - Calendar Rebalancing: on a certain period basis
-- Percent-Range Rebalance (or Corridor)
-    - Factors affecting the Optimal Corridor level
+- Percent-Range Rebalance (or **Corridor**)
+    - Factors affecting the **Optimal Corridor Level**
         1. Transaction Cost: high costs, high hurdle for rebalancing, high corridor. **Positive**
-        2. Risk Tolerance: high tolerance, less sensitive to divergences from SAA, high corridor. 
+        2. Risk Tolerance: high tolerance, less sensitive to divergences from SAA, high corridor. **Positive**
         3. Risk Aversion. **Negative**
         4. Asset Class Correlation: highly correlated, high corridor. **Positive**
         5. Belief in Momentum: has momentum, high corridor. **Positive**
@@ -118,30 +120,19 @@ As the value of puts and calls is positively related to volatility, such a posit
 
 $$ U = \mathbb{E}(R_m) - 0.005 \lambda \sigma^2_m $$
 
+0.005 = 1/2 /100 为了平衡 sigma^2 的量纲
+
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.43.55.png" alt="Screenshot 2023-10-18 at 12.43.55" style="zoom: 33%;" />
 
-if the non-negative constraint is made, then there are points on the efficients frontier becoming unavailable. The efficient frontier becomes non-continuous. To approximate the standard deviation of those points, we use **adjacent corner portfolios**.
+if the non-negative constraint is made, then there are points on the efficients frontier becoming unavailable. **The efficient frontier becomes non-continuous.** To approximate the standard deviation of those points, we use **adjacent corner portfolios**. 如果点在non-continuous的地方，用两边的adjacent点拟合
 
 Reasoning: 
 
-1. the adjacent corner portfolios (use D, L to approximate C) give more accurate results, than far away portfolios (A,F to approx C). 
+1. the adjacent corner portfolios (use D, L to approximate C) give more accurate results, than far away portfolios (A,F to approx C).  越近的点拟合越好
 2. one of the adjacent portfolio has the high Sharpe ratio. *The adjacent portfolios would artificially have a max Sharpe one*
 3. assume the adjacent portfolios have correlation of 1. Then the variance of approximation is $\sigma_{approx}^2 = w^2 \sigma^2_D + (1-w)^2 \sigma_L^2 + 2\rho w(1-w)\sigma_D\sigma_L$, $\rho=1$, so $\sigma_{approx} = w\sigma_D + (1-w)\sigma_L$. As we assume the fully correlated situation, the s.d. is the upper limit / highest possible. *It would artificially within the range*
 
 If there is a risk-free asset, then combine the **risk-free asset** with the **tangent portfolio**.
-
-#### Pros and Cons of MVO
-
-Pros: commonly, widely, easily, used
-
-Cons:
-
-1. The optimisation process make output **highly sensitive** to inputs
-2. Outputs are **highly concentrated** 结果weights集中在某个资产上 *(apply constraints)*
-3. MVO assume standard normal **dist**, so **not account for Skewness and Kurtosis** *(use other dist instead)*
-4. **sources of risks may not be diversified** *(use factor-based model instead)*
-5. no consider **liability or consumption stream** *(use ALM instead)*
-6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS instead)*
 
 #### Pros and Cons of MVO
 
@@ -154,7 +145,7 @@ Cons:
 3. MVO assume standard normal **dist**, so **not account for Skewness and Kurtosis** *(use other dist instead)*
 4. **sources of risks may not be diversified** *(use factor-based model)*
 5. no consider **liability or consumption stream** *(use ALM, Surplus MVO)*
-6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS)*
+6. MVO is a **single-period framework** that not consider trading / rebalance cost and tax *(use MCS instead)*
 
 #### Overcome those Cons
 
@@ -163,13 +154,13 @@ Cons:
 incorporate real-world constraints, can restrict percentage of asset class. 
 
 - Non-negative constraint, percentage constraint, upper limits
-- **However**, if constraint is made, the problem is no longer optimisation of the original. 不再是原来的 Optimisation, 而是 optimisation with constraints.
+- **However**, if constraint is made, the problem is **no longer optimisation** of the original. 不再是原来的 Optimisation, 而是 optimisation with constraints.
 
 ##### Resample
 
-resampling uses **MCS** to estimate a large number of potential capital market assumptions, simulated frontiers are saved and averaged to get the **resampled frontier**.
+Resampling uses **MCS** to estimate a large number of potential capital market assumptions, simulated frontiers are saved and averaged to get the **resampled frontier**.
 
-- As multi paths are simulated, the resampled frontier would be smoothed not in-continuous.
+- As **multi paths** are simulated, the resampled frontier would be smoothed not in-continuous.
 - **However**, there might be 
     1. **concave bump** where expected return decreases as expected risk increases
     2. Risky asset allocations are **over-diversified**. (as there are simulations)
@@ -229,6 +220,8 @@ To solve the illiquid problem, practical options include
 1. exclude less liquid asset classes
 2. model input by representing the highly diversified characteristics. such as use REITs instead of direct real estate.
 3. ?? Include less liquid asset classes in the asset allocation decision and attempt to model the inputs to represent the specific risk characteristics associated with the likely implementation vehicles. 
+
+---
 
 ### Liability-relative Asset Allocations 
 
@@ -300,6 +293,8 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 ![Screenshot 2023-10-18 at 16.58.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png)
 
 与 lia一起考虑，即为非线性
+
+---
 
 ### Goals-Based Asset Allocation
 
