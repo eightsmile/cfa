@@ -507,9 +507,9 @@ $V_0 = \frac{NOI_1}{r-g}$ => $r = \frac{NOI_1}{V_0} + g$
 
 We get to the formula by composing three parts
 
-1. Cap Rate: $\frac{NOI_1}{V_0}$, 经营带来的 income return / value
+1. Cap Rate: $\frac{NOI_1}{V_0}$, 经营带来的 income return
 2. $g_{nominal} = g_{realNOI} + \pi $
-3. An additional term: $-\%\Delta CapRate$ **repricing**, coz $\text{Capital Gain} = \frac{V_1 - V_0}{V_0}$ 但是因为 估值上升 即 V 提升带来的 Capital Gain 会使 Captial Rate 在分母的 V 变大。所以 Capital Gain & Capital Rate are negative correlated.
+3. $-\%\Delta CapRate$ **repricing**, coz $\text{Capital Gain} = \frac{V_1 - V_0}{V_0}$ 但是因为 估值上升 即 V 提升带来的 Capital Gain 会使 Captial Rate 在分母的 V 变大。所以 Capital Gain & Capital Rate are negative correlated.
 
 $r = CapRate + NOI \ growth - \%\Delta CapRate$
 
@@ -536,17 +536,15 @@ term premium, credit premium, equilty risk premium (cap gain), liquidity premium
 - REITs use significant **leverage**, to make it compare with direct real estate, REITs should be unlevered first
 - **after adjusting the leverage of REITs, it has higher return and low volatility**
 
-<<<<<<< Updated upstream
-An estimate of the long-run expected or required return for commercial real estate **equals** the sum of the capitalization rate (cap rate) plus the growth rate (constant) of net operating income (NOI). 
+An estimate of the long-run expected or required return for commercial real estate **equals** the sum of the capitalisation rate (cap rate) plus the growth rate (constant) of net operating income (NOI). 
 
 $Expected\ Required\ Rate = Cap\ Rate+NOI$
-=======
-**Sample Text:** An estimate of the long-run expected or required return for commercial real estate **equals** the **sum** of the **capitalisation rate (cap rate)** plus the growth rate (constant) of net operating income **(NOI**).  Plus the percentage change of NOI.
+
+**Sample Text**: An estimate of the long-run expected or required return for commercial real estate **equals** the **sum** of the **capitalisation rate (cap rate)** plus the growth rate (constant) of net operating income **(NOI**). Plus the percentage change of NOI.
 
  **Expected Required Rate:** $\mathbb{E}(R_{re}) = Cap\ Rate+NOI_{Nominal}-\%\Delta CapRate$
 
 $NOI_{nominal} = NOI_{real }+ Inflation$
->>>>>>> Stashed changes
 
 ###  Exchange Rate
 
