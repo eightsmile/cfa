@@ -8,6 +8,7 @@ Definition:  includes (1) conventional assets and liabilities (in Accounting Sta
 
 1. Human Capital (PV of Future Earnings), 
 2. PV of Pension Income (Un-vested Benefits), 
+    - P.S. $Pension\ Plan\ Ratio = \frac{Pension Asset}{Pensia Lia}$ ,  A/L
 3. PV of Expected Inheritances (Bequest).
 
 - Above is for individual investors, and before is for institutional investors.
@@ -118,9 +119,15 @@ As the value of puts and calls is positively related to volatility, such a posit
 
 ### Asset-Only: MVO
 
+Characteristics: (1) sensitive to inputs 因为optimisation process makes that (2) might concentrate to certain class 会集中于某个asset class，而不是 disperse
+
 $$ U = \mathbb{E}(R_m) - 0.005 \lambda \sigma^2_m $$
 
-0.005 = 1/2 /100 为了平衡 sigma^2 的量纲
+0.005 is bull shit for balancing the decimal, if the input ignore %. Use $U=\mathbb{E}(R_m) - \frac{1}{2}\lambda \sigma^2_m$ directly if input is with %。
+
+0.005 = 1/2 /100 为了平衡 sigma^2 的量纲，输入时直接拿掉%才这么算，SB才这么算。
+
+带小数点做input，直接用正常公式就行，不用0.005
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.43.55.png" alt="Screenshot 2023-10-18 at 12.43.55" style="zoom: 33%;" />
 
@@ -318,6 +325,8 @@ Drawback of Goal Based: (1) inefficient, (2) not consider correlation between as
 ### Risk Budgeting and Risk Parity
 
 #### Risk Budgeting
+
+The goal of risk budgeting is to **maximise return per unit of risk.** A risk budget identifies the total amount of risk and attributes risk to its constituent parts. An optimum risk budget allocates risk efficiently.
 
 ![_cgi-bin_mmwebwx-bin_webwxgetmsgimg](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%253F%253F%2526MsgID%253D6268719542435932561%2526skey%253D%40crypt_df70b197_26e8fd2fe06b2899556fa708fc188e62%2526mmweb_appid%253Dwx_webfilehelper.png)
 
