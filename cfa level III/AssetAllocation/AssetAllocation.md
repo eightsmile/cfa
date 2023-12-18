@@ -84,8 +84,8 @@ $$w = \frac{1}{A}\frac{r_p - r_f}{\sigma_p^2}$$
 
 ### Tactical Asset Allocation (TAA) and Dynamic Asset Allocation (DAA) 
 
-- TAA involves deliberate **short-term deviations** from the SAA; 
-- DAA incorporates **deviations from the SAA that are motivated by longer-term valuation signals or economic views.**
+- TAA involves deliberate **short-term deviations** from the SAA;  短期 deviate from SAA
+- DAA incorporates **deviations from the SAA that are motivated by longer-term valuation signals or economic views.** 长期 deviate from SAA
 
 ### Rebalancing - make portfolio close to SAA
 
@@ -100,6 +100,11 @@ Two Approaches:
         4. Asset Class Correlation: highly correlated, high corridor. **Positive**
         5. Belief in Momentum: has momentum, high corridor. **Positive**
         6. Liquidity: Less liquidity, higher cost, high corridor. **Negative**
+        
+        - **Volatility**: **Positive or Negative**: 
+            - Negative because The higher the volatility of the rest of the portfolio, excluding the asset class being considered, **the more likely a large divergence from the strategic asset allocation becomes**, which should point to a narrower optimal corridor, all else being equal.
+            - Positive because higher vol, more transaction cost
+            - 
 
 ### Rebalance Frequency
 
@@ -230,7 +235,7 @@ To solve the illiquid problem, practical options include
 
 ---
 
-### Liability-relative Asset Allocations 
+### Liability-relative Asset Allocations  基本上只要涉及Lia 或者考虑过  lia 的就都要用 Lia-relative AA
 
 The asset allocation with considering the investor's Liability.
 
@@ -282,7 +287,9 @@ Not fully hedge the Liability. **Partially** hedge the liability, and use the ot
 
 use Asset to purchase derivative and use derivative to hedge the change of liability
 
-#### Integrated Asset-Liability Approach (might be better)
+#### Integrated Asset-Liability Approach
+
+把 A & L 一起考虑。由于 Two Portfolio 适合用于 Over-funded pension，因为可以把大于 L 的部分拆开。但是对于 Under-funded Pension 就应该用 Integrated AL Approach
 
 - **Integrate or jointly optimise** asset and liability decision
 - Has to potential to **improve the institution's surplus**
@@ -402,3 +409,13 @@ $v_{at} = v_{pt} (1-t)$
 4. Representative / Recency（representative problem 的三个层次：（1）过去好的投资，将来也是好的；（2）好公司就是好的投资；（3）只看了短期收益就认为是好的基金经理）: **Governance**
 5. Framing Bias: **多角度看。看return同时看risk，Sharpe ratio， max drawdown等**
 6. Availability Bias (买的是最先想到的股票): **global portfolio**
+
+---
+
+Pension Funds
+
+影响 pension fund 的因素
+
+1. Average Participant Age 越高，离把pension折现提出的时间越短，折现的越少，则 lia 越大
+2. Salary Growth 收入越多，Fund Lia越大 commitment
+3. Short term rate increase，Pension Fund 大多数是长周期，不是short term，
