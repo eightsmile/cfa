@@ -517,7 +517,7 @@ $weights_1 = t / T,  weight_2 = (T-t)/T$
 
 - **Expected Probability**
 
-  假设利率在区间内服从均匀分布，所以 分子/分布 = Prob
+  假设利率在区间内服从均匀分布，所以 分子/分母 = Prob
 
 ---
 
@@ -542,7 +542,12 @@ MtM 指在 currency swap 存续期，swap 的value （因为 initial 的时候 v
 
 #### Returns
 
+RHS 在外国投资的收益 * 汇率变动的收益
+
 $1+ R_{DC} = (1+R_{FC})(1+R_{FX})$
+
+- $R_{FX}$ is defined as the **percentage change in the foreign currency against the domestic currency**. $R_{FX}$ is in the directly quoted exchange rate. 
+-  Because market quotes are not always in direct terms, analysts will need to convert to direct quotes before calculating percentage changes. 如果不是 direct quote，要先调整为 direct quote 在算 R_{fx}
 
 in a portfolio
 
@@ -553,6 +558,8 @@ $R_{DC} = \sum_i^n w(1+R_{FC})(1+R_{FX}) - 1$
 #### Variance
 
 $Var(R_{DC}) = Var\bigg((1+R_{FC})(1+R_{FX}) - 1\bigg)$
+
+$R_{FC}\times R_FX$ is $o(R)$, so ignore it
 
 $\sigma^2_{R_{DC}}\approx  \sigma^2_{R_{FC}} + \sigma^2_{R_{FX}} + 2\sigma_{R_{FC}}\sigma_{R_{FX}}\times Corr$
 
@@ -596,17 +603,23 @@ $\sigma^2_{R_{DC}}\approx  \sigma^2_{R_{FC}} + \sigma^2_{R_{FX}} + 2\sigma_{R_{F
 
      4. Opportunity of the hedge. (rule of the thumb, 50% hedge ratio). Hedge the larger advese moments, ignore the minor.
 
-  3. Choice of Currency Management Strategies
+  3. **Choice of Currency Management Strategies** / **Hedging**
 
-     1. Passive Hedge, 100% hedge with benchmark portfolio used to evaluate performance
-     2. Discretionary Hedge, with limits 80% hedge
-     3. Active Currency Management, 20% hedge, more active management
-     4. Currency Overlay， 0% hedge 有专员负责 trade and bargin with the FX, speculate
-
-  4. Formulate a CUrrency Mgt. Program
-
+     - Optimal hedging decisions require balancing the benefits of hedging against the costs of hedging. 
+     - **Hedging Costs are from (1) trading cost (2) opportunity cost** 
+  
+     1. **Passive Hedge**, 100% hedge with benchmark portfolio used to evaluate performance
+     2. **Discretionary Hedge,** with limits.
+        - The primary duty of the discretionary hedger is to protect the portfolio from currency risk.
+     3. **Active Currency Management**, more active management
+     4. 0% is assume the market is efficient that speculation is useless.
+     5. **Currency Overlay**， 0% hedge 有专员负责 trade and bargin with the FX, speculate
+        - If internal resources for active management are lacking, the fund manager would **outsource** currency exposure management to a sub-advisor that specializes in foreign exchange management. **This approach would allow the fund manager of Portfolio A to separate the currency hedging function (currency beta)**, which can be done effectively internally, **and the active currency management function (currency alpha)** which can be managed externally by a foreign currency specialist. 外包给专门做外汇交易的人做，可以挣 currency beta 和 currency aloha
+  
+  4. Formulate a Currency Mgt. Program
+  
      The situation we need bias toward more-fully hedged currency mgt programs 需要更多对冲的情况
-
+  
      1. have a short term objective
      2. Risk averse
      3. Immediate Income/Liqudity needs
@@ -614,6 +627,18 @@ $\sigma^2_{R_{DC}}\approx  \sigma^2_{R_{FC}} + \sigma^2_{R_{FX}} + 2\sigma_{R_{F
      5. hedge program is cheap
      6. financial mkt is volatile or risky
      7. Skeptical the benefical owners 客户怀疑 / management oversight active mgt 监管控制 active currency mgt
+
+### Active Currency Approach
+
+- **Technical Analysis:** Market technicians believe that in a liquid, freely-traded market the historical price data already incorporates all relevant information on future price movements. Technicians believe that it is not necessary to look outside the market at data like the current account deficit, inflation and interest rates because current exchange rates already reflect the market consensus view on how these factors will affect future exchange rates.
+- **Carry Trade**: . This strategy is implemented by borrowing in low-yield currencies (USD at 1%) and investing in high-yield currencies (INR at 8%).
+- **Economic Fundamentals**: This approach assumes that, in free markets, exchange rates are determined by logical economic relationships that can be modeled. A fundamentals-based approach estimates the “fair value” of the currency, with the expectation that observed spot rates will converge to long-run equilibrium values described by parity conditions.
+
+### Volatility Trader
+
+| Statement 1: “Given the current stability in financial markets, several traders at our firm take advantage of the fact that most options expire out-of-the money and therefore are net-short volatility.” | Statement 1 best explains the view of a speculative volatility trader. Speculative volatility traders often want to be net-short volatility, if they believe that market conditions will remains stable. The reason for this is that most options expire out-of-the money, and the option writer can then keep the option premium as a payment earned for accepting volatility risk. (Speculative volatility traders would want to be long volatility if they thought volatility was likely to increase.) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Statement 2: “Traders that want to minimize the impact of unanticipated price volatility are net-long volatility.” | Statement 2 best describes the view of a hedger of volatility. Most hedgers are net-long volatility since they want to buy protection from unanticipated price volatility. Buying currency risk protection generally means a long option position. This can be thought of as paying an insurance premium for protection against exchange rate volatility. |
 
 ### Tactical Currency Management
 
