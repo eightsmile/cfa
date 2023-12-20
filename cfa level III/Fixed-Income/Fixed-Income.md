@@ -16,7 +16,11 @@
 
 - Hedge for **Inflation**
 
+    - 一般情况下，bond 对 inflation 不友好，因为 pay fixed
+    - **(1) Float bond & (2) TIPS**
+    
     ![Screenshot 2023-11-08 at 08.58.01](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2008.58.01.png)
+    
 
 ### Classify the Fixed-Income Mandates
 
@@ -268,7 +272,7 @@ $\mathbb{E}(R)\approx Yield\ Income + Rolldown\ Return + E_1 -E_2 + E_3$
 
 - $Rolldown Return = \frac{BondPrice_e - BondPrice_b}{BondPrice_b}$
 
-  (P.S. $Roll\ Yield = Yield\ Income + Rollowdown\ Return$)
+  (P.S. $Roll\ Yield = Yield\ Income + Rollowdown\ Return$) 价格提升 + coupon earning 
 
 - $E_1 = \text{Changes in Price based on Investors' view yields and yield spread}$
 
