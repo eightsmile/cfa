@@ -164,13 +164,19 @@ Gamma is the **maxima** while option is **at-the-money**.
 
 1. The Black-Sholes model assumes constant Volatility
 
-2. Emperically for **foreign currency options**, when at-the-money, implied volatility is lowest
+2. Empirically for **foreign currency options** and **Equity**, when at-the-money, **implied volatility** is lowest
 
-   ![Screenshot 2023-11-01 at 21.59.45](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 21.59.45.png)
+   The implied volatility is relatively low for at-the-money options. It becomes progressively higher as an option moves either into the money or out of the money.
+
+   ![Screenshot 2023-12-19 at 08.13.55](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-19%20at%2008.13.55.png)
 
 3. Equity Option, Skew (Smirk)
 
-   ![Screenshot 2023-11-01 at 22.06.49](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 22.06.49.png)
+   The volatility used to price a low-strike-price option (i.e., a deep out of the
+
+   money put or a deep in the money call) is significantly higher than that used to price a high-strike-price option (i.e., a deep in the money put or a deep out of the money call).
+
+   ![Screenshot 2023-12-19 at 08.13.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-19%20at%2008.13.37.png)
 
 4. Reasons for the Smile in Equity Options
 
@@ -313,6 +319,8 @@ $Basis = S - F \times CF$
 
 - if basis is **positive**, **sell the basis** , ( long the future and short the bond) 因为 Basis converges to zero, 所以如果 basis 正，那么S会变小，F会变大 使basis趋近于0
 - if the basis is **negative**, **buy the basis**, ( long the bond and short the future)
+
+- If contango, then buy close (front-period) future, short long term future.  因为价格会趋于 spot，long-term future价格会下降到spot
 
 #### Fixed-Income Future Hedging 
 
@@ -471,7 +479,7 @@ Payoff of Variance Swaps is based on **Variance** rather than **Volatility (s.d.
 
 Swap 的双方为 $\sigma^2$ and $K^2$
 
-- Variance Stike (Implied Volatiltiy),  $K^2$: the implied vol **at the beginning**
+- Variance Strike (Implied Volatiltiy),  $K^2$: the implied vol **at the beginning**
   - $Strike = K , \text{and } variance \ strike = K62$
 - Realised Variance,  $\sigma^2$: Actual Vol over the life of the swap
 
@@ -518,6 +526,18 @@ $weights_1 = t / T,  weight_2 = (T-t)/T$
 - **Expected Probability**
 
   假设利率在区间内服从均匀分布，所以 分子/分布 = Prob
+  
+  Current range = 2.5% - 2.75% => average is 2.625
+  
+  Target range = 2.75% - 3.00% = > average is 2.875%
+  
+  Current FFE is 100 - 97.175 = 2.825% (因为 federal fund rate is not tradable, we use FFE rate Federal Fund Effective rate is trade inter-bank)
+  
+  $Prob = \frac{FFE - CurrentAve}{TargetAve - CurrentAve}$
+
+FFR 为 FOMC 设定的，银行在CB存款的利率。Fed Future Contract 为市场上可以交易的，相当于市场的预期。
+
+如果 Fed Future contract 的 rate 小于 FFR，那么市场预测 FOMC会降息
 
 ---
 
@@ -769,3 +789,67 @@ one type: bear put spread position with a short call position
     - Crosses in currency pair (coz might not have direct pair)
 - Might have Capital Control in the emerging mkt, so use **non-deliverable forwards (NDFs)** 不直接交还本金，cash settled rather than physically settled
 
+---
+
+## Hedging to Achieve the Target
+
+##### Interest Rate Swap
+
+$D_{fixReceiver} = D_{fix}- D_{float}>0$
+
+Duration of floating-rate bond is about **half of reset period**
+
+##### Bond Portfolio Duration Adjustment
+
+$Bond \times MDur_p + NP \times MDur_s = Bond \times MDur_{Target}$
+
+$NP = \frac{MDur_T - MDur_p}{Mdur_s}$
+
+$MDur_s$ is the modified duration of swap, $MDur_p$ is the current modified duration, $MDur_T$ is the target modified duration.
+
+##### Eurodollar Futures
+
+$BPV=NotionalValue\times 1bp \times \frac{90}{360}=25$
+
+Time Horizon is set to be 90 days
+
+Notional Value is set to be 1 million
+
+##### Fixed-Income Future
+
+$BPV_p + BPV_f \times BPVHR = BPT_T$
+
+$BPV_f \times CF = BPV_{CTD}$
+
+##### Equity Future Beta
+
+$\beta_S \times S + N_f \times \beta_f = \beta_T \times S$
+
+##### Short Summary
+
+If the target is $\beta=0$ or $MDur_t =0$ , then just set RHS of eq to be zero.
+
+- **Long** Position of T-bond Future / Stock Index Future would **increase** BPV Duration / Beta
+- **Short** Position of T-bond Future / Stock Index Future would **decrease** BPV Duration / Beta
+
+##### Variance Swap
+
+$Variance\ Notional = \frac{Vega\ Notional}{2\times StrikePrice}$
+
+Strike $X$ is the expected future variance of the underlying, expressed as volatility (not variance)
+
+$N_{vega}(\frac{\sigma^2 - X^2}{2\times Strike}) = N_{var}(\sigma^2 - X^2)$
+
+###### Value of the Variance Swap
+
+站在 t 时点，variance swap的价值是多少。在 t 时点， [0,t]已经过去了，所以可以算出来 realised vol。[t,T]未发生，所以 用 implied vol or fair strike
+
+$V_t = N_{var} \times PV_t \times \bigg[( \frac{t}{T}\times RV_{0,t}^2 + \frac{T-t}{T}\times IV_{t,T}^2) - X^2 \bigg]$
+
+- N_var is variance notional
+- RV is realised vol
+- IV is Implied vol / fair strike
+- X - original strike
+- () 内相当于 换的 var的加权平均，X^2 为最开始约定的 strike variance。求PV现值，求 notional value
+
+$VarianceNotional = \frac{VegaNotional}{2X}$
