@@ -54,9 +54,17 @@ $Duration = Horizon$
 
 ### Duration Matching (Classic Immunisation)
 
+保证 能earn IRR / Cash Flow Yield
+
 #### For Single Lia Immunisation
 
 Make price risks and reinvestment risks cancel each other.
+
+对于 single liability immunisation ，convexity 越小，受到的 structural risk （即yield curve 非平行移动带来的risks）越小。
+
+Structural Risk (non-parallel steepening and flattening twists)
+
+对于 port lia immunisation，convexity 越大，免疫的越好
 
 1. Portfolio Duration = Liability Duration   <- price risks
 2. PV of Port = PV of Lia                     <- reinvestment risks
@@ -84,12 +92,15 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 1. $PV_A = PV_{Lia}$
 2. $Duration_A = Duration_{Lia}$
-
-- 1.2 可以合并为 Money Duration (BPV) 一样 or PVBP 一样
-
+    - 1.2 可以合并为 Money Duration (BPV) 一样 or PVBP 一样
 3. （增加一条 for multi-lia ）$Range_{A} > Range_{Lia}$ 资产的周期要能覆盖 lia port的周期，为了保证最后一期有足够的现金流能 cover liability payments
 
+- Convexity要大于 outflow convexity的最小的
+    - The immunising portfolio needs to be greater than the convexity (and dispersion) of the outflow portfolio. But, the convexity of the immunising portfolio should be minimised in order to minimise dispersion and reduce structural risk.
+
 ### Cash Flow Matching
+
+Cash Flow matching 是最nb的，可以避免 risk from non-parallel shifts in Yield Curve
 
 先 cover 最后一笔负债，从后往前一层一层的剥离。先匹配长期的bond 是因为 买 asset 匹配长期的 lia 的时候，asset也会产生 interim cf，那么在匹配短期的时候，这些cf inflow将被合并考虑
 
@@ -123,6 +134,8 @@ Allow active management for the surplus amount of assets over liability 用surpl
 前三个(1) duration matching (2) CF matching (3) contingent immunisation是用来构建组合。但是 Derivatives Overly 不是用于构建，而是用来 adjust. **Rebalance the immunisation portfolio to keep it on its target duration.**
 
 $Asset \ BPV \times \Delta Asset\ Yields + Hedge\ BPV \times \Delta\ Hedge \ Yield \approx Lia\ BPV \times \Delta Lia \ Yield$
+
+$BPV_A + N_f \times BPV_f = BPV_L$
 
 #### Using Forwards
 
@@ -195,7 +208,7 @@ FX market is difficult to track, because of size and breadth, wid array of secur
 
 - **Pure Indexing:** 做一模一样的指数 replicate an existing market index by purchasing all of the constituent securities, to minimise tracking risks
 
-    - Passive Investment: pros: diversification, cons: neither feasible nor cost-effective
+    - Passive Investment: pros: diversification, cons: neither feasible nor **cost-effective** 因为要疯狂 rebalance 所以 transaction cost 高
     - Could be done by mutual fund, ETFs, Total Return Swap (TRS)
 
 - **Enhanced Indexing**: 与指数有不同（买部分 or Mirror 主要风险因子） the investor purchases fewer securities than the full set of index constituents but matches primary risk factors reflected in the index.
@@ -364,6 +377,8 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 ![Screenshot 2023-11-10 at 13.34.46](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png)
 
 CF spreads and is diversified across the life of the bond.
+
+The laddered approach provides both diversification over time and liquidity.
 
 ---
 
