@@ -361,6 +361,10 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 
 ![Screenshot 2023-11-09 at 12.28.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png)
 
+**Type I:** An advantage to knowing the size and timing of cash flows is that **yield duration statistics**—that is, Macaulay duration, modified duration, money duration, and PVBP—can be used to measure the interest rate sensitivity of the liabilities.
+
+**With Type II, III, and IV liabilities, a curve duration statistic** known as **effective duration** is needed to estimate interest rate sensitivity. This statistic is calculated using a model for the uncertain amount and/or timing of the cash flows and an initial assumption about the yield curve.
+
 ### Primary Indexing Risks Factors
 
 - Risks Factors for primary indexing:
@@ -379,6 +383,10 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 CF spreads and is diversified across the life of the bond.
 
 The laddered approach provides both diversification over time and liquidity.
+
+P.S. dispersion and convexity are positively correlated see equation. 
+
+**Sample text:** A laddered portfolio has **lower convexity and dispersion than a barbell portfolio but more than a bullet portfolio,** given comparable duration and cash flow yields. Lower convexity and dispersion are desirable aspects in liquidity management. In a laddered portfolio, there is always a bond close to redemption enhancing liquidity. As bonds mature, the final coupon and principal are available for distribution or can be reinvested in a long-term bond at the back of the ladder. 
 
 ---
 
