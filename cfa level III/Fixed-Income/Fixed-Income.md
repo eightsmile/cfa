@@ -1,4 +1,4 @@
-# Fixed-Income
+# Fixed Income
 
 ## Overall
 
@@ -10,7 +10,7 @@
     2. **In the Stress Periods**, correlation 
         - decrease between government and equity
         - increase between high yield bond and equity
-    3. Less volatile than equity
+    3. 
 
 - **Manage Cash Flows** to meet obligations such as Tuition Fees, Pension, etc
 
@@ -184,11 +184,10 @@ Risks Factors:
 1. **Interest Rate Risks**: exposure to parallel shift in the Yield Curve. Measured by **Portfolio Duration**
 
 2. **Spread Risks**: exposure to changes in spreads between Treasuries and non-Treasuries. Measured by **Spread Duration**.
-
    - (YTM = Benchmark Yield + Spread), so spread 涨1%带来的YTM 增加与 Benchmarked涨1%带来的YTM增加一致。thus spread duration = portfolio duration，as 都通过YTM影响 price
-
+   
    - P.S.国债没有 spread
-
+   
 3. **Yield Curve Risks**: exposure to a twist in the Treasury Yield Curve. Measured by **Key Rate Duration & PV of Distribution of CF**
 
 4. Credit Risks**: exposure to downgrades and defaults. Measured by contribution to **duration by credit rating
@@ -244,13 +243,17 @@ Recall:
 
 - Maculay Duration: weighted averaged years
 - Modified Duration: percentage price change given the YTM yield changes
-- Effective Duration: the sensitivity of bond price to a change in benchmarket yield (**parallel shift in the benchmark yield curve**)
+- Effective Duration: the sensitivity of bond price to a change in benchmarket yield (**parallel shift in the benchmark yield curve**) 仅用来分析 parallel shifts of yield curve
 - Key Rate Duration: identify the sensitivity of shape of benchmark yield curve
 - Empirical Duration: regressopm pf bond price on benchmarket yield curve
 - Spread Duration: sensitivity to change in credit spread, $YTM = Benchmark + Spread$
 - Money Duration (BPV): 利率变 1%， 价格波动的amount
 - PVBP (Price Value of a Basis Point): 利率变动1bp，带来的价格波动
 - Convexity: second order Derivatives of Price w.r.t. yield
+
+#### Spread
+
+A bond’s **yield spread** includes both **credit and liquidity risk**. Liquidity risk depends on both market conditions and the specific supply-and-demand dynamics of each fixed-income security.
 
 ##### Correlation
 
@@ -443,7 +446,11 @@ P.S. dispersion and convexity are positively correlated see equation.
 
     - then three strategies in three situations:
 
-      ![Screenshot 2023-11-12 at 15.46.53](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 15.47.25.png) ![Screenshot 2023-11-12 at 15.49.56](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png)
+      ![Screenshot 2023-11-12 at 15.49.56](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png)
+
+      ![Screenshot 2023-12-23 at 21.06.33](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png)
+
+    - i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
 
     - if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
 
@@ -480,13 +487,21 @@ P.S. dispersion and convexity are positively correlated see equation.
 
 ### Evaluatiing Yield Curve Strategies
 
+**Totoal Expected Return:**
+
 $\mathbb{E}(R)$:
 
-	1. Coupon Return: coupon + reinvestment
-	1. Rolldown Return: when $\Delta y$, how much $\Delta P$
-	1. Return: when $ \Delta y$ changes, how much $\Delta P$
-	1. Credit Loss
-	1. FX G/L
+Coupon Return: coupon + reinvestment
+1. Rolldown Return: when $\Delta y$, how much $\Delta P$
+2. Return: when $ \Delta y$ changes, how much $\Delta P$
+3. Credit Loss
+4. FX G/L
+
+#### Forward Rate Bias
+
+Forward rate bias is defined as an observed divergence from interest rate parity conditions under which **active investors seek to benefit by borrowing in a lower-yield currency and investing in a higher-yield currency.**
+
+Investors tend to favor unhedged fixed-income investments in higher-yielding currencies that are sometimes enhanced by borrowing in lower-yielding currencies.
 
 ---
 
@@ -501,44 +516,77 @@ $\mathbb{E}(R)$:
 
 High Yield bond and Low Yield bond behave different at differnt econ environment.
 
-![Screenshot 2023-11-12 at 20.03.27](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 20.03.27.png)
+![Screenshot 2023-12-24 at 16.57.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312241657372.png)
 
 - Low credit level issuers tend to have greater slope and level changes at different econ cycle.
+
+  - high-yield spread curve tends to invert during a contraction
+
+- High-rated issueres face smaller credit spread changes.
 - In strong econ growth situation, low/high credit rated spread converges.
 - In bad econ envir, people buy gov bond. Gov bond and high-yield bond become negative correlated.
 
 - **Emperical Duration**: benchmark rate 对 price 实际的影响
 
-  $\underbrace{BondYield}_{Duration} = \underbrace{Risk-freeRate}_{Benchmark Duration}+ \underbrace{Spread}_{Spread Duration}$
+  $\underbrace{BondYield}_{Duration} = \underbrace{RiskFreeRate}_{Benchmark Duration}+ \underbrace{Spread}_{Spread Duration}$
 
   - Theoretically, benchmark duration and spread duration have same impacts w.r.t. interest rate changes
   - Empirically, (in practice), credit spread tend to be **negatively corr with risk-free rate**.
+    
+    $\frac{\Delta P }{P}=-Modified.Dur \times Yield$
+    
+    Classic Duration assume spread is zero, and measure only how rf change affect price percentage change
+    
+    Empirical Duration admit the negative correlation between rf and spread, so rf change would be partially deducted by negative spread move, thus RHS side change result in less price percentage change,
+    
+    A common way to calculate a bond’s empirical duration is to **run a regression of its price returns on changes in a benchmark interest rate.**
+    
+    ​	In sum, Emprical Duration is less than the classic / efficient one.
+    
     - Most of yield changes are from spread changes. (Spread duration should be higher) <- that is the **empirical duration**
-    - **Highly rated bond such as gov bond has low credit spread, is mostly affected by benchmark risks, has greater empirical duration**
-    - **Juck bond or Corporate bond, are less affected by benchmark risks, (they are affected by spread risks), so negative empirical duration**
+    - **Highly rated bond such as gov bond has low credit spread, is mostly affected by benchmark risks, has greater empirical duration** 
+      - Investment-grade bonds have lower credit and default risks than high-yield bonds and are **more sensitive** to interest rate changes and credit migration, which cause credit spread volatility. 高质量的债券 对于 interest 和 credit 变化更民高
+    - **Junk bond or Corporate bond, are less affected by benchmark risks, (they are affected by spread risks), so negative empirical duration**
 
-##### Types of Spread
+### Types of Spread
 
-- Benchmark Spread = Yield on Credit Security - Yield on Benchmark Bond
+#### Fixed Rate Bonds Spread
+
+- **Benchmark Spread** = Yield on Credit Security - Yield on Benchmark Bond
   - use for pricing
-  - disadv: might have maturity mismatch
-- G-Spread = Yield on Credit Security - Yield on Gov Bond
-  - disadv: maturity mismatch ( could use interpolate to estimate the yield)
-- I-Spread = YTM - Swap Rate
-  - swap rate is more flexible and has different maturity then gov bond
-- Asset Swap Spread (ASW) = Coupon Rate - Spread
-- Z-Spread: $PV = \frac{PMT}{1+r_1+Z}+ \frac{PMT}{(1+r_2+Z)^2} + \frac{PMT+FV}{(1+r_N+Z)^N}$
+  - disadv: might have maturity mismatch 不需要将期限匹配一致，找最近期的即可
+- **G-Spread** = Yield on Credit Security - Yield on Gov Bond
+  - disadv: maturity mismatch ( could **use interpolate to estimate the yield**) 用interpolate匹配期限
+- **I-Spread** = YTM - Swap Rate
+  - swap rate is more flexible and has different maturity then gov bond 也需要用interpolate 匹配期限
+- **Asset Swap Spread (ASW)** = Coupon Rate - Swap Rate
+  - i.e. corporate bond coupon = 10%。 swap float rate = MRR。把公司 interim payment 转换为对应期限的 swap会有余量即位ASW。如 8% fixed 转换为 MRR，那么 10% coupon <=> MRR + 2%，这2%即位 ASW
+
+- **Z-Spread**: $PV = \frac{PMT}{1+r_1+Z}+ \frac{PMT}{(1+r_2+Z)^2} + \frac{PMT+FV}{(1+r_N+Z)^N}$
   - Parallel shifts of the YTM
-- CDS basis = CDS spread - Z-Spread
+- **CDS basis** = CDS spread - Z-Spread
   - <=> CDS fee
-- Option-Adjusted Spread (OAS): for option embedded bond
+- **Option-Adjusted Spread (OAS):** for option embedded bond
   - 剔除了 option 后之后的 spread，用于比较 含权债券和不含权债券
-- Floating-Rate Note Credit Spread: 
-  - a Float Rate Note (FRN) pays interest (coupon) $= MRR + \underbrace{Constant\ Yield\ Spread}_{Quoted Margin}$
-  - Discount rate = $MRR+DiscountMargin$
-  - => $Quoted Margin$ v.s. $Discount Margin$ 相当于 coupon rate  v.s. discount rate
-    - QM = DM, at par
-    - QM > DM, at premium
+
+#### Float Rate Bond Spread
+
+The notion of discount margins is applied to floating-rate securities, which pay coupons based on an underlying benchmark such as Libor plus a spread. The value of FRNs is based on uncertain future cash flows as it is not known at purchase what the coupons will be as they fluctuate based on changes in the underlying index. The quoted margin on an FRN is the spread the bond pays above or below the underlying index. The **quoted margin reflects the return required to compensate investors for the credit risk they take on when investing.** If an issuer’s credit risk worsens or improves, the market’s perceptions of the quoted margin will change too. **The difference between the quoted margin and the spread the market now requires for the FRN to trade at par is the discount margin.**
+
+- **QM:** a Float Rate Note (FRN) pays interest (coupon) $= MRR + \underbrace{Constant\ Yield\ Spread}_{Quoted Margin}$
+  - established upon issuance, not reflect credit risls changes over time 在最开始确定，期间不改变
+- **DM:** Discount rate = $MRR+DiscountMargin$
+  - 在每期reset date，float rate bond 会重置为par
+  - DM assumes a flat MRR zero curve
+- => $Quoted Margin$ v.s. $Discount Margin$ 相当于 coupon rate  v.s. discount rate
+  - QM = DM, at par
+  - QM > DM, at premium
+- **Z-DM:** Zero-Discount Margin changes based on changes in the MRR forward curve. 
+  - In an upward-sloping yield curve, **the Z-DM will be below the DM.**
+
+MRR is based on **current MRR** and therefore implies a **flat** forward curve. 因为不知道未来的 MRR 是多少，所以会假设 flat curve，未来的 MRR 等于现在的MRR
+
+- The yield spread for a corporate bond will be equal to the G-spread if the government benchmark yield curve is flat.
 
 #### Impacts of Yield Spreads on Portfolio Return
 
@@ -557,13 +605,17 @@ However, **for lower-rated bond**, it is the **percentage of spread change** $\f
 
 #### Excess Spread Return
 
-$\mathbb{E}(R) = \underbrace{Coupon + Reinvest}_{YTM} + \underbrace{\Delta p}_{-D\times\Delta Y} - CreditLoss $, ignore the foreign G/L for this equation.
-
 Similarly, see the underbrace, and we get the following eq
 
-$ExcessReturn = Spread + (-SD\times \Delta S) - LGD \times PoD$
+$Excess\ Spread = Spread/T + (-Spread.Dur\times \Delta Spread) - LGD \times PoD$
+
+​	i.e. semi-annual payments means 2 periods per year, so Spread / 2
+
+- Instantaneous spread change = $-\Delta Spread \times Eff.Spread.Duration$
 
 ### Credit Strategy
+
+$Spread \approx LGD \times PoD$
 
 #### Bottom-up Credit Strategy
 
@@ -574,13 +626,21 @@ $ExcessReturn = Spread + (-SD\times \Delta S) - LGD \times PoD$
     2. Two model
 
         1. Reduced form model, (1) forward not historical (2) use macro and idiosyncratic data
+           - Reduced form models solve for default intensity, or the **POD** over a specific time period, using observable company-specific variables such as financial ratios and recovery assumptions as well as macroeconomic variables, including economic growth and market volatility measures. 用回归输入factors 得到 PoD
         2. Structural Credit Model, forward looking PoD
+           - Structural credit models use market-based variables to **estimate the market value of an issuer’s assets and the volatility of asset value.** **The likelihood of default is defined as the probability of the asset value falling below that of liabilities.** 估计 Market value of A & L，PoD为 A < L 的概率
 
     3. Credit Spread => Excess Return
 
         $\mathbb{E}(Excess S)=S - S.D.\times \Delta S -PoD\times LGD$
-
+    
     P.S. Consider (1) other features such as options (2) cost of trading
+
+#### Transaction Cost
+
+For buyer: $Size\times \bigg( TradePrice - \frac{Bid + Ask}{2} \bigg)$
+
+For Seller: $Size\times \bigg( \frac{Bid+Ask}{2} - TradePrice\bigg)$
 
 #### Top-Down Credit Strategy
 
@@ -632,7 +692,7 @@ Three methods:
 
 ### Synthetic Credit Strategy: CDS 
 
-Fxied CDS Coupon 为标准化的 investment-grade = 1%, high-yield bond = 5% 。所以 实际的情况与标准的差值将作为 upfront fee 在前期支付，差值折现后求和，为 CDS quoted price。
+Fixed CDS Coupon 为标准化的 investment-grade = 1%, high-yield bond = 5% 。所以 实际的情况与标准的差值将作为 upfront fee 在前期支付，差值折现后求和，为 CDS quoted price。
 
 CDS is quoted on a Issuer's CDS Spread = PV of difference between CDS Spread & Fixed Coupon
 
@@ -643,11 +703,31 @@ CDS is quoted on a Issuer's CDS Spread = PV of difference between CDS Spread & F
 - Payer Option on CDS index,   short CDS index-based credit spread exposure
 - Receiver Option on CDS index,   long CDS index-based credit spread exposure
 
+#### CDS Price
+
+$CDS \ Price = NP\times \bigg[ 1+(FixedCoupon-CDS\ Spread)\times Eff.Spread.Dur_{CDS} \bigg]$
+
+#### CDS Risk Position
+
+Sample Text: **Selling protection on the CDX index is a “long” credit spread risk position,**  因为预期credit rating会提升，所以sell CDS protect是去赚钱。while purchasing protection on the CDX Financials subindex is a “short” credit spread risk position, leaving the investor with a long index position without exposure to financial reference entities in the CDX index. 
+
 #### Spread Curve CDS Strategy
 
-Same for the yield curve movement
+Same for the yield curve movement。如果expected steepening of the investment-grade credit spread curve，相当于credit spread curve twists, 长期 spread提升，短期变小。长期提升意味着 长期credit变差，所以 long long-term
+
+a synthetic credit roll-down strategy involves **selling protection using a single-name CDS contract for a longer maturity.** 因为卖protection 收到更多 CDS spread，到短期PoD变小了，收到的Spread将会变小
+
+- 当经济收缩时最好的策略：An **economic contraction** is often associated with a sharp rise in shorter-term high-yield spreads and spread curve flattening in investment grade and inversion in high yield
+  - the most appropriate choice is to take a short risk (purchase protection) in five-year high-yield spreads and a long position (sell protection) in five-year investment-grade spreads. 
+- **flight to quality**:  refers to the tendency of investors to move their money out of riskier asset classes (like technology stocks) and **into more stable asset classes (like government bonds)** during bear markets, recessions, periods of high inflation, and other times of economic uncertainty. 预期经济变糟，转入gov bond
 
 ### Global Credit Strategy
 
 - Developed Market: Fixed-income markets usually have well-established and liquid derivative and other capital markets.
-- Emerging or Frontier Market: face concentrated risk; have a restricted domestic currency with varying degrees of liquidity,
+- **Emerging or Frontier Market:** face concentrated risk; have a restricted domestic currency with varying degrees of liquidity,
+  - Emerging market credit is characterized by **a concentration in commodities and banking and government ownership of some entities.**
+  - **Global investment provides diversification**: some differences across regions in the credit cycle providing diversification.
+
+P.S.
+
+-  MBS expects lower, not higher, volatility.
