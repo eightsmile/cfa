@@ -14,10 +14,13 @@
 
 - Look for poorly managed and overvalued companies 如 浑水
 - Activist short selling 在short后出报告
-- Typically take a bottom-up approach
+- Typically take a **bottom-up** approach   short的全是bottom-up
 - the stock’s **high short-interest ratio** and **high cost to borrow** (“on special”) are very concerning. Both factors suggest significant potential that a dangerous **short-squeeze situation**.
 
-##### Equity Market Neutral
+- Dedicated short-selling funds take **only** short positions.
+- Activist short-selling funds take short positions and publicly share their negative fundamental views. 
+
+##### Equity Market Neutral (EMN)
 
 - Construct a **zero beta portfolio**, so i**mmune to market risk**, **earn only alpha**
 - Types:
@@ -29,13 +32,26 @@
 - Short horizon and active trading, so highly diversified and liquid
 - **High leverage**. EMN strategies typically do not meet regulatory leverage limits for mutual fund vehicles. So, **limited partnerships** are the preferred vehicle.
 - Work well when the market is vulnerable and weak.
+- Equity market–neutral managers are likely to have high levels of diversification and turnover ratios.
+
+**Sample Text:** Overall, EMN managers are more useful for portfolio allocation **during periods of non-trending or declining markets**. EMN hedge fund strategies take opposite (long and short) positions in similar or related equities having divergent valuations while attempting to maintain a near **net zero portfolio exposure to the market**. EMN managers **neutralize market risk by constructing their portfolios such that the expected portfolio beta is approximately equal to zero**. Moreover, EMN managers often **choose to set** the **betas** for sectors or industries as well as for common risk factors (e.g., market size, price-to-earnings ratio, and book-to-market ratio) **equal to zero**. Since these portfolios **do not take beta risk and attempt to neutralize many other factor risks**, they typically **must apply leverage** to the long and short positions to **achieve a meaningful return profile** from their individual stock selections. 因为风险小，return小，所以加杠杆才能扩大收益
+
+EMN strategies typically deliver return profiles that **are steadier and less volatile** than those of many other hedge strategy areas. Over time, their conservative and constrained approach typically results in a less dynamic overall return profile than those of managers who accept beta exposure. Despite the use of substantial leverage and because of their more standard and overall steady risk/return profiles, equity market-neutral managers are often a preferred replacement for fixed-income managers during periods when fixed-income returns are unattractively low.
+
+---
 
 ### Event-Driven Strategy
 
 #### Merger Arbitrage
 
+Merger arbitrage is a good uncorrelated source of alpha.
+
 - A: Acquirer
 - T: Target
+
+If the merger successes, then use the T stock to A stock, and take cost difference.
+
+If the merger fails, then prices should revert back to their pre-merger announcement levels
 
 ##### Cash-for-Stock
 
@@ -65,12 +81,20 @@ Characteristics:
 - High level of illiquidity
 - Low leverage
 
+**Sample Text**: Event-driven strategies, such as merger arbitrage, tend to be exposed to some natural equity market beta risk. Event-driven merger arbitrage strategies have **market sensitivity and left-tail risk attributes**. Also, **while event-driven strategies may have less beta exposure than simple, long-only beta allocations, the higher hedge fund fees effectively result in a particularly expensive form of embedded beta.** 由于会受tail risk影响，而全部白给
+
+---
+
 ### Relative Value Strategy
 
 #### Fixed-Income Arbitrage
 
 - Yield Curve Trades: taking long and short positions at different points on the yield curve
+  - **Sample Text**: For yield curve trades, the prevalent calendar spread strategy involves taking long and short positions at different points on the yield curve where the relative mispricing of securities offers the best opportunities, such as in a curve flattening or steepening.
+
 - Carry Trades: long a higher yielding security and shorting a lower yielding security
+  - **Sample Text**: Carry Trade: A classic example of a fixed-income arbitrage trade involves buying lower-liquidity, off-the-run government securities and selling higher-liquidity, duration-matched, on-the-run government securities.
+
 
 **Return profile is like put option.**
 
@@ -79,20 +103,26 @@ Characteristics:
 
 #### Convertible Bond Arbitrage
 
+long short volatility 与 long short option方向一致，因为option 与 vol 正相关
+
 Convertible bond = straight debt + long equity call option
 
 - Conversion value = stock price * conversion ratio
     - If conversion value > bond value, then in-the-market
     - Vice versa
-- Conversion ration = # of share a bond can exchange
+- Conversion ratio = # of share a bond can exchange
 
 Convertible bond is complex structured, so generally under-valued. **Buy Convertible bond, short corresponding # of stocks.**
+
+If the convertible bond’s current price is near the conversion value, then the **combination of a long convertible and short equity delta exposure will create a situation** where for small changes in the share price and ignoring dividends and borrowing costs, **the profit/loss will be the same.**
+
+---
 
 ### Opportunistic Hedge Fund
 
 #### Global Macro Strategy
 
-- Top-down, fundamental model
+- **Top-down**, fundamental model
 - Heterogeneity 包括多种 assets 特异
 - leveraged
 
@@ -103,29 +133,60 @@ Convertible bond is complex structured, so generally under-valued. **Buy Convert
 
 #### Characteristics
 
-- both: Derivative 多 -> leverage 多 -> 风险多，volatility 
-- Both: 但是因为有derivatives可以hedge 风险，所以当经济差的时候 left tail的风险可控，暴露right-tail risks
-- Both are highly liquid
+- **Both**: Derivative 多 -> leverage 多 -> 风险多，volatility 
+- **Both**: 但是因为有derivatives可以hedge 风险，所以当经济差的时候 left tail的风险可控，暴露right-tail risks
+- **Both** are highly liquid
 
 - **Managed futures** take more **systematic approach**
 - **global macro managers** are **more discretionary**
+
+---
 
 ### Specialist Strategies
 
 #### Volatility Trading
 
-Source and buy cheap volatility and sell more expensive volatility while
+Roll down: Source and buy cheap volatility and sell more expensive volatility, earn premium
+
+**Equities and volatility are negatively correlated. In order to hedge the equity exposure in the portfolio, a long volatility position is necessary.** 
 
 #### Reinsurance and Life Settlements
 
 - insurance contracts are not liquid and difficult to sell.
 - the insurance and reinsurance themselves are independent with the market, so uncorrelated with the equity mkt. Thus, diversified
 
+Hedge Fund 会一次性买一个 pool的保单， pay lump sum fee 一次性一笔的买断费，然后pay ongoing premium payments 按期付保费，在受保人die 的时候挣 death benefits：
+
+- Hedge funds look for policies in which the **ongoing premium payments to keep the policy active are relatively low**. 每期支付保费少的
+- Hedge funds also look for life settlements where the **surrender value offered to the insured individual is also relatively low**,不懂 surrender value 指的是提前终止 提出来的钱。可能是相对应，收益人想要提前终止，要把钱还给收益人，因为之前一次买断过，收益人会找hedge fund surrender
+- and the probability that the designated insured person is likely to die **earlier** than predicted by standard actuarial methods is relatively high. 先死给的理赔多
+
+---
+
 ### Multi-Manager Strategy
 
 #### ![Screenshot 2023-10-29 at 00.50.27](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2000.50.27.png)
 
 ![Screenshot 2023-10-29 at 10.40.41](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2010.40.41.png)
+
+**FoF一定有 double layer fees**: **FoFs have double layers of fees** without being able to net performance fees on individual managers. The FoF investor always faces netting risk and is responsible for paying performance fees that are due to winning underlying funds while suffering return drag from the performance of losing underlying funds. Even if the FoF’s overall performance (aggregated across all funds) is flat or down, FoF investors must still pay incentive fees that are due to the managers of the winning underlying funds. 
+
+**MSF (Multi-Strategy Fund) 的 fee 可以内部抵消（gain 的 loss 的可以net）**The fee structure is more investor friendly at MSFs, where the general partner absorbs the **netting risk arising from the divergent performance** of the fund’s different strategy teams. This is an attractive outcome for the MSF investor because (1) the GP is responsible for netting risk and (2) the only investor-level incentive fees paid are those due on the total fund performance after netting the positive and negative performances of the various strategy teams.
+
+**MSF更方便切换战略做TAA，因为内部有自己的小团队。****MSFs can reallocate capital into different strategy areas more quickly and efficiently than is possible in FoFs**, allowing MSFs to react faster to real-time market impacts. This shorter tactical reaction time, combined with MSFs’ better strategy transparency, makes MSFs more resilient than FoFs in preserving capital.
+
+**FoF的FM更多，所以operational risks diversidied，但是MSF相对应内部有一大堆FM，还是有较高concentrated operational  risks.** MSFs have higher manager-specific operational risks than FoFs. In MSFs, teams of managers dedicated to running different hedge fund strategies share operational and risk management systems under the same roof. This means that the MSF’s operational risks are not well diversified because all operational processes are performed under the same fund structure. FoFs, in contrast, have less operational risk because each separate underlying hedge fund is responsible for its own risk management
+
+More Sample Text: 
+
+1. Multi-strategy managers like Hedge Fund B can reallocate capital into different strategy areas more quickly and efficiently than would be possible by a fund-of-funds (FoF) manager like Hedge Fund C. The multi-strategy manager has full transparency and a better picture of the interactions of the different teams’ portfolio risks than would ever be possible for FoF managers to achieve. Consequently, the multi-strategy manager can react faster to different real-time market impacts—for example, by rapidly increasing or decreasing leverage within different strategies depending upon the perceived riskiness of available opportunities.
+2. The fees paid by investors in a multi-strategy fund can be structured in a number of ways, some of which can be very attractive when compared to the FoFs’ added fee layering and netting risk attributes. Conceptually, FoF investors always face netting risk, whereby they are responsible for paying performance fees due to winning underlying funds while suffering return drag from the performance of losing underlying funds. Even if the FoF’s overall performance is flat or down, FoF investors must still pay incentive fees due to the managers of winning funds.
+
+Multistrategy funds typically use **more leverage** and have **more volatile return profiles** than funds of funds.
+
+Multistrategy funds have **faster reaction times for tactical allocation changes**.
+
+Funds of funds potentially offer a **more diverse mix** of strategies.
 
 ---
 

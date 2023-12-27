@@ -559,6 +559,8 @@ Systematic + Discretionary X Top-down + Bottom-up
 
 2*2 一共四种管理组合的方式
 
+Targeting low idiosyncratic risk along with low concentrations indicates a systematic approach
+
 ### Active Return
 
 - Overweights outperformed securities 多配好股票
@@ -675,7 +677,7 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
       1. 与 factor exposure 相关的
       1. 和与 个股相关的
       1. high net exposure to a risk factor leads to high active risks 来自beta (risk exposure)差异越提升active risks
-      1. neutralised factor exposure will have active risk entirely attributed to active share 如果beta差异(risk exposure) =0 ，那么 active risk 全部来自 active share。因为 alpha & epsilon 即FM主动管理的程度，这个东西可以由 active share 衡量
+      1. neutralised factor exposure will have active risk entirely attributed to active share 如果beta差异(risk exposure) =0 ，那么 active risk 全部来自 active share。**因为 alpha & epsilon 即FM主动管理的程度，这个东西可以由 active share 衡量**
       1. active risks attributed to active share will be smaller if the number of securtities is large or idiosyncratic risk is small 如果组合中股票数量多，diversification大，$\sigma^2_{\epsilon}$ active share 小，那么active risks 小
       1. active risk increase with the increse in factor and idiosyncratic volatility
 3.  Active Share v.s. Active Risks
@@ -795,6 +797,7 @@ Four Conclusion about slippage cost
   - Long term risk premium 历史看 涨多跌少
   - Capacity and Scalability 一般 买股票的 liquidity 比short大的好
   - Limited Lagal Liability Laws 损失是limited，不同于short方 损失时无限的
+  - 市场一般会谴责 short， 而 long 是美德
 
 - Long/short Investing
 
@@ -803,7 +806,7 @@ Four Conclusion about slippage cost
     - if net exposure < 0 , net short exposure
   - i.e.  
     - 130/30 funds 为long 130，short 30
-    - market neutral portfolio, 为 remove market exposure 
+    - market neutral portfolio, 为 remove market exposure 多空net  = 0, beta = 0 如 long 50 short 50
   - Benefits of Long/Short Strategies
     1. Express negative ideas
     2. use leverage
@@ -831,3 +834,19 @@ Behavioural Bias
 Value and Growth Trap
 
 - 低PE 和 低PEG 的股票 长期不动，不涨价（如果PE低于行业均值，但是growth负的，说明他活该PE低，要倒闭）	
+
+### Well Constructed Portfolio
+
+weights 能清晰的 体现 investment philosophy 
+
+Factor Risk Contribution 中 unexplained 部分少。unexplained 越多表示 FM 自己都不能解释自己 fund risks
+
+组合中 number 越多，按理说 越 diversified。此时 如果 number多的 portfolio 的 active risk 大，那么管理的不有效。**Number 和 active risks 不能 contradict**
+
+Fee / Active Share 越小，说明 fee 越便宜
+
+### Sample Text
+
+![Screenshot 2023-12-26 at 19.37.16](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312261937371.png)
+
+The risk targets for Fund Z are most likely those of a manager using a diversified **multi-factor approach.** Low single-security risk of 1% and modest overall portfolio risk of 4%, combined with flexibility on sector risk, demonstrate a highly diversified portfolio that primarily emphasizes factor exposures. Fund X has risk targets consistent with an emphasis on **stock picking**—namely, high active risk, high exposure to risk from a single security, and low sector deviations. Fund Y has risk targets consistent with an emphasis on **sector rotation**—namely, high active risk and a high tolerance for sector deviations.
