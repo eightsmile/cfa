@@ -64,9 +64,14 @@ Buy share of T, sell share of A. Because A issue share to buy T, then share pric
 Overall Characteristics:
 
 - If the deals fail, this strategy has market sensitivity and left-tail risk attributes.
-- The preferred vehicle is **limited partnership** because of merger arbitrage’s use of significant **leverage**, but some low-leverage, lowvolatility liquid alts merger arbitrage funds do exist.
+- The preferred vehicle is **limited partnership** because of merger arbitrage’s use of significant **leverage**, but some low-leverage, low volatility liquid alts merger arbitrage funds do exist.
     - typically apply 3 to 5 times leverage in order to achieve lowdouble-digit returns.
 - Kind diversified, because the Acquirer and Target together is a composite, pretty much irrelevant with other portfolio. Thus, diversified.
+
+特点：
+
+- expose to **left-tail** risks，因为若失败了，损失格外大
+- Leverage：高杠杆（只要是arbitrage的，都高杠杆）一般3-5倍
 
 #### Distressed Securities
 
@@ -209,45 +214,6 @@ Funds of funds potentially offer a **more diverse mix** of strategies.
 
 ---
 
-## Sum
-
-### EMN
-
-赚 alpha，beta = 0， 
-
-整个组合不承担  system risks, 不承担 unsystem risk， 组合总风险低
-
-特点：
-
-- return: moderest
-- sigma: low 因为只有非系统风险
-- Leverage: 因为要做beta=0，所以会加杠杆。同时因为risks低，所以要加杠杆才能放大收益
-
-### Merger Arbitrage
-
-long T, short A
-
-特点：
-
-- expose to **left-tail** risks，因为若失败了，损失格外大
-- Leverage：高杠杆（只要是arbitrage的，都高杠杆）一般3-5倍
-
-### Convertible Bond
-
-long Convertible Bond, short stock
-
-Profit: CF
-
-特点：
-
-- Liquidity: long 方 因为结构复杂，所以需求低 liquidity 差。short方 cost 大
-- leverage 高
-- 适用条件 moderrate波动的
-
-### FOF Multi-Fund 对比
-
----
-
 ## Analysis of Hedge Fund Strategy
 
 Conditional Factor Risk model
@@ -312,6 +278,10 @@ the higher the drawdown, the greater the **tail risks**
 
 Invest in  (1) future (2) 实物 farmland 
 
+### Real Estate
+
+**Public real estate** has had a fairly **high, positive correlation with equities**, as well as a **high, positive equity beta.** In contrast, fixed income has broadly had a negative correlation with equity and a small but negative equity beta. Switching from fixed income to real estate will likely **decrease** portfolio diversification an**d increase return volatility.**
+
 ### Investment Consideration
 
 - **Risk Characterisitcs**
@@ -364,6 +334,16 @@ Invest in  (1) future (2) 实物 farmland
 - Tax Consideration
 
 - Build v.s. Buy
+
+### Asset Classification
+
+- Traditional Approach 看表面 
+  - 按流动性分：private 的流动性都差，public 的都好，包括REITs / Public Real Estate，包括上市公司股票的HF
+  - 按通胀，高通胀 real estate / commodity, 高通胀+low growth : inflation-linked bond TIPS, Gold
+  - Limitation: 主观判断投资的asset，容易 over-estimate the diversification
+  - doesn’t group assets together based on a few shared characteristics. 不会通过risk factor 对asset分类，如 traditional approach 会对待 high yield bond 和 gov bond 会在同一个 fixed-income portfolio中。但是 risk-based approach 会把两种bond 不同对待
+- Risk-Based Approach 和 risk fator 回归 
+  - 因为是回归，所以 sensitive to hisorical look-back period
 
 ### Suitablility
 
