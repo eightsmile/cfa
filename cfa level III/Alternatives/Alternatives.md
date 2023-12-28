@@ -122,14 +122,21 @@ If the convertible bond’s current price is near the conversion value, then the
 
 #### Global Macro Strategy
 
-- **Top-down**, fundamental model
+- **Top-down**, fundamental model, trend driven 追逐全球趋势
 - Heterogeneity 包括多种 assets 特异
-- leveraged
+- leveraged 用杠杆放大风险
+- 受制于全球经济risks，so perform worst during recession 。no diversified in crisis 全球金融危机时，全完蛋
 
 #### Managed Futures
 
 - exotic contract: furtures on weather / derivatives on carbon emission, etc.
-- time-series momentum trend / cross-sectional momentum
+- time-series momentum trend 
+    - Absolute basis: can net long / net short
+
+- cross-sectional momentum
+    - **Net zero** or **market neutral** 
+    - Work well when market is out / underperformed relative to other mkt  因为net zero 所以
+
 
 #### Characteristics
 
@@ -146,9 +153,21 @@ If the convertible bond’s current price is near the conversion value, then the
 
 #### Volatility Trading
 
-Roll down: Source and buy cheap volatility and sell more expensive volatility, earn premium
+Roll down: Source and buy cheap volatility and sell more expensive volatility, earn premium 
 
 **Equities and volatility are negatively correlated. In order to hedge the equity exposure in the portfolio, a long volatility position is necessary.** 
+
+VIX option和stock之间可以diversify
+
+- Strategy:
+    1. Outright long volatility, 买期权 with **delta hedging of the gamma exposure** 交易所交易
+    2. OTC options 期限maturity长于2年的，OTC交易
+    3. VIX index
+    4. OTC volatility swap / variance swap
+- Characteristics:
+    - **Long volatility strategy is a convex strategy**. Skew to the right 凸性策略，比较好 （期限越长越好
+    - Liquidity 交易所交易的liquidity好，但期限短。OTC liquidity 差，但期限长
+    - options 自带 leverage
 
 #### Reinsurance and Life Settlements
 
@@ -229,6 +248,14 @@ Profit: CF
 
 ---
 
+## Analysis of Hedge Fund Strategy
+
+Conditional Factor Risk model
+
+$Return_{hedgeFund} = \alpha_i + \beta_1 F_1 + \beta_2 F_2 + \beta\times Dummy +...+\epsilon$
+
+The Unexplained Returns are (1) alpha; (2) alpha (FM investment skills); (3) omitted factor; (4) random error
+
 ### Conditional Factor Risk Model
 
 reg HF return on 
@@ -238,7 +265,11 @@ reg HF return on
 3. Credit Risks (CREDIT) 债券风险
 4. Volatility Risks (VIX) Options风险
 
-### Empirical Results
+- It is a conditional model as there is a dummy variable that distinguishes between calm market and turbulent market condition. 用dummy区分market condition
+
+Traditional Portfolio: 60/40 Equity/Debt
+
+If hedge fund is added, there could **increase Sharpe and Sortino ratios, and diversify risks**. 降低风险 提高收益
 
 #### Risk-Adjusted Measure
 
