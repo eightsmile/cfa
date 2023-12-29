@@ -372,13 +372,13 @@ NAV net asset value 资产净值 , by BASE
 
 $NAV_e = NAV_b +A - S$
 
-A: Contributon 打款 <- Call, $C\% \times 未投入 = C\%\times (CC-PIC)$, commited capital - paid-in capital
+$NAV_t = NAV_{t-1} \times (1+g) + Captial Contribtuion - Distribution$
 
-S: Return 收益 <- Distribution, $D\%$
+- A: Capital Contribution 打款 <- Call, 
 
-$NAV_e = NAV_b + g\times NAV_b + C\%(C-PIC) - D\% \times NAV_b(1+g)$
+    Capital Contribution = Rate of Contribution * (Capital Commitment - Paid-in Capital) 
 
-$NAV_e = NAV_b(1+g)(1-D\%) + C\% (CC-PIC)$
+    承诺要付的CC - 已经付的 Paid-in
 
 #### Avoid Cash Drag
 
@@ -395,9 +395,26 @@ Stree test for unexpectred events
 
 ### Performance Evaluation
 
-- MWRR (IRR) , Cons 受CF出现的时间点影响，只考虑了 percentage 没考虑 Value Amount
+Benchmark:
 
-- $MOIC = \frac{Cummulative Distribution}{Paid-inCapital} = \frac{D_1 + D_2 + D_3}{C_1+C_2 +C_3}$
+- Custom Index Proxies (i.e. MSCI world index + 3%)
+- Peer Group Comparison, percentile of Peers
+
+Others:
+
+- Private Equity, Credit, Real Estate 流动性最差的三种 用 IRR  , 
+
+    - Cons 受CF出现的时间点影响，只考虑了 percentage 没考虑 Value Amount
+
+- Private Equity 还可以用 $MOIC = \frac{Cummulative Distribution}{Paid-inCapital} = \frac{D_1 + D_2 + D_3}{C_1+C_2 +C_3}$
 
     直接把现金流相加，不折现。Pros: 不受CF时点影响，Cons: 但是没考虑Time Value of Money
 
+### Monitor the Investment Program
+
+投之前需要考虑的
+
+- Key person risk 关键FM离职的风险，p.s. 对于量化基金 关键的是model，所以Key Person Risk 不大
+- Alignment of Interests, whether FM's interests remain closely aligned with their own 是否执行之际的interest
+- investor 要理解 FM 的 Risk Management Philosophy 不会随意 提取钱出来
+- Investor gauge the profile
