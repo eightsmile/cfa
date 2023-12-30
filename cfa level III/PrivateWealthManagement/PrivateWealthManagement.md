@@ -125,7 +125,7 @@ Asset 不能 cover Liability 的方法
     3. Annuity Puzzle 不喜欢投资annuity 因为觉得保险公司都是sb，不如自己投资
     4. Preference for Investment Income over Capital Appreciation 相比于capital gain更喜欢 coupon 和 dividends更喜欢稳定的income 收入
 
-### IPS (Investment Policy Statement)
+## IPS (Investment Policy Statement)
 
 1. **Background and Investment Objectives (R, for Return)**
 
@@ -238,18 +238,18 @@ Asset 不能 cover Liability 的方法
 
     - estate or inheritance
 
-Scenario
+#### Scenario
 
 - Double Taxation (,income is taxed twice 收入被税两次)
 - Qualified Dividends: In the U.S., if common stock is held for at least 60 days, then lower tax rate
 - Cross-border investments: withholding taxes 预扣税
 
-Capital Gain Taxes
+#### Capital Gain Taxes
 
 - Tax Basis = price * # + all related other costs
 - Step-up on Death: 拿 inheritance 时，tax basis 调整为 fair market value of the asset
 
-Tax Jurisdiction
+#### Tax Jurisdiction
 
 - Tax haven: no tax for foreign investors
 - Territorial Tax System: only locally-sourced income is tax 只有本地的tax
@@ -257,55 +257,52 @@ Tax Jurisdiction
     - Residence Rules 用于判定人是哪个国家的 taxable resident
     - 当一个人属于多个国家时，Tax Treaties  (tie-breaker rules) 防止全额的 double-taxation，部分减少税
 
-### Tax Efficiency
-
-- Equity is more tax efficient
-    - Dividend receive preferential tax treatment
-    - Capital Gain tax is lower 因为 capital gain 未实现的时候不交税
-    - Flexible to sell
-- Equity 比 Alternatives  derivatives 省税，
-- Low turnover is more tax-efficient than high turnover
-- Low yield is more tax-efficient than high yield
-- Style-box approach is not tax efficient 这是的fund manager有特定的style范围，如果出了box of style 要rebalance or reconstitute，这个过程税多
-
-#### Measurement
+#### Measurement (Calculation)
 
 - After-tax Holding Period Return
 
-    No consider tax: $R = \frac{V_1-V_0 +Income}{V_0}$
+  No consider tax: $R = \frac{V_1-V_0 +Income}{V_0}$
 
-    Consider Tax: $R' = \frac{V_1-V_0 +Income- T}{V_0}$
+  Consider Tax: $R' = \frac{V_1-V_0 +Income- T}{V_0} = R - \frac{T}{V_0}$
 
-    ​	$R' = R - \frac{T}{V_0}$
+  ​	$R' = R - \frac{T}{V_0}$
 
 - Cumulative After Tax Return, $R_G$
 
-    $(1+R'_1)\cdots(1+R'_n) = (1+R'_G)^n$
+  $(1+R'_1)\cdots(1+R'_n) = (1+R'_G)^n$
 
-    $1+R'_G =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) }$
+  $1+R'_G =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) }$
+
+  - However, 这么算的 $R'$ 可能不准，if
+
+    1. Realised capital losses can be fully deducted
+    2. Not all investors will receive full credit for the tax losses realised
+    3. Taxes are usually paid on annual or quarterly basis
+
+    - in sum 只要记得 由于 capital losses 可能抵扣时出现问题即可
 
 - After-tax Post-liquidation Return, $R_{PL}$
 
-    $1+R'_{PL} =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) -\frac{Liquidation Tax}{Final Value}}$
+  $1+R'_{PL} =\sqrt[n]{(1+R'_1)\cdots(1+R'_n) -\frac{Liquidation Tax}{Final Value}}$
 
-    $LiquidationTax = (FinalValue-TaxBasis)\times t_{CapitalGain}$
+  $LiquidationTax = (FinalValue-TaxBasis)\times t_{CapitalGain}$
 
-- After-Tax Excess Return
+  or says, $LiquidationTax= (V_t-V_0)\times T_{captialGain}$ 对所有 captial gain 的部分收 capital gain tax，分母要是 $V_t = (1+R'_1)\cdots(1+R'_n)$
 
-    - $x=\text{Pre-tax excess return}=R-B$
-    - $x'=\text{After-tax excess return}=R'-B'$
-    - ,  where $R$ is the portfolio return, $B$ is the benchmark return. $R'$ is after-tax return, and $B'$ is the after-tax benchmark return
-    - Tax Alpha = $x'-x $
+- After-Tax Excess Return (越大越好，所以 x' 在前)
 
-- Tax-Efficiency Ratio (TER)
+  - $x=\text{Pre-tax excess return}=R-B$
+  - $x'=\text{After-tax excess return}=R'-B'$
+  - ,  where $R$ is the portfolio return, $B$ is the benchmark return. $R'$ is after-tax return, and $B'$ is the after-tax benchmark return
+  - Tax Alpha = $x'-x $
 
-    $TER = \frac{R'}{R}=\frac{税后return}{税前return}$
+- Tax-Efficiency Ratio (TER) 因为是efficiency 越大越好，所以R'在分子才能越大越好
 
-    Not working is return is negative
+  $TER = \frac{R'}{R}=\frac{税后return}{税前return}$
 
-### Tax-Aware Approaches to Planning
+  **Not working is return is negative**
 
-#### Three Accounts
+### Three Accounts
 
 三个阶段：放入，capital gain，取出
 
@@ -314,64 +311,98 @@ Tax Jurisdiction
 - Tax-Exempt Account (TEA): 交一次税，放入时交
 
 - Value, FV
-    - Taxable Account , $FV = (1+R')^n$ , $R'=R(1-t)$
-    - TDA, $FV = (1+R)^n(1-t)$ 最后整体 (1-t)
-    - TEA, $FV=(1+R)^n$, no tax
+  - Taxable Account , $FV = (1+R')^n$ , $R'=R(1-t)$
+  - TDA, Tax Deferred Account, $FV = (1+R)^n(1-t)$ 最后整体 (1-t)
+  - TEA, Tax-exempt account, $FV=(1+R)^n$, no tax 最nb的没有tax
+- P.S. 
+  - 对机构 **pension fund, endowment fund, foundation** are generally **tax-exempt** 最nb的
+  - 对个人 The retirement accounts of individuals are usually **tax-deferred** 养老金给一定的优惠，在最后才tax
 
-#### Asset Location
+### Tax Management Strategy
 
-Rule of Thumb:
+#### Tax avoidance strategy 整个就不交
 
-- Tax-Efficient Assets -> Taxable Account
+- hold assets in a tax-exempt accout
+- Invest in tax-exempt bond
+- hold assets and **divdidend-paying stock** **long enough** to pay more favorable tax rate 持有越久 tax 越优惠，dividend 的 tax 更优惠
+
+#### Tax-Deferral Strategy
+
+- invest in TDA
+- In a progressive tax system, defer tax if anticipate tax rate will be lower in retirement 在累积税率制情况下，在退休后拿收益，那时tax少
+- Limit portfolio turnover and tax loss harvesting
+- turnover might create tax benefits
+
+#### Tax-Efficiency Strategy
+
+- Equity is more tax efficient
+    - **Dividend** receive preferential tax treatment 国家鼓励长期投资，所以分红的tax比captial gain的低
+    - Capital Gain tax is lower 因为 capital gain 未实现的时候不交税
+    - Flexible to sell
+- Equity 比 Alternatives derivatives 省税，因为tax of alternatives is more complicated
+- Low turnover is more tax-efficient than high turnover
+- Low yield is more tax-efficient than high yield
+- Style-box approach is not tax efficient 这是的fund manager有特定的style范围，如果出了box of style 要rebalance or reconstitute，这个过程税多
+
+#### Tax-Aware Approaches to Planning
+
+##### Asset Location
+
+Rule of Thumb: 大原则，但是具体问题具体分析
+
+- Tax-Efficient Assets -> Taxable Account 
 - Tax-Inefficient Assets -> TEA or TDA
 
 I.E.
 
 - Equity -> Taxable Account 
-    - 因为 equity本身就是 tax efficient，主要收益来自于 capital gain，capital gain本身就是realise时候交
+    - 因为 equity本身就是 tax efficient，主要收益来自于 capital gain，capital gain本身就是realise时候交。
     - 但如果 high turnover 那么就变成 tax-inefficient了，那么放入TDA TEA
+    - 如果本身资产就tax-efficient 如 股票，那么就放 taxable account
 - Bond -> TDA
 
-#### Decumulation Strategies for a Retirement Account
+##### Tax- efficient Decumulation Strategies for a Retirement Account
+
+先取taxable account的钱，不达到 累进税率 progressive tax 的额度。退休后，没有工资收入时，再取 retirement account 的钱
 
 - **Retirement Accounts are TEA or TDA**, so their compounding rate would not be s.t. tax, so higher rate of compounding
 
-Therefore, **the rule of thumb**, withdrawals from the taxable account first and allow the retirement account to continue to compound.
-
-先取taxable account的钱，因为retirement account 的钱 compound的快，所以后取
+Therefore, **the rule of thumb**, withdrawals from the taxable account **first** and allow the retirement account (TDA) to continue to compound.
 
 - **Under progressive tax regimes**, a more tax-efficient strategy may be to withdraw from the retirement account until the lowest tax brackets have been fully utilised. 在累积税率时，工资收入高，所以税率高，所以先取 retirement account 的话税高。而退休之后取税低
 
-#### Assets for Charitable Giving
+##### Assets for Charitable Giving
 
-Gifts: Cash or Equity
+Gifts: highly appreciated Equity 把有很多 capital gain 的捐出去，可以拿回捐赠发票，收到未来可以抵税的额度 **tax deduction from the gift to remove future unrealised gain tax liability.**
 
 - Appreciated securities can be gifted to a qualified charity without triggering the capital gain. 把 tax basis 最低的捐了，因为 capital gain = price - tax basis 大。charity可以免税
     - Gifting low-cost- basis assets from taxable accounts is preferred.
 
-### Tax Management Strategies 如何进行税务管理
-
 Tax avoidance 为合法避税， tax evasion 偷税 is illegal不合法
 
-- Selection of Investment Vehicle
+#### Selection of Investment Vehicle
 
-    1. Partnership (开办合伙制大企业，交个人税，不用交公司税。这样可以避免双重征税，先公司税后再个人税的问题)
+1. Partnership 合伙制企业，没有企业所得税，不用交企业税 (开办合伙制大企业，交个人税，不用交公司税。这样可以避免双重征税，先公司税后再个人税的问题)
 
-    2. Mutual Funds 
+    - tax liability is passed throught to partners
+    - the fund is free of taxation
+    - distribution is classified as capital gain
 
-        - Co-investors are influenced 所有人共同承担税务，因为赎回时，卖share 换钱，capital gain的部分将被税，所以shareholder都会被税
+2. Mutual Funds 
 
-        - When new shareholders buy into the fund, they are also buying a share of the unrealised capital gains accrued in prior periods. 因为 fund manager的tax basis为最开始的price，所以中途买入的话，不管买入价是多少，tax basis都是最开始的值。
+    - Co-investors are influenced 所有人共同承担税务，因为赎回时，卖share 换钱，capital gain的部分将被税，所以shareholder都会被税
 
-            所以最好买此前captial gain 升值少的 stocks
+    - When new shareholders buy into the fund, they are also buying a share of the unrealised capital gains accrued in prior periods. 因为 fund manager的tax basis为最开始的price，所以中途买入的话，不管买入价是多少，tax basis都是最开始的值。
 
-        - Potential Capital Gain Exposure
+        所以最好买此前captial gain 升值少的 stocks
 
-            $PCGE = \frac{Net\ G/L}{Total NetAsset}=\frac{gains - distribtuion-losses}{startPrice+(G-Distribution)}$
+    - Potential Capital Gain Exposure
 
-            这ratio越低越好，因为越低意味着gain少，所以**PCGE越小，tax efficiency越好**
+        $PCGE = \frac{Net\ G/L}{Total NetAsset}=\frac{gains - distribtuion-losses}{startPrice+(G-Distribution)}$
 
-    3. ETFs 可以在二级市场交易，所以只有赎回的人被税，其他shareholder不受影响
+        这ratio越低越好，因为越低意味着gain少，所以**PCGE越小，tax efficiency越好**
+
+3. ETFs 可以在二级市场交易，所以只有赎回的人被税，其他shareholder不受影响
 
 #### Tax Lot Accounting
 
