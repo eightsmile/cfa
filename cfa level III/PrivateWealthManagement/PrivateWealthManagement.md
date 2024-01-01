@@ -361,7 +361,7 @@ I.E.
     - 如果本身资产就tax-efficient 如 股票，那么就放 taxable account
 - Bond -> TDA
 
-##### Tax- efficient Decumulation Strategies for a Retirement Account
+##### Tax-efficient Decumulation Strategies for a Retirement Account
 
 先取taxable account的钱，不达到 累进税率 progressive tax 的额度。退休后，没有工资收入时，再取 retirement account 的钱
 
@@ -396,24 +396,28 @@ Tax avoidance 为合法避税， tax evasion 偷税 is illegal不合法
 
         所以最好买此前captial gain 升值少的 stocks
 
-    - Potential Capital Gain Exposure
+        赎回的时候，要卖股票还钱，之前的 capital gain实现了要交税。其他人想赎回导致所有人都要承担 capital gain 的tax
 
+    - **Potential Capital Gain Exposure** 
+
+        **measure of tax liability embededd in a mutual fund**
+
+        Capital Gain Distribution 是减项
+        
         $PCGE = \frac{Net\ G/L}{Total NetAsset}=\frac{gains - distribtuion-losses}{startPrice+(G-Distribution)}$
-
+        
         这ratio越低越好，因为越低意味着gain少，所以**PCGE越小，tax efficiency越好**
 
 3. ETFs 可以在二级市场交易，所以只有赎回的人被税，其他shareholder不受影响
 
-#### Tax Lot Accounting
+    - **very tax efficient**
+    - **tax liabilities can be reduced or eliminated**
 
-track how much you paid when you bought it记录买入时的价格为 tax basis
+4. Separately-managed account (SMA)
 
-The Tax Lot Method is for prioritising the realisation of G/L by
-
-- FIFO 默认，但是由于一般first in 的tax basis 小，所以 tax inefficient 
-- LIFO
-- HIFO (highest in first out)
-- Specified-lot method 指定选择
+    - **Flexible** tax management
+    -  tax situation can **be tailored**
+    - **realised G/L can be aggregated across client's all account**
 
 #### Tax Harvesting
 
@@ -425,6 +429,17 @@ realise a loss that can be used to **offset** gains or other income 用loss 的 
     3. **Tax Loss Harvesting** is tax-**deferral** strategy 
         - 相当于晚交税
         - 晚交的税 可以 compound
+
+#### Tax Lot Accounting
+
+track how much you paid when you bought it记录买入时的价格为 tax basis
+
+The Tax Lot Method is for prioritising the realisation of G/L by
+
+- FIFO 默认，但是由于一般first in 的tax basis 小，所以 **tax inefficient** 
+- LIFO
+- HIFO (highest in first out) **most tax efficient**
+- Specified-lot method 指定选择
 
 #### Quantitative Method
 
@@ -439,9 +454,11 @@ Set objective function to be used to minimize taxdrag and investment risk.
     - Tax-Optimised Loss Harvesting: continuously look for losses harvesting opportunities
     - Gain-Loss Matching Optimisation
 
-### Manage Concentrated Position 管理过集中的投资
+---
 
-由于low tax basis 或者 inheritance 而产生的过渡集中的投资
+## Manage Concentrated Position 管理过集中的投资
+
+### Introduction
 
 - Risks
 
@@ -481,30 +498,68 @@ Set objective function to be used to minimize taxdrag and investment risk.
 
   5. Charitable Giving Strategies, 通过 charitable trust 把asset 转到 **tax-exempt account** in which it can be sold **without** incurring capital gains taxes.
 
-#### 管理上市公司的股票 Publicly Equities
+### 管理上市公司的股票 Publicly Equities ( concentrated position in low basis stock)
 
 1. Staged Diversification and Completion Portfolios
 
    - Sell and diversify
    - Staged diversification
-   - Completion portfolio 卖一部分集中的，买 diversified equities
+   - **Completion portfolio** 卖一部分集中的，买 diversified equities
 
 2. Tax-Optimised Equity Strategies
 
-   - Equity monetisation. Advantages 见下
-     - avoid triggering the capital gains tax, 
-     - be subject to restrictions from the sale of the stock, 
-     - not want to cede control of the voting rights, 
-     - want to keep the position but create short-term liquidity.
-   - Collar 不同于 monetisation，这两种方法用衍生品
-     - S + P - C 
-     - Pros: protects against downside risk
-     - Cons: has a limited upward potential
-   - Covered Call
+   - Equity monetisation
+     
+     strategies to receive cash without an outright sale 把资产 以非卖出的形式变成钱
+     
+     - Two-Step Process 做monetisation的方法
+     
+       1. **hedge a large portion of risks** 
+     
+          hedge 价格下跌的风险， short sale, future, forward, option, etc
+     
+          因为直接把stock 抵押，stock由于风险大，100value的stock只能抵押 50 的钱。所以要先hedge 一下降低风险再抵押
+     
+       2. Borrow against the hedged position 把hedge 过的 risk 降低的 position 用来抵押 borrow money
+     
+     - Advantages 见下
+       - avoid triggering the capital gains tax, 
+       - be subject to **restrictions from the sale of the stock,** 
+       - **not want to cede control of the voting rights**, 不会失去原有stock的控制权、投票权 (Cede = give up)
+       - want to keep the position but **create short-term liquidity.**
+     
+   - Other Tax Consideration
+
+     - **Constructive Sale:** trigger a taxable event if risks of stocks are completely eliminated. 当stock 所有的 风险都被对冲，则“视同销售”constructive sale，那么也会触发 taxable event
+     - Long-term gain with a lower gax rate
+
+   - Tools if hedge that can avoid the constructive sale: 因为保留的一部分风险，所以可以避免被判定为constructive sale
+
+     - **Zero-Cost Collar** 不同于 monetisation，这两种方法用衍生品
+
+       <img src="/Users/mie/Library/Application Support/typora-user-images/image-20231231150626589.png" alt="image-20231231150626589" style="zoom: 25%;" />
+
+       - S + P - C 
+       - Pros: protects against downside risk
+       - Cons: has a limited upward potential
+
+     - **Covered Call**
+
+       - **substitute for staged selling**
+       - **it can psychologically prepare investor to dispose of those shares**
+
+     - Additional: Call Option and Tax
+
+       - call option can affect the taxasiton of the stock divididends
+       - **premiums** received on the **short call** can be classified as **captial gain**
+         - call premium would be taxed at **higher short-term gain rate**
 
 3. Tax-Free Exchanges
 
-   - Exchange Funds 各公司创始人创建exchange fund，按比例在fund中换基金份额（包含其他公司的股）达到diversified的目的
+   - Exchange Funds 各公司创始人创建exchange fund，按比例在fund中换基金份额 pro rate（包含其他公司的股）达到diversified的目的.
+
+     因为是拿 股票换股票，所以 no trigger taxable events
+
    - Cons: 要求入股的stocks存续7年以上，提前取出费用高
 
 4. Charitable Remainder Trust 
@@ -518,59 +573,83 @@ Set objective function to be used to minimize taxdrag and investment risk.
    - **Without** incurring a **capital gain tax**. 
    - But beneficiary would **own income tax** for the income
 
-#### 管理过集中的 Private Equities
+### 管理过集中的 Private Equities /Private Business
 
 - Personal Line of Credit Secured by Company Shares 
+  - without put arrangement, so no cause an immediate taxable event
   - 以自己的名义把公司stock抵押贷款 arrange a personal loan secured by the private company's share
-- Leveraged Recapitalisation 分步退出
-  - For owner who are not yet ready to exit entirely and still have desire to continue to grow the business 对于还想继续business 不完全退出的。
-  - 先出一部分股权，留一部分。留下的部分可以签合同，之后设置条件（对赌）更高价卖出。
+  
+- Leveraged Recapitalisation 分步退出，让PE买
+  - For owner who are not yet ready to exit entirely and still have desire to continue to **grow the business** 对于还想继续business 不完全退出的。
+  
+    先出一部分股权给 PE ，留一部分。留下的部分可以签合同，之后设置条件（对赌）更高价卖出。
+  
   - Cons: 
     1. 收到现金流
     2. diversified assets
     3. Incentive to the owner to still manage the firm 因为还有 minority ownership interest
+  
 - Employee Stock Ownership Plan (ESOP)
-  - 把一部分公司股票卖给公司的 养老金计划。
+  - 把一部分公司股票卖给公司自己的 养老金计划。
   - Pros: 
-    1. Deter capital gain tax
-    2. Retain control of the firm
-    3. Maintain upside potential
+    1. **Defer** capital gain tax 可以通过 pension 把 gain 递延到 pension 提取到时候
+    2. **Retain control** of the firm
+    3. **Maintain upside potential** 一部分控股权没卖，所以剩下的部分还可以随公司增值
 
-#### Managing Concentrated Positions in Real Estate
+### Managing Concentrated Positions in Real Estate
 
-- Mortgage Financing
+- Mortgage Financing 抵押借款（stock是质押，房子可以抵押 房地产抵押贷款不会视同销售，因为没有卖资产，所以没有触发 taxable event 但仍通过抵押获得了 liqudity）
   - Resource  有追索权，即若房价跌了，borrower要pay别的东西来补充抵押物的价值。so less risks for banks
-  - Non-recourse 无追索权，对银行来说违约风险高
-- Real Estate Monetisation for the Charitably Inclined 把房地产捐给DAF。DAF免税，然后把钱gift给beneficiary
+  - Non-recourse 无追索权，房子价值跌了也不能找borrower 要别的东西赔偿，所以对银行来说违约风险高
+    - 如果房价涨了，还债
+    - 如果房价跌了，可以 non-recouse to protect the downside risks
+- Donor Advised Fund (DAF)
 
-### Wealth Transfer Planning
+  Real Estate Monetisation for the Charitably Inclined 把房地产捐给DAF。DAF免税，然后把钱gift给beneficiary
 
-Estate 财产传承规划，death后传给下一代
+![Screenshot 2023-12-31 at 15.45.06](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312311545356.jpeg)
 
-1. Will for Testament 遗嘱
-2. Inteste 无设置遗嘱，那么会进行 Probate (遗嘱认证) 流程，即为法院判定 legal process。流程长，费用高。
+可以 maintain ownership 的话，的三种方法本质都是 抵押贷款 monetisation，其他方法 都有新的 owner 加入。
+
+---
+
+## Estate Plannings
+
+### Introduction
+
+Estate 财产传承规划，death后传给下一代，可以 death  死的时候给，也可以 lifetime 或者时候给
+
+#### Objectives of Wealth Transfer
+
+1. Maintaining sufficient income and **liquidity**
+2. Decide the **control**
+3. **asset protection**, protect assets from creditor 债务保护
+4. Transferring assets in a **tax-aware manner**
+   - Estate Tax: levied on the total value, tax before the distribtuions of beneficiaries 是死后对总资产先交，分配给个人后还要再交
+   - Inheriitance Tax: paid by each beneficiary 个人获得分配后自己再交
+   - Generation-skipping tax 直接交给孙子一次性的tax，比先交给儿子后儿子再交给孙子分阶段的多。保证整个过程给到孙子的时候都是tax一样的
+5. **Preservation of Family Wealth**
+6. **Business Succession**
+7. Achieve **Charitable** Goals
+
+#### Will and Probate
+
+1. Will (or Testament) 遗嘱
+2. Testator 立遗嘱的人 is the person who authored the will and whose property is disposed of accourding the will. 
+3. Probate: Inteste 无设置遗嘱，那么会进行 Probate (遗嘱认证) 流程，即为法院判定 legal process。流程长，费用高。
    - 避免 Probate 的方法
      1. Joint Ownership 在房产证上jointly 写父子的名字
      2. Living Trust，在生前作为 grantor 给 trust 钱做 probate
      3. retirement plan 在养老金计划中写其他受益人
      4. life insurance 理赔给 beneficiary。理赔部分不需要税，且不走 probate程序
      5. Lifetime gifts 在活着的时候 lifetime of donor
-   - forced heirship laws 法定继承权。如：妻子1/3，孩子们1/3，剩下的才按 will 分配
 
-#### Objectives of Wealth Transfer
+- Legal Systems
+  - **Common Law** 允许 testators freedom of disposition by will 可以随便设遗嘱
+  - **Civil Law** place restriction on testamentory disposition 强制遗产要给一些人
+    - forced heirship laws 法定继承权。如：妻子1/3，孩子们1/3，剩下的才按 will 分配
 
-1. Maintaining sufficient income and liquidity
-2. Decide the control
-3. asset protection, protect assets from creditor 债务保护
-4. Transferring assets in a tax-aware manner
-   - Estate Tax: levied on the total value, tax before the distribtuions of beneficiaries 是死后对总资产先交，分配给个人后还要再交
-   - Inheriitance Tax: paid by each beneficiary 个人获得分配后自己再交
-   - Generation-skipping tax 直接交给孙子一次性的tax，比先交给儿子后儿子再交给孙子分阶段的多。保证整个过程给到孙子的时候都是tax一样的
-5. Preservation of Family Wealth
-6. Business Succession
-7. Achieve Charitable Goals
-
-#### Estate Tax 遗产税的计算
+### Estate Tax 遗产税的计算
 
 - Flat Rate, 为固定的税率，不累计
 
@@ -578,15 +657,19 @@ Estate 财产传承规划，death后传给下一代
 
   $TaxAmount=(Total - S.A.)\times t$
 
-#### Gift v.s. Bequest
+#### Lifetime Gift v.s. Bequest
+
+活着给叫 lifetime gift 税低一点，但是不确定要给多少。死了给叫 bequest 税高
 
 - Tax-Free Gift 算相对价值，哪个方式的Final Value高，那个方法合适
 
-  1. If estate is taxed:
+  1. **If estate is taxed:**
 
-     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{\big[1+r_g(1-t_g)\big]^n}{\big[ 1+r_e(1-t_e)\big]^n(1-T_e) }$
+     $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{\big[1+r_g(1-t_g)\big]^n}{\big[ 1+r_e(1-t_e)\big]^n(1-T_e) }$ 如果 >1 ，则 gift 更 tax efficient 
 
-  2. If the pre-tax return and effective tax rates are equal for both the recipient and donor
+     ![Screenshot 2023-12-31 at 16.28.09](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312311630197.jpeg)
+
+  2. **If the pre-tax return and effective tax rates are equal for both the recipient and donor (r_A = r_B 两个人的rate 一样大，则见下)**
 
      $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{1}{1-T_e }$
 
@@ -595,17 +678,28 @@ Estate 财产传承规划，death后传给下一代
      $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{\big[1+r_g(1-t_g)\big]^n(1-T_g)}{\big[ 1+r_e(1-t_e)\big]^n(1-T_e) }$
 
   4. If the pre-tax return and effective tax rates are equal for both the recipient and donor
-
+  
      $RV_{TaxFreeGift} = \frac{FV_{gift}}{FV_{Bequest}} = \frac{1-T_g}{1-T_e }$
 
-#### Estate Planning Tools
+### Estate Planning Tools
 
 1. Trust
 
    Grantor 富B   把钱给   Trustee 管理者   把收益给 Beneficiary
 
-   - Revocable Trust & Irrevocable 可以跟grantor隔离preotect assets from claim
-   - Fixed Trust & Discretionary 有trustee自由决定给受益人多少钱不由beneficiary决定，跟beneficiary隔离
+   - Revocable Trust & Irrevocable (A B 之间隔离) 可以跟grantor隔离preotect assets from claim
+   - Fixed Trust & Discretionary  (B C 之间隔离) 有trustee自由决定给受益人多少钱不由beneficiary决定，跟beneficiary隔离
+
+   ![Screenshot 2023-12-31 at 16.47.11](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312311648637.jpeg)
+
+   - 信托的作用：
+     1. **Control**. make resources available to beneficiaries without yielding complete control
+     2. **Asset Protection**.
+        - **irrevocable trucst** can protect assets from claims against the settlor
+        - **discretionary trust** can protect assets from claims against the beneficiaries
+        - ownership of family business **does not get diluted** 
+        - **be used to avoid probate**
+     3. **Tax-related Considerations.** 
 
 2. Fundation 机构投资者章节会着重讲
 
@@ -614,21 +708,22 @@ Estate 财产传承规划，death后传给下一代
    Pros:
 
    - Income Tax Deduction
-   - Favorable Tax Treatment of Investment Returns
-   - Protection of Assets from Estate Tax
+   - Favorable Tax Treatment of Investment Returns 在fundation里的钱也不investment return tax
+   - Protection of Assets from Estate Tax 在fundation里的钱已经不是遗产了
 
 3. Life Insurance 保寿险 按约定的 cover 付给 beneficiary
 
+   - 一部分钱用于买保险，就不是estate了
    - 由于 death benefit 人都死了, so tax exempt
    - Life Insurance 可以和 Trust 结合 transfer assets to the beneficiaryes outside of the probate process 可以跳过 probate过程（税高），通过 trust 和寿险的方式把钱给 beneficiary
 
-4. Companies (Controlled Foreign Corporation, CFC)
+4. Companies (Controlled Foreign Corporation, CFC) 海外控股公司（开曼群岛）
 
    不能不交税，但是可以把 tax defer 把税递延
 
-#### Across Multiple Generation 隔代转移
+### Across Multiple Generation 隔代转移 Family Governance
 
-1. General Principles of Family Governance 定规矩
+1. General Principles of Family Governance 家族治理 定规矩
 2. Family Conflict Resolution 防止家族冲突，规定家族规定 family constitution，通过写入有法律约束力的家族文件中，违反就不给钱，而制定 legally binding
 3. Family Dynamics in the Context of Business Exit
 
@@ -636,7 +731,24 @@ Estate 财产传承规划，death后传给下一代
 
 ## Individual Lifetime
 
-### Human Capital & Financial Capital
+### Holistic Balance Sheet
+
+![Screenshot 2023-12-31 at 17.31.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312311739169.jpeg)
+
+Traditional v.s. Economic Balance SHeet
+
+- Traditional BS includes accounting Asset & Lia, **easy to quantify**
+- Economic Balance Sheets provides an overview of **total wealth portfolio**, including
+  1. **Asset: Human Captial** 
+  2. **Asset: Pension**
+  3. **Liability: Consumpton**
+  4. **Liability: Bequest Goals**
+- Net Wealth = Net Worth + PV of Future Earning + Pension Plan
+- $\rho(HC,FC)$ 越小，越 diversified。
+  - For younger with greater human captial, is better to spend more to **protect the value of Human Capital**, and **plan for retirement saving goals**
+- Vested Pension Plan 算作 financial capital, Unvested Pension Plan 算作 Human Capital
+
+#### Human Capital & Financial Capital
 
 让 Human Capital 和 Financial Capital uncorrelated 可以分散风险
 
@@ -644,23 +756,16 @@ $HC_0 = \sum \frac{Prob_t\times w_{t-1}\times (1+g_t)}{(1+r_f+y)^t}$
 
 - $w_{t-1}(1+g_t)$, is previous wage times growth = current period wage
 - y is risk adjustment (like the risk premium)
+- 如果 r discount rate 降低，HC会增大
 
-### Financial Stages of Life for an Individual
+- Earning or Health 影响 both financial and human capital
+- Property 基本上只影响 financial capitl
+
+#### Financial Stages of Life for an Individual
 
 ![Screenshot 2023-11-23 at 12.44.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252405.png)
 
 ![Screenshot 2023-11-23 at 12.44.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252594.png)
-
-### Net Worth
-
-Net Wealth = Net Worth + PV of Future Earning + Pension Plan
-
-- Traditional Balance Sheet
-- Economic (Holistic Balance Sheet): include also 
-  1. humans capital
-  2. pension value 
-  3. PV of Lifetime Consumption Needs 
-  4. Bequests
 
 #### Risk Management Strategy
 
@@ -675,16 +780,26 @@ Net Wealth = Net Worth + PV of Future Earning + Pension Plan
 
   ![Screenshot 2023-11-23 at 12.45.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252861.png)
 
-### Individual Risk Exposures
+#### Individual Risk Exposures
 
 - Earnings risk (insure with disability insurance 工作能力丧失了赔钱的保险)
+  - Disability Income Insurance 残疾保，对 disability 对定义
+    1. According to one' **regular occupation** 如钢琴家保手，丧失本职工作能力就保
+    2. According to **any occupation is suited by education and experience** 丧失同等教育水平工作的能力保
+    3. According to duties of **any occupation** 只要能看大门就不保
+
 - Premature death risk (insure with life insurance 防止提前挂了家庭没有收入了的保险)
 - Longevity risk (insure with annuities 防止活太长了钱不够花弥补pension)
 - Property risk (insure with property insurance 财产险如车险)
 - Liability risk (insure with liability insurance 责任险，如把赔钱的责任转移给保险公司)
 - Health risk (insure with health insurance 医保)
 
-### Life Insurance 寿险
+### Life Insurance 寿险 死了才给 
+
+Life Insurance 算作 Human Capital，用于防止 Human Capital 的 risks
+
+1. hedge risks of premature deathe 防止死太早 
+2. estate-planning tool 用于estate 遗产的planning
 
 - Life Insurance  寿险，可以重复投保
   - 死亡险 Temporary Life Insurance 定期死亡险，在一定时间內死才保 Permanent Life Insurance 保永久。所以贵
@@ -711,9 +826,16 @@ Basic Elements
   - Non-forfeiture Clause 不丧失现金价值。退保的时候可以退还 cash value
   - guaranteed insurability 其他杂毛条款，如续保
 
+Type of Life Insurance
+
+- **Temproary Life Insurance** 如 在40-50岁 (term) 之间挂了才赔
+- **Permanent Life Insurance** 对于整个年龄段
+  - **Whole Life Insurance** 保费固定
+  - **Universial Life Insurance** 在cash value上增加一些灵活度，一般有需要赔付灵活分配的，选这个
+
 付钱
 
-- Net Premium 
+- Net Premium  一般为先付 
 
   - the discounted value of the future death benefit.
   - 假设发生了理赔，（负）投资者每年付的premium折现  + 保险公司理赔coverage折现
@@ -738,31 +860,112 @@ Net Premium = Gross Premium - 总收益
 
 ![Screenshot 2023-11-23 at 13.25.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252491.png)
 
+- Use real discount rate = (1 + growht) / (1+ discount rate) 去计算折现
+- Total Discount Rate = Nominal Rf + Income Volatility
 - Net Premium Cost Index 不考虑第三步的cash value，因为我们假设在25th year 发生了理赔
 - Surrender Cost Index（退保），即没发生保险触发条件，在最后要把cash value还给投保人
 
-### Annuity
+##### Surrender Cost Index, see eco-system
+
+![Screenshot 2024-01-01 at 13.43.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011343883.png)
+
+### Other Insurance
+
+- **Disability Income Insurance** 残疾保，对 disability 对定义
+  1. According to one' **regular occupation** 如钢琴家保手，丧失本职工作能力就保
+  2. According to **any occupation is suited by education and experience** 丧失同等教育水平工作的能力保
+  3. According to duties of **any occupation** 只要能看大门就不保
+- **Health / Medical Insurance** 医保
+  1. Indemnity Plan 可以去 any medical service provider with reasonable fee 可以去任何医院，自己付款后，拿小票回来报销
+  2. Preferred Provider Organisation 可以找network of physician or provider with lower price 可以找固定的医院，用低价格
+  3. Health Maintenance Organisation 有私人医生office, allow office visits at no, or very little, cost to encourage individuals to seek help for small medical problems before they become more serious 像英国 NHS 小病找诊所 不要钱
+  4. Co
+  5. mprehensive Major Medical Insurance 大多数病 vast majority of health care expense全覆盖
+
+### Annuity 活着才给
 
 年轻时候买，用来老了退休了收到 annuity payment
 
-2 * 2 + 1
+2 * 2 + 1 Deferred/Immediate * Fixed/Variable + ALDA
 
 Deferred & Immediate * Fixed & Variable  两两组合，一共四种结果
 
+variable 指的是  diversified menu of potential investment options，可以调整 payment
+
+Defer 指的是 退休时候才返钱，immediate指的是立刻返钱
+
+Fixed 指的是  fixed annuity locks the annuitant into a portfolio of bond-like assets at whatever rate of return exists at the time of purchase
+
 - Deferred variable annuities
+
 - Deferred fixed annuities
+
 - Immediate variable annuities
+
 - Immediate fixed annuities
-- Advanced life deferred annuities 最后一种是 高龄年金，给老人买，付的钱不多，但是能收到钱的年份也少了，因为活得时间短了
+
+- Advanced life deferred annuities (ALDA) 最后一种是 高龄年金，给老人买，付的钱不多，但是能收到钱的年份也少了，因为活得时间短了
 
 - Mortality Credits 由于有的人死得早有的人死得晚，比预期。所以取打样板可以中和正负的diff
+
 - Payout Method
   - Joint Life 夫妻双方活一个就要付 annuity 
+    - Joint Life Annuity: The joint life feature will **provide payments until both of them are no longer living.** 俩人都挂了才终止，一个挂了不终止payment
+  - life annuity 活着就付
   - Period Certain Annuity 只付20年
-  - Life Annuity with Period Certain 
+  - Life Annuity with Period Certain 至少payment 10年，如买了立刻挂了，按理说 annuity支付给活的，将终止。但是 life annuity with period certain 可以保证挂得早 继续赔
+  - Life Annuity with refund 提前挂了可以退款
+  
+- The income yield for a **given amount invested in a life-only immediate annuity** is **higher for an older person than for a younger person.** 
 
-### Implmentation
+  年金买的越晚，income yield 越高
 
-- Equity-like human capital: less aggressive portfolio
-- Bond-like human capital: 如医生律师人力资本收入稳定，则金融资本可以more agreesive portfolio
+  PV 固定，I/Y 固定（保险公司去投资的收益率，与这个人多久挂没关系，所以固定），FV=0。如果 N 大， PMT就小
 
+  - Ceteris paribus, 男的 income yield 要比 女的高，因为女性平均寿命长
+  - The inclusion of a **period certain** (or a **return-of-premium feature**) will **reduce the payout** but to **varying degrees** 加了period certain，一般会减少income yield，如在90岁买10year period certain，那么income yield一定会小。但是如果30岁买 10year period certain则对income yield 影响不大
+
+---
+
+## Implmentation of Risk Managament
+
+| Loss Characteristics | High Frequency          | Low Frequency                       |
+| -------------------- | ----------------------- | ----------------------------------- |
+| High Severity        | Risk Avoidance 别做     | **Risk Transfer 买保险 如飞机失事** |
+| Low Severity         | Risk Reduction 系安全带 | Risk Retention 保留                 |
+
+A risk with the loss characteristics of **high frequency** of occurrence and **low severity** of loss, such as **dental cavities**, is best managed through **risk reduction—for example, through proper dental hygiene.** 
+
+A risk with the loss characteristics of **low frequency** of occurrence and **high severity of loss**, such as an **earthquake that destroys your home, is best managed through risk transfer.**  买保险 transfer 给保险公司
+
+A risk with the loss characteristics of **low frequency** of occurrence and **low severity** of loss is best managed through **risk retention,** such as not purchasing an extended warranty on an infrequently used and relatively inexpensive item.
+
+所以保险，包括 life insurance，都是 risk transfer
+
+#### Human Capital
+
+- **Overall Volatility** of one's economic balance sheet can be reduced by selecting assets that **correlate weakly (or even negative) with human capital** 通过与Human Capital 负相关降低风险
+
+- Equity-like human capital: 如个人工资中与stock挂钩的部分多，则 Financial Captial can be less aggressive portfolio
+
+- Bond-like human capital: 如医生律师人力资本收入稳定，则 Financial Captial 金融资本可以more agreesive portfolio
+
+- 投资的 financial asset 要与 Human Captial 即工作领域&工作领域的option/stock
+
+   不相关。去 diversify risks
+
+---
+
+### Others Sample Text
+
+About Private Wealth Manager
+
+- In order to construct client portfolios, a private wealth manager requires a thorough understanding of asset class risks and returns, correlation among asset classes, and knowledge of investment vehicles, managers, products, and implementation strategies.
+- In most cases, wealth managers must have a broad understanding of capital markets and asset classes, but it is unlikely that they will be investment specialists.
+- Wealth managers are typically not experts in specialized financial planning fields, such as insurance, taxation, and estate planning. However, wealth managers who have a working knowledge in these fields can add value for clients and more effectively interact with other professionals who serve the clients.
+
+About Retirement Income Goal
+
+-  The Benettons stress the **importance of achieving their lifetime income goal of maintaining their inflation-adjusted current standard of living throughout retirement.** Analyzing this goal by pricing ***<u>a joint life annuity</u>*** is the best method to insure that this goal will be achieved. **A joint life annuity provides a guaranteed series of fixed payments for as long as either of them is alive in exchange for a lump sum payment.**
+- **A mortality table i**llustrates an individual’s **life expectancy at any given age**. A potential problem with using mortality tables as the sole method to analyze the Benetton’s retirement goal is the **probability that either one or both of them live to an age that exceeds the life expectancy of the general population**. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
+- **The Monte Carlo simulation** analyzes the **likelihood of the client’s actual portfolio meeting anticipated retirement needs**. **Although the Monte Carlo output would include the probability of achieving the Benetton’s goal, it would not guarantee that their goal is achieved**, nor would it necessarily measure the “shortfall magnitude” to achieving their goal. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
