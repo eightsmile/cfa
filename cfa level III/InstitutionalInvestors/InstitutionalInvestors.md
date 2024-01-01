@@ -9,11 +9,15 @@
 
 ### Common Characteristics
 
+![Screenshot 2024-01-01 at 15.43.41](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011543682.png)
+
 - **Scale (Asset Size)** 
-    - Small institutional investor小的机构，outsource外包给别的人做投资。
+    - Small institutional investor小的机构，outsource外包给别的人做投资。<500 millions
     - Larger institutional investor 大的机构 experience scale benefits
+    - **large size can get access to PE fund, 资金规模小的 PE 投不了**
 - **Long-term Investment Horizon** 相对于 individual 投资期限更长 & **Low Liquidity Needs** 不太容易被提款
     - **Banks and insurance companies** however tend to be more **asset-liability focused**
+    - 周期长可以投 private real estate
 - Governance Framework
     - board of directors -> investment committee -> investors
     - 制定 risk appetite, set investment strategy
@@ -30,6 +34,8 @@ Know Your Customers
 - Asset allocation policy with ranges and asset class benchmarks.
 
 ### Investment Approaches
+
+![Screenshot 2024-01-01 at 15.44.08](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011612038.png)
 
 #### Norway Model (Sovereign Wealth Funds) 
 
@@ -77,6 +83,8 @@ Know Your Customers
 ![Screenshot 2023-11-24 at 13.10.13](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.10.13.png)
 
 #### DB Plan
+
+如果 DB pension fund is not fully funded, then have risks
 
 - Stakeholders 利益相关方
 
@@ -386,6 +394,8 @@ or,
 
 $D_E = \frac{A}{E}D_A - (\frac{A}{E}-1)D_L\frac{\Delta i}{\Delta y}$
 
+![Screenshot 2024-01-01 at 20.13.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401012013382.png)
+
 #### Portfolio RIsks
 
 $w_A = \frac{A}{E}$
@@ -401,6 +411,10 @@ $\sigma^2_E = (\frac{A}{E})^2 \sigma_A^2 + (\frac{A}{E}-1)^2\sigma^2_L - 2 \frac
 ![Screenshot 2023-11-26 at 22.41.09](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262241769.png)
 
 ![Screenshot 2023-11-26 at 22.42.07](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262242620.png)
+
+Sample Text
+
+Evaluate risk considerations of private defined benefit (DB) pension plans in relation to 1) plan funded status, 2) sponsor financial strength, 3) interactions between the sponsor’s business and the fund’s investments, 4) plan design, and 5) workforce characteristics
 
 ---
 
