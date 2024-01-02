@@ -339,7 +339,7 @@ Pension Asset Allocation
 
 ![image-20240102132012133](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132012133.png)
 
-**flow-through**: A flow-through entity is a legal business entity that passes any income it makes straight to its owners, shareholders, or investors. 相当于 fund 会把 endowment 之间转给 universities 和 beneficiaries
+**flow-through**: A flow-through entity is a legal business entity that passes any income it makes straight to its owners, shareholders, or investors. 相当于 donate 对钱，直接立刻全部花掉，且不占用 5% 的额度
 
 4. External Constraints
    - requirement investor boards/committees/officers to invest on a **total return basis** and **consider portfolio diversification**
