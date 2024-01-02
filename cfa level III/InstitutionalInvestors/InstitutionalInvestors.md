@@ -391,6 +391,30 @@ Pension Asset Allocation
     2. **statutory accounting** by regulatory 由监管要求的，一般会conservative
     3. **True Economic Accounting** using market value 反应其真实经济情况的
 
+### IPS
+
+1. Stakehoders
+
+![Screenshot 2024-01-02 at 21.41.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022141358.png)
+
+2. Liability and Investment Horizon![Screenshot 2024-01-02 at 21.42.35](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2024-01-02 at 21.42.35.png)
+
+3. Liquidity Needs
+
+![Screenshot 2024-01-02 at 21.43.05](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143030.png)
+
+4. External Constraints
+
+![Screenshot 2024-01-02 at 21.43.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143861.png)
+
+5. Investment Objectives
+
+![Screenshot 2024-01-02 at 21.44.01](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144546.png)
+
+![Screenshot 2024-01-02 at 21.44.27](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144359.png)
+
+![Screenshot 2024-01-02 at 21.44.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144505.png)
+
 ### Insurers 保险公司 见individual的章节
 
 - Life Insurers 寿险 
