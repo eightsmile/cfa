@@ -493,7 +493,17 @@ $r_A$ is postively correlated $r_E$. leverage ratio $A/E$ is negative correlated
 
 #### Portfolio Duration
 
-Generally, 
+We consider E = A - L, 其中 A 占 A/E, L占 -L/E
+
+Duration of E 加权平均 $Dur_E = \frac{A}{E}Dur_A + \frac{-L}{E}Dur_L \times Adjustment$
+
+As the interest rates for Asset and for Lia are different, the adjustment is consider to adjust A & L's interest rates. Let $\Delta i$ be the interest rate for Lia, $\Delta y$ be for assets. Finally, we get,
+
+$Dur_E = \frac{A}{E}Dur_A + \frac{-L}{E}Dur_L \times \frac{\Delta i}{\Delta y}$
+
+btw, the liability is has less rate, duration is less affected by interest rate change, so the adjustment is less than 1.
+
+or Generally, 
 
 $r_d = \frac{\Delta P}{P} = -D\times \Delta y$
 
