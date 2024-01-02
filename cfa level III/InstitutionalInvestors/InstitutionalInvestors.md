@@ -342,8 +342,9 @@ Pension Asset Allocation
 **flow-through**: A flow-through entity is a legal business entity that passes any income it makes straight to its owners, shareholders, or investors. 相当于 fund 会把 endowment 之间转给 universities 和 beneficiaries
 
 4. External Constraints
-
-![image-20240102133003967](./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240102133003967.png)
+   - requirement investor boards/committees/officers to invest on a **total return basis** and **consider portfolio diversification**
+   - fiduciary duty
+   - typically enjoy tax-exempt status
 
 5. Investment Objectives
 
