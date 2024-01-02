@@ -397,7 +397,9 @@ Pension Asset Allocation
 
 ![Screenshot 2024-01-02 at 21.41.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022141358.png)
 
-2. Liability and Investment Horizon![Screenshot 2024-01-02 at 21.42.35](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2024-01-02 at 21.42.35.png)
+2. Liability and Investment Horizon
+
+![Screenshot 2024-01-02 at 21.44.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022146531.png)
 
 3. Liquidity Needs
 
