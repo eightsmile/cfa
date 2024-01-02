@@ -1,47 +1,63 @@
 # Institutional Investors
 
-### Types
+Types
 
 - Pension Plan (35 tn USD)
 - Sovereign Wealth Funds (7 tn USD)
 - University Endowments and Private Foundations (1.6 tn USD)
 - Banks and Insurers (9 tn USD)
 
-### Common Characteristics
+---
+
+## Common Characteristics
 
 ![Screenshot 2024-01-01 at 15.43.41](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011543682.png)
 
 - **Scale (Asset Size)** 
-    - Small institutional investor小的机构，outsource外包给别的人做投资。<500 millions
-    - Larger institutional investor 大的机构 experience scale benefits
+    - Small institutional investor小的机构，outsource外包给别的人做投资。<500 millions, 
+      - small number of analysts, 
+      - not do in-sourcing alternative investments as they need people. 
+      - might not be able to invest in PE fund
+    - Larger institutional investor 大的机构 
+      - experience scale benefits, 
+      - get access to a large universe of assets
+      - cons: s.t. market price impact
     - **large size can get access to PE fund, 资金规模小的 PE 投不了**
 - **Long-term Investment Horizon** 相对于 individual 投资期限更长 & **Low Liquidity Needs** 不太容易被提款
     - **Banks and insurance companies** however tend to be more **asset-liability focused**
-    - 周期长可以投 private real estate
+    - 周期长可以投 private real estate & alternatives
 - Governance Framework
-    - board of directors -> investment committee -> investors
+    - board of directors -> investment committee (CIO) -> investors
     - 制定 risk appetite, set investment strategy
 - Regulatory Frameworks 为了 lower leverage, increase centralised clearing, improve reporting transparency
 - Principal-Agent Issues 由于组织架构，所以会面临 board 和 investor的分歧
 
 ### Overview of IPS
 
-Know Your Customers
+1. stakeholders
+2. Liabilities and Investment Horizon
+3. Liquidity Needs
+4. External Constraints affecting Investment
+5. Investment Objectives
+6. Asset Allocation
+7. (Risk Consideration, for Pension Plan)
 
-- The institution’s mission and investment objectives (i.e., return and risk tolerance).
-- Discussion of the investment horizon and liabilities.
-- Any constraints affecting the asset allocation (legal, regulatory, tax, and accounting).
-- Asset allocation policy with ranges and asset class benchmarks.
+---
 
-### Investment Approaches
+## Investment Approaches
 
 ![Screenshot 2024-01-01 at 15.44.08](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011612038.png)
+
+Scales matters: 
+
+- for the small scale, funds may use the endowment model, however, might be unable to access to the PE funds that require minimum liquidity needs.
+- for the large scale, funds can get access a large universe of assets, however might easily get exposed to market price index, hard to invest in small cap stock, etc.
 
 #### Norway Model (Sovereign Wealth Funds) 
 
 因为是养老金，所以保守
 
-- Traditional Style characterised by 60%/40% equity/fixed income. Few Alternatives, Large Passive Investment, tight tracking error limits
+- Traditional Style characterised by 60%/40% equity/fixed income. Few Alternatives, **Large Passive Investment**, tight tracking error limits
 - Pros: low cost, high transparency, suitable for large scale
 - Cons: limited valued-added potential 因为主要是 passive
 
@@ -49,7 +65,7 @@ Know Your Customers
 
 激进，外包
 
-- High alternative exposure, active management and **outsourcing**
+- **High alternative exposure,** **active management** and **outsourcing**
 - Pros: high value-added potential
 - Cons: high fess and high cost
 
@@ -82,7 +98,7 @@ Know Your Customers
 
 ![Screenshot 2023-11-24 at 13.10.13](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.10.13.png)
 
-#### DB Plan
+### DB Plan
 
 如果 DB pension fund is not fully funded, then have risks
 
@@ -118,77 +134,154 @@ Know Your Customers
     
     分子$ 1\% \times w_0 (1+g)^T\times T$ 为pension benefits，乘每期活着的概率，因为活着才给钱
     
-    Funded Ratio = $\frac{PensionAsset}{PensionLia}$ 如果>1说明能A覆盖负债。同理 Funded Status =A-L 如果 > 0 说明 A多
+    - Funded Ratio = $\frac{PensionAsset}{PensionLia}$ 如果>1说明能A覆盖负债。同理 Funded Status =A-L 如果 > 0 说明 A多
+    - Fund Status, F.S. = PA - PBO
+      - if FS < 0, underfunded, then the pension plan **may have high risks**, 当FS负数，风险高，对于 risk tolerance investors may cannot increase the investment return 因为提高 return 则 risks 一般也会提高，但是FS已经<0了。
+      - **Then, 怎么办？ 提高 sponsor's contribution**
     
     由公式可以看出影响 PBO的因素
     
     ![Screenshot 2023-11-25 at 20.48.58](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252049751.png)
     
-    P.S. additional contributions 增加不是好现象，因为若公司运营正常，则一般不愿意往 Pension Plan 里注入更多的钱，因为钱有更好的去处，如公司日常经营。所以 contribution 多往往意味着不好的情况。
-    
-    对于 pension plan，contribution变多，意味着未来给员工的pension benefits越多，所以公司要pay的多，则PBO Liability大
-    
 - Investment Horizon
 
     - 投资期限越长，意味着 ability to tolerate volatility of contribution rates 越大。能承受更多风险
-        - people are more mature or older, might have less risk tolerance 越老承担风险多能力越低
+        - **people are older, pension plan gets more mature**, might have less risk tolerance 人越老，pension越mature ，越老承担风险多能力越低
+        - **the more mature the pension fund, the shorter the investment horizon** pension的期限越短，对流动性需求越高，investment horizon越短
         - frozen 的养老金计划（没有新人增加的），此时随着时间过去，老人变老，承担风险能力变低
+          - **negative CF (benefits payment > contribution)**
     
-- Externalty
+- External Constraints (Reporting)
 
     - Regulation 要披露 fees and costs both internally and externally
-    - tax perspetives
-    - accounting rules 在B/S上披露 net funded status
+    - tax perspectives: **pension funds have favorable tax treatment**
+    - **(1) 必须report (2)accounting rules 在B/S上披露 net funded status**
 
-- Risk Consideration 承担风险的多能力 5个影响承担风险能力的因素
+      - PA <- **fair market value**
 
-    1. plan status 目前上 surplus or deficites, higher surplus implies greater risk tolerance
-    2. Firm's financial status and profitability: 公司经营越好，pension承担风险能力越低。因为公司可以contribute.  greater firm's profitability, less the debt ratio, then greater ability to tolerent risks
-    3. Sponsor and pension fund rosk exposure  公司和pension 相关性corr越小，则两者风险可以diversified，risk tolerance强
-    4. Plan features 提前退休 earky retirement & lump sum distribtion 一笔大提款，会降低 risk tolerance
-    5. workforce characteristics 人员结构相关的 人越年轻 risk tolerence 越好
+      - PBO <- the blended approach 
+
+        discount the **funded portion using (higher )expected return on PA**, and **discount the unfunded portion based on the (lower) yield on tax-exempt municipal bond**
+
+- **Risk Consideration** 承担风险的多能力 5个影响承担风险能力的因素 (above or below average)
+
+    1. plan status 目前上 surplus or deficits, higher surplus implies greater risk tolerance
+    2. **Firm's financial status and profitability**: 公司经营越好，pension承担风险能力越低。因为公司可以contribute.  greater firm's profitability, less the debt ratio, then greater ability to tolerent risks
+    3. **Sponsor and pension fund risk exposure (correlation between sponsor's business & pension)** 公司business和 pension 相关性corr越小，则两者风险可以diversified，risk tolerance强
+    4. **Plan features** 提前退休 **early retirement & lump sum distribution** 一笔大提款，会降低 risk tolerance 如果fund可以提前提款等，则对流动性liquidity需求高，则 less risk tolerance
+    5. workforce characteristics 人员结构相关的 人越年轻 risk tolerance 越好，因为能往pension里贡献钱越多
 
 - Investment Objective 
 
-    1. Meet Pension Liabilties
-    2. Minimise Contribtuion
-
-### Pension Asset Allocation
-
-1. 如果 pension 的lia payment 稳定，所以要有稳定的asset匹配支出。所以买 bonds
-2. 如果 time horizon 长，可以承担更多risks，为了减少contribution可以增加高收益的，买 equity
-3. 如果为了抗通胀 (1) risk tolerance低，买TIPS 通胀债券 (2) risk tolerance 高，如人员年轻 可以买 RE Commodity
+    1. Match liability with assets (PBO & PA)
+    2. Minimise Contribution
 
 ### DC Plan
 
 Plan Sponsors 不负责 investment risks
 
+### IPS Pension Fund
+
+1. Stakeholders
+
+![image-20240102123900496](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123900496.png)
+
+2. Liability and Investment Horizon
+
+![image-20240102123948151](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123948151.png)
+
+![image-20240102124035971](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124035971.png)
+
+3. Liquidity Needs
+
+![image-20240102124056062](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124056062.png)
+
+4. External Constraint
+
+![image-20240102124210770](./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240102124210770.png)
+
+5. Risk Consideration
+
+![image-20240102124401605](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124401605.png)
+
+6. Investment Objective
+
+![image-20240102124428307](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124428307.png)
+
+7. Asset Allocation
+
+![image-20240102124502390](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124502390.png)
+
+Pension Asset Allocation
+
+1. **如果 pension 的 lia payment 稳定**，所以要有稳定的asset匹配支出。**所以买 bonds**
+2. **如果 time horizon 长，可以承担更多risks**，为了减少contribution**可以增加高收益的，买 equity**
+3. 如果为了**抗通胀** (1) risk tolerance低，买TIPS 通胀债券 (2) risk tolerance 高，如人员年轻 可以买 RE Commodity
+
+- P.S. remember, alternative investments 
+  1. require higher specialties, require complexity and skills (greater selection risks)
+  2. higher fees (because of high management and skills)
+  3. for Pension Fund (large scale), attractive opportunity might be scarce.
+  4. reduce liquidity of the fund, such as private real estate
+
 ---
 
 ## SWF Sovereign Wealth Funds
 
-### Types
+### Type
 
-- Budget Stablisation Funds 平准基金 用于平衡budget & economy稳定基金 from commodity price volatility and external shocks
+- **Budget Stablisation Funds 平准基金 insulate the budget & economy from commodity price volatility and external shocks **用于平衡经济和财政，from 大宗价格变化，如俄罗斯石油
+  
   - Chile: Economic and Social Stabilization Fund; Timor-Leste Petroleum Fund; Russia’s Oil Stabilization Fund
-- Development Funds 发展基金，造桥修路 infrastructure，由 project 项目主导
+  
+- **Development Funds 发展基金 support economic development**
+  
+  ​	造桥修路 infrastructure，由 project 项目主导
+  
   - Mubadala (UAE); Iran’s National Development Fund; Ireland Strategic Investment Fund
-- Saving Funds 储蓄基金，用于把能源开采提前赚的钱投资起来，避免将来能源枯竭了没钱了
+  
+- Saving Funds 储蓄基金，**share wealth across generations** by transforming proceeds from the **sale of non-renewable assets into long-term wealth** and diversified financial assets
+  
+  用于把能源开采提前赚的钱投资起来，避免将来能源枯竭了没钱了
+  
   - Abu Dhabi Investment Authority; Kuwait Investment Authority; Qatar Investment Authority; Russia’s National Wealth Fund 如沙特
-- Reserve Funds 外汇储备基金，用于稳定外汇，reduce the negative carry costs of holding reserves or earn returns on ample reserves
+  - Norway 北海油田的钱
+  
+- **Reserve Funds 外汇储备基金，reduce the negative carry costs of holding reserves**
+
+  用于稳定外汇，reduce the negative carry costs of holding reserves or earn returns on ample reserves
+
   - China Investment Corporation; Korea Investment Corporation; GIC Private Ltd. (Singapore)
-- Pension Reserve Funds 为了保证国家pension outflows
+
+- **Pension Reserve Funds 为了保证国家pension outflows** . Set to meet identified future outflows of pension payments
+
   - National Social Security Fund (China); New Zealand Superannuation Fund; Future Fund of Australia
 
-### Risks Tolerence
+### SWF IPS
 
-![Screenshot 2023-11-25 at 21.53.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252154641.png)
+1. Stakeholders
+   - the **ultimate SWF stakeholders** are the **current and future citizens** (or residents)
+   - the management or investment office: invest according to investment policy and objectives
+   - SWF's board: **oversee** the management or investment, and has a **fiduciary duty to the ultimate beneficiaries**
+2. Liabilities and Investment Horizon
 
-### Investment Objectives
+![image-20240102130804171](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130804171.png)
 
-![Screenshot 2023-11-25 at 21.58.36](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252158395.png)
+3. Liquidity Needs
 
-### Asset Allocation
+![image-20240102131145632](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131145632.png)
+
+4. External Constraints
+   - Legal and Regulatory: **transparent and accountable manner**
+   - Tax: **tax-free**
+
+5. Investment Objectives
+
+![image-20240102130301158](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130301158.png)
+
+6. Asset Allocation
+
+![image-20240102130322213](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130322213.png)
 
 - **Budget stabilization funds.** 
 
@@ -210,11 +303,25 @@ Plan Sponsors 不负责 investment risks
 
   These have high allocations to equities and alternatives due to a long investment horizon and low liquidity needs in the accumulation phase.
 
+7. Risks Tolerance
+
+![Screenshot 2023-11-25 at 21.53.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252154641.png)
+
 ---
 
-## Endowment 如校园基金会
+## Endowment & Foundations 如校园基金会
 
-- **Stakeholder**: Student Alumni, employees 因为免税，所以没有 government作为 stakeholder
+1. Stakeholders
+
+![image-20240102131506749](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131506749.png)
+
+**Stakeholder**: Student Alumni, employees 因为免税，所以没有 government作为 stakeholder
+
+2. Liabilities and Investment Horizon: Endowments
+
+![image-20240102131606933](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131606933.png)
+
+![image-20240102131931052](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131931052.png)
 
 - **Time Horizon**: perpetual
 
@@ -228,38 +335,23 @@ Plan Sponsors 不负责 investment risks
   - **Market Value Rule**: if w = 0, then $Spending_{t+1} = SpendingRate \times Average \ AUM$，用开支比例 * 平均以前的情况
   - Hybrid Rule: $w\in(0,1)$
 
-- Liqudity Needs
+3. Liquidity Needs
 
-  $LN = CF\ Outflows - CF\ Inflow$
+![image-20240102132012133](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132012133.png)
 
-  - Liquidty Related Factors:
+**flow-through**: A flow-through entity is a legal business entity that passes any income it makes straight to its owners, shareholders, or investors. 相当于 fund 会把 endowment 之间转给 universities 和 beneficiaries
 
-   1. Fundraising from donors 
+4. External Constraints
 
-      	1. Donation 有钱，对流动性的需求低
-          	2. Dependency of Donation 对donation对需求低，LN低
+![image-20240102133003967](./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240102133003967.png)
 
-   2. Reliance of Spending from Endowment 对使用endowment开支对依赖性越高 LN越高
+5. Investment Objectives
 
-   3. Capability of endowment  or debt insurance 
+![image-20240102133048348](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102133048348.png)
 
-      对debt issue 的需求高 对 endowment需求高，则LN高
+6. Asset Allocation
 
-- Investment Objectives
-
-  1. Maintain Purchase Power 保持不亏钱
-  2. Maintain the level of Spending 保持有钱花spending时有钱
-
-- Asset Allocation
-
-  - 为了赚钱 可以配 alternative investment in majority > 50%
-  - (small US unversisty endownment may exposure to home bias, as would like to buy more US equity and US alternatives)
-
-### Private Fundation 
-
-由个人 或者由公司设立，慈善性质低
-
-为了operation 或者 community 相关的，为公众和慈善减税(变成了endowment )
+![image-20240102132916482](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132916482.png)
 
 ### Difference Between US Foundations and Unversity Endowment
 
@@ -277,7 +369,7 @@ Plan Sponsors 不负责 investment risks
 
 ---
 
-## Banks
+## Banks & Insurers
 
 ![Screenshot 2023-11-25 at 23.14.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252314907.png)
 
