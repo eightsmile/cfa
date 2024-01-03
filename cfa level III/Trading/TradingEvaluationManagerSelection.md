@@ -17,7 +17,7 @@
 - **Cash Flow Needs**: 
 
     - 避免 cash drag
-        - Equalisation: invest cash temporarily to futures and ETFs 
+        - **Equitisation**: invest cash temporarily to futures and ETFs 
         - 用于避免 cash drag。花一部分钱买 equity futures 股指期货 或者 ETFs 挣收益
 
 - **Corporate Actions** 其他事项
@@ -106,7 +106,7 @@
         - Cons: 无法控制 outlayer
     - TWAP 按时间 equal-weighted time schedule
 
-2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股
+2. Liquidity Seeking 在不同市场中寻找流动性，适合大盘股
 
     Take advantage of market liquidity **across multiple venues by trading faster** when liquidity exists at a favourable price.
 
