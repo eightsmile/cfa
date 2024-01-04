@@ -171,13 +171,15 @@
 
 #### Implementation Shortfall IS （执行落差 显性+隐性） 交易成本拆分
 
+The implementation shortfall (IS) metric7 is the most important ***ex post*** trade cost measurement used in finance.
+
 ![image-20240103131940941](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131940941.png)
 
 - $P_n$ current price
 - $P_d$  price at the time of investment decision **(decision price)**
 - $P_0$ arrival price
 
-$Implementation\ Shortfall = Paper\ Return - Real\ Cost = Total\ Cost$ ，再把 total cost 拆分成 1,2,3三部分
+$Implementation\ Shortfall = Paper\ Return - Actual\ Return = Total\ Return$ ，再把 total cost 拆分成 1,2,3三部分
 
 Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 实际只买到了 #900 share (#900 = #800@\$10.5 + #100@\$11 其中#800股用\$10.5买到，#100股用\$11买到).
 
@@ -185,7 +187,7 @@ Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 
 
   - Paper Return = (\$12 - \$10) * #100 = 2000  (paper return 指的是想象中的 return)
 
-  - Real Return = \$12 * #900 - ( $10.5 * #800 + \$11 * #100 ) - 50(fees) = 1250 (real return 指的是实际交易发生的return)
+  - Actual Return = \$12 * #900 - ( $10.5 * #800 + \$11 * #100 ) **- 50(fees)** = 1250 (real return 指的是实际交易发生的return)
 
   - Total Cost = Paper Return - Real Return = 750
 
@@ -296,7 +298,7 @@ $Active \ Return \leftrightarrow \alpha$
 
   $G = \frac{1+R}{1+B}-1=\frac{R-B}{1+B} =\frac{A}{1+B}$
 
-### Performance Attribution
+### Performance Attribution 只管分析 return / risks 的来源，不管分析 investment quality 不管投资好坏
 
 1. Return-based attribtuion 
 
@@ -336,8 +338,16 @@ $Active \ Return \leftrightarrow \alpha$
 
 - BF Model
 
-  纵坐标起点是 B <- 整个benchmark 的总收益率 P.S. B_i 为各行业的 benchmark return
+  纵坐标起点是 B, 整个benchmark 的总收益率 P.S. B_i 为各行业的 benchmark return
 
+  $B = \text{total benchmark return}$
+  
+  $B_i$ portfolio 中不同 component 的 benchmark return
+  
+  $W_i$ Benchmark weight, 
+  
+  $w_i$ portfolio component weight
+  
   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png" alt="Screenshot 2023-11-29 at 21.27.20" style="zoom:50%;" />
 
 ##### Carhart 4 Factor Model
@@ -395,16 +405,16 @@ Type of Attribution Analysis
 
 | Investment Decision Making Process | Relative (vs. Benchmark)                                     | Absolute                                                     |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Bottom up 从个体security 看        | Position’s marginal contribution to tracking risk            | Position’s marginal contribution to total risk               |
-| Top down 由行业看到个体            | Attribute tracking risk to relative allocation and selection decisions | Factor’s marginal contribution to total risk and specific risk |
-| Factor based 四因子                | Factor’s marginal contribution to tracking risk and active specific risk | Same as the above                                            |
+| Bottom up 从个体security 看        | Position’s marginal contribution to **tracking risk**        | Position’s marginal contribution to **total risk**           |
+| Top down 由行业看到个体            | Attribute **tracking risk** to relative allocation and selection decisions | Factor’s marginal contribution to **total risk and specific risk** |
+| Factor based 四因子                | Factor’s marginal contribution to **tracking risk and active specific risk** | Same as the above                                            |
 
 ### Benchmarking Investments and Managers
 
 - Asset-Based Benchmark
 - Liability-Based Benchmark
 
-#### Property of being a Good Benchmark
+#### Property of being a Good Benchmark (SAMURAI)
 
 - Specified in Advanced 事先确定
 - Appropriate 能否反应 portfolio style
@@ -416,35 +426,43 @@ Type of Attribution Analysis
 
 #### Asset-Based Benchmarks
 
-- Absolute return benchmarket
+- **Absolute return benchmarket**
 
   minimum target return, 比如 hurdle rate
 
+  ​	An absolute return benchmark is a minimum target return that the manager is expected to beat. It will not determine how the manager performed relative to other managers.
+
   Cons: 问题在于 不能做到 un-ambiguous 因为为指定的rate，没有成分的weights
 
-- Broad Market Indexes 用大盘指数 做benchmark
+- **Broad Market Indexes 用大盘指数 做benchmark**
 
   Cons: 不 appropriate 可能无法反应portfolio的风格
 
-- Style Index 比较好的选择，可以反映风格
+- **Style Index 比较好的选择，可以反映风格**
 
   Cons: 无法分散化，因为集中于某个 style
 
-- Factor-Model-Based Benchmark 随便取factors
+- **Factor-Model-Based Benchmark 随便取factors**
 
   通过回归构建一个模型，作为benchmark
+
+  ​	Factor-model-based benchmarks are constructed by regressing the portfolio’s return against the factors believed to influence returns.
 
   Cons: not intuitive 无解释效益
 
   Ambiguous 因为不同模型会有不同结果 ，misspecificed
 
-- Return-Baed Benchmark 固定有 style factor 作为因子，如 Four Factors
+- **Return-Baed Benchmark 固定有 style factor 作为因子，如 Four Factors**
 
   Cons: 能反映style，但是不能反映 what they own 持仓
 
   Cons: 不能反映 style 改变
 
-- Manger Universe, Manager Peer Group 投资经理们的业绩比较
+- **Manger Universe, Manager Peer Group 投资经理们的业绩比较**
+
+  Pros 可以与选定的style的FM比
+
+  ​	A manager universe—or manager peer group—is a broad group of managers **with similar investment disciplines**. Although not a benchmark, per se, a manager universe allows investors to make comparisons with the performance of other managers following similar investment disciplines.
 
   Cons: survivor bias , cannot be specified in advance, not investable
 
@@ -462,8 +480,8 @@ B 右边 相当于基金经理通过自己能力挣的钱
 
 - P - Portfolio Returns
 - M - Market Index Return
-- S - Style Return
-- A - Active Management Return
+- **S - Style Return**
+- **A - Active Management Return**
 - E = (P-M), difference between the portfolio and the broad market index
 - If the benchmark is a broad market index, then $S$ is assume to be zero. Then, $P = M+A$
 
@@ -486,7 +504,7 @@ Rationale
 
 - 因为 Leverage 大，所以收益率高。此时用有杠杆的和无杠杆的 port & benchmark 比，是不可比的
 
-### Performance Appraisal
+### Performance Appraisal 用来分析FM水平
 
 - Sharpe Ratio
 
@@ -495,6 +513,8 @@ Rationale
   Risk -> excess return
 
   Cons: Risks have upside and downside, only downside vol worries
+
+  无法解决 非正态分布的问题
 
 - Treynor Ratio
 
@@ -528,19 +548,23 @@ Rationale
 
 - Sortino Ratio
 
-  $Sor R = \frac{R_p - R_T}{\sigma_{Downside}}$
+  $Sor R = \frac{R_p - MAR}{\sigma_{Downside}}$
 
-  - $R_T$ is the minimum required return, e.g. hurdle rate
+  - $MAR$ is the minimum required return, e.g. hurdle rate
 
-  - $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
+  - The semistandard deviation : $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
 
     ![Screenshot 2023-11-30 at 19.01.05](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301901297.png)
 
     Excess return w.r.t. Target, per unit of downside return 
+    
+    **The Sortino ratio penalizes a manager when portfolio return is less than the MAR (minimum acceptable return) and thus is preferred when the investor’s goal is to preserve capital.**
 
-- Capture Ratio
+- **Capture Ratio**
 
   $CR = \frac{UC}{DC}$
+
+  用compound return算 Rb or Rp, $1+ R_b = \sqrt[3]{ (1+R_1)(1+R_2)(1+R_3)}$
 
   - $UpsideCapture = \frac{R_p}{R_b}$ benchmark上涨1，portfolio上涨的比率为UC，UC大于一好
 
@@ -554,9 +578,9 @@ Rationale
 
     ![Screenshot 2023-12-01 at 13.28.23](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-01%20at%2013.28.23.png)
 
-- Drawdown: peak-to-trough loss
+- Drawdown: cumulative peak-to-trough loss **during a continuous period**
 
-- Drawdown Duration 从peak最高点跌下来，再回到peak的时间
+- Drawdown Duration 从peak最高点跌下来，再回到peak的时间  **strat of the drawdown** until the cumulative drawdown **recovers to zero**.
 
 ---
 
