@@ -1,54 +1,54 @@
 # Trading Evaluation & Manager Selection
 
-## Motivations to Trade
+## Trading
 
-- **Profit Seeking**:
+### Motivations to Trade 交易的目标 *4
 
+- 1 **Profit Seeking**:
     - Trade Urgency 越urgent to trade，受market impact影响越大，TC越高
-
+    
     - Alpha Decay, Alpha 随着时间过去会越来越小，所以时间过的越久，alpha 超额收益越少
         - Alpha Decay 越大，即很快 alpha就会 decay到0，那么 trade urgency 越大。
-
-- **Risk Management**: 
-
+    
+- 2 **Risk Management**: 
     1. Remain at targeted risks level
     2. Hedge risks
-
-- **Cash Flow Needs**: 
-
+    
+- 3 **Cash Flow Needs**: 
     - 避免 cash drag
         - Equalisation: invest cash temporarily to futures and ETFs 
         - 用于避免 cash drag。花一部分钱买 equity futures 股指期货 或者 ETFs 挣收益
-
-- **Corporate Actions** 其他事项
-
+    
+- 4 **Corporate Actions** 其他事项
     1. Dividends / coupons
     2. Index tracking
     3. Margin or Collateral calls
 
 ### Trading Strategies and Strategy Selection
 
-#### Trade Strategy Inputs 影响价格的因素 作为 inputs
+### Trade Strategy Inputs 影响价格的因素 作为 inputs
 
 - Order Characteristics:
-    - Side: 
+    - **Side**: 买 or 卖
         - Demand Liquidity Side: 需要买的，与大多数人一致，demand越多，价格推升越多，T.C.(trading cost) 越大
         - Supply Liquidity Side 可以高价卖，提供流动性，T.C.小
-    - Size 绝对交易量
-    - Relative Size 自己的交易量占整个security 当天交易量的占比 ADV (average daily volume)
+    - **Size**: 绝对交易量
+    - **Relative Size**: 自己的交易量占整个security 当天交易量的占比 ADV (average daily volume)
 - Market Conditions
     - Liquidity Crises
     - Mkt Volatility
 - **Market Impacts and Execution Risks**
     - Market Impact 由于越卖越贵导致的价格提升，带来的T.C.提升
     - Execution Risks 建仓时，由于价格波动带来的建仓成本影响
-        - 提升 trade urgency 可以在更短时间内建仓，避免时间长，价格波动带来的成本变化
+        - **提升 trade urgency 可以在更短时间内建仓**，避免时间长，价格波动带来的成本变化
+        
+          **Trading with greater urgency results in lower execution risk**
 - Security Characteristics
     - 如 海外equity，Individual Security Liquidity
 - User-Based Consideration
     - 个人越厌恶风险，trade urgency 越高（越急着做交易）
 
-#### Reference Pirce
+### Reference Pirce
 
 - Pre-trade Benchmark 交易前的 benchmark 适用于 Quant Trader 因为需要有数据做跑模型，只能用此前的数据
 
@@ -85,26 +85,30 @@
     - Agency Trades 由 broker 挣佣金 commission fees，撮合交易。因为dealer承担更多风险，所以一般 bid-ask spread更大一点
 - Low-touch automated execution strategies 低参与的电子化的平台
     - Alternative Trading Systems ATS (Non-exchange trading venues)
-    - DMA Direct Market Access
+    - **DMA Direct Market Access (for small + liquid trades)**
     - Dark Pools 不会披露交易信息，匿名交易，便于机构投资者 做大笔的交易
 - Algorithmic Trading
     - Execution Algorithms 用于执行
     - Profit-seeking Algorithms 通过交易挣超额收益的算法
 
-#### Execution Algorithm 电子化 execution trading 的五个交易方法
+### Execution Algorithm 电子化 execution trading 的五个交易方法
 
 1. Scheduled (POV, VWAP, TWAP) 适用小订单，不适用大订单，有可能完不成交易如果illiquid
 
-    - POV (percentage of volume) 如 交易量为市场交易量的1%
+    Scheduled algorithms are appropriate for orders in which **portfolio managers or traders do not have expectations for adverse price movement during the trade horizon**. These algorithms are also used by portfolio managers and traders who have **greater risk tolerance for longer execution time periods** and are more concerned with **minimizing market impact**. Scheduled algorithms are often appropriate **when the order size is relatively smal**l (e.g., no more than 5%–10% of expected volume), the **security is relatively liquid**, or the orders are part of a risk-balanced basket and trading all orders at a similar pace will maintain the risk balance.
+
+    1. POV (percentage of volume) 如 交易量为市场交易量的1%
         - Pros: take advantage of increase liquidity 因为与市场保持一致
-        - Cons: Higher Trading Cost 由于自己与市场一致，所以价格会被推高 ，有T.C.
+        - Cons: Higher Trading Cost 由于自己与市场一致，所以价格会被推高 ，有 T.C.
         - Cons: trade may not be complete 无法保障交易达成
-    - VWAP 按交易量 （前一天的交易量分时点给做权重）然后按权重分配到此次交易中，对订单拆分
+    2. VWAP 按交易量 （前一天的交易量分时点给做权重）然后按权重分配到此次交易中，对订单拆分
         - 由于empirically，一个trading day 开始和结束时交易多，所以为VWAP curve 是 U shape
         - Pros: 能 compete the trade
         - Cons: 对于 illiquid stock 还是可能完不成交易
-        - Cons: 无法控制 outlayer
-    - TWAP 按时间 equal-weighted time schedule
+        - Cons: 无法控制 **outlayer**
+    3. TWAP 按时间 equal-weighted time schedule
+        - Pros: exclude outlayers
+        - Text Sample: Portfolio managers may choose TWAP when they wish to **exclude potential trade outliers**. Trade outliers may be **caused by trading a large buy order at the day’s low or a large sell order at the day’s high 价格的过高和过低**. **If market participants are not able to fully participate in these trades, then TWAP may be a more appropriate choice.** The TWAP benchmark is used by portfolio managers and traders to evaluate fair and reasonable trading prices in market environments with high volume uncertainty and for securities that are subject to spikes in trading volume throughout the day.
 
 2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股
 
@@ -136,28 +140,71 @@
 
     - 寻求 highest probability of executing, best market price
 
-### Comparison of Markets
+### Comparison of Markets 交易方法
 
-交易平台 看 (1) Size (2) liquidity
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131328037.png" alt="image-20240103131328037" style="zoom:33%;" />
+
+
+
+交易平台 先看 (1) Size, 再看 (2) liquidity
 
 - 流动性差， Size 高 => 选 high-touch 人工交易
-    - Principal (dealer risks 挣 spread 多): Urgency高的在此交易
-    - Agency (broker without risks 挣 commission 少) : Urgency低的在此交易，T.C.低
+    - Principal (**dealer** risks 挣 spread 多): **Urgency高 **的在此交易
+    - Agency (**broker** without risks 挣 commission 少) : **Urgency低** 的在此交易，T.C.低
 
 - 流动性好，size 小 => 选 low-touch 电子化平台
     - （5个 algorithm）
 
 - P.S. (on-the-run) Treasury 国债，可以选 Algorithm 交易，因为流动性好
 
-## Trade Evaluation
+- For Fixed Income: low transparency low price discoverying ability, 
+    1. Large + urgent => high touch broker
+    2. Large + non-urgent => trading algorithms
+    3. Small + Liquid => electronic trading
 
-### Implementation Shortfall IS 执行落差 显性+隐性
 
-- IS Formulation
+### Trade Evaluation
 
-  $IS = Execution\ Cost + Opportunity\ Cost + Fees$
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131841288.png" alt="image-20240103131841288" style="zoom:33%;" />
 
-- Expanded Implementation Shortfall
+#### Implementation Shortfall IS （执行落差 显性+隐性） 交易成本拆分
+
+![image-20240103131940941](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131940941.png)
+
+- $P_n$ terminal price
+- $P_d$ decision price
+
+$Implementation\ Shortfall = Paper\ Return - Real\ Cost = Total\ Cost$ ，再把 total cost 拆分成 1,2,3三部分
+
+Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 实际只买到了 #900 share (#900 = #800@\$10.5 + #100@\$11 其中#800股用\$10.5买到，#100股用\$11买到).
+
+- Total return: 
+
+  - Paper Return = (\$12 - \$10) * #100 = 2000  (paper return 指的是想象中的 return)
+
+  - Real Return = \$12 * #900 + $10.5 * #800 + \$11 * #100 + 50 = 1250 (real return 指的是实际交易发生的return)
+
+  - Total Cost = Paper Return - Real Return = 750
+
+  - 把 Total Cost 拆分成 1，2，3
+
+    1. execution cost 由于交易的慢了，导致买贵了的cost （即 买到的 900 其中 800@\$10.5 100@\$11 与 理想情况 900@\$10 的差值
+
+       (\$10.5 - \$10 ) * #800 + (\$11 - \$10) * #100
+
+    2. opportunity cost 由于 no being execute 没买到的机会成本 （即有 100 没买到）
+
+       (#1000 - #800 - #100) * (\$12 - $10)
+
+    3. Fee
+
+       50
+
+-  Formulation
+
+  $IS = 1. Execution\ Cost + 2. Opportunity\ Cost + 3. Fees$
+
+- Expanded Implementation Shortfall, **Execution Cost = Delay Cost + Trading Cost**
 
   $Expanded \ IS = Delay\ Cost + Trading\ Cost + Opportunity\ Cost+ Fees$
 
@@ -165,7 +212,9 @@
 
 - 减少opp costr的方法：Appropriate Order size => minimise the opportunity cost
 
-#### Calculation
+#### Trade Cost Measurement 
+
+![image-20240103132041810](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103132041810.png)
 
 - Cost in Dollar per share: $Cost(\$/share) = Side \times (\bar{P}-P^*)$
 - Cost in Total Dollar: $Cost(\$) = Side \times (\bar{P}-P^*) \times Shares $
