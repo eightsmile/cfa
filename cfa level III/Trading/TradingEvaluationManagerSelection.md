@@ -93,7 +93,7 @@
 
 ### Execution Algorithm 电子化 execution trading 的五个交易方法
 
-1. Scheduled (POV, VWAP, TWAP) 适用小订单，不适用大订单，有可能完不成交易如果illiquid
+1. Scheduled (POV, VWAP, TWAP) 适用小订单，不适用大订单，**有可能完不成交易如果illiquid**
 
     Scheduled algorithms are appropriate for orders in which **portfolio managers or traders do not have expectations for adverse price movement during the trade horizon**. These algorithms are also used by portfolio managers and traders who have **greater risk tolerance for longer execution time periods** and are more concerned with **minimizing market impact**. Scheduled algorithms are often appropriate **when the order size is relatively smal**l (e.g., no more than 5%–10% of expected volume), the **security is relatively liquid**, or the orders are part of a risk-balanced basket and trading all orders at a similar pace will maintain the risk balance.
 
@@ -102,15 +102,17 @@
         - Cons: Higher Trading Cost 由于自己与市场一致，所以价格会被推高 ，有 T.C.
         - Cons: trade may not be complete 无法保障交易达成
     2. VWAP 按交易量 （前一天的交易量分时点给做权重）然后按权重分配到此次交易中，对订单拆分
+        - 有 schedule
         - 由于empirically，一个trading day 开始和结束时交易多，所以为VWAP curve 是 U shape
         - Pros: 能 compete the trade
         - Cons: 对于 illiquid stock 还是可能完不成交易
         - Cons: 无法控制 **outlayer**
     3. TWAP 按时间 equal-weighted time schedule
+        - 有 schedule
         - Pros: exclude outlayers
         - Text Sample: Portfolio managers may choose TWAP when they wish to **exclude potential trade outliers**. Trade outliers may be **caused by trading a large buy order at the day’s low or a large sell order at the day’s high 价格的过高和过低**. **If market participants are not able to fully participate in these trades, then TWAP may be a more appropriate choice.** The TWAP benchmark is used by portfolio managers and traders to evaluate fair and reasonable trading prices in market environments with high volume uncertainty and for securities that are subject to spikes in trading volume throughout the day.
 
-2. Liquidity Seeking 在不同市场中寻找流动性，适合大盘股
+2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股，**适合大单交易**
 
     Take advantage of market liquidity **across multiple venues by trading faster** when liquidity exists at a favourable price.
 
@@ -128,11 +130,11 @@
 
 4. Dark Strategies / Illiquidity Aggregators
 
-    - Dark Aggregator Algorithm  适合需要匿名交易
+    - Dark Aggregator Algorithm  适合需要匿名交易 Dark pools provide anonymity because no pre-trade transparency exists. 不确定性 uncertainty 高
     - Appropriate 适合 for: 
         - 大单 large order size, 
-        - illiquid asset with higher ask-bid spread, 
-        - no need to execute the order entirely
+        - **illiquid asset with higher ask-bid spread,** 
+        - **no need to execute the order entirely**
 
 5. Smart Order Routers (SORs)
 
@@ -171,8 +173,9 @@
 
 ![image-20240103131940941](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131940941.png)
 
-- $P_n$ terminal price
-- $P_d$ decision price
+- $P_n$ current price
+- $P_d$  price at the time of investment decision **(decision price)**
+- $P_0$ arrival price
 
 $Implementation\ Shortfall = Paper\ Return - Real\ Cost = Total\ Cost$ ，再把 total cost 拆分成 1,2,3三部分
 
@@ -182,7 +185,7 @@ Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 
 
   - Paper Return = (\$12 - \$10) * #100 = 2000  (paper return 指的是想象中的 return)
 
-  - Real Return = \$12 * #900 + $10.5 * #800 + \$11 * #100 + 50 = 1250 (real return 指的是实际交易发生的return)
+  - Real Return = \$12 * #900 - ( $10.5 * #800 + \$11 * #100 ) - 50(fees) = 1250 (real return 指的是实际交易发生的return)
 
   - Total Cost = Paper Return - Real Return = 750
 
@@ -204,27 +207,59 @@ Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 
 
   $IS = 1. Execution\ Cost + 2. Opportunity\ Cost + 3. Fees$
 
-- Expanded Implementation Shortfall, **Execution Cost = Delay Cost + Trading Cost**
+- 继续拆分 Further Expanded Implementation Shortfall, **Execution Cost = Delay Cost + Trading Cost**
 
-  $Expanded \ IS = Delay\ Cost + Trading\ Cost + Opportunity\ Cost+ Fees$
+  $Expanded \ IS = 1.1.Delay\ Cost + 1.2.Trading\ Cost + 2.Opportunity\ Cost+ 3.Fees$
+
+- 把 Total Cost 拆分成 1.1, 1.2，2，3
+
+  1. execution cost 由于交易的慢了，导致买贵了的cost （即 买到的 900 其中 800@\$10.5 100@\$11 与 理想情况 900@\$10 的差值
+
+     (\$10.5 - \$10 ) * #800 + (\$11 - \$10) * #100 = 500
+
+     1. **Delay Cos**t:  arrival price: $P_0$ 注意这里是交易了多少的 # 
+
+        **Delay cost = (Number of shares sold × Arrival price) – (Number of shares sold × Decision price)**
+
+         **= Value of shares sold at arrival price – Value of shares sold decision price**
+
+        (\$10.2 - \$10) * #900 = 180
+
+     2. **Trading Cost**
+
+        **Trading cost = (Total shares sold × Execution price) – (Number of shares sold × Arrival price)**
+
+         **= Value of shares sold at execution price – Value of shares sold at arrival price**
+
+        (\$10.5 - \$10.2 ) * #800 + (\$11 - \$10.2) * #100 = 320
+
+     - 1.1 + 1.2 = 1 = 500
+
+  2. opportunity cost 由于 no being execute 没买到的机会成本 （即有 100 没买到）
+
+     (#1000 - #800 - #100) * (\$12 - $10)
+
+  3. Fee
+
+     50
 
 - Delay Cost 决策和下单时间不一样，降低方法：减少时间
 
 - 减少opp costr的方法：Appropriate Order size => minimise the opportunity cost
 
-#### Trade Cost Measurement 
+#### Trade Cost Measurement :$ \frac{ave - *} {*}$
 
 ![image-20240103132041810](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103132041810.png)
 
-- Cost in Dollar per share: $Cost(\$/share) = Side \times (\bar{P}-P^*)$
-- Cost in Total Dollar: $Cost(\$) = Side \times (\bar{P}-P^*) \times Shares $
-- Cost in Basis Points (bps): $Cost (bps) = Side\times \frac{\bar{P}-P^*}{P^*} \times 10,000bp$
-- $P^*$ is the reference price
+- \* **Cost in Dollar per share**: $Cost(\$/share) = Side \times (\bar{P}-P^*)$
+- \* **Cost in Total Dollar**: $Cost(\$) = Side \times (\bar{P}-P^*) \times Shares $
+- \* **Cost in Basis Points (bps)**: $Cost (bps) = Side\times \frac{\bar{P}-P^*}{P^*} \times 10,000bp$
+- $P^*$ is the reference price 可以是 arrival price / TWVP / VWAP 等
 - $\bar{P}$ is the average execution price
 
 #### Market Adjusted Cost
 
-用于 separate the trading cost from the general market movement 把由于市场price变动带来的trading cost 拆开
+用于 separate the trading cost from the general market movement 把由于市场price变动带来的trading cost 拆开: Trade cost evaluation calculates **trading costs and performance relative to a specified trading cost or trading performance benchmark**. 自己的交易 将对于 benchmark 交易。Costs are determined by the transaction amount paid above the reference price benchmark for a buy order. The market-adjusted cost calculation involves three steps:
 
 $Market-Adjusted\ Cost (bps) = Arrival Cost (bps) - \beta \times Index \ Cost (bps)$
 
@@ -234,7 +269,12 @@ $Index\ Cost = \frac{Index VWAP - Index\ Arrival Price}{Index\ Arrival Price} \t
 
 #### Trade Government 交易政策描述
 
-List of Policy, Borning
+List of Policy, Borning 确保合规 **procedures are in line with the fiduciary duty**
+
+- Meaning of best execution
+- factors determing the optimal order execution approach
+- listo f brokers and execution venue
+- monitor execution arrangement
 
 ---
 
@@ -292,13 +332,13 @@ $Active \ Return \leftrightarrow \alpha$
 
   起点是 0
 
-  ![Screenshot 2023-11-29 at 20.50.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292050277.png)
+  <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292050277.png" alt="Screenshot 2023-11-29 at 20.50.19" style="zoom:50%;" />
 
 - BF Model
 
   纵坐标起点是 B <- 整个benchmark 的总收益率 P.S. B_i 为各行业的 benchmark return
 
-  ![Screenshot 2023-11-29 at 21.27.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png)
+  <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png" alt="Screenshot 2023-11-29 at 21.27.20" style="zoom:50%;" />
 
 ##### Carhart 4 Factor Model
 
