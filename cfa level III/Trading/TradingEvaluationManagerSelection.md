@@ -16,7 +16,7 @@
     
 - 3 **Cash Flow Needs**: 
     - 避免 cash drag
-        - Equalisation: invest cash temporarily to futures and ETFs 
+        - **Equitisation**: invest cash temporarily to futures and ETFs 
         - 用于避免 cash drag。花一部分钱买 equity futures 股指期货 或者 ETFs 挣收益
     
 - 4 **Corporate Actions** 其他事项
@@ -110,7 +110,7 @@
         - Pros: exclude outlayers
         - Text Sample: Portfolio managers may choose TWAP when they wish to **exclude potential trade outliers**. Trade outliers may be **caused by trading a large buy order at the day’s low or a large sell order at the day’s high 价格的过高和过低**. **If market participants are not able to fully participate in these trades, then TWAP may be a more appropriate choice.** The TWAP benchmark is used by portfolio managers and traders to evaluate fair and reasonable trading prices in market environments with high volume uncertainty and for securities that are subject to spikes in trading volume throughout the day.
 
-2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股
+2. Liquidity Seeking 在不同市场中寻找流动性，适合大盘股
 
     Take advantage of market liquidity **across multiple venues by trading faster** when liquidity exists at a favourable price.
 
