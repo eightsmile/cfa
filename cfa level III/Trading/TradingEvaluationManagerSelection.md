@@ -586,6 +586,8 @@ Rationale
 
 ## Manager Selection Process
 
+Insert 1
+
 ### Manager Universe 先确定可选的范围
 
 所有 feasible manager 可选的基金经理
@@ -613,15 +615,20 @@ The manager universe 提前根据 **IPS** filter了符合的
 - 影响 expected cost的因素，size, shape, mean, dispersion, etc. 
     - 如 skilled & un-skilled FM 的 mean 差距小, dispersion 大（方差大），则cost的差距小
 - 市场越有效，超额收益越少，opportunity cost of hiring a unskilled FM 越小
+- In deciding which fund to hire, the **goal is to avoid making decisions based on short-term performance** (trend following) and to **identify evidence of behavioral biases** in the evaluation of managers during the selection process.
+- **Psychologically, people seek to avoid feelings of regret.** Type I errors are errors of commission, active decisions that turn out to be incorrect, whereas Type II errors are errors of omission, or inaction. **Type I errors create explicit costs, whereas Type II errors create opportunity costs.** Because individuals appear to put less weight on opportunity costs, **Type I errors are psycho­logically more painful than Type II errors.**
+- **Type I errors are more transparent to investors, so they entail not only the regret of an incorrect decision but the pain of having to explain this decision to the investor.** Type II errors, such as firing (or not hiring) a manager with skill, are less transparent to investors—unless the investor tracks fired managers or evaluates the universe themselves.
+-  突然说因为 Type I error 更显性 explicit，更透明 transparent，同同时 Behaviourally, people seek to avoid the feelings of regret 所有 Type I error 跟被重视。而 Type II error is about the opportunity cost, which is less tranparent unless they evaluate un-hired FM. 所以经常被忽视
 
 ### Quantitative
 
 ##### Style analysis 时刻关注是否FM的投资style 有变化
 
 - Returns-Based Style Analysis (RBSA) 回归 Top-Down，用 style factor做 **regression** ，比较基金的收益和 那个style factor  的beta 大，那么port就是哪个style
-    - Pros: 可以纵向比较，看FM不同时间的style
+    - Pros: 可以纵向比较，看FM不同时间的style。
+    - Pros: require less efforts to acquire data 尽管需要跑回归，但是由于进入时间序列数据比较好获取，所有数据好收集
     - **Not subject to window dressing 不受持仓的影响，因为不看持仓**
-    - Cons: 对于 illiquid securities， 由于样本量小，return data is fluent 被平滑, may understate the risks exposure
+    - Cons: **对于 illiquid securities， 由于样本量小，return data is fluent 被平滑,** may understate the risks exposure
     - Cons: 不精确 因为没看持仓
 - Holding-based style analysis (HBSA)
     - Bottom up 选某个时点的weights
@@ -643,6 +650,7 @@ The manager universe 提前根据 **IPS** filter了符合的
 - Philosophy 投资理念
     - Passive Strategy seek to capture return from systematic risk premium
     - Active Strategy seek return from misplacing. The **inefficiency is from (1) behavioural and (2) structural**
+    - Style Drift: 与投资决策过程不一致
 - Investment Personnel: Process, People, Portfolio 投资团队为people
 - Investment Decision MakeingProcess:
     - Signal Creation 市场产生信号，产生观点 (idea generation): unique, timely, interpreted differently
@@ -659,11 +667,18 @@ The manager universe 提前根据 **IPS** filter了符合的
         - Owner 归客户
         - 可 customised
         - tax efficiency 可以做税务筹划
+        
+          **investors who is focused on tax efficiency would prefer a separately managed account** because a separate account allows the implementation of tax-efficient investing and trading strategies
         - transparency  账户情况可以给client公开
         - Cons: cost 贵因为客制化，tracking risk高因为客制化，
     - (2) pooled vehicles 大家一起玩
     - Liquidity: ETFs, closed-end fund 流动性好，因为有二级市场可以赎回（open-end fund 只能找 FM 赎回，所有流动性差）
-- Monitoring
+    
+        - ETFs Close-end > Open-end > LP & PE
+        - **Limited partnerships and private equity funds typically require investors to invest their money for longer periods.**
+    
+    Insert 2
+- Management Team 管理，比 个人管理Fund好，因为 key person risk降低
 
 #### Management Fee
 
@@ -671,10 +686,18 @@ The manager universe 提前根据 **IPS** filter了符合的
 
 - Performance-based Fees (**maximum and high-water mark,** or **clawback**)
 
-    1. Symmetric Structure 利润profit为正，收fee，为负扣钱
-    2. Bonus Structure with limited exposed to the downside and fully exposed to upside 挣钱有奖励，亏了不罚钱
-    3. Bonus structure with limited exposed to either the downside or the upside 上下两端都有limit，亏有限，奖有限
+    1. A **symmetrical structure** in which the manager is fully exposed to both the downside and upside (Computed fee = Base + Sharing of performance);
+    
+        利润profit为正，收fee，为负扣钱
 
+    2. A **bonus structure in which the manager is not fully exposed to the downside but is fully exposed to the upside** [Computed fee = Higher of either (1) Base or (2) Base plus sharing of positive performance]; or
+    
+       挣钱有奖励，亏了不罚钱。有可能导致 FM **has the greatest incentive to assume additional risk to earn a higher investment management fee**  因为挣得多了给incentive多，亏了也不亏incentive。不像3，如果亏了则亏管理费
+    
+    3.  **bonus structure in which the manager is not fully exposed to either the downside or the upside** [Computed fee = Higher of (1) Base or (2) Base plus sharing of performance, to a limit].
+    
+       上下两端都有limit，亏有限，奖有限
+    
     - 看题目思考分析，没有固定的收费标准，因为每个公司都不一样
     
 - Three basic ways of performance-based fees
@@ -684,3 +707,22 @@ The manager universe 提前根据 **IPS** filter了符合的
 
 - Other Considerations
 
+**Performance-based fee structures** convert symmetrical gross active return distributions into asymmetrical net active return distributions, reducing variability on the upside but not the downside. As a result, a single standard deviation calculated on a return series that incorporates active returns, above and below the base fee, can lead to the underestimation of downside risk. In contrast, fully symmetric fees (fully exposing the manager to both upside and downside results) tend to yield closer alignment in risk and effort than bonus-style fees.
+
+
+
+一般来说 performance fee 高，意味着 Higher active investment
+
+- Sample Text: about fee & volatility
+
+  Which of the following fee structures *most likely* decreases the volatility of a portfolio’s net returns?
+
+  Incentive fees are fees charged as a percentage of returns (reducing net gains in positive months and reducing net losses in negative months), its use lowers the standard deviation of realized returns. Charging a management fee (a fixed percentage based on assets) lowers the level of realized return without affecting the standard deviation of the return series. Incentive fee 利润高的时候收到高，低的时候收的低，所以 decrease volatility
+
+  Management fee 相当于减去固定的值（常数），方差不变
+
+- **Sharing based on active return / based on return net of base fee**
+
+  如果基于 active return,  则 用( port return - benchmarket ) * sharing %
+
+  如果基于 base fee， 则用 (port return - base fee) * sharing %
