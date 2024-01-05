@@ -586,79 +586,101 @@ Rationale
 
 ## Manager Selection Process
 
-- Manager Universe 先确定可选的范围
+### Manager Universe 先确定可选的范围
 
-    所有 feasible manager 可选的基金经理
+所有 feasible manager 可选的基金经理
 
-    The manager universe 提前根据 **IPS** filter了符合的 
+The manager universe 提前根据 **IPS** filter了符合的 
 
-    1. suitability
-    2.  style, 
-    3. passive/active suitable
+1. suitability
+2.  style, 
+3. passive/active suitable
 
-    特别扯淡part Type I and Type II errors in manager selection
+### Type I & Type II Error of Manager Selection
 
-    - Null Hypothesis: the manager is not skillful 基金经理skill=0
+特别扯淡part Type I and Type II errors in manager selection
 
-    - Type I: 去真，reject the null when it is true。FM是垃圾，但是还是雇了他（reject the true null）
-    - Type II: 纳伪，accept the null when it is false。FM nb 但是没雇
-    - Decision Makers worry more about Type I errors than Type II errors. coz
-        1. Psychologically, people seek to avoid feelings of regret 因为 type I 是做错了， type ii 是错过了。人们容易忽略错过了，而放大做错的
-        2. Type I errors are straightforward to measure 因为与雇员业绩相关，共容易观测
-        3. Type I errors liked to decision makers' compensation 与雇人相关，会给工资的
-    - 影响 expected cost的因素，size, shape, mean, dispersion, etc. 
-        - 如 skilled & un-skilled FM 的 mean 差距小, dispersion 大（方差大），则cost的差距小
-    - 市场越有效，超额收益越少，opportunity cost of hiring a unskilled FM 越小
+- Null Hypothesis: the manager is not skillful 基金经理skill=0
 
-- Quantitative
+- Type I: 去真，reject the null when it is true。FM是垃圾，但是还是雇了他（reject the true null） **(error of commission 雇了个sb)**
+- Type II: 纳伪，accept the null when it is false。FM nb 但是没雇 **(error of omission 错过了人才**)
+- Decision Makers worry more about Type I errors than Type II errors. coz
+    1. 请神容易送神难，雇sb往往会更糟
+    2. Psychologically, people seek to avoid feelings of regret 因为 type I 是做错了， type ii 是错过了。人们容易忽略错过了，而放大做错的
+    3. Type I errors are straightforward to measure 因为与雇员业绩相关，共容易观测
+    4. Type I errors liked to decision makers' compensation 与雇人相关，会给工资的
+- **efficient market** exihibts **smaller differences** in skilled and unskilled manager 有效市场情况下，skilled 和 unskilled 的差距少，因为alpha 少
+- 影响 expected cost的因素，size, shape, mean, dispersion, etc. 
+    - 如 skilled & un-skilled FM 的 mean 差距小, dispersion 大（方差大），则cost的差距小
+- 市场越有效，超额收益越少，opportunity cost of hiring a unskilled FM 越小
 
-    - Investment Due Diligence (dd) 
-        - Attribution and appraisal
-            - Style analysis 时刻关注是否FM的投资style 有变化
-                - Returns-Based Style Analysis (RBSA) 回归 Top-Down，用 style factor做 regressor ，比较基金的收益和 那个style factor  的beta 大，那么port就是哪个style
-                    - Pros: 可以纵向比较，看FM不同时间的style
-                    - Not subject to window dressing 不受持仓的影响，因为不看持仓
-                    - Cons: 对于 illiquid securities， 由于样本量小，return data is fluent 被平滑, may understate the risks exposure
-                - Holding-based style analysis (HBSA)
-                    - Bottom up 选某个时点的weights
-                        - Cons: s.t. window dressing 受制于粉饰，
-        - Capture Ratio 见此前提到 UC/DC
-        - drawdown 见此前提到 
+### Quantitative
 
-- Quality 
+##### Style analysis 时刻关注是否FM的投资style 有变化
 
-    - Investment dd
-        - Philosophy 投资理念
-            - Passive Strategy seek to capture return from systematic risk premium
-            - Active Strategy seek return from misplacing. The Inefficiency is from (1) behavioural and (2) structural
-        - Process, People, Portfolio 投资团队为people
-            - Investment Decisional Process:
-                - Signal Creation 市场有信号
-                - Signal Capture 根据信号产生idea
-                - Portfolio Construction 建仓
-                - Portfolio Monitor 后期
-    - Operational dd 定性分析公司**运营、治理情况**，制度等
-        - Process and Procedure 制度是否完善
-        - Firm & terms 企业文化 条款条例等
-        - Investment vehicle 
-            - (1) individual separate account SMA 可以定制的，自己玩的 
-                - Owner 归客户
-                - 可 customised
-                - tax efficiency 可以做税务筹划
-                - transparency  账户情况可以给client公开
-                - Cons: cost 贵因为客制化，tracking risk高因为客制化，
-            - (2) pooled vehicles 大家一起玩
-        - Monitoring
+- Returns-Based Style Analysis (RBSA) 回归 Top-Down，用 style factor做 **regression** ，比较基金的收益和 那个style factor  的beta 大，那么port就是哪个style
+    - Pros: 可以纵向比较，看FM不同时间的style
+    - **Not subject to window dressing 不受持仓的影响，因为不看持仓**
+    - Cons: 对于 illiquid securities， 由于样本量小，return data is fluent 被平滑, may understate the risks exposure
+    - Cons: 不精确 因为没看持仓
+- Holding-based style analysis (HBSA)
+    - Bottom up 选某个时点的weights
+        - Cons: s.t. window dressing 受制于粉饰，
 
-### Management Fee
+##### Capture Ratio 见此前提到 UC/DC
+
+- help assess manager **suitability relative** to the investors' IPS
+- can evaluate the **consistency** between the stated and reported investment portfolio
+
+##### Drawdown 见此前提到 
+
+**Stress-test** of the investment process **when princple-agent conflicts arise**
+
+### Quality 
+
+#### Investment Due Diligence
+
+- Philosophy 投资理念
+    - Passive Strategy seek to capture return from systematic risk premium
+    - Active Strategy seek return from misplacing. The **inefficiency is from (1) behavioural and (2) structural**
+- Investment Personnel: Process, People, Portfolio 投资团队为people
+- Investment Decision MakeingProcess:
+    - Signal Creation 市场产生信号，产生观点 (idea generation): unique, timely, interpreted differently
+    - Signal Capture 落实观点 (idea implimentation)
+    - Portfolio Construction 建仓
+    - Portfolio Monitor 后期
+
+#### Operational DD 定性分析公司**运营、治理情况**，制度等
+
+- Process and Procedure 制度是否完善
+- Firm & terms 企业文化 条款条例等
+- Investment vehicle 
+    - (1) individual separate account SMA 可以定制的，自己玩的 
+        - Owner 归客户
+        - 可 customised
+        - tax efficiency 可以做税务筹划
+        - transparency  账户情况可以给client公开
+        - Cons: cost 贵因为客制化，tracking risk高因为客制化，
+    - (2) pooled vehicles 大家一起玩
+    - Liquidity: ETFs, closed-end fund 流动性好，因为有二级市场可以赎回（open-end fund 只能找 FM 赎回，所有流动性差）
+- Monitoring
+
+#### Management Fee
 
 - AUM Fee = $AUM \times \%$
 
-- Performance-based Fees
+- Performance-based Fees (**maximum and high-water mark,** or **clawback**)
 
     1. Symmetric Structure 利润profit为正，收fee，为负扣钱
     2. Bonus Structure with limited exposed to the downside and fully exposed to upside 挣钱有奖励，亏了不罚钱
     3. Bonus structure with limited exposed to either the downside or the upside 上下两端都有limit，亏有限，奖有限
 
     - 看题目思考分析，没有固定的收费标准，因为每个公司都不一样
+    
+- Three basic ways of performance-based fees
+
+    - symmetrical structure: conputed fee = base + sharing of performance
+    - bonus 看题说话
+
+- Other Considerations
 
