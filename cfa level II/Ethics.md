@@ -86,6 +86,11 @@ Working in certain industry 的不一定是 profession
 - Fund 背后的 investor 才是 真正 beneficiary
 - When use Somebody as exclusively Broker, it must be **on the best interest of clients**.
 - soft dollar 用作对客户有用的，CFA 报名费 大咩
+- Submit to each client, at least **Quarterly**, an itemised statement showing
+  - funds and security in custody plus all debits, credits, transaction
+  - disclose to client where the assets are to bev maintained
+  - distinguish clients' assets from others
+- Proxy Voting Policy 要为 clients 的利益 vote, do cost-benefits analysis
 
 #### III(B). Fair Dealing
 
@@ -219,7 +224,7 @@ Working in certain industry 的不一定是 profession
 
 - Referral Fee could be money or service (指客户帮忙拉客，给客户的好处), 无论是啥 都要 disclose 具体情况 金额 
 - disclose before engagement
-- At least **Quartly** disclose
+- At least **Quarterly** disclose
 - Appropriate disclosure means that members and candidates must advise the client or prospective client, **before entry into any formal agreement for services**, of any benefit given or received from the recommendation of any services provided by the member or candidate.” In this case, the disclosure does not occur until
 
 ### VII. About the Exam <- Don't Be Silly
