@@ -1,6 +1,6 @@
 # Ethics
 
-## AMC Asset Manager Code
+## AMC Asset Manager Code 针对资管公司
 
 ### Basic
 
@@ -29,11 +29,19 @@ ABC 与 codes and standards 一致
 
 1. Managers must **comply with code and legal requirements** 需要符合codes和当地法律要求
 2. **Appoint a compliance officer** 公司需要任命一个合规负责人
+
     - Compliance Officer should **competent, knowledgeable, and credible**
-    - should be **independent from** the investment and operations
-    - **Report directly** to the CEO or board of directors.
+      - should be **independent from** the **investment and operations** **独立**于投资和运营。不能是公司的 senior portfolio manager
+      - **Correct**: by appointing an existing employee to act as a Compliance Officer the Fund would be in Compliance with the Asset Manager Code assuming that the employee is competent, knowledgeable, and credible and is empowered to carry out their duties.
+    - **Report directly** to the CEO **or** board of directors.
+    - eastblish **backup office and opertaional space,** 
+    - Deal with **key employee death**
 
 3. Portfolio info that are supplied to clients should be confirmed or review by **Independent from third-party**. 需要有独立第三方确认提供给客户的信息是对的
+
+    - **The compliance department would be considered an independent third party** because compliance is not involved with compiling or presenting the information to clients.
+
+    - and when such third-party **prices are not available**, the code calls for the use of “good faith” methods to determine fair value.  如果 price not available (for illiquid asset), 可以自选方法，如GIPS
 
 4. **Maintain records** for an appropriate periods 留存就行，没说存多久
 
@@ -41,7 +49,11 @@ ABC 与 codes and standards 一致
 
 6. Establish a **business-continuity plan**
 
-    ![Screenshot 2023-12-04 at 13.03.52](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-04%20at%2013.03.52.png)
+    - adequate **backup**, preferably **off-site**, for **all account information** 要在公司外部储存。
+    - with **alternative plan **对于大公司，不光要有 back-up 还要有 alternative back-up plan
+    - plans for **communicating with critical vendors and suppliers**
+    - plans for **employee** communication, coverage of **critical business function**
+    -  plans for contacting and communicating with clients **during a period of extended disruption.** 如果持续中断需告知用户，如果短暂终端无需告知用户（但需要与员工和供应商vender沟通）
 
 7. Establish a **firm-wide risk management process**
 
@@ -53,16 +65,22 @@ ABC 与 codes and standards 一致
 #### F. Disclosure
 
 1. Communicate with clients **timely**
+
+    Clients may reasonably expect to receive regular performance reporting about their accounts. Without such performance information, even for investment vehicles with lock-up periods, clients cannot evaluate their overall asset allocations (i.e., including assets not held or managed by the Managers) and determine whether rebalancing is necessary. Accordingly, unless otherwise specified by the client, Managers must provide regular, ongoing performance reporting. Managers should report to clients **at least quarterly,** and when possible, such reporting should be provided within 30 days after the end of the quarter.
 2. Disclosures are **truthful, accurate, complete, and understandable**
 3. Include **material facts**
 4. Include: 
     1. conflicts of interests 
     2. regulatory or disciplinary action 
     3. Investment process, including information regarding lock-up periods, strategies, risk factors, and use of derivatives and leverage
-    4. Gross-and net-of-fees returns, unusual expenses
+    4. **At minimum, disclose Gross-and net-of-fees returns, unusual expenses**
+       - only direct trading expenses should be deducted in calculating gross-of-fees returns. Custodial fees cannot be considered a component of direct trading expenses.
     5. Retrospectively disclose
-    6. Disclosure specific management fee, incentive fee, etc
+    6. Disclosure specific **management fee, incentive fee**, etc
+       - disclose **actual fee with itemisation**
     7. Disclose average or expected enpenses
+       - to **prospective clients the expected fees** 
+       - managers **must disclose to prospective clients the average or expected expenses or fees** clients are likely to incur, and to existing clients the actual fees and other costs charged to them.
     8. Soft or bundled commission
     9. Valuation methods
     10. Shareholder voting policies
@@ -81,6 +99,8 @@ Compliance Officer
 ---
 
 ## GIPS
+
+For GIPS compliance, a single verification report must be issued with respect to the whole firm. Verification cannot be carried out only on a composite and, accordingly, does not provide assurance about the investment performance of any specific composite. The Standards stress that firms must not state or imply that a particular composite has been “verified.”
 
 ### Key Terms
 
@@ -115,7 +135,10 @@ Compliance Officer
 - MWR **at least annually**
 - All portfolios except private market investment portfolios, **monthly**
 - Private market investment portfolio, **quarterly**
+  - managers should report to clients **at least quarterly**, and when possible, such reporting should be provided within 30 days after the end of the quarter
+
 - Pooled funds ( not included in composites), **annually**
+-  unless otherwise specified by the client, managers should report to clients at least quarterly, and when possible, within 30 days of the end of the period.
 
 P.S. 
 
@@ -169,6 +192,8 @@ Bundled Fees 可扣除可不扣除，如果 bundled fee 中，transaction fee占
 - Non-fee-paying discretionary segregated accounts and pooled funds **may** be included in a composite, but additional disclosures may be required 可放可不放
 
 #### TWR Calculations
+
+GIPS standards require that returns be calculated on a **monthly** basis for periods beginning on or after 1 January 2001.
 
 - Asset Weighting using beginning value
 - Asset weighting using beginning value and external cash flow
