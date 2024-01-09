@@ -11,12 +11,12 @@
 
 ### Cognitive Error
 
-- Belief Perservance: RICCH
+- Belief Perseverance: RICCH
 - Information Processing: FAMA
 
-#### Belief Perservance
+#### Belief Perseverance
 
-- **Representativeness Bias**: **overweight new info, overweights small sample** that is less representitive
+- **Representativeness Bias**: **overweight new info, overweights small sample** that is less representative
   - **Base-rate neglect; Sample-size neglect**
 - **Illusion of Control**: people tend to **believe that they can control outcomes**, but in fact they can not.
   - **Believe they can control outcomes / Overstate their influence**
@@ -26,7 +26,7 @@
   - holding securities too long
 - **Confirmation Bias (Selection Bias)**: notice what support their beliefs, ignore what contradict their beliefs 选择看支持他们观点的，忽略反对他们观点的
   - look for positive info, ignore negative info
-  - Under diversified / Overconcentrated
+  - Under diversified / Over-concentrated
 - **Hindsight Bias** (I knew it all along): **see past events as having been predicted** 觉得自己预测到了未来，但是实际中没有
   - overestimate the degree they predicted an outcome
   - unfairly assess performance and risks
@@ -45,10 +45,10 @@
   - chase income stream
 - **Availability Bias**: **based on how easily the outcome comes to mind**, to make a decision
   - make decision based on advertising
-  - limited investment opportuntiy set and under-diversity
+  - limited investment opportunity set and under-diversity
   - Source 产生availability bias 的原因: retrievability, categorisation, resonance, narrow range of experience
 
-### Emotional Biass
+### Emotional Bias
 
 - LOSSER
 
@@ -57,20 +57,20 @@
   - disposition effect: hold losers too long and sell winners too quickly
   - Limited upside potential
   - trade excessively and hold riskier portfolio 因为好的都卖了，留着的都是垃圾
-  - Initialise by Kahnesman and Tversky (1979) about prospect theory
+  - Initialised by Kahnesman and Tversky (1979) about prospect theory
 - **Overconfidence Bias**: **Unwarranted faith in their abilities**
   - underestimate risks
-  - Trade Excessiely
+  - Trade Excessively
   - Hold poorly diversified portfolio
-  - experience lower retrun than the peers in the market
+  - experience lower return than the peers in the market
   - **Illusion of Knowledge bias / Self-attribution bias**
 - **Self-Control Bias**: **deviate from their long term goals to short-term goals** 由于不够自律而追求短期目标，而不是长期 (have a strong desire to consume today)
   - save inefficiently for the future
   - accept too much risk to generate higher return
   - cauaw asset allocation imbalanced
 - **Status Quo Bias**: **People do nothing instead of making changes** 不动，不改变。观念很陈旧，不愿意更新
-  - unknowingly maintain portfolios that are inappropriate for their circustances
-  - fail to explore other opportuntiies
+  - unknowingly maintain portfolios that are inappropriate for their circumstances
+  - fail to explore other opportunities
 - **Endowment Bias**: **value an asset more when they hold rights to it** 对于已有的东西，有感情的东西，看的更重，不愿意卖
   - Fail to sell off certain assets or replace them 
   - continue to hold classes that are familiar
