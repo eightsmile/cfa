@@ -295,7 +295,7 @@ $ i = \pi + r$
 - If monetary policy is restrictive and fiscal policy is stimulative, the yield curve is flat and the implications for the economy are less clear.
 - If monetary policy is stimulative and fiscal policy is restrictive, the yield curve is moderately steep and the implications for the economy are less clear.
 
-![Screenshot 2023-10-21 at 17.18.52](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-21%20at%2017.18.52.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-21%20at%2017.18.52.png" alt="Screenshot 2023-10-21 at 17.18.52" style="zoom:50%;" />
 
 ###  International Consideration
 
@@ -305,7 +305,7 @@ If **Current Account Surplus**, => Net Export (export > import), => capital infl
 
 If **Current Account Deficits**, Import > Export, 需要借外汇来进口, **Capital Account inflow (Surplus)**
 
-- **Therefore, Current Account & Captial Account negative correlated**
+- **Therefore, Current Account & Capital Account negative correlated**
 
 ### Interest Rate/Exchange Rate Linkages
 
@@ -344,9 +344,9 @@ Text Sample: Eastland currently has a fixed exchange rate pegged to Northland wi
 
     1. Hold to Maturity 持有至到期
     2. No Default 不违约
-    3. reinvest at YTM 以YTM的rate再投资
+    3. reinvest at YTM 以 YTM 的 rate 再投资
 
-- $r = \text{coupon rate} + \text{Re-Investmen} + \Delta P$
+- $r = \text{coupon rate} + \text{Re-Investment} + \Delta P$
 
     - if **market rate** increase, 
 
@@ -357,13 +357,13 @@ Text Sample: Eastland currently has a fixed exchange rate pegged to Northland wi
 
     - **Duration Gap = "MI" = Maculy Duration - Investment Period**
 
-        - if DG > 0, Daculy Duration is larger, price risks dominates. Thus, market rate increase, impacts of $\Delta P$ > impacts of $RI$, => thus $r$ increase
+        - if DG > 0, Maculy Duration is larger, price risks dominates. Thus, market rate increase, impacts of $\Delta P$ > impacts of $RI$, => thus $r$ increase, bond price decreases.
 
 #### Risk Premium Approach
 
 $r = r_f + TP + CP + LP$
 
-- **risk free rate**: short term 因为如果是长期的就不需要term premium, similarly risk-free rate without TP CP LP risks
+- **risk free rate**: short term 因为如果是长期的就不需要 term premium, similarly risk-free rate without TP CP LP risks
 
     - **T-bill rate, if negative interest rate**, then use **policy rate** replaced 
     - if term is mismatched 如果期限错配, use **Future Contract Rate** (forward rate, or future rate)
@@ -372,7 +372,7 @@ $r = r_f + TP + CP + LP$
 
     1. **Inflation Uncertainty**
 
-        **The term structure is postively correlated with inflation uncertainty**
+        **The term structure is positively correlated with inflation uncertainty**
 
          $TP = r_{longTerm} - r_{shortTerm}$
 
@@ -390,7 +390,7 @@ $r = r_f + TP + CP + LP$
 
         衰退 -> buy T-bond ->  long-term bond price increase -> $r_{LT}$ decrease
 
-        $TP = r_{LP} - r_{ST}$ decrase
+        $TP = r_{LP} - r_{ST}$ decrease
 
     3. **Supply and Demand**
 
@@ -410,7 +410,7 @@ $r = r_f + TP + CP + LP$
 
     3. **Credit Rating**: Low Credit Rating -> high credit premium
 
-    - Emperical Finding: Default Risk has the majority among those three
+    - Empirical Finding: Default Risk has the majority among those three
 
 - **Liquidity premium**
 
@@ -435,7 +435,7 @@ $GGM: r_e = \frac{D_1}{P_0}+g$
 
     因为 Dividend Yield: Cash Div + Repurchase
 
-    其中回购越多，对share holders越好，因为share被浓缩了，同时因为 $\% \Delta S$ 本身是负数，所以
+    其中回购越多，对 shareholders 越好，因为 share 被浓缩了，同时因为 $\% \Delta S$ 本身是负数，所以
 
     调增为 $-\% \Delta S$
 
