@@ -2,18 +2,17 @@
 
 ## Framework and Macro Considerations
 
-- Economic Forecasting - Econometric Analysis	
-
+- **Economic Forecasting - Econometric Analysis**	
   - Structural Model: based on economic theory 有理论
-  - Reduced-form: might be without theory, base on data and correlation 无理论支撑，数据之间的关系
-
+  - Reduced-form: might be without theory, base on data and correlation 无理论支撑，数据之间的关系 regression
+  
   - Pros and Cons
   - Pros: 
     1. Many factors, 
-    2. Quantative, 
+    2. Quantitative, 
     3. Has a model, so can easily generate output, 
     4. Discipline consistency
-
+  
   - Cons: 
     1. Complex and Time-consuming
     1. Data input might be hard to forecast
@@ -22,16 +21,15 @@
     1. Not forecast turning points 无法或者滞后的预测turning points
 
 
-- Indicators
-
+- **Indicators 用 indicator 预测经济情况**
   - Leading indicators. A composite of leading indicators is called a **diffusion index**
-
+  
   - Coincident 
-
+  
   - Lagging
-
+  
   - Pros and Cons
-
+  
     - Pros: 
       1. Simple, 
       1. Could **forecast turning points**
@@ -63,9 +61,9 @@
 2. Data measurement errors and biases
     - Transcription errors 抄错了
     -  Survivorship bias. The survivorship bias might overestimate returns 如PE知有表现好的时候才公布收益，所以 survivorship bias 高估 return
-    - Appraisal data. The higher the frequency of data, the lower the correlation, because data become no smoothy. Lower the correlation, higher the risks 数据频率越高，corr越低，则 risk 越低。 Return smoother biases downward the risks
+    - Appraisal data. The higher the frequency of data, the lower the correlation, because data become no smoothy. Lower the correlation, higher the risks 数据频率越高，corr越低（因为assume 高频数据是大幅波动的，所以corr低），则 risk 越低。 Return smoother biases downward the risks
 3. Limitations of historical estimates
-    - Regime changes make data non-stationary. 由于 regime changes，造成 data non- stationary
+    - Regime changes make data non-stationary. 由于 regime changes，造成 data non-stationary
     - Non-stationary make data statistically non-predictable.
     - Long time period & large dataset are preferable. Asynchronous data (high frequency data) underestimate correlation and underestimate risks.
 4. Ex-post (将来) risk as a biased risk measure ex-ante (过去的) risk
@@ -84,16 +82,16 @@
 
 Factors cause the exogenous shocks
 
-- Changes in Government Policy
-- Political Events
+- **Changes in Government Policy**
+- **Political Events**
 - Technological progress
 - Natural disasters
 - Discovery of natural resources
 - Financial crisis
 
-#### Application 
+#### Application 预测 $r_e$ Equity Return
 
-![Screenshot 2023-10-20 at 13.06.51](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-20%20at%2013.06.51.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-20%20at%2013.06.51.png" alt="Screenshot 2023-10-20 at 13.06.51" style="zoom: 33%;" />
 
 $r_e = \frac{D_1}{P_0} + g_{equity}$
 
@@ -137,7 +135,7 @@ By Golden Growth Model: $P_0 = \frac{D_1}{r_e-g}$, we expand that into the whole
 
     **L** 劳动力规模 has two drivers: **(1)** growth in potential labour force **size**, **(2)** labour force **participation**.
 
-    **Y/L** productivity 劳动力效率 has two drives: **(1)** capital inputs **(2)** TFP total factor productivity
+    **Y/L** productivity 劳动力效率 has two drives: **(3)** capital inputs **(4)** TFP total factor productivity
 
 3. Thus, in the long term
 
@@ -158,7 +156,13 @@ Reason of cyclical business activities
 
 ### Phases
 
-![Image](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Image.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Image.png" alt="Image" style="zoom:50%;" />
+
+- **short-term rate** by CB is same as the slope of curve
+  - bond price is negative corr with short-term rate
+  - short-term rate 代表 economic policy 强度
+- Inflation lags with the short-term rate 通胀滞后于short-term rate
+- output gap is the diff between potential GDP & actual 
 
 #### 1. Initial Recovery 复苏期
 
@@ -190,7 +194,7 @@ Reason of cyclical business activities
 #### 4. Slowdown
 
 - Inflation still Increase
-- Short-term rate Peak
+- Short-term rate Peak (achieve the peak, and going down 在4的最开始 curve flat -> achieve the top)
     - bond yield peak, bond price goes to the bottom
 - Might have inverted yield curve, short-term rate > long term rate
 - Buy: Bond as it achieves the bottom
@@ -205,7 +209,7 @@ Reason of cyclical business activities
 
 ### Inflation
 
-- **Dis-inflation**: means inflation decrease, i.e. from 8% to 5%. Dis-inflation migh decelerate the econ. 但是因为inflation还是正的，price还在提升
+- **Dis-inflation**: means inflation decrease, i.e. from 8% to 5%. Dis-inflation migh decelerate the econ. 但是因为inflation 下降了，但 还是正的，price还在提升
 - **Deflation**: negative inflation 是负的
 
 **Deflation is worst!** in that, while asset price decrease (deflation), the balance sheet ends up with negative equity. Borrower cannot repay the interests, then **Default**!
@@ -217,25 +221,25 @@ Reason of cyclical business activities
 
 | Business Cycle   | Inflation                                              | Economic Policy           | Markets                                                      |
 | ---------------- | ------------------------------------------------------ | ------------------------- | ------------------------------------------------------------ |
-| Initial recovery | Initially declining inflation                          | Stimulative               | **(1)** Short-term rates low or declining; **(2)** Long-term rates bottomingand bond prices peaking; **(3)** Stock prices increasing |
-| Early expansion  | Low inflation and good economic growth                 | Becoming less stimulative | **(1)** Short-term rates increasing; **(2)** Long-term rates bottomingor increasing with bondprices beginning to decline; **(3)** Stock prices increasing |
+| Initial recovery | Initially declining inflation                          | Stimulative               | **(1)** Short-term rates low or declining; **(2)** Long-term rates bottoming and bond prices peaking; **(3)** Stock prices increasing |
+| Early expansion  | Low inflation and good economic growth                 | Becoming less stimulative | **(1)** Short-term rates increasing; **(2)** Long-term rates bottoming or increasing with bond prices beginning to decline; **(3)** Stock prices increasing |
 | Late expansion   | Inflation rate increasing                              | Becoming restrictive      | **(1)** Short-term and long-term rates increasing with bond prices declining; **(2)** Stock prices peaking and volatile |
 | Slowdown         | Inflation continues to accelerate                      | Becoming less restrictive | **(1)** Short-term and long-term rates peaking and then declining with bond prices starting to increase; **(2)** Stock prices declining |
 | Contraction      | Real economic activity declining and inflation peaking | Easing                    | **(1)** Short-term and long-term rates declining with bond prices increasing; **(2)** Stock prices begin to increase later in the recession |
 
 #### Buy
 
-- **Inflation within expectations:** 
+- **Inflation within expectations:** 买 stock, inflation is reflected into the stock price
     1. Cash equivalents: Earn the real rate of interest
     2. Bonds: Shorter-term yields more volatile than longer-term yields
     3. Equity: No impact given predictable economic growth (已经反映在预期中 )
     4. Real estate: Neutral impact with typical rates of return
-- **Inflation above or below expectations:**
+- **Inflation above or below expectations:** 买 固定资产 real estate 保值，保持购买力
     1. Cash equivalents: Positive (negative) impact with increasing (decreasing) yields 
     2. Bonds: Longer-term yields more volatile than shorter-term yields 
     3. Equity: Negative impact given the potential for central bank action or falling asset prices, though some companies may be able to pass rising costs on to customers
     4. Real estate: Positive impact as real asset values increase with inflation
-- **Deflation:**
+- **Deflation:** 资产价值降低，Fixed-income 保持收入(if no default), cash keeps its value. 所以不买 stock 买 high-rated bond + cash
     1. Cash equivalents: Positive impact if nominal interest rates are bound by 0% 
     2. Bonds: Positive impact as fixed future cash flows have greater purchasing power (assuming no default on the bonds) 
     3. Equity: Negative impact as economic activity and business declines 
@@ -249,7 +253,7 @@ Reason of cyclical business activities
 
     $r_{policy } = r^* + \frac{1}{2} (\pi-{\pi}^*) +\frac{1}{2}(Y-Y^*)$
 
-- Negative Interest Rate
+- Negative Interest Rate 负利率情况下
 
     - few comparable periods, 因为 negative interest rate 的历史数据样本小，所以用历史数据估计未来，估计不准确 
     - it means significant structural changes

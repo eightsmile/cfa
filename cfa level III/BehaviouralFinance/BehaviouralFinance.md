@@ -87,25 +87,25 @@
 
 ### Classification of Investors into Types
 
-- Barnewall Two-way Model
+- **Barnewall Two-way Model**
 
   - **Passive Investor**: accumulate wealth passively
-    - Lower risk tolence
+    - Lower risk tolerance
     - the small the economic source, the more passive the investor is
   - **Active Investors**: actively involved in wealth creation
     - high RT
     - prefer to control own investments
     - if loss of control, RT reduce quickly
 
-- Bilard, Biehl, and Kaiser Five-way Model
+- **Bilard, Biehl, and Kaiser Five-way Model**
 
   最下面 是 Anxious
 
-  ![Screenshot 2023-12-03 at 14.20.55](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312031421154.png)
+  <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312031421154.png" alt="Screenshot 2023-12-03 at 14.20.55" style="zoom:80%;" />
 
-- Pompian Model (Four-way Model)
+- **Pompian Model (Four-way Model)**
 
-  ![Screenshot 2023-12-03 at 14.24.13](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312031424059.png)
+  <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312031424059.png" alt="Screenshot 2023-12-03 at 14.24.13" style="zoom:80%;" />
 
 - The more emotional bias a person is, tell them more emotional things, "big picture", not statistical data.
 
@@ -115,24 +115,24 @@
 
 - Individuals may simultaneously display **both emotional biases and cognitive errors**. 
 - Individual might display traits **more than one behavioral investor type**.
-- As investors age, they will most likely go through behavioral changes. 会随年龄增长变
+- As investors age(ing), they will most likely go through behavioral changes. 会随年龄增长变
 - Even in the same type, individuals should not be treated the same due to their **unique** circumstances and psychological traits. 每个人都不一样
 - Individuals act **irrationally at different times and without predictability.**
 
 #### Adviser–Client Relations
 
-- RT questionnaires
+- RT (risk tolerance) questionnaires
   - 对 institutional investor 更有效，比 individual 
   - 对 cognitive bias 对投资者更有效，对比 emotional 。emotional的都是sb
 
 #### Portfolio Construction
 
-- Inertia and Default: Status quo 
-- Naïve Diversification: Regret aversion 
-- Company Stock: Familiar, overconfidence, Framing, Loyalty effects and status quo 
-- Excessive Trading: Many biases. (e.g. overconfidence, regret of aversion etc) 
-- Home Bias: Availability, illusion of control, endowment, and status quo, confirmation. 
-- Behavioral Portfolio Theory: Mental account bias
+- **Inertia and Default**: Status quo 
+- **Naïve Diversification**: Regret aversion 
+- **Company Stock**: Familiar, overconfidence, Framing, Loyalty effects and status quo 
+- **Excessive Trading**: Many biases. (e.g. overconfidence, regret of aversion etc) 
+- **Home Bias**: Availability, illusion of control, endowment, and status quo, confirmation. 
+- **Behavioral Portfolio Theory**: Mental account bias
 
 #### Others
 
