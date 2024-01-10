@@ -158,19 +158,21 @@ Gamma is the **maxima** while option is **at-the-money**.
 
 2. Emperically for **foreign currency options**, when at-the-money, implied volatility is lowest
 
-   ![Screenshot 2023-11-01 at 21.59.45](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 21.59.45.png)
+   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102047341.png" alt="Screenshot 2024-01-10 at 20.47.28"  />
 
 3. Equity Option, Skew (Smirk)
 
-   ![Screenshot 2023-11-01 at 22.06.49](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-01 at 22.06.49.png)
+   ![Screenshot 2024-01-10 at 20.48.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102048212.png)
 
 4. Reasons for the Smile in Equity Options
 
-   1. Crashophbia 崩盘 market crash 可能，因为option就是用来应对危机的
-   2. Leverage. As equity declines in value, company's leverage increases.
-   3. Volatility Feedback Effect. 反身性，相当于 负向 accelerator
+   1. **Crashophbia** 崩盘 market crash 可能，因为option就是用来应对危机的
+   2. **Leverage**. As equity declines in value, company's leverage increases.
+   3. **Volatility Feedback Effect.** 反身性，相当于 负向 accelerator
 
-5. OTM Put 的 vol 低, OTM Call 的 vol 高. Buy OTM Call (underpriced) and sell OTM put (overpriced) 
+5. 同样是 OTM ，put option 价格比 call option 贵。因为，put以上三个原因。所以Put Price 大，则 implied vol for Put 大。
+
+   OTM Put 的 vol 低, OTM Call 的 vol 高. Buy OTM Call (underpriced) and sell OTM put (overpriced) 
 
 6. **Implied Volatility** is compared with $\frac{K}{S_0}$ or  $\frac{K}{F_0}$ (相当于去除量纲)
 
@@ -295,7 +297,7 @@ $CTD = $$Quoted Price \times CF$
   - 因为  market rate 大的 ，duration 长 的折价多
   - ![Screenshot 2023-11-04 at 19.00.31](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-04%20at%2019.00.31.png)
   - 如图，久期长的离 expired date 远，折价越多。但是这只是clean price 方面，还未考虑 Accured Interest  
-- if market yield > notional yield 的， 短久期的 可能为 CTD （更便宜，适合交割）原因见上图，把图沿 y-axis 对称 
+- if market yield < notional yield 的， 短久期的 可能为 CTD （更便宜，适合交割）原因见上图，把图沿 y-axis 对称 
 
 ##### Basis Trading
 
@@ -310,13 +312,7 @@ $Basis = S - F \times CF$
 
 担心 interest rate 上涨， 带来 T-bond Price 下跌，同时 Fixed-Income Future 价格下跌，所以 **Short Futures**
 
-##### Basis Point Value for Bonds ( BPV )
-
-$BPV_p = MDur_p \times MV_p \times 0.01\%$ , or    $BPV_p = MDur_p(\times) \times MV_p \times 1$
-
-(MDur 为 Modified Duration )
-
-similarly,
+##### Basis Point Value for Bonds ( BPV 
 
 - $BPV_{CTD} = MDur_{CTD} \times MV_{CTD} \times 0.01\%$ 
   - $MV_{CTD} = (CTD\ QuotedPrice) \times Future$
@@ -409,7 +405,7 @@ $F \Leftrightarrow f \times Multiplier$ are $ amount
 
 如 Fund has 33.33% Bonds + 66.67% Equity， 想调整为 30% Bonds + 70% Equity。因为若fund很大，直接抛售等买卖会带来资产价格大幅变动。
 
-为了避免价格波动，我们不直接买卖资产，而是买卖对应的 derivatives (futures and forwards)，因为这样可以最小化对市场价格的影响
+**为了避免价格波动**，我们不直接买卖资产，而是买卖对应的 derivatives (futures and forwards)，**因为这样可以最小化对市场价格的影响**
 
 通过 Cash Position make $\beta = 0, for\ Stocks$, $BPV = 0, for\ Bonds$
 
