@@ -2,7 +2,7 @@
 
 ## Economic Balance Sheet
 
-Definition:  includes (1) conventional assets and liabilities (in Accounting Statement) and (2) **extended portfolio assets** and liabilities (not appear in conventional B/S).
+Definition: includes (1) conventional assets and liabilities (in Accounting Statement) and (2) **extended portfolio assets** and liabilities (not appear in conventional B/S).
 
 **Extended Portfolio Assets** includes: 
 
@@ -28,7 +28,7 @@ Economic Net Worth = Net Worth (Financial Asset - Fin Lia) + 1,2,3
 | **Extended Assets**: PV of Expected Contribution | **Extended Liabilities**: PV of Expected Future Support |
 |                                                  | **Net Worth**                                           |
 
-![Screenshot 2023-10-18 at 12.44.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.44.59.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2012.44.59.png" alt="Screenshot 2023-10-18 at 12.44.59" style="zoom:50%;" />
 
 ---
 
@@ -251,7 +251,7 @@ $$ U_{LiaRelative} = \mathbb{E}(R_{surplus}) - 0.005 \lambda \sigma^2_{surplus} 
 
 Asset Liability Management (ALM) approach minimise the difference between assets and liabilities at each level of risks
 
-![Screenshot 2023-10-18 at 13.01.17](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2013.01.17.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2013.01.17.png" alt="Screenshot 2023-10-18 at 13.01.17" style="zoom:50%;" />
 
 ##### Difference between Surplus & Asset-only
 
@@ -289,13 +289,16 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 
 #### Integrated Asset-Liability Approach
 
-把 A & L 一起考虑。由于 Two Portfolio 适合用于 Over-funded pension，因为可以把大于 L 的部分拆开。但是对于 Under-funded Pension 就应该用 Integrated AL Approach
+把 A & L 一起考虑。由于 Two Portfolio 适合用于 Over-funded pension，因为可以把大于 L 的部分拆开。
+
+- Integratred Asset Lia Approach 可以应用于任何 A > < = L 的情况
+- 逻辑倒序，但**对于 Under-funded Pension 就应该用 Integrated AL Approach** 。对于deficit pension plan 要 A L 一起考虑
 
 - **Integrate or jointly optimise** asset and liability decision
 - Has to potential to **improve the institution's surplus**
 - Can be implemented in a **factor-based** model
 - 因为Asset和Lia一起考虑，所以decision可能更加 紧密，也因此有可能 improve institution's surplus
-- 可以考虑 multi-period
+- **可以考虑 multi-period**
 
 #### Comparison
 
@@ -304,7 +307,7 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 - **Surplus Optimisation** approach links assets and the present value of liabilities through a correlation coefficient. 用Correlation算Surplus Efficient Frontier, 而 **Two-portfolio Approch**不需要
 - Two Portfolio (Basic) needs over-funded, (Variant) need not. 而Surplus Optimisation method 不考虑overfunded or not
 
-![Screenshot 2023-10-18 at 16.58.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2016.58.10.png" alt="Screenshot 2023-10-18 at 16.58.10" style="zoom:67%;" />
 
 与 lia一起考虑，即为非线性
 
@@ -315,7 +318,7 @@ use Asset to purchase derivative and use derivative to hedge the change of liabi
 - Apply best to Individuals
 - Allocate capital to **sub-portfolio**, **pick the highest probability**, use horizon-adjusted discount rate to discount the expected CF, obtain **lowest initially required capital** for each goal
 
-![Screenshot 2023-10-18 at 22.36.55](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2022.36.55.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-18%20at%2022.36.55.png" alt="Screenshot 2023-10-18 at 22.36.55" style="zoom: 50%;" />
 
 Drawback of Goal Based: (1) inefficient, (2) not consider correlation between asset class
 
@@ -365,11 +368,14 @@ The goal of risk budgeting is to **maximise return per unit of risk.** A risk bu
 
 Each asset (asset class or risk factor) should **contribute equally** to the total risk of the portfolio for a portfolio to be well **diversified**. 每个asset class贡献同样的资产，那么比如有 bond, equity, commodity, 因为bond的风险小，那么portfolio中配置的就bond就更多，这样可以达到1/3 portfolio total risk
 
-#### Pros and Cons
+- Pros and Cons
 
-- **Pros**: risks are diversified
-- **Cons**: as we include more bonds by the risk parity, risks are diversified, but expected returns are scarified.
-- **Cons**: Dependent on the ability to use extremely large amounts of leverage at low borrow rates 
+  - **Pros**: risks are diversified
+
+  - **Cons**: as we include more bonds by the risk parity, risks are diversified, but expected returns are scarified.
+
+  - **Cons**: Dependent on the ability to use extremely large amounts of leverage at low borrow rates 
+
 
 ---
 

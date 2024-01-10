@@ -26,19 +26,13 @@ $Profit = \underbrace{(S_T - S_0)}_{long \ S} + \underbrace{ C - \max(S_T-K,0)}_
 - if max loss, $S_T = 0$, $Loss (Profit) = -S_0 + C$
 - if max gain, $S_T > X$, $Gain (Profit) = K - S_0 + C$
 
-![ ](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2021.11.26.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2021.11.26.png" alt=" " style="zoom:50%;" />
 
 #### 2. Protected Put (long Stock, long Put)
 
 $Profit = \underbrace{(S_T - S_0)}_{longStock} + \underbrace{\max(K - S_T,0) - P}_{LongPut}$
 
-若用分段函数探讨，
-
-![Screenshot 2023-10-30 at 13.08.38](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-10-30 at 13.08.38.png)
-
-但是更简单的办法：
-
-![Screenshot 2023-10-30 at 12.54.26](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2012.54.26.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2012.54.26.png" alt="Screenshot 2023-10-30 at 12.54.26" style="zoom: 33%;" />
 
 Protected Put is a hedge, but is not a perfect hedge, because there is still the maximum loss part.
 
@@ -46,11 +40,9 @@ Protected Put is a hedge, but is not a perfect hedge, because there is still the
 
 $Profit = \underbrace{(S_T - S_0)}_{LongStock} + \underbrace{C - \max(S_T-K)}_{Short Call} + \underbrace{\max(K-S_T,0)-P}_{LongPut}$
 
-![Screenshot 2023-10-30 at 13.05.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2013.05.19.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2013.05.19.png" alt="Screenshot 2023-10-30 at 13.05.19" style="zoom: 33%;" />
 
-![Screenshot 2023-10-30 at 13.07.11](/Users/mie/Library/Application Support/typora-user-images/Screenshot 2023-10-30 at 13.07.11.png)
-
-##### Put-Call Parity
+#### P.S. Put-Call Parity
 
 - Case 1:
 
@@ -73,7 +65,7 @@ $Profit = \underbrace{(S_T - S_0)}_{LongStock} + \underbrace{C - \max(S_T-K)}_{S
     - long $Put_H$ short $Put_L$
     - Short $Call_L$ long $Call_H$
 
-![Screenshot 2023-10-30 at 13.32.52](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2013.32.52.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-30%20at%2013.32.52.png" alt="Screenshot 2023-10-30 at 13.32.52" style="zoom:33%;" />
 
 P.S. 如果 options 是 out-of-money，那么是 期权费之差。如果 option 是 in-the-money， 那么还要考虑行权价格的差 + 期权费。总之，现推导。
 
@@ -84,22 +76,22 @@ P.S. 如果 options 是 out-of-money，那么是 期权费之差。如果 option
 
 #### 6. Straddle
 
-同买同卖at the same strike price. Long straddle => long volatility
+同买同卖 **at the same strike price**. Long straddle => long volatility
 
 - Long Straddle = + Call + Put
 - Short Straddle = -Call - Put
 
-![Screenshot 2023-11-01 at 12.46.54](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.46.54.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.46.54.png" alt="Screenshot 2023-11-01 at 12.46.54" style="zoom:33%;" />
 
 #### In Sum
 
-![Screenshot 2023-11-01 at 12.52.13](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.52.13.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.52.13.png" alt="Screenshot 2023-11-01 at 12.52.13" style="zoom: 33%;" />
 
 Sell option <=> sell volatility, long option <=> expect vol
 
 Long call <=> long bull
 
-![Screenshot 2023-11-01 at 12.49.52](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.49.52.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2012.49.52.png" alt="Screenshot 2023-11-01 at 12.49.52" style="zoom: 33%;" />
 
 ---
 
@@ -134,7 +126,7 @@ Put: $\Delta \in[-1,0]$
 
     $\Delta_C = N(d_1)$
 
-![Screenshot 2023-11-01 at 13.17.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2013.17.35.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2013.17.35.png" alt="Screenshot 2023-11-01 at 13.17.35" style="zoom: 33%;" />
 
 ##### Delta Hedging
 
