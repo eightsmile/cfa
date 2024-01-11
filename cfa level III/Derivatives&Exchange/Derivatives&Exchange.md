@@ -152,29 +152,50 @@ Gamma is the **maxima** while option is **at-the-money**.
 
 ---
 
-### Volatility Smile
+## Volatility Smile
+
+#### Volatility Smile and Volatility Skew Smirk
+
+![image-20240111114003172](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240111114003172.png)
 
 1. The Black-Sholes model assumes constant Volatility
 
-2. Emperically for **foreign currency options**, when at-the-money, implied volatility is lowest
+2. Empirically for **foreign currency options**, when at-the-money, implied volatility is lowest
 
-   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102047341.png" alt="Screenshot 2024-01-10 at 20.47.28"  />
+   - 结论是：OTM 的 Option 的 implied vol 更大
 
-3. Equity Option, Skew (Smirk)
+   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102047341.png" alt="Screenshot 2024-01-10 at 20.47.28" style="zoom: 67%;" />
 
-   ![Screenshot 2024-01-10 at 20.48.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102048212.png)
+3. **Equity Option**, Skew (Smirk)
 
-4. Reasons for the Smile in Equity Options
+   - Reasons for the Smile in Equity Options
 
    1. **Crashophbia** 崩盘 market crash 可能，因为option就是用来应对危机的
    2. **Leverage**. As equity declines in value, company's leverage increases.
    3. **Volatility Feedback Effect.** 反身性，相当于 负向 accelerator
 
-5. 同样是 OTM ，put option 价格比 call option 贵。因为，put以上三个原因。所以Put Price 大，则 implied vol for Put 大。
+   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401102048212.png" alt="Screenshot 2024-01-10 at 20.48.20" style="zoom:67%;" />
+
+4. 同样是 OTM ，put option 价格比 call option 贵。因为，put以上三个原因。所以Put Price 大，则 implied vol for Put 大。
 
    OTM Put 的 vol 低, OTM Call 的 vol 高. Buy OTM Call (underpriced) and sell OTM put (overpriced) 
 
-6. **Implied Volatility** is compared with $\frac{K}{S_0}$ or  $\frac{K}{F_0}$ (相当于去除量纲)
+5. **Implied Volatility** is compared with $\frac{K}{S_0}$ or  $\frac{K}{F_0}$ (相当于去除量纲)
+
+#### Risk Reversal
+
+- Long Risk Reversal: 预期因为上述情况，implied volatility 被高估，那么应该
+  - **short put, long call** 挣 put 高估和call 低估的钱
+  - Then, **short stocks** 为了只保留 vega risks, 去除 delta risks, we then need to 
+- Short Risk Reversal: 反之
+
+#### Term Structure of Volatility
+
+- The term structure of volatility is **often** in **contango**, （因为期限越远，风险越高，所以upward sloped）
+
+  (the implied volatilities for long-term options are higher)
+
+- When market is stress, the term structure inverts.
 
 ---
 
@@ -186,7 +207,7 @@ Gamma is the **maxima** while option is **at-the-money**.
 
 Payer and Receiver 都指的是 对Float 的 pay / receive
 
-![Screenshot 2023-11-01 at 22.47.14](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2022.47.14.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-01%20at%2022.47.14.png" alt="Screenshot 2023-11-01 at 22.47.14" style="zoom:50%;" />
 
 ##### Duration of the Swap
 
@@ -269,6 +290,8 @@ $\$1,000,000 \times \frac{90}{360}\times 1bp = \$25$
 
 ### Fixed-Income Futures
 
+![image-20240111115144191](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240111115144191.png)
+
 Treasury-bond is the underlying asset, we do not use corporate bond as there is less liquidity and more credit risks.
 
 #### Delivery
@@ -295,7 +318,7 @@ $CTD = $$Quoted Price \times CF$
 
 - if market yield > notional yield, then long duration bond is likely to be CTD (最合适用来交割的)	
   - 因为  market rate 大的 ，duration 长 的折价多
-  - ![Screenshot 2023-11-04 at 19.00.31](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-04%20at%2019.00.31.png)
+  - <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-04%20at%2019.00.31.png" alt="Screenshot 2023-11-04 at 19.00.31" style="zoom:50%;" />
   - 如图，久期长的离 expired date 远，折价越多。但是这只是clean price 方面，还未考虑 Accured Interest  
 - if market yield < notional yield 的， 短久期的 可能为 CTD （更便宜，适合交割）原因见上图，把图沿 y-axis 对称 
 
@@ -353,9 +376,11 @@ $BPVHR = \frac{BPV_T - BPV_P}{BPV_F}$
 - $BPV_F \times CF= BPV_{CTD}$    (Accured Interest is ignored just now)
 - **Finally**, $BPVHR = \frac{BPV_T - BPV_P}{BPV_{CTD}}\times  CF$
 
-![Screenshot 2023-11-04 at 20.36.54](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-04%20at%2020.36.54.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-04%20at%2020.36.54.png" alt="Screenshot 2023-11-04 at 20.36.54" style="zoom:50%;" />
 
 ### Manage Equity Risk
+
+![image-20240111115439433](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240111115439433.png)
 
 管理 Equity Risks 的方法 (1) Swap (2) Future and Forward <- adjust target portfolio beta & cash equitisation
 
@@ -439,7 +464,7 @@ $HR = \frac{\text{Amount of Currency to be Exchanged}}{\text{Future Contract Siz
 
 ---
 
-### Manage Volatility Risks
+## Manage Volatility Risks
 
 - Volatility Derivatives
   1. VIX Futures
@@ -449,43 +474,75 @@ $HR = \frac{\text{Amount of Currency to be Exchanged}}{\text{Future Contract Siz
 
 ##### VIX Futures
 
+<img src="./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240111101232401.png" alt="image-20240111101232401" style="zoom:67%;" />
+
 VIX and Equity returns are mostly negative correlated
 
 P.S. Cost of Carry model does not work on VIX $F = S X(1+r_f)^T - CB + CC$, because VIX spot is not able to be invested (VIX is an index, is calculated)
 
+- 如果是 Contango, 横坐标 term，纵坐标 price，向上倾斜。这意味着：随着期限减少（向 term = 0），价格会降低。
+  - 这意味着，在 roll VIX future 时，如以100买 t=10，卖90 在t=9。再roll，卖80在t=8，etc。每次roll的价格都会降低。所以contango的情况会亏 price 
+  - $RollYield = \frac{F-S}{S}$
+- 如果是 backwards，在 roll的时候，price会提升，可以挣 price 提升的钱。
+
 ##### Variance Swap 
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240111081317145.png" alt="image-20240111081317145" style="zoom:67%;" />
 
 Payoff of Variance Swaps is based on **Variance** rather than **Volatility (s.d.)**.
 
-Swap 的双方为 $\sigma^2$ and $K^2$
-
-- Variance Stike (Implied Volatiltiy),  $K^2$: the implied vol **at the beginning**
-  - $Strike = K , \text{and } variance \ strike = K62$
-- Realised Variance,  $\sigma^2$: Actual Vol over the life of the swap
-
 No Exchange of Notional Principal and No interim Settlement periods
 
-- Settlement Amount (long): $=variance\ notional \times (\sigma^2 - K^2)$
-  - Long 方为 收浮动，支固定
-- Settlement Amount (long): $=vega\ notional \times \frac{\sigma^2-K^2}{2K}$
-- , where $vega \ notional = variance \ notional \times 2K$    ($vega\ notional = variance\ notional \times (\sigma +K)$, and $\sigma+K \approx K+K=2K $)
-- $vega \ notional$ 是指一般意义上的本金，题目会给的数值
+- Variance Stike (Implied Volatiltiy),  $K^2$: the implied vol **at the beginning**
+  - $Strike = K , \text{and } variance \ strike = K^2$
+- Realised Variance,  $\sigma^2$: Actual Vol over the life of the swap
 
-###### Mark-to-Market (MtM) Value of Variance Swap
+Swap 的双方为 $\sigma^2$ and $K^2$. 如果市场上实际的 variance, $\sigma^2>K^2$ the **strike price** squared. 
+
+那么 **每份swap 的payoff** 是 $\sigma^2 - K^2$ 相当于用$K^2$买$\sigma^2$.
+
+**整个 swap 的 payoff** 是，即 **settlement amount =**  $N_{variance}\times (\sigma^2 - K^2)$
+
+- Vega Notional 的定义: $N_{vega} = \frac{Gain - Loss}{2}$  因为loss是负数，我们要absolute amount所以用 -loss 调整为正的
+  - Gain: $(K+1)^2\times N_{variance}$
+  - Loss: $(K-1)^2\times N_{variance}$
+- So, $N_{vega} = \frac{4K}{2}=2K\times N_{variance}$
+- $N_{variance} = \frac{N_{vega}}{2K}$
+
+- Settlement Amount (long): $=N_{vega}\times \frac{\sigma^2-K^2}{2K}$
+- $vega \ notional$ 是指实际中 quote Variance Swap 的报价，题目会给的数值，让我们算 variance notional
+
+P.S. the payoff of variance swap is **convex** 即 var 增大带来的 payoff 提升 > 比 var 减少带来的 payoff 减少。投资者喜欢
+
+###### Mark-to-Market (MtM) Value of Variance Swap 
+
+在swap中间某一点 Variance Swap 的 Value （既然是value，就要折现到 t=0)
 
 盯市，因为 swap 在 beginning is made to be zero value，但是随着时间和市场变化（$\sigma^2 \ \text{and}\ K^2$ 变化） swap开始有价值
 
 MtM 指在 t 时间估计出来的，对到期日 var 的估计（加权平均）
 
-![Screenshot 2023-11-05 at 16.10.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-05%20at%2016.10.21.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-05%20at%2016.10.21.png" alt="Screenshot 2023-11-05 at 16.10.21" style="zoom: 67%;" />
 
 $Expected \ Variance\ to \ Maturity = (\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T})$
 
 $weights_1 = t / T,  weight_2 = (T-t)/T$
 
+- $\sigma_t^2$ 在 t 时间点已实现的 variance 
+
+- $K_{T-t}^2$ 在 t 时间点 开启一份预期 T 到期的 Strike Price of Swap，为 **implied variance**,  = fair strike of a new (T-t) variance swap
+
+- then 用expected var to maturity - Strike, 得到T时点Swap的payoff
+
+  $(\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T}) - Strike_T^2$
+
+- 把 T 时点的 payoff 折现即为 现在的 value
+
+  $\frac{(\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T}) - Strike_T^2}{1+r\frac{t}{T}}$
+
 ---
 
-### Inferring Market Expectation
+## Inferring Market Expectation
 
 | Application                                 | Derivative              |
 | ------------------------------------------- | ----------------------- |
@@ -495,7 +552,9 @@ $weights_1 = t / T,  weight_2 = (T-t)/T$
 
 - **Fed Funds Futures**
 
-  - $Fed Funds Future \ ContractPrice = 100 - Expected FFE\ rate$
+  - $\text{Fed Funds Future Contract Price} = 100 - Expected FFE\ rate$
+
+  - future 是市场预期报价的，所以反映了市场的预期
 
   - **Eurdollar Futures**
     - Dollar deposited in the outside of US
@@ -505,7 +564,13 @@ $weights_1 = t / T,  weight_2 = (T-t)/T$
 
 - **Expected Probability**
 
-  假设利率在区间内服从均匀分布，所以 分子/分母 = Prob
+  假设利率在区间内服从均匀分布，测算 市场预期的rate 即 future，与如果FOMC 真正调整了的 Price 的差距
+  
+  $\frac{\text{Expected FFE} - \text{CurrentFFR} }{\text{FFR.Hike/Down} - \text{Current FFR}} $
+  
+  $\text{FFR.Hike/Down} = \text{Current FFR} \pm25bp$
+  
+  所以，分母一般一定为 25bp
 
 ---
 
@@ -567,7 +632,7 @@ $\sigma^2_{R_{DC}}\approx  \sigma^2_{R_{FC}} + \sigma^2_{R_{FX}} + 2\sigma_{R_{F
 
 ### Strategic Currency Management
 
-- **Fomulate IPS**: general objectives, risk tolerance, time horizon, ongoing income and liquidity, benchmark (rebalance周期)
+- **Formulate IPS**: general objectives, risk tolerance, time horizon, ongoing income and liquidity, benchmark (rebalance周期)
 
 - **Choice of Currency Exposures**: 要对冲多少
 
@@ -664,15 +729,15 @@ $\frac{F}{S} = \frac{1+r_d}{1+r_f}$
 
 if $\frac{F}{S} > \frac{1+r_d}{1+r_f}$, $\frac{F}{S} ({1+r_f})> {1+r_d}$, then borrow $r_d$ as its is low cost, and invest in $f$. The arbitrage return would be $\frac{F}{S} ({1+r_f}) - ({1+r_d})$
 
-if $\frac{F}{S} < \frac{1+r_d}{1+r_f}$, $\frac{S}{F} ({1+r_d})> {1+r_f}$, then borrow $r_d$ as its is low cost, and invest in $f$, then the arbitarge return would be $\frac{S}{F} ({1+r_d}) -( {1+r_f})$,
+if $\frac{F}{S} < \frac{1+r_d}{1+r_f}$, $\frac{S}{F} ({1+r_d})> {1+r_f}$, then borrow $r_f$ as its is low cost, and invest in $d$, then the arbitarge return would be $\frac{S}{F} ({1+r_d}) -( {1+r_f})$,
 
-remember always let F/S or S/F be in the larger side.
+**remember always let F/S or S/F be in the larger side.**
 
 #### Returns from Carry Trade
 
 **However, in reality**, high-yield countries often see their currencies appreciate, not depreciate, for extended periods of time. Reasoning:
 
-1. Captial Inflow
+1. Capital Inflow
 1. yield difference
 
 #### Forward Rate Bias & Carry Trade
@@ -693,7 +758,7 @@ By **Delta Hedging**, we can get a **delta-neutral position**. Straddle is a lon
 
 Straddle is delta Neutral, because it is symmetric at the current stock price.
 
-![Screenshot 2023-11-07 at 13.02.53](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.02.53.png)![Screenshot 2023-11-07 at 13.02.53](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.02.53.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.02.53.png" alt="Screenshot 2023-11-07 at 13.02.53" style="zoom: 25%;" />
 
 #### **Strangle** 
 
@@ -701,7 +766,7 @@ Long Call and long put OTM, but as options are OTM, so lower premium 期权费�
 
 The Green Curve is Straddle, Yellow Curve is Strangle, in the below figure.
 
-![Screenshot 2023-11-07 at 13.05.09](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.05.09.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.05.09.png" alt="Screenshot 2023-11-07 at 13.05.09" style="zoom:25%;" />
 
 Pros: lower premium fees
 
@@ -709,7 +774,7 @@ Cons: lower returns
 
 However, strangle could have a trading position that has net Vega and delta exposures (可以被做成不是围绕 current stock price 中心对称的，如向左和向右平移通过调整 call & put 的 strike price，这样可以结合 traders 对涨和跌的 expectations)
 
-![Screenshot 2023-11-07 at 13.13.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.13.10.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-07%20at%2013.13.10.png" alt="Screenshot 2023-11-07 at 13.13.10" style="zoom: 50%;" />
 
 Discontinue the Carry Trade 意味着 终止 Carry Trade
 
@@ -770,7 +835,7 @@ buy an OTM put and wrote a deeper OTM put with same maturity
 
 one type: bear put spread position with a short call position
 
-### Expotic Options
+### Exotic Options
 
 - Asian Options = $\max(S_T - ave,0)$
 
@@ -810,7 +875,7 @@ Emerging mkt 特点
 
 NDF Characteristics:
 
-- Counterparty risk
+- Counter-party risk
 - Cash settlement
 - the pricing of NDFs may differ from what is expected on the basis of arbitrage conditions.
 
@@ -847,6 +912,8 @@ Notional Value is set to be 1 million
 $BPV_p + BPV_f \times BPVHR = BPT_T$
 
 $BPV_f \times CF = BPV_{CTD}$
+
+$BPVHR = \frac{BPT_T - BPV_P}{BPV_{CTD}}\times CF$
 
 ##### Equity Future Beta
 

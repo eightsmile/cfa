@@ -16,11 +16,10 @@
 
 - Hedge for **Inflation**
 
-    - 一般情况下，bond 对 inflation 不友好，因为 pay fixed
+    - 一般情况下，bond 对 high inflation 不友好，因为 pay fixed
     - **(1) Float bond & (2) TIPS**
     
-    ![Screenshot 2023-11-08 at 08.58.01](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2008.58.01.png)
-    
+    <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2008.58.01.png" alt="Screenshot 2023-11-08 at 08.58.01" style="zoom: 50%;" />
 
 ### Classify the Fixed-Income Mandates
 
@@ -75,7 +74,7 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
 - If $Port Duration < Horizon$: 如果 hold to maturity，那么不受 price risks 影响。但是受 reinvestment risk 影响大，因为
 - If $Port Duration > Horizon$: 在收到 interim CF 之前就给买了，所以investment horizon小，那么受制于 reinvestment risks 小，因为没 reinvest 就卖了，反而受 price risks 影响大
-- If $Port Duration = horizon = Lia Matuiry$, then Great
+- If $Port Duration = horizon = Lia Matuiry$, then the hedge is good
 
 ##### Immunisation Risks: 
 
@@ -111,9 +110,9 @@ Cash Flow matching 是最nb的，可以避免 risk from non-parallel shifts in Y
 
 , where $P_A,C_A$ are for the bond A, 5-year. and bond B is 4-year, bond C is 3-year, etc
 
-![Screenshot 2023-11-08 at 10.13.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.35.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.35.png" alt="Screenshot 2023-11-08 at 10.13.35" style="zoom:67%;" />
 
-![Screenshot 2023-11-08 at 10.12.55](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.10.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.10.png" alt="Screenshot 2023-11-08 at 10.12.55" style="zoom:67%;" />
 
 Pros: 精确度高，可以很好匹配现金流 
 
@@ -148,7 +147,7 @@ $BPV_A + N_f \times BPV_f = BPV_L$
 
 #### Swaption
 
-- increase duration: enter a receiver swaption
+- increase duration: enter a receiver swaption 收固定pay浮动，所以duration提升
 - Decrease duration: enter a payer swaption
 
 Using Derivatives to adjust the duration of liability portfolio 用于调整 duration 不用于构建 asset portfolio
@@ -158,15 +157,17 @@ Using Derivatives to adjust the duration of liability portfolio 用于调整 dur
 - Non hedge, Hedge ratio = 0%
 - Fully Immunised, Hedge ratio = 100%
 
-- If interest rate is low, then 有利率上升到风险，资产价值可能下降，then have higher heding ratio
+- If interest rate is low, then 有利率上升的风险，资产价值可能下降，then have higher hedging ratio
 
-- ### if interest rate is higher, then 有利率下降风险，资产价值可能上升， 所以 then lower hedging ratio
+- if interest rate is higher, then 有利率下降风险，资产价值可能上升， 所以 then lower hedging ratio
 
 ### Risks in LDI
 
 1. Model Risks: model assumptions are wrong
 2. Interest Rate Risks: $Dur_A = Dur_L$, duration explains (95%) most of price movement of bonds
-3. Yield Curve Risks: non-parallel shifs of the yield curve. Minimise the dispersion of CF can mitigate this risks.
+3. Yield Curve Risks: **non-parallel shifs of the yield curve**. 
+
+   How to deal with the non-parallel shifts of the yield curve: Minimise the dispersion of CF can mitigate this risks.
 4. Spread Risks: $YTM = Base Yield(Treasury Yield) + Spread$
    - yield on high-quality corporate bond are less volatilty than more liquid treasuries
 5. Counterparty Credit Risks
@@ -225,9 +226,9 @@ FX market is difficult to track, because of size and breadth, wid array of secur
         - Yield Curve Risks: 
 
             1. 保证 portfolio Key rate duration与index 一致 - gauge the non-parallel yield curve shifts
-            2. PVD ( present value of distribution of CF)保证 PVD 与index一致
+            2. PVD ( present value of distribution of CF) 保证 PVD 与index一致
 
-            ![Screenshot 2023-11-10 at 13.16.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.16.42.png)
+            <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.16.42.png" alt="Screenshot 2023-11-10 at 13.16.42" style="zoom:33%;" />
 
             ![Screenshot 2023-11-10 at 13.17.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.17.20.png)
 
@@ -235,7 +236,7 @@ FX market is difficult to track, because of size and breadth, wid array of secur
 
 - **Active Management**: involves taking positions in primary risk factors that deviate from those of the index in order to generate excess return
 
-![Screenshot 2023-11-08 at 19.34.02](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2019.34.02.png) 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2019.34.02.png" alt="Screenshot 2023-11-08 at 19.34.02" style="zoom: 67%;" /> 
 
 ---
 
@@ -334,7 +335,7 @@ $D_p = D_I + \frac{V_B}{V_E}(D_I - D_B)$
 
 ##### Securtities Lending
 
-![Screenshot 2023-11-08 at 21.50.02](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2021.50.02.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2021.50.02.png" alt="Screenshot 2023-11-08 at 21.50.02" style="zoom:50%;" />
 
 Rebate Rate = Collateral Earning Rate - Securitiy Lending Rate
 
@@ -362,7 +363,7 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 
 ### Types of Lia
 
-![Screenshot 2023-11-09 at 12.28.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png" alt="Screenshot 2023-11-09 at 12.28.21" style="zoom:50%;" />
 
 **Type I:** An advantage to knowing the size and timing of cash flows is that **yield duration statistics**—that is, Macaulay duration, modified duration, money duration, and PVBP—can be used to measure the interest rate sensitivity of the liabilities.
 
@@ -381,7 +382,7 @@ Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
 
 ### Laddered Portfolio
 
-![Screenshot 2023-11-10 at 13.34.46](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png" alt="Screenshot 2023-11-10 at 13.34.46" style="zoom:50%;" />
 
 CF spreads and is diversified across the life of the bond.
 
@@ -446,9 +447,9 @@ P.S. dispersion and convexity are positively correlated see equation.
 
     - then three strategies in three situations:
 
-      ![Screenshot 2023-11-12 at 15.49.56](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png)
+      <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png" alt="Screenshot 2023-11-12 at 15.49.56" style="zoom: 67%;" />
 
-      ![Screenshot 2023-12-23 at 21.06.33](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png)
+      <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png" alt="Screenshot 2023-12-23 at 21.06.33" style="zoom:67%;" />
 
     - i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
 
@@ -470,13 +471,13 @@ P.S. dispersion and convexity are positively correlated see equation.
 
     - negative butterfly means 蝴蝶肚子朝上 butterfly spread increase, then mid increase, long and short term decrase, 
       - then long long barbell, short bullet
-    - Positve Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
+    - Positive Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
 
   - 4. **Volatility Changes** Strategies
 
     - Reduce in volatility, then short options 
       - long callable bonds
-    - Incrase in volatility, then long options and option value incrase
+    - Increase in volatility, then long options and option value incrase
       - long putable bonds
 
 - **Adjust the Duration** (**increase** duration and convexity)
@@ -485,7 +486,7 @@ P.S. dispersion and convexity are positively correlated see equation.
   - long bond call, have to right to take a bond
   - decrease duration by the opposite trading
 
-### Evaluatiing Yield Curve Strategies
+### Evaluating Yield Curve Strategies
 
 **Totoal Expected Return:**
 
