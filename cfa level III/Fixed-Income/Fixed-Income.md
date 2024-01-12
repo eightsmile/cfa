@@ -1,6 +1,6 @@
 # Fixed Income
 
-## Overall
+## General Knowledge
 
 ### Roles of Fixed Income in Portfolio
 
@@ -28,9 +28,103 @@
     2. CF matching
     3. Derivatives Overlay
     4. Contingent Immunisation
-- **Total Return** 为了挣 return
+- **Total Return** Mandate 为了挣 return 
+    1. Pure Index
+    2. Enhanced Index
+    3. Active
 
-#### Liability Based Mandate
+### Types of Lia
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png" alt="Screenshot 2023-11-09 at 12.28.21" style="zoom:50%;" />
+
+| Types    | Amount is Known | TIming is Known | Example                                                      |
+| -------- | --------------- | --------------- | ------------------------------------------------------------ |
+| Type I   | 1               | 1               | Traditional Bond (without options)                           |
+| Type II  | 1               |                 | Callable bond (已知amount，不知道时间，可提前赎回), Term Life-time Insurance 寿险 |
+| Type III |                 | 1               | Float Rate Note, Inflation Related Bond (金额不确定，但是有确定到期) |
+| Type IV  |                 |                 | DB Plan, Property & Casualty Insurance 财险金额和时间都不确定 |
+
+**Type I:** An advantage to knowing the size and timing of cash flows is that **yield duration statistics**—that is, Macaulay duration, modified duration, money duration, and PVBP—can be used to measure the interest rate sensitivity of the liabilities.
+
+**With Type II, III, and IV liabilities, a curve duration statistic** known as **effective duration** is needed to estimate interest rate sensitivity. This statistic is calculated using a model for the uncertain amount and/or timing of the cash flows and an initial assumption about the yield curve.
+
+### Fixed-Income Returns 5个部分
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240112083726046.png" alt="image-20240112083726046" style="zoom: 67%;" />
+
+$\mathbb{E}(\Delta P) = - Mod.Dur \times \Delta Yield + \frac{1}{2}\times Convexity \times (\Delta Yield)^2 $
+
+### Leverage
+
+##### Leveraged Portfolio **Return**
+
+$r_p = \frac{Portfolio\ Return}{Portfolio\ Equity} =  r_i + \frac{B}{E} \times (r_I - r_B)$
+
+自有资金的return = 本身的return, r_i + leverage * (diff between 自己的return - borrowed return)
+
+- $E$ value of Portfolio Equity, amount of Equity
+  - $r_I$ investment funds return
+- $B$ borrowed funds, amount of Bonds
+  - $r_p$ levered portfolio returns
+- The last eqution, and the last term represent the leverage effects on returns.
+- if $r_I > r_B$, then leverage increase total portfolio return
+- if $r_I < r_B$, then leverage decrease total portfolio return
+
+##### Leverage Effects on Duration
+
+$D_p = D_I + \frac{V_B}{V_E}(D_I - D_B)$
+
+##### 提升 Leverage 的方式
+
+1. Derivatives
+
+   - Futures:
+     - if $i$ increase, then price decrease, FP also decrease
+
+   - Swap:
+     - Fixed-rate payer: long float short fix 因为 float 不影响duration，所以short fixed 会减少 duration。此时 i 提升， duration 负，则 value increase
+     - Fixed-rate receivers: long fix short float 为duration增加。此时 i 提升，duration 为正，value 减少
+
+
+2. Repo
+
+   1. **Repo Margin**: A 给 B asset，值100； B 给 A cash，为95 。 此时 B 少给的 5 为 Repo Margin，B少付的相当于是A给B的保证金
+   2. **Repo Rate**: 结束后，A 给 B cash，为 97；B 把 Asset = 100 还给 A。那么97-95=2，多出的 2 为 repo rate，相当于借款利息	
+
+3. Structural Financial Instruments (implicit)
+
+   - inverse floator
+   - embedded leverage
+
+4. Securtities Lending
+
+   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2021.50.02.png" alt="Screenshot 2023-11-08 at 21.50.02" style="zoom:50%;" />
+
+   Rebate Rate = Collateral Earning Rate - Securitiy Lending Rate
+
+#### Risks of Leverage
+
+- Force Liquidation
+  - Fire Sale: forced liquidations at prices that are below fair value as a result of the seller’s need for immediate liquidation.
+- Higher level of Risks
+
+### Taxation
+
+如果实现 Capital Loss 可以减税
+
+如果是 tax exempt account，那么可以直接 直接实现 capital gain，否则考虑实现 capital loss 来抵税
+
+- Tax rate (rationale: 越稳定的收入 tax rate 越高，因为税务局不愿意承担风险)
+  - Coupon: tax is higher 
+  - Capital Gain: tax is lower
+
+Short-term Capital Gain tax > Long term Capital Gain
+
+Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
+
+---
+
+## Liability Based Mandate
 
 1. Duration Matching
 2. Cash Flow Matching
@@ -51,7 +145,7 @@ $Duration = Horizon$
 
 买 zero-coupon bond 最好，因为不涉及不用考虑中间 coupon reinvest的问题，但是 zero-coupon bond 只有短期。要匹配长期，只能买 coupon bearing fixed income bond
 
-### Duration Matching (Classic Immunisation)
+### Duration Matching (Classic Immunisation 免疫策略) 
 
 保证 能earn IRR / Cash Flow Yield
 
@@ -59,16 +153,18 @@ $Duration = Horizon$
 
 Make price risks and reinvestment risks cancel each other.
 
-对于 single liability immunisation ，convexity 越小，受到的 structural risk （即yield curve 非平行移动带来的risks）越小。
+- P.S.
+  - 对于 single liability immunisation ，convexity 越小，受到的 structural risk （即yield curve 非平行移动带来的risks）越小。
+  - 对于 port lia immunisation，convexity 越大，免疫的越好
 
-Structural Risk (non-parallel steepening and flattening twists)
-
-对于 port lia immunisation，convexity 越大，免疫的越好
+如何 做 immunisation immunistion 
 
 1. Portfolio Duration = Liability Duration   <- price risks
 2. PV of Port = PV of Lia                     <- reinvestment risks
 
 -  以上两个条件可以合并为: same Money Duration (BPV) or (PVBP)
+
+3. **minimuse Convexity, in order to minimise structural risks**
 
 Horizon 指的是 liability duration 负债的duration = 负债的到期日
 
@@ -76,7 +172,9 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 - If $Port Duration > Horizon$: 在收到 interim CF 之前就给买了，所以investment horizon小，那么受制于 reinvestment risks 小，因为没 reinvest 就卖了，反而受 price risks 影响大
 - If $Port Duration = horizon = Lia Matuiry$, then the hedge is good
 
-##### Immunisation Risks: 
+##### Dealing with the Structural risk / Immunisation Risks: 
+
+Structural Risk (non-parallel steepening and flattening twists) yield curve 非平行移动会导致 structural risk 即 
 
 - 此策略不能 cover Non-parallel changes **in interest rate** 因为 duration 衡量的是 利率的平行移动，所以如果不平行移动，则 duration match 失效
     - bond 的 CF流入有 (1) Barbell 两边流入多，中期流入少，易受 non-parallel shifts 影响 (2) Bullet 仅一期大的流入，受 non-parallel shifts 影响小。**In sum， invest 更多bullet bonds**
@@ -86,8 +184,9 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
     - 但是 rebalance 太过频繁会增加 transaction costs
 - 只匹配了 duration ，没有 匹配 convexity
     - 没啥解决办法，忽略 convexity
+- **如何解决 Structural risks ，最好的是买 Zero-coupon bond 只有一期现金流。其次是 买 bullet bond 现金流集中，convexity 小，受 yield curve moves 影响小**
 
-##### For Multi-Liabilities Immunisation
+#### For Multi-Liabilities Immunisation
 
 1. $PV_A = PV_{Lia}$
 2. $Duration_A = Duration_{Lia}$
@@ -97,7 +196,7 @@ Horizon 指的是 liability duration 负债的duration = 负债的到期日
 - Convexity要大于 outflow convexity的最小的
     - The immunising portfolio needs to be greater than the convexity (and dispersion) of the outflow portfolio. But, the convexity of the immunising portfolio should be minimised in order to minimise dispersion and reduce structural risk.
 
-### Cash Flow Matching
+##### Cash Flow Matching
 
 Cash Flow matching 是最nb的，可以避免 risk from non-parallel shifts in Yield Curve
 
@@ -110,25 +209,38 @@ Cash Flow matching 是最nb的，可以避免 risk from non-parallel shifts in Y
 
 , where $P_A,C_A$ are for the bond A, 5-year. and bond B is 4-year, bond C is 3-year, etc
 
-<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.35.png" alt="Screenshot 2023-11-08 at 10.13.35" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.35.png" alt="Screenshot 2023-11-08 at 10.13.35" style="zoom: 50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.10.png" alt="Screenshot 2023-11-08 at 10.12.55" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2010.13.10.png" alt="Screenshot 2023-11-08 at 10.12.55" style="zoom: 50%;" />
 
-Pros: 精确度高，可以很好匹配现金流 
+- Pros: 精确度高，可以很好匹配现金流 ，Straight forward, **no assumption of non-parallel shifts of the yield curve** , **no reinvestment**,  **no rebalance**, **accounting defeasance (在 B/S 中 把 A L 轧差 remove)**
+- Cons: 成本高，因为要买匹配日期的 bonds，若没有匹配的，只能买提前到期的bond，那么会损失提前到期日和pay lia日之间的时间价值。这段时间可能只能投低收益 risk- free 流动性强的资产。
 
-Cons: 成本高，因为要买匹配日期的 bonds，若没有匹配的，只能买提前到期的bond，那么会损失提前到期日和pay lia日之间的时间价值。这段时间可能只能投低收益 risk- free 流动性强的资产。
-
-Why not buy back and retire the liability early?
+Why not buy back and retire the liability early (tender offer)?
 
 - Buyback is difficult and costly
 - Might be illiquid
 - Corporate has motive to improve the credit rating by doing CF matching, so do not buyback earlier.
 
-### Contingent Immunisation
+##### Duration Matching
 
-Allow active management for the surplus amount of assets over liability 用surplus 的部分做 active management，其他正常部门 immunisation
+条件：
 
-##### Derivatives Overlay
+1. $MV_A > PV_L$ or $PV_A>PV_L$
+2. $BPV_A = BPV_L$
+3. $Convexity_A>Convexity_L$ 不同于 single 此时要求 convexity 比 lia 的更大，这样才增在non-parallel moves 是 cover CF  
+
+Cash Flow matching 和 Duration matching 的区别：具体见下表
+
+
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240112124542365.png" alt="image-20240112124542365" style="zoom: 67%;" />
+
+##### Contingent Immunisation 用
+
+Allow **active management** for the surplus amount of assets over liability **用surplus 的部分做 active management，其他正常部份 immunisation**
+
+##### Derivatives Overlay 用于 Cover the Duration Gap
 
 前三个(1) duration matching (2) CF matching (3) contingent immunisation是用来构建组合。但是 Derivatives Overly 不是用于构建，而是用来 adjust. **Rebalance the immunisation portfolio to keep it on its target duration.**
 
@@ -136,23 +248,29 @@ $Asset \ BPV \times \Delta Asset\ Yields + Hedge\ BPV \times \Delta\ Hedge \ Yie
 
 $BPV_A + N_f \times BPV_f = BPV_L$
 
-#### Using Forwards
+$BPV = V \times MD$
 
-- Required Number of Future Contract: $N_f = \frac{Lia\ Portfolio \ BPV - Asset \ Portfolio \ BPV}{futures\ BPV}$
-- $Futures BPV = \frac{BPV_{CTD}}{CF}$  cheapest to Deliver
+- Using Future
 
-#### Using Interest Swap
+  - Required Number of Future Contract: $N_f = \frac{Lia\ Portfolio \ BPV - Asset \ Portfolio \ BPV}{futures\ BPV}$
 
-- Notional Principal: $NP = \frac{LiaBPV - Asset BPV}{Swap BPV/100}$
+  - $Futures BPV = \frac{BPV_{CTD}}{CF}$  cheapest to Deliver
 
-#### Swaption
 
-- increase duration: enter a receiver swaption 收固定pay浮动，所以duration提升
-- Decrease duration: enter a payer swaption
+- Using Interest Swap
+  - Notional Principal: $NP = \frac{LiaBPV - Asset BPV}{Swap BPV/100}$
+
+
+- Swaption
+
+  - increase duration: enter a receiver swaption 收固定pay浮动，所以duration提升
+
+  - Decrease duration: enter a payer swaption
+
 
 Using Derivatives to adjust the duration of liability portfolio 用于调整 duration 不用于构建 asset portfolio
 
-#### Hedge Ratio
+### Hedge Ratio
 
 - Non hedge, Hedge ratio = 0%
 - Fully Immunised, Hedge ratio = 100%
@@ -176,20 +294,28 @@ Using Derivatives to adjust the duration of liability portfolio 用于调整 dur
 
 ---
 
-### Total Return Mandates (Index Based)
+## Total Return Mandates (Index Based)
+
+- Pure Index (Full replication)
+- Enhanced Index 
+- Active
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240112133640987.png" alt="image-20240112133640987" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240112134011405.png" alt="image-20240112134011405" style="zoom:67%;" />
 
 因为 bond liquidity 比 equity 的低，所以mimic index bonds by purchasing the same bonds 可能比较难以操作。 所以 mimic **Risk Factors**
 
 Risks Factors:
 
-1. **Interest Rate Risks**: exposure to parallel shift in the Yield Curve. Measured by **Portfolio Duration**
+1. **Interest Rate Risks**: exposure to **parallel** shift in the Yield Curve. Measured by **Portfolio Duration**
 
 2. **Spread Risks**: exposure to changes in spreads between Treasuries and non-Treasuries. Measured by **Spread Duration**.
    - (YTM = Benchmark Yield + Spread), so spread 涨1%带来的YTM 增加与 Benchmarked涨1%带来的YTM增加一致。thus spread duration = portfolio duration，as 都通过YTM影响 price
-   
+
    - P.S.国债没有 spread
-   
-3. **Yield Curve Risks**: exposure to a twist in the Treasury Yield Curve. Measured by **Key Rate Duration & PV of Distribution of CF**
+
+3. **Yield Curve Risks**: exposure to a **twist** in the Treasury Yield Curve. Measured by **Key Rate Duration & PV of Distribution of CF**
 
 4. Credit Risks**: exposure to downgrades and defaults. Measured by contribution to **duration by credit rating
 
@@ -267,120 +393,20 @@ Below-investment-grade securities are affected more by changes in spread than by
 - Use the **spread duration** to gauge the portfolio’s sensitivity to changes in credit spreads.
 - A **second way** to increase the portfolio credit exposure is to **reduce the average credit rating of the portfolio**.
 
-### Bond Market Liquidity
+### Risks Factors for primary indexing
 
-Yield & Liqudity are negative correlated
+- Interest Rate Risks: 保证 portfolio Effective duration 与 index一致
+- Yield Curve Risks: 
+  1. 保证 portfolio Key rate duration与index 一致 - gauge the non-parallel yield curve shifts
+  2. PVD ( present value of distribution of CF)保证 PVD 与index一致
 
----
-
-### Fixed-Income Returns
-
-We introduced previously
-
-1. Coupon
-2. $\Delta P$
-3. Reinvestment
-
-$\mathbb{E}(R)\approx Yield\ Income + Rolldown\ Return + E_1 -E_2 + E_3$
-
-- $Yield Income = \frac{Annual\ Coupon\ Payment}{Current\ Bond\ Price}$
-
-  - Annual Coupon Payment = Coupon + Reinvestment Income
-
-- $Rolldown Return = \frac{BondPrice_e - BondPrice_b}{BondPrice_b}$
-
-  (P.S. $Roll\ Yield = Yield\ Income + Rollowdown\ Return$) 价格提升 + coupon earning 
-
-- $E_1 = \text{Changes in Price based on Investors' view yields and yield spread}$
-
-- $E_2 = Credit\ Loss$
-
-- $E_3 = Currency \ Gains \ or \ Losses$
-
-$\mathbb{E}(\Delta P) = - Mod.Dur \times \Delta Yield + \frac{1}{2}\times Convexity \times (\Delta Yield)^2 $
-
----
-
-### Leverage
-
-##### Leveraged Portfolio **Return**
-
-$r_p = \frac{Portfolio\ Return}{Portfolio\ Equity} = \frac{r_1 \times V_E + V_B - V_B\times r_B}{V_E} = r_i + \frac{V_B}{V_E} \times (r_I - r_B)$
-
-- $V_E$ value of Portfolio Equity
-  - $r_I$ investment funds return
-- $V_B$ borrowed funds
-  - $r_p$ levered portfolio returns
-- The last eqution, and the last term represent the leverage effects on returns.
-- if $r_I > r_B$, then leverage increase total portfolio return
-- if $r_I < r_B$, then leverage decrease total portfolio return
-
-##### Leverage Effects on Duration
-
-$D_p = D_I + \frac{V_B}{V_E}(D_I - D_B)$
-
-##### Derivatives
-
-- Futures:
-  - if $i$ increase, then price decrease, FP also decrease
-- Swap:
-  - Fixed-rate payer: long float short fix 因为 float 不影响duration，所以short fixed 会减少 duration。此时 i 提升， duration 负，则 value increase
-  - Fixed-rate receivers: long fix short float 为duration增加。此时 i 提升，duration 为正，value 减少
-
-##### Repo
-
-**Repo Margin**: A 给 B asset，值100； B 给 A cash，为95 。 此时 B 少给的 5 为 Repo Margin，B少付的相当于是A给B的保证金
-
-**Repo Rate**: 结束后，A 给 B cash，为 97；B 把 Asset = 100 还给 A。那么97-95=2，多出的 2 为 repo rate，相当于借款利息	
-
-##### Securtities Lending
-
-<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-08%20at%2021.50.02.png" alt="Screenshot 2023-11-08 at 21.50.02" style="zoom:50%;" />
-
-Rebate Rate = Collateral Earning Rate - Securitiy Lending Rate
-
-#### Risks of Leverage
-
-- Force Liquidation
-  - Fire Sale: forced liquidations at prices that are below fair value as a result of the seller’s need for immediate liquidation.
-- Higher level of Risks
-
----
-
-### Taxation
-
-Coupon: tax is higher
-
-Captial Gain: tax is lower
-
-Short-term Captial Gain tax > Long term Capitla Gain
-
-Capital Loss 能抵减 Capital Gain， 不能抵减 Coupon
-
----
-
-## Liability-Driven and Index-based Strategies
-
-### Types of Lia
-
-<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-09%20at%2012.28.21.png" alt="Screenshot 2023-11-09 at 12.28.21" style="zoom:50%;" />
-
-**Type I:** An advantage to knowing the size and timing of cash flows is that **yield duration statistics**—that is, Macaulay duration, modified duration, money duration, and PVBP—can be used to measure the interest rate sensitivity of the liabilities.
-
-**With Type II, III, and IV liabilities, a curve duration statistic** known as **effective duration** is needed to estimate interest rate sensitivity. This statistic is calculated using a model for the uncertain amount and/or timing of the cash flows and an initial assumption about the yield curve.
-
-### Primary Indexing Risks Factors
-
-- Risks Factors for primary indexing:
-    - Interest Rate Risks: 保证 portfolio Effective duration 与 index一致
-    - Yield Curve Risks: 
-        1. 保证 portfolio Key rate duration与index 一致 - gauge the non-parallel yield curve shifts
-        2. PVD ( present value of distribution of CF)保证 PVD 与index一致
 - Spread Risk 保证 Spread  duration 匹配
 
-### Benchmark Selection
+### Bond Market Liquidity
 
-### Laddered Portfolio
+Yield & Liquidity are negative correlated
+
+### Laddered Portfolio （convexity 在 Bullet 和 Barbell 之间）
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-10%20at%2013.34.46.png" alt="Screenshot 2023-11-10 at 13.34.46" style="zoom:50%;" />
 
@@ -396,32 +422,30 @@ P.S. dispersion and convexity are positively correlated see equation.
 
 ## Yield Curve Strategy
 
-### Primay Yield Curve Risks Factors
+### Primary Yield Curve Risks Factors
 
 - **Level**: parallel shifts in the yield curve
 - **Slope**: twist / non-parallel shifts ($Y_{long-run} - Y_{short-run}$)
 - **Shape or Curvatures** (butterfly movement): $2Y_m - Y_s - Y_L$
-  - postive butterly: concave
+  - positive butterly: concave
 
 - **Duration**:
 
   - **Maculy Duration**: weighted Average Time
-  - **Modified Duration**: yield and percentage of price cgabges 
+  - **Modified Duration**: yield and percentage of price changes
   - **Effective Duration**: yield and percentage of price changes for **options embeded bonds**
   - **Key Rate Duration**: **at a specific time point**
 
 - Convexity (second order)
 
-  - effecitve convexioty : for option embedded bonds
-
-  ![Screenshot 2023-11-12 at 15.00.20](/Users/meowmeow/Library/Application Support/typora-user-images/Screenshot 2023-11-12 at 15.00.20.png)
+  - effective convexity : for option embedded bonds
 
 ### Strategies
 
 - **Static Yield Curve:** 
 
   1. buy and hold:
-     - in upward sloping curve, active mangetment
+     - in upward sloping curve, active management
   2. riding the yield curve: buy long-term bond, sell short-term bond
      - in upward sloping curve, active mangetment
   3. Carry Trade (repo): buy security or long term bond, borrowing at low rate / or Repo to earn the spread between two rates
@@ -432,53 +456,61 @@ P.S. dispersion and convexity are positively correlated see equation.
 
 - **Dynamic Yield Curve**
 
-  - 1. **Level** Changes (parallel shifts)
+  1. **Level** Changes (parallel shifts)
 
-    - if interest rate fall, then price incrase, then strategy should be to increase the duration
-    - if interest rate increase, then price decrase, then strategy should be to decrease the duration
-    - Ways to reduce Duration: 
-      1. sell cash bond, bullet
-      2. Pay-fixed (interst raet swap)
-      3. short future position
+     - if interest rate fall, then price increase, then strategy should be to increase the duration
 
-  - 2. **Slope** Changes
+     - if interest rate increase, then price decrase, then strategy should be to decrease the duration
 
-    - if getting **steepen**, then long term rate incrase, long-term bond price decrase, short-term rate decrase, short term bond price increase
+     - Ways to reduce Duration: 
+       1. sell cash bond, bullet
+          1. Pay-fixed (interest rate swap)
+          2. short future position
 
-    - then three strategies in three situations:
+  2. **Slope** Changes
 
-      <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png" alt="Screenshot 2023-11-12 at 15.49.56" style="zoom: 67%;" />
+     - if getting **steepen**, then long term rate incrase, long-term bond price decrase, short-term rate decrase, short term bond price increase
 
-      <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png" alt="Screenshot 2023-12-23 at 21.06.33" style="zoom:67%;" />
 
-    - i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
+     - then three strategies in three situations:
 
-    - if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
+       <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png" alt="Screenshot 2023-11-12 at 15.49.56" style="zoom: 67%;" />
 
-      - Long bullet, short barbell 
+       <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png" alt="Screenshot 2023-12-23 at 21.06.33" style="zoom:67%;" />
 
-    - if under **bear steepen**, then long term rate increase more than short-term rate increase, and rates are all increased, so prices are all decrase, but long-term price decrease more. We decrase duration
 
-    - if under **bull steepen**, we want earn from steepen, then increase duration.
+     - i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
+       - if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
 
-    - Risk is the yield curve moves unlike our expectation that didn't get steepen.
+         - Long bullet, short barbell 
 
-    - Vice Versa for **Flattening**
 
-  - 3. **Shape** Changes (curvture) (diverge rate changes)
+     - if under **bear steepen**, then long term rate increase more than short-term rate increase, and rates are all increased, so prices are all decrase, but long-term price decrease more. We decrase duration
 
-    $Butterfly\ Spread = 2Y_m - Ys- Y_L$
 
-    - negative butterfly means 蝴蝶肚子朝上 butterfly spread increase, then mid increase, long and short term decrase, 
-      - then long long barbell, short bullet
-    - Positive Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
+     - if under **bull steepen**, we want earn from steepen, then increase duration.
 
-  - 4. **Volatility Changes** Strategies
 
-    - Reduce in volatility, then short options 
-      - long callable bonds
-    - Increase in volatility, then long options and option value incrase
-      - long putable bonds
+     - Risk is the yield curve moves unlike our expectation that didn't get steepen.
+
+
+     - Vice Versa for **Flattening**
+
+  3. **Shape** Changes (curvture) (diverge rate changes)
+
+     $Butterfly\ Spread = 2Y_m - Ys- Y_L$
+
+     1. negative butterfly means 蝴蝶肚子朝上 butterfly spread increase, then mid increase, long and short term decrase, 
+        1. then long long barbell, short bullet
+     2. Positive Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
+
+  4. **Volatility Changes** Strategies
+
+     - Reduce in volatility, then short options 
+       - long callable bonds
+
+     - Increase in volatility, then long options and option value incrase
+       - long putable bonds
 
 - **Adjust the Duration** (**increase** duration and convexity)
   - long receiver swaption, have the right to receive fixed
@@ -486,9 +518,11 @@ P.S. dispersion and convexity are positively correlated see equation.
   - long bond call, have to right to take a bond
   - decrease duration by the opposite trading
 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240112164349321.png" alt="image-20240112164349321" style="zoom: 67%;" />
+
 ### Evaluating Yield Curve Strategies
 
-**Totoal Expected Return:**
+**Total Expected Return:**
 
 $\mathbb{E}(R)$:
 
@@ -527,7 +561,7 @@ High Yield bond and Low Yield bond behave different at differnt econ environment
 - In strong econ growth situation, low/high credit rated spread converges.
 - In bad econ envir, people buy gov bond. Gov bond and high-yield bond become negative correlated.
 
-- **Emperical Duration**: benchmark rate 对 price 实际的影响
+- **Empirical Duration**: benchmark rate 对 price 实际的影响
 
   $\underbrace{BondYield}_{Duration} = \underbrace{RiskFreeRate}_{Benchmark Duration}+ \underbrace{Spread}_{Spread Duration}$
 
