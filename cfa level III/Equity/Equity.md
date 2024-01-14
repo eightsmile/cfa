@@ -121,7 +121,7 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
     
         - $w_i = \frac{MV_j}{\sum MV_i} = \frac{P_j \times K}{\sum P_i \times K} = \frac{P_j}{\sum P_i}$
     
-        - 高价股权重会更高，对 index 影响更大。growth stock 往往 price 更高，所以 growth stock 在 index 中权重更大
+        - 高价股权重会更高，对 index 影响更大。growth stock （高价股） 往往 price 更高，所以 growth stock 在 index 中权重更大。P.S. Growth Stock 指的是有增长潜力的，如AAPL 股价一般比较高。Value Stock 指的是 price 被低估的，P/BV 小的
         - 拆股 split 等影响 price，会影响 price weighting。但 拆股不会影响 market cap，所以不影响 market-cap weighting。
         - **Rebalance weights** 因为拆股会带来价格减半，但是实际上 index 不应受到影响，所以要调整 被拆 stock 的 weight 使得拆股前后 index 数值一致，然后反推 weights。所以 price weighting 会调整 weights
     
@@ -241,7 +241,7 @@ Most benchmarket returns are driven by factors, which are risk exposures that ca
 2. ETFs
    - 可以在交易所买，所以基金份额可以在二级市场交易
    - 可以在交易所 做空，融资融券，leverage, short 因为可以在交易所交易。不像 open-end mutual fund 只能找基金公司申购赎回，不能用于申购赎回
-   - 不用现金交割，而是用 in kind 以物易物的方式交割。也因此没有现金的 gain / loss realised，gain loss are un-realised 所以可以达到 **tax defer** 的好处
+   - 不用现金交割，而是用 in kind 以物易物的方式交割，sponsor 拿一篮子stock 换 ETFs。也因此没有现金的 gain / loss realised，gain loss are un-realised 所以可以达到 **tax defer** 的好处
 
 ##### 对比 mutual fund & ETFs
 
@@ -249,7 +249,7 @@ Most benchmarket returns are driven by factors, which are risk exposures that ca
 
 ##### ETFs v.s. Mutual Funds
 
-- ETFs' redemption 拿钱换股，所以其他人 包括 NAV不会被影响，所以 redemption is more cheap and efficient, but Mutual Funds 会拿钱换stock
+- ETFs' redemption 拿ETFs换股，所以其他人 包括 NAV不会被影响，所以 redemption is more cheap and efficient, but Mutual Funds 会拿钱换stock
 - ETF s higher transaction costs from commission and bid-ask spread. 因为可以在二级交易 and might be illiquid in some secondary market
 
 ####  Derivatives
@@ -299,7 +299,7 @@ The **optimisation process accounts explicitly for the covariances** in the port
 
 - **Pros**:
     - lower tracking error than stratified sampling 
-    - Can account for the covariance / correlation for diversification**Cons**:
+    - Can account for the covariance / correlation for diversification
 - **Cons**
     - Historical data, corr might change
     - Dynamic optimisation would also be costly
@@ -311,9 +311,13 @@ The **optimisation process accounts explicitly for the covariances** in the port
 
 ##### Sum
 
-其中波动率，stratified因为只选了部分，所以波动率大
+- 波动率，stratified因为只选了部分，所以波动率大
 
- full replication < optimisation < stratified sampling
+  full replication < optimisation < stratified sampling
+
+- Transaction Cost
+
+  Optimisation < stratified sampling < full replication
 
 ### Causes of Tracking Error T.E.
 
@@ -356,7 +360,7 @@ In no cost world, Full replication produce lowest T.E., but real world there has
 
 - **Pitfall in Fundamental Investing** (more subjective 更主观)
     1. Behavioural Biases
-    2. Value Trap 不能只因为 P/E 低就买，它PE低可能是因为 该公司要完蛋了，人们都在卖
+    2. Value Trap 不能只因为 P/B P/E 低就买，它PE低可能是因为 该公司要完蛋了，人们都在卖
     3. Growth Trap 不能因为 expected growth 高就买，可能 expected growth 虽然高，但是可能不达预期，或者 timing 不合时宜
 
 #### Quantitative Approach
@@ -372,9 +376,9 @@ In no cost world, Full replication produce lowest T.E., but real world there has
     3. Back-testing the strategy
 
         - Information Coefficient (IC) 用 信息系数，factor 与未来return的相关性。 衡量 factor 怎么样
-            - Pearson IC: $\rho(S_t, R_{t+1})$ , 是factor score 和下一期return 的相关系数corr。 where $S_t$ is the factor score (expected return), and $R_{t+1}$ is the real return at t+1
-                - sensitive to outlier **容易受异常值影响**，如在算相关系数的时候有一期的数打错了，h或者有一期有巨大异常值，那么影响会挺大
-            - Spearman IC 计算相关系数 corr between factor score 和 forward return 的排序值.
+            - Pearson IC: $\rho(S_t, R_{t+1})$ , 是factor score 和下一期return 的相关系数corr, where $S_t$ is the factor score (expected return), and $R_{t+1}$ is the real return at t+1
+                - sensitive to outlier **容易受异常值影响**，如在算相关系数的时候有一期的数打错了，或者有一期有巨大异常值，那么影响会挺大
+            - Spearman IC 计算相关系数 corr between factor score **FS** 和 **SR** 排序值of forward/subsequent return .
                 - 计算的是排序值，所以outlier的影响会被减少
             - P.S. 用 Factor Score @ t 和 Subsequent Month Ration @ t+1 算，因为是Subsequent 所以要 t+1。$Corr(FS_t, SR_{t+1})$
 
@@ -419,7 +423,7 @@ Quantitative model consider correlation between factors, so it consider risks at
 
 - **Relative value**: 投 low multiple (P/E, P/B) 即price 低的 为 value investment
 - **Contrarian Investing**: Purchasing or selling securities against prevailing market sentiment.
-- **High-quality value**: warren buffet 投 intrinsic value 高的 high quality 龙楼
+- **High-quality value**: Warren Buffet 投 intrinsic value 高的 high quality 龙头
 - **Income Investing**: invest high dividend yields or high div growth rate firm
 - **Deep-value investing**: focus on low valuation or firms with financial distress 投 multiple 非常低的，面临退市风险的股票，**把自己的expert能力发挥，主动参与管理**，投资有困难的公司
 - **Restrucuring and Distressed debt investing**: invest prior to or during an expected bankruptcy filing 投资distressed firm，**相信公司本身的manager有能力管理好**
@@ -555,7 +559,7 @@ Ending
 
 ## Active Equity Investing
 
-Systematic + Discretionary X Top-down + Bottom-up
+(Systematic + Discretionary) X (Top-down + Bottom-up)
 
 2*2 一共四种管理组合的方式
 
@@ -596,7 +600,7 @@ According to the above function, we decompose it into three parts.
 
      $R_A = \sum(\beta_i^p - \beta_i^B) F_i $
 
-2. **Tactically Adjusting**. **factor timing, security selection**. Return from identifying misplacing, Alpha $\alpha$
+2. **Tactically Adjusting**. **factor timing, security selection**. Return from identifying misplacing, 因为回归的factors 都是 rewarded factor，所以residuals会留下 unrewarded factors。这部分体现了基金经理的的能力 (security selection + CME factor timing)，即 Alpha $\alpha$
 
     - Sustainable 可持续，取决于基金经理的能力，基金经理越nb alpha越大
 
@@ -630,7 +634,7 @@ According to the above function, we decompose it into three parts.
 
 4. Breadth of Experience (BR) 
 
-    $InformationRatio = \frac{R_A}{\sigma_A}$
+    $IR = InformationRatio = \frac{R_A}{\sigma_A}$
 
     $IR = IC\times TC\times \sqrt{BR}$ , and combine those two 
 
@@ -640,7 +644,7 @@ According to the above function, we decompose it into three parts.
 
 ![Screenshot 2023-11-17 at 16.05.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-17%20at%2016.05.21.png)
 
-#### Relative Risks 衡量active investment的指标
+#### Relative Risks 衡量 active investment的指标
 
 Relative risk is measured w.r.t. the benchmark. There are two measures of the benchmark-relative risks.
 
@@ -656,30 +660,32 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
     - Between (0,1)
 
-    - Sources 来源：(1) 与 benchmark 中成分股不同 (2) weights 不同。P.S. 如果 portfolio 中 stocks 数比 index 少很多，那么active share一定会大，因为如果数少，则 concentration 集中度大
+    - Sources 来源：(1) 与 benchmark 中成分股不同 (2) weights 不同。P.S. 如果 portfolio 中 stocks 数比 index 少很多，那么active share一定会大，因为如果数少，则 concentration 集中度大 
 
 2. Active Risks ( Tracking Error )
 
     - Source of Risks
 
-        Recall: 
+      Recall: 
 
-        $R_A =  \sum(\beta_i^p - \beta_i^B) F_i + \epsilon_p - \epsilon_B$	
+      $R_A =  \sum(\beta_i^p - \beta_i^B) F_i + \epsilon_p - \epsilon_B$	
 
-        $R_A =  \underbrace{\sum(\beta_i^p - \beta_i^B) F_i}_{1} +\underbrace{\alpha}_{2}+\underbrace{\epsilon}_{3}$
+      $R_A =  \underbrace{\sum(\beta_i^p - \beta_i^B) F_i}_{1} +\underbrace{\alpha}_{2}+\underbrace{\epsilon}_{3}$
 
-        收益被拆成了 3 部分（或者说 2 部分，即 1 和 2+3，同理 风险也将被拆成 2 部分
+      收益被拆成了 3 部分（或者说 2 部分，即 1 和 2+3，同理 风险也将被拆成 2 部分
 
-        $\sigma^2_A = \underbrace{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg)}_{factor \ exposure} + \underbrace{\sigma^2_e}_{\text{idiosyncratic  risks/ active share}}$
+      $\sigma^2_A = \underbrace{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg)}_{1. factor \ exposure} + \underbrace{\sigma^2_e}_{\text{2. idiosyncratic  risks/ active share}}$
 
-        $\sigma_A = \sqrt{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg) + {\sigma^2_{\epsilon}} }$
+      $\sigma_A = \sqrt{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg) + {\sigma^2_{\epsilon}} }$
 
       1. 与 factor exposure 相关的
       1. 和与 个股相关的
-      1. high net exposure to a risk factor leads to high active risks 来自beta (risk exposure)差异越提升active risks
-      1. neutralised factor exposure will have active risk entirely attributed to active share 如果beta差异(risk exposure) =0 ，那么 active risk 全部来自 active share。**因为 alpha & epsilon 即FM主动管理的程度，这个东西可以由 active share 衡量**
-      1. active risks attributed to active share will be smaller if the number of securtities is large or idiosyncratic risk is small 如果组合中股票数量多，diversification大，$\sigma^2_{\epsilon}$ active share 小，那么active risks 小
-      1. active risk increase with the increse in factor and idiosyncratic volatility
+    
+      - high net exposure to a risk factor leads to high active risks 来自beta (risk exposure)差异 提升active risks
+      - neutralised factor exposure will have active risk entirely attributed to active share 如果beta差异(risk exposure) =0 ，那么 active risk 全部来自 active share。**因为 alpha & epsilon 即FM主动管理的程度，这个东西可以由 active share 衡量** (注意上面公式，active share 指的是 $\sigma_e^2$ 的部分)
+      - active risks attributed to active share will be smaller if the number of securtities is large or idiosyncratic risk is small 如果组合中股票数量多，diversification大，$\sigma^2_{\epsilon}$ active share 小，那么active risks 小
+      - active risk increase with the increse in factor and idiosyncratic volatility
+    
 3.  Active Share v.s. Active Risks
 
     1. The level of active risk will rise with an increase in factor and idiosyncratic volatility 
@@ -694,7 +700,7 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
 - Closet Index: 伪主动管理，说是主动，但实际上是 被动，所以active risk & active share 都低
 - Factor Neutral: $\sigma_A = \sqrt{\sigma^2\bigg(\sum (\beta_i^p-\beta_i^b)\times F_i\bigg) + {\sigma^2_{\epsilon}} }$ 第一个部分 = 0，因为factor neutral。所以 active risk 只受到 active share 影响。但是由于 有 active share不一定有 active risk，所以在x-axis靠左的位置
-- Factor Bets: active risks is high。下面等式的第一部分不等于零，第二部分较小
+- **Factor Bets:** active risks is high。active risks 等式的第一部分不等于零，第二部分较小。较为贴合benchmark 的 factors
 - Concentrated: active share is high，factor exposure 比较高
 - Concentrated Stock Pick: 全高
 
@@ -710,7 +716,7 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
      for Asset 1: $CV_1 = w_1^2\sigma_1^2 + w_1 w_2 cov_{1,2}$
 
-     for Asset 1: $CV_2 = w_2^2\sigma_2^2 + w_1 w_2 cov_{1,2}$
+     for Asset 2: $CV_2 = w_2^2\sigma_2^2 + w_1 w_2 cov_{1,2}$
 
      **Contribution of each asset to total** $=\frac{CV_1}{\sigma_p^2}$
      
@@ -724,7 +730,7 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
 ![Screenshot 2023-12-25 at 22.22.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312252222496.png)
 
-- Relative Risk Measure: **relative to the benchmark** 所有指标都减去benchmark 获得 active risk or active return 这才是relative term
+- **Relative Risk Measure**: **relative to the benchmark** 所有指标都减去benchmark 获得 active risk or active return 这才是relative term
 
   - Derivatives
 
@@ -767,7 +773,7 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
 
 - P.S. the distinction between formal and heuristic risks
 - Other Considerations:
-  - Leverage $R_g = R_a - \sigma^2/2$ 几何平均数 = 代数平均数 - sigma^2/2 这意味着 return 和 risk 是非线性的，不是 risk 越多 return 就越多，而是类似抛物线。所以不能无限leverage扩大收益。
+  - Leverage $R_g = R_a - \sigma^2/2$ 几何平均数 = 代数平均数 - sigma^2/2 这意味着 **return 和 risk 是非线性的，不是 risk 越多 return 就越多，而是类似抛物线。所以不能无限leverage扩大收益**。
   - Risk Measures
 
 #### Market Inpacts Cost
@@ -788,7 +794,7 @@ Four Conclusion about slippage cost
 1. slippage cost is more important than commission ocst
 2. greater for small cap stock than large cap stock
 3. no necessarily greater in emerging mkt
-4. slippage cost is higher is market volatility is higher
+4. slippage cost is higher if market volatility is higher
 
 #### Strategy
 
@@ -841,7 +847,9 @@ weights 能清晰的 体现 investment philosophy
 
 Factor Risk Contribution 中 unexplained 部分少。unexplained 越多表示 FM 自己都不能解释自己 fund risks
 
-组合中 number 越多，按理说 越 diversified。此时 如果 number多的 portfolio 的 active risk 大，那么管理的不有效。**Number 和 active risks 不能 contradict**
+组合中 number 越多，按理说 越 diversified。此时 **如果** number多的 portfolio 的 active risk 大，**那么**管理的不有效。
+
+**Number 和 active risks 不能 contradict**
 
 Fee / Active Share 越小，说明 fee 越便宜
 

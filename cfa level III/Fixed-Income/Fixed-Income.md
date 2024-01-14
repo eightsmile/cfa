@@ -10,8 +10,7 @@
     2. **In the Stress Periods**, correlation 
         - decrease between government and equity
         - increase between high yield bond and equity
-    3. 
-
+    
 - **Manage Cash Flows** to meet obligations such as Tuition Fees, Pension, etc
 
 - Hedge for **Inflation**
@@ -447,8 +446,9 @@ P.S. dispersion and convexity are positively correlated see equation.
   1. buy and hold:
      - in upward sloping curve, active management
   2. riding the yield curve: buy long-term bond, sell short-term bond
-     - in upward sloping curve, active mangetment
-  3. Carry Trade (repo): buy security or long term bond, borrowing at low rate / or Repo to earn the spread between two rates
+     - in upward sloping curve, active mangetment 挣long-term bond 的 coupon 要比 short-term 的大。同时，由于假设 yield curve upward sloping, 持有bond 到短期后 rate 下降，so bond price increase。
+     - 综上 ride the yield curve 假设 upward yield curve ， 挣 (1) higher coupon (2) price change
+  3. Carry Trade (repo): buy security or long term bond, borrowing at low rate / or **Repo** to earn the spread between two rates
      - reqiure the yield curve to be static.
   4. Derivatives
      1. Long Future Position (用衍生品可以增加 leverage)
@@ -468,41 +468,25 @@ P.S. dispersion and convexity are positively correlated see equation.
           2. short future position
 
   2. **Slope** Changes
-
-     - if getting **steepen**, then long term rate incrase, long-term bond price decrase, short-term rate decrase, short term bond price increase
-
-
-     - then three strategies in three situations:
-
+		- if getting **steepen**, then long term rate incrase, long-term bond price decrase, short-term rate decrase, short term bond price increase
+		- then three strategies in three situations:
        <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-12%20at%2015.49.56.png" alt="Screenshot 2023-11-12 at 15.49.56" style="zoom: 67%;" />
-
        <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312232106240.png" alt="Screenshot 2023-12-23 at 21.06.33" style="zoom:67%;" />
-
-
-     - i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
-       - if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
-
-         - Long bullet, short barbell 
-
-
-     - if under **bear steepen**, then long term rate increase more than short-term rate increase, and rates are all increased, so prices are all decrase, but long-term price decrease more. We decrase duration
-
-
-     - if under **bull steepen**, we want earn from steepen, then increase duration.
-
-
-     - Risk is the yield curve moves unlike our expectation that didn't get steepen.
-
-
-     - Vice Versa for **Flattening**
+		- i.e. in duration-neutral yield curve flattening trade, an investor typically goes long on longer-term bonds and short on shorter-term bonds, **expecting that the yield curve will flatten**.
+		- if we want **duration neutral**, we should play with barbell and bullet, as bullet has more mid-term, and is less affected by slope changes; but for barbell long-term rate incrase, price decrease more than short-term price increase, so barbell overall is loss. 
+			- Long bullet, short barbell 
+		- if under **bear steepen**, then long term rate increase more than short-term rate increase, and rates are all increased, so prices are all decrase, but long-term price decrease more. We decrase duration
+		-if under **bull steepen**, we want earn from steepen, then increase duration.
+		- Risk is the yield curve moves unlike our expectation that didn't get steepen.
+		- Vice Versa for **Flattening**
 
   3. **Shape** Changes (curvture) (diverge rate changes)
 
-     $Butterfly\ Spread = 2Y_m - Ys- Y_L$
+     $Butterfly\ Spread = 2Y_m - Ys- Y_L$ 计算公式
 
      1. negative butterfly means 蝴蝶肚子朝上 butterfly spread increase, then mid increase, long and short term decrase, 
         1. then long long barbell, short bullet
-     2. Positive Butterfly means 蝴蝶翅膀朝上, lonf bullet, short barbell
+     2. Positive Butterfly means 蝴蝶翅膀朝上 V 形, long bullet (mid-term), short barbell (short short-term and long-term)
 
   4. **Volatility Changes** Strategies
 
@@ -572,30 +556,30 @@ High Yield bond and Low Yield bond behave different at differnt econ environment
     
     Classic Duration assume spread is zero, and measure only how rf change affect price percentage change
     
-    Empirical Duration admit the negative correlation between rf and spread, so rf change would be partially deducted by negative spread move, thus RHS side change result in less price percentage change,
+    **Empirical Duration admit the negative correlation between rf and spread**, so rf change would be partially deducted by negative spread move, thus RHS side change result in less price percentage change, 
     
     A common way to calculate a bond’s empirical duration is to **run a regression of its price returns on changes in a benchmark interest rate.**
     
-    ​	In sum, Emprical Duration is less than the classic / efficient one.
+    ​	**In sum, Emprical Duration is less than the classic / efficient one.**
     
     - Most of yield changes are from spread changes. (Spread duration should be higher) <- that is the **empirical duration**
-    - **Highly rated bond such as gov bond has low credit spread, is mostly affected by benchmark risks, has greater empirical duration** 
-      - Investment-grade bonds have lower credit and default risks than high-yield bonds and are **more sensitive** to interest rate changes and credit migration, which cause credit spread volatility. 高质量的债券 对于 interest 和 credit 变化更民高
+    - **Highly rated bond such as gov bond has low credit spread, is mostly affected by benchmark risks has greater empirical duration**  (For high-rated bond, the spread is less sensitive to benchmark rate, rf, increase)bond quality 越低，影响越大。即 low-rate bond 当 rf 提升，即经济好 CB会提升 rf，经济好，违约少，所以 spread 会减少非常大，
+      - Investment-grade bonds have lower credit and default risks than high-yield bonds and are **more sensitive** to interest rate changes and credit migration, which cause credit spread volatility. 高质量的债券 对于 interest 和 credit 变化更高
     - **Junk bond or Corporate bond, are less affected by benchmark risks, (they are affected by spread risks), so negative empirical duration**
 
 ### Types of Spread
 
 #### Fixed Rate Bonds Spread
 
-- **Benchmark Spread** = Yield on Credit Security - Yield on Benchmark Bond
+- **Benchmark Spread** (Yield Spread) = Yield on Credit Security - Yield on Benchmark Bond
   - use for pricing
-  - disadv: might have maturity mismatch 不需要将期限匹配一致，找最近期的即可
+  - disadv: might have maturity mismatch **不需要将期限匹配一致**，找最近期的即可
 - **G-Spread** = Yield on Credit Security - Yield on Gov Bond
   - disadv: maturity mismatch ( could **use interpolate to estimate the yield**) 用interpolate匹配期限
 - **I-Spread** = YTM - Swap Rate
   - swap rate is more flexible and has different maturity then gov bond 也需要用interpolate 匹配期限
 - **Asset Swap Spread (ASW)** = Coupon Rate - Swap Rate
-  - i.e. corporate bond coupon = 10%。 swap float rate = MRR。把公司 interim payment 转换为对应期限的 swap会有余量即位ASW。如 8% fixed 转换为 MRR，那么 10% coupon <=> MRR + 2%，这2%即位 ASW
+  - i.e. corporate bond coupon = 10%。 swap float rate = MRR。把公司 interim payment 转换为对应期限的 swap会有余量即位ASW。如 8% fixed 转换为 MRR，那么 10% coupon <=> MRR + 2%，这2%即为 ASW
 
 - **Z-Spread**: $PV = \frac{PMT}{1+r_1+Z}+ \frac{PMT}{(1+r_2+Z)^2} + \frac{PMT+FV}{(1+r_N+Z)^N}$
   - Parallel shifts of the YTM
@@ -608,9 +592,9 @@ High Yield bond and Low Yield bond behave different at differnt econ environment
 
 The notion of discount margins is applied to floating-rate securities, which pay coupons based on an underlying benchmark such as Libor plus a spread. The value of FRNs is based on uncertain future cash flows as it is not known at purchase what the coupons will be as they fluctuate based on changes in the underlying index. The quoted margin on an FRN is the spread the bond pays above or below the underlying index. The **quoted margin reflects the return required to compensate investors for the credit risk they take on when investing.** If an issuer’s credit risk worsens or improves, the market’s perceptions of the quoted margin will change too. **The difference between the quoted margin and the spread the market now requires for the FRN to trade at par is the discount margin.**
 
-- **QM:** a Float Rate Note (FRN) pays interest (coupon) $= MRR + \underbrace{Constant\ Yield\ Spread}_{Quoted Margin}$
+- **QM:** 指的是 coupon 怎么算 a Float Rate Note (FRN) pays interest (coupon) $= MRR + \underbrace{Constant\ Yield\ Spread}_{Quoted Margin}$
   - established upon issuance, not reflect credit risls changes over time 在最开始确定，期间不改变
-- **DM:** Discount rate = $MRR+DiscountMargin$
+- **DM**: 指的是 怎么折现 Discount rate = $MRR+DiscountMargin$
   - 在每期reset date，float rate bond 会重置为par
   - DM assumes a flat MRR zero curve
 - => $Quoted Margin$ v.s. $Discount Margin$ 相当于 coupon rate  v.s. discount rate
@@ -635,18 +619,18 @@ $\%\Delta P = - Spread.D \times \Delta Spread + \frac{1}{2}\times S.Conv \times 
 
 However, **for lower-rated bond**, it is the **percentage of spread change** $\frac{\Delta Spread}{Spread}$would have impact on the price, not absolute basis.对于低评级bond，对价格有影响的是 spread 变动的百分比，而不 spread 变动的数值 
 
-- Duration Times Spread (DTS) = $Eff.Spread.Duration \times Spread$
+- **Duration Times Spread (DTS)** = $Eff.Spread.Duration \times Spread$
     - 因为 是percentage of spread对price 有影响， 所以为$\frac{\Delta Spread}{Spread}\times (\underbrace{D\times Spread}_{DTS})$
 
-#### Excess Spread Return
+- **Excess Spread Return**
 
-Similarly, see the underbrace, and we get the following eq
+  Similarly, see the underbrace, and we get the following eq
 
-$Excess\ Spread = Spread/T + (-Spread.Dur\times \Delta Spread) - LGD \times PoD$
+  $Excess\ Spread = Spread/T -Spread.Dur\times \Delta Spread - LGD \times PoD$
 
-​	i.e. semi-annual payments means 2 periods per year, so Spread / 2
+  i.e. semi-annual payments means 2 periods per year, so Spread / 2
 
-- Instantaneous spread change = $-\Delta Spread \times Eff.Spread.Duration$
+  - Instantaneous spread change = $-\Delta Spread \times Eff.Spread.Duration$
 
 ### Credit Strategy
 
@@ -725,7 +709,7 @@ Three methods:
 
 ---
 
-### Synthetic Credit Strategy: CDS 
+## Synthetic Credit Strategy: CDS 
 
 Fixed CDS Coupon 为标准化的 investment-grade = 1%, high-yield bond = 5% 。所以 实际的情况与标准的差值将作为 upfront fee 在前期支付，差值折现后求和，为 CDS quoted price。
 

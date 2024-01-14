@@ -12,17 +12,20 @@
 
 ##### Dedicated Short Selling and Short-biased
 
+bottom up
+
 - Look for poorly managed and overvalued companies 如 浑水
 - Activist short selling 在short后出报告
 - Typically take a **bottom-up** approach   short的全是bottom-up
 - the stock’s **high short-interest ratio** and **high cost to borrow** (“on special”) are very concerning. Both factors suggest significant potential that a dangerous **short-squeeze situation**.
 
-- Dedicated short-selling funds take **only** short positions.
+- **Dedicated short-selling** funds take **only** short positions.
+- **Short-biased** hedge fund focues on good short-side stock picking.
 - Activist short-selling funds take short positions and publicly share their negative fundamental views. 
 
 ##### Equity Market Neutral (EMN)
 
-- Construct a **zero beta portfolio**, so i**mmune to market risk**, **earn only alpha**
+- Construct a **zero beta portfolio**, so **immune to market risk**, **earn only alpha**
 - Types:
     1. Pairs Trading: two stocks hedge each other
     2. Stub Trading: long short subsidiary and parent
@@ -140,13 +143,13 @@ If the convertible bond’s current price is near the conversion value, then the
 
 - cross-sectional momentum
     - **Net zero** or **market neutral** 
-    - Work well when market is out / underperformed relative to other mkt  因为net zero 所以
+    - Work well when market is out / underperformed relative to other mkt  因为net zero
 
 
 #### Characteristics
 
 - **Both**: Derivative 多 -> leverage 多 -> 风险多，volatility 
-- **Both**: 但是因为有derivatives可以hedge 风险，所以当经济差的时候 left tail的风险可控，暴露right-tail risks
+- **Both**: 但是因为有derivatives可以hedge 风险，所以当经济差的时候 left tail的风险可控，right-tail skewness
 - **Both** are highly liquid
 
 - **Managed futures** take more **systematic approach**
@@ -197,9 +200,9 @@ Hedge Fund 会一次性买一个 pool的保单， pay lump sum fee 一次性一�
 
 **MSF (Multi-Strategy Fund) 的 fee 可以内部抵消（gain 的 loss 的可以net）**The fee structure is more investor friendly at MSFs, where the general partner absorbs the **netting risk arising from the divergent performance** of the fund’s different strategy teams. This is an attractive outcome for the MSF investor because (1) the GP is responsible for netting risk and (2) the only investor-level incentive fees paid are those due on the total fund performance after netting the positive and negative performances of the various strategy teams.
 
-**MSF更方便切换战略做TAA，因为内部有自己的小团队。****MSFs can reallocate capital into different strategy areas more quickly and efficiently than is possible in FoFs**, allowing MSFs to react faster to real-time market impacts. This shorter tactical reaction time, combined with MSFs’ better strategy transparency, makes MSFs more resilient than FoFs in preserving capital.
+**MSF更方便切换战略做TAA，因为内部有自己的小团队**。**MSFs can reallocate capital into different strategy areas more quickly and efficiently than is possible in FoFs**, allowing MSFs to react faster to real-time market impacts. This shorter tactical reaction time, combined with MSFs’ better strategy transparency, makes MSFs more resilient than FoFs in preserving capital.
 
-**FoF的FM更多，所以operational risks diversidied，但是MSF相对应内部有一大堆FM，还是有较高concentrated operational  risks.** MSFs have higher manager-specific operational risks than FoFs. In MSFs, teams of managers dedicated to running different hedge fund strategies share operational and risk management systems under the same roof. This means that the MSF’s operational risks are not well diversified because all operational processes are performed under the same fund structure. FoFs, in contrast, have less operational risk because each separate underlying hedge fund is responsible for its own risk management
+**FoF的FM更多，所以operational risks diversidied，但是MSF相对应内部有一大堆FM，还是有较高concentrated operational risks.** MSFs have higher manager-specific operational risks than FoFs. In MSFs, teams of managers dedicated to running different hedge fund strategies share operational and risk management systems under the same roof. This means that the MSF’s operational risks are not well diversified because all operational processes are performed under the same fund structure. FoFs, in contrast, have less operational risk because each separate underlying hedge fund is responsible for its own risk management
 
 More Sample Text: 
 
@@ -216,9 +219,11 @@ Funds of funds potentially offer a **more diverse mix** of strategies.
 
 ## Analysis of Hedge Fund Strategy
 
-Conditional Factor Risk model
+### Conditional Factor Risk model - turbulent market period
 
-$Return_{hedgeFund} = \alpha_i + \beta_1 F_1 + \beta_2 F_2 + \beta\times Dummy +...+\epsilon$
+in order to analyse whether hedge fund **risk exposures** that are **insignificant during calm market** periods may become **significant during turbulent market period.**
+
+$Return_{hedgeFund} = \alpha_i + \beta_1 F_1 + \beta_2 F_2 + \beta\times Dummy+\beta \times D\times  F_2 ...+\epsilon$
 
 The Unexplained Returns are (1) alpha; (2) alpha (FM investment skills); (3) omitted factor; (4) random error
 
@@ -345,14 +350,32 @@ Invest in  (1) future (2) 实物 farmland
 - Risk-Based Approach 和 risk fator 回归 
   - 因为是回归，所以 sensitive to hisorical look-back period
 
-### Suitablility
+## Investment Consideration
+
+![Screenshot 2024-01-14 at 17.51.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751337.png)
+
+![Screenshot 2024-01-14 at 17.51.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751904.png)
+
+![Screenshot 2024-01-14 at 17.51.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751129.png)
+
+#### Suitability Consideration
 
 - Investment Horizon: long
 - Enterprise: Skilled Manager
 - Governance: formal investment policy
 - Transparency: low
+- 不能用 s.d. 分析风险，因为 risk 不对称
 
 In sum, alternatives are suitable to high risk tolerance investors.
+
+#### Soft Skills
+
+- commnication skills
+- social skill, interpersonal skills
+- education and coaching skills
+- Business development and sales skills, lead new business development 
+
+P.S. 与 soft skill 对应的是 technical skills 包含: captial market proficiency, portfolio construction ability, financial planning knowledge, technology skills, **language skill** 多会说一种外语
 
 ### Approach to Asset Allocation
 
@@ -365,6 +388,10 @@ In sum, alternatives are suitable to high risk tolerance investors.
 - Risk Factor Based Optimisation
 
 ### Liquidity Planning
+
+- Capital Contribution = Rate of Contribution * (Capital Commitment - Paid-in-Capital)
+- Distribution = Rate of Distrubiton_t * NAV * (1 + growth rate)
+- NAV_1 = NAV_0 (1+g) + Capital Contribution - Distribution
 
 #### NAV 
 
@@ -382,7 +409,7 @@ $NAV_t = NAV_{t-1} \times (1+g) + Captial Contribtuion - Distribution$
 
 #### Avoid Cash Drag
 
-为了保证 call 的时候有钱可以投进去，又避免持有 cash 导致 return过低。
+为了保证 Capital Contribution / call 的时候有钱可以投进去，又避免持有 cash 导致 return过低。
 
 在 call 之前，把准备投
 
