@@ -977,16 +977,30 @@ About Retirement Income Goal
 
 ## IPS
 
-
-
-
-
 ### Parts of IPS
+
+1. Background and Investment Objectives
+
+   PV -> CF, Tax -> FV
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115084940928.png" alt="image-20240115084940928" style="zoom: 67%;" />
 
+2. Investment Parameters 区分 什么能投什么不能投
+
+   Risk, Time, Liquidity, Unique, Constraints 
+
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085003131.png" alt="image-20240115085003131" style="zoom:67%;" />
 
+3. SAA TAA
+4. Portfolio Management 在构建和管理 portfolio 时的过程
+   1. D 判断是否是 discretionary
+   2. R 判断 rebalanced 的方法
+   3. Tactical Changes 判断 the degree that FM is permitted to go outside the range of SAA 即 TAA 超出 SAA 的部分
+   4. I 如何实施，买ETFs 还是 mutual fund，要不要雇人，investment vehicle 等
+
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085021165.png" alt="image-20240115085021165" style="zoom:67%;" />
+
+5. Duities and Responsibilities 说明 FM 的职责，IPS 的频次等 此部分为固定内容
+6. Appendix
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085039626.png" alt="image-20240115085039626" style="zoom:67%;" />
