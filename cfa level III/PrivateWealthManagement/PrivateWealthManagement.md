@@ -1004,3 +1004,11 @@ About Retirement Income Goal
 6. Appendix
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085039626.png" alt="image-20240115085039626" style="zoom:67%;" />
+
+### Evaluatng the Success of an Investment Program 如何评价投资的好坏
+
+1. 是否实现 goals
+2. 投资过程是否 consistent，（是否可持续）见下details
+3. Portfolio Performance : absolute or relative metrics 
+
+![Screenshot 2024-01-15 at 22.18.51](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401152219452.png)
