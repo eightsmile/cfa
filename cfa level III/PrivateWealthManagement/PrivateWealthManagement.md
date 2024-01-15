@@ -4,20 +4,26 @@
 
 ### Private Clients v.s. Institutional Clients
 
-![Screenshot 2023-11-20 at 08.24.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2008.24.37.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2008.24.37.png" alt="Screenshot 2023-11-20 at 08.24.37" style="zoom:50%;" />
 
-### Personal Information (get to know)
+### Personal Information (get to know) FIIICC
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115082726730.png" alt="image-20240115082726730" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115082759252.png" alt="image-20240115082759252" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115082828641.png" alt="image-20240115082828641" style="zoom:67%;" />
 
 - **Family situation**: martial status, # of Children, ages of family member
 - **ID**
-- **Employment and Career info**
-- **Sources of wealth**: wage earned, inheritance
-- **Investment Background**: Return, Liquidity, ESG
-- **Financial Objectives and Risk Tolerance**
+- **Investment Background**: assets source
+- **Investment Preference**: Return Preference, Liquidity Preference, ESG
+- **Career info**
+- **Clients' Financial Objectives (goal and risk tolerance)**: wage earned, inheritance
 
 #### Financial Information
 
-![Screenshot 2023-11-20 at 12.29.48](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2012.29.48.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2012.29.48.png" alt="Screenshot 2023-11-20 at 12.29.48" style="zoom:50%;" />
 
 Asset 不能 cover Liability 的方法
 
@@ -92,7 +98,7 @@ Asset 不能 cover Liability 的方法
             1. Individual prob of living might exceed the general population 个人数据可能与大样本不一样
             2. Cannot model different scenarios
 
-            ![Screenshot 2023-11-20 at 13.30.33](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.30.33.png)
+            <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.30.33.png" alt="Screenshot 2023-11-20 at 13.30.33" style="zoom:50%;" />
 
     2. Annuities 直接按 保险公司的 fixed payment 算
 
@@ -101,7 +107,7 @@ Asset 不能 cover Liability 的方法
             1. fixed payment each year 与实际情况不相符
             2. Cannot model different scenarios
 
-            ![Screenshot 2023-11-20 at 13.31.47](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.31.47.png)
+            <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.31.47.png" alt="Screenshot 2023-11-20 at 13.31.47" style="zoom:50%;" />
 
     3. Monte Carlo Simulation
 
@@ -116,7 +122,7 @@ Asset 不能 cover Liability 的方法
             2. Sensitive to changes in assumption
             3. Not necessary the shortfall magnitude ？wtf
 
-            ![Screenshot 2023-11-20 at 13.32.26](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.32.26.png)
+            <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-20%20at%2013.32.26.png" alt="Screenshot 2023-11-20 at 13.32.26" style="zoom:50%;" />
 
 - Behavioural Consideration in Retirement Planning
 
@@ -129,11 +135,11 @@ Asset 不能 cover Liability 的方法
 
 1. **Background and Investment Objectives (R, for Return)**
 
-   1. **Clearify the objectives**
+   1. **Clarify the objectives**
 
       know the background Information, (name, age, personal financial info, etc). Retirement, family member etc
 
-   2. the investment objectives should be **detailed and quantified** Prioritise the Objectives Conduct Capacity sufficiency Analysis
+   2. the investment objectives should be **detailed and quantified** Priorities the Objectives Conduct Capacity sufficiency Analysis
 
    3. **capital sufficiency analysis, revise the objectiv**e
 
@@ -148,8 +154,8 @@ Asset 不能 cover Liability 的方法
    1. RIsk Tolerance (willingness and ability)
    2. Investment Time Horizon, (might be a range not a number)
    3. Asset Class Preferences
-   4. Other Investment Preference (ESG, or Legacy, endownment bias)
-   5. Liquidty Preference
+   4. Other Investment Preference (ESG, or Legacy, endowment bias)
+   5. Liquidity Preference
    6.  Constraints
 
 3. **Portfolio Asset Allocation (SAA, TAA)**
@@ -214,7 +220,7 @@ Asset 不能 cover Liability 的方法
 
 ### Private Client Segments 给个人投资者分类
 
-![Screenshot 2023-11-21 at 12.12.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-21%20at%2012.12.28.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-21%20at%2012.12.28.png" alt="Screenshot 2023-11-21 at 12.12.28" style="zoom: 33%;" />
 
 ---
 
@@ -536,24 +542,21 @@ Set objective function to be used to minimize taxdrag and investment risk.
    - Tools if hedge that can avoid the constructive sale: 因为保留的一部分风险，所以可以避免被判定为constructive sale
 
      - **Zero-Cost Collar** 不同于 monetisation，这两种方法用衍生品
-
-       <img src="/Users/mie/Library/Application Support/typora-user-images/image-20231231150626589.png" alt="image-20231231150626589" style="zoom: 25%;" />
-
-       - S + P - C 
+     - S + P - C 
        - Pros: protects against downside risk
-       - Cons: has a limited upward potential
-
+     - Cons: has a limited upward potential
+       
      - **Covered Call**
-
-       - **substitute for staged selling**
+     
+     - **substitute for staged selling**
        - **it can psychologically prepare investor to dispose of those shares**
 
      - Additional: Call Option and Tax
-
-       - call option can affect the taxasiton of the stock divididends
+     
+     - call option can affect the taxasiton of the stock divididends
        - **premiums** received on the **short call** can be classified as **captial gain**
-         - call premium would be taxed at **higher short-term gain rate**
-
+       - call premium would be taxed at **higher short-term gain rate**
+   
 3. Tax-Free Exchanges
 
    - Exchange Funds 各公司创始人创建exchange fund，按比例在fund中换基金份额 pro rate（包含其他公司的股）达到diversified的目的.
@@ -602,7 +605,7 @@ Set objective function to be used to minimize taxdrag and investment risk.
   - Resource  有追索权，即若房价跌了，borrower要pay别的东西来补充抵押物的价值。so less risks for banks
   - Non-recourse 无追索权，房子价值跌了也不能找borrower 要别的东西赔偿，所以对银行来说违约风险高
     - 如果房价涨了，还债
-    - 如果房价跌了，可以 non-recouse to protect the downside risks
+    - 如果房价跌了，可以 non-resouse to protect the downside risks
 - Donor Advised Fund (DAF)
 
   Real Estate Monetisation for the Charitably Inclined 把房地产捐给DAF。DAF免税，然后把钱gift给beneficiary
@@ -613,7 +616,7 @@ Set objective function to be used to minimize taxdrag and investment risk.
 
 ---
 
-## Estate Plannings
+## Estate Planning
 
 ### Introduction
 
@@ -626,7 +629,7 @@ Estate 财产传承规划，death后传给下一代，可以 death  死的时候
 3. **asset protection**, protect assets from creditor 债务保护
 4. Transferring assets in a **tax-aware manner**
    - Estate Tax: levied on the total value, tax before the distribtuions of beneficiaries 是死后对总资产先交，分配给个人后还要再交
-   - Inheriitance Tax: paid by each beneficiary 个人获得分配后自己再交
+   - Inheritance Tax: paid by each beneficiary 个人获得分配后自己再交
    - Generation-skipping tax 直接交给孙子一次性的tax，比先交给儿子后儿子再交给孙子分阶段的多。保证整个过程给到孙子的时候都是tax一样的
 5. **Preservation of Family Wealth**
 6. **Business Succession**
@@ -701,7 +704,7 @@ Estate 财产传承规划，death后传给下一代，可以 death  死的时候
         - **be used to avoid probate**
      3. **Tax-related Considerations.** 
 
-2. Fundation 机构投资者章节会着重讲
+2. Foundation 机构投资者章节会着重讲
 
    Private foundations may be required to make certain **minimum annual distributions**. 政府为了防止逃税，要求foundation每年必须distribute的额度
 
@@ -735,13 +738,13 @@ Estate 财产传承规划，death后传给下一代，可以 death  死的时候
 
 ![Screenshot 2023-12-31 at 17.31.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312311739169.jpeg)
 
-Traditional v.s. Economic Balance SHeet
+Traditional v.s. Economic Balance Sheet
 
 - Traditional BS includes accounting Asset & Lia, **easy to quantify**
 - Economic Balance Sheets provides an overview of **total wealth portfolio**, including
-  1. **Asset: Human Captial** 
+  1. **Asset: Human Capital** 
   2. **Asset: Pension**
-  3. **Liability: Consumpton**
+  3. **Liability: Consumption**
   4. **Liability: Bequest Goals**
 - Net Wealth = Net Worth + PV of Future Earning + Pension Plan
 - $\rho(HC,FC)$ 越小，越 diversified。
@@ -763,9 +766,9 @@ $HC_0 = \sum \frac{Prob_t\times w_{t-1}\times (1+g_t)}{(1+r_f+y)^t}$
 
 #### Financial Stages of Life for an Individual
 
-![Screenshot 2023-11-23 at 12.44.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252405.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252405.png" alt="Screenshot 2023-11-23 at 12.44.00" style="zoom:50%;" />
 
-![Screenshot 2023-11-23 at 12.44.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252594.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252594.png" alt="Screenshot 2023-11-23 at 12.44.10" style="zoom:50%;" />
 
 #### Risk Management Strategy
 
@@ -778,7 +781,7 @@ $HC_0 = \sum \frac{Prob_t\times w_{t-1}\times (1+g_t)}{(1+r_f+y)^t}$
 
 - Risk Management Techniques
 
-  ![Screenshot 2023-11-23 at 12.45.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252861.png)
+  <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252861.png" alt="Screenshot 2023-11-23 at 12.45.37" style="zoom:50%;" />
 
 #### Individual Risk Exposures
 
@@ -848,7 +851,7 @@ Type of Life Insurance
 
     2. 实际交的。 + Expense 保险公司运营的费用（销售费用、提成etc） + Profits 给保险公司赚的钱
 
-       ![Screenshot 2023-11-23 at 13.19.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252186.png)
+       <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252186.png" alt="Screenshot 2023-11-23 at 13.19.44" style="zoom:50%;" />
 
        因为提成第一年多，越到未来越少。所以前几年的 费用将被抵扣掉（cash value 剩下的少），以后越交累积的越多 These cash values build up very slowly in the early years, during which the company is making up for its expenses.
 
@@ -858,7 +861,7 @@ Type of Life Insurance
 
 Net Premium = Gross Premium - 总收益
 
-![Screenshot 2023-11-23 at 13.25.10](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252491.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311232252491.png" alt="Screenshot 2023-11-23 at 13.25.10" style="zoom:50%;" />
 
 - Use real discount rate = (1 + growht) / (1+ discount rate) 去计算折现
 - Total Discount Rate = Nominal Rf + Income Volatility
@@ -867,7 +870,7 @@ Net Premium = Gross Premium - 总收益
 
 ##### Surrender Cost Index, see eco-system
 
-![Screenshot 2024-01-01 at 13.43.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011343883.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011343883.png" alt="Screenshot 2024-01-01 at 13.43.37" style="zoom:50%;" />
 
 ### Other Insurance
 
@@ -927,7 +930,7 @@ Fixed 指的是  fixed annuity locks the annuitant into a portfolio of bond-like
 
 ---
 
-## Implmentation of Risk Managament
+## Implementation of Risk Managament
 
 | Loss Characteristics | High Frequency          | Low Frequency                       |
 | -------------------- | ----------------------- | ----------------------------------- |
@@ -946,11 +949,11 @@ A risk with the loss characteristics of **low frequency** of occurrence and **lo
 
 - **Overall Volatility** of one's economic balance sheet can be reduced by selecting assets that **correlate weakly (or even negative) with human capital** 通过与Human Capital 负相关降低风险
 
-- Equity-like human capital: 如个人工资中与stock挂钩的部分多，则 Financial Captial can be less aggressive portfolio
+- Equity-like human capital: 如个人工资中与stock挂钩的部分多，则 Financial Capital can be less aggressive portfolio
 
-- Bond-like human capital: 如医生律师人力资本收入稳定，则 Financial Captial 金融资本可以more agreesive portfolio
+- Bond-like human capital: 如医生律师人力资本收入稳定，则 Financial Capital 金融资本可以more agreesive portfolio
 
-- 投资的 financial asset 要与 Human Captial 即工作领域&工作领域的option/stock
+- 投资的 financial asset 要与 Human Capital 即工作领域&工作领域的option/stock
 
    不相关。去 diversify risks
 
@@ -969,3 +972,21 @@ About Retirement Income Goal
 -  The Benettons stress the **importance of achieving their lifetime income goal of maintaining their inflation-adjusted current standard of living throughout retirement.** Analyzing this goal by pricing ***<u>a joint life annuity</u>*** is the best method to insure that this goal will be achieved. **A joint life annuity provides a guaranteed series of fixed payments for as long as either of them is alive in exchange for a lump sum payment.**
 - **A mortality table i**llustrates an individual’s **life expectancy at any given age**. A potential problem with using mortality tables as the sole method to analyze the Benetton’s retirement goal is the **probability that either one or both of them live to an age that exceeds the life expectancy of the general population**. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
 - **The Monte Carlo simulation** analyzes the **likelihood of the client’s actual portfolio meeting anticipated retirement needs**. **Although the Monte Carlo output would include the probability of achieving the Benetton’s goal, it would not guarantee that their goal is achieved**, nor would it necessarily measure the “shortfall magnitude” to achieving their goal. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
+
+---
+
+## IPS
+
+
+
+
+
+### Parts of IPS
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115084940928.png" alt="image-20240115084940928" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085003131.png" alt="image-20240115085003131" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085021165.png" alt="image-20240115085021165" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240115085039626.png" alt="image-20240115085039626" style="zoom:67%;" />

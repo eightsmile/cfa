@@ -1,52 +1,40 @@
 https://zhuanlan.zhihu.com/p/621949920
 
-**Monte Carlo simulation（专题）**
+### Monte Carlo simulation（专题）
 
 定义：Monte Carlo simulation allows asset manager to model the uncertainty of several key variables. Generates random outcomes according to assumed probability distribution for these key variables. It is flexible approach for exploring different market or investment scenario. 蒙特卡洛模拟是将变量（事先定义好分布）的值随机发射，生成了结果，可灵活的探索不同市场、投资环境下的状态。
 
 较MVO的优势：
 
-1, Rebalancing and taxes, Monte carlo simulation allow to analyze different rebalancing policies and their cost over time（in multi-period situation）. 蒙特卡洛模拟可以用于分析执行不同的再平衡策略、税收时的影响。
-
-2, Path dependent. As there are cash out flow each year, terminal wealth（the portfolio’s value at a given point） will be path-dependent because of the interaction of cash flows and returns. 如果每年都有资金流出，指定时间的组合价值会受这些资金流出和收益的影响 Cash flows in and out of a portfolio and the sequence of returns will have a material effect on terminal wealth, this is termed path-dependent.
-
-3, Monte Carlo can incorporate statistical properties outside the normal distribution, such as skewness and excess kurtosis.蒙特卡洛模拟可用于建模非正态分布。
-
-4, Monte Carlo simulation is able to incorporate the effect of changes to variable over time, it is a multi-period framework. MVO is a single-period framework, it can not be used to evaluate the likelihood of the foundation dropping below 5 m desired spending lever in the future.蒙特卡洛模拟可包含不同变量长时间变化的影响。
+1. Rebalancing and taxes, Monte carlo simulation allow to analyze different rebalancing policies and their cost over time（in multi-period situation）. 蒙特卡洛模拟可以用于分析执行不同的再平衡策略、税收时的影响。
+2. Path dependent. As there are cash out flow each year, terminal wealth（the portfolio’s value at a given point） will be path-dependent because of the interaction of cash flows and returns. 如果每年都有资金流出，指定时间的组合价值会受这些资金流出和收益的影响 Cash flows in and out of a portfolio and the sequence of returns will have a material effect on terminal wealth, this is termed path-dependent.
+3. Monte Carlo can incorporate statistical properties outside the normal distribution, such as skewness and excess kurtosis.蒙特卡洛模拟可用于建模非正态分布。
+4. Monte Carlo simulation is able to incorporate the effect of changes to variable over time, it is a multi-period framework. MVO is a single-period framework, it can not be used to evaluate the likelihood of the foundation dropping below 5 m desired spending lever in the future.蒙特卡洛模拟可包含不同变量长时间变化的影响。
 
 Monte Carlo Simulation结果显示成功率低，如何解决？
 
-1, increasing the amount of contribution for the goal.
-
-2, reducing the goal amount, reduce the size of their investment portfolio needed when retire by accepting a lower standard of living.
-
-3, delaying the time of goal.
-
-4, adopting an investment strategy with higher expected return, **within the client's acceptable risk tolerance and risk capacity**.
+1. increasing the amount of contribution for the goal.
+2. reducing the goal amount, reduce the size of their investment portfolio needed when retire by accepting a lower standard of living.
+3. delaying the time of goal.
+4. adopting an investment strategy with higher expected return, **within the client's acceptable risk tolerance and risk capacity**.
 
 Monte Carlo Simulation的优缺点
 
 Advantage: 
 
-1,applicability to the client's actual asset allocation; 
-
-2,aggregating the result of many trials of probability-based estimates of key variables;
-
-3,flexibly model different scenarios and explore issues that are important to client; 
-
-4,provides a distribution of probable outcomes rather than a point estimate, allow the investor to determine the likelihood of reaching their retirement goal.
+1. applicability to the client's actual asset allocation; 
+2. aggregating the result of many trials of probability-based estimates of key variables;
+3. flexibly model different scenarios and explore issues that are important to client; 
+4. provides a distribution of probable outcomes rather than a point estimate, allow the investor to determine the likelihood of reaching their retirement goal.
 
 Limitations: 
 
-1,can not predict the future; 
+1. can not predict the future; 
+2. include the probability of reaching a goal, but no necessary shortfall magnitude; 
+3. does not consideration of unique belief, Monte simulation rely on the past data, but do not incorporate expectation for future financial market.
+4. highly sensitive to small change in input assumption.
 
-2,include the probability of reaching a goal, but no necessary shortfall magnitude; 
-
-3,does not consideration of unique belief, Monte simulation rely on the past data, but do not incorporate expectation for future financial market.
-
-4, highly sensitive to small change in input assumption.
-
-**Behavioral Finance**
+### Behavioral Finance
 
 从行为金融的角度，分析客户可能存在的bias，对用户进行分类，进而实现更好的与客户沟通。
 
@@ -94,25 +82,22 @@ Certainty overconfidence/prediction(the range of outcomes in his forecast is nar
    Recent effect: availability
    Disposition effect 处置效应. more willing to sell winners, which can encourage excess trading
    Halo effect: 明星公司是好的投资标的 favorable evaluation of some characteristics to other characteristics
-6. 如何克服这些bias ？
-7. be as neutral as possible and open-minded as possible when interpreting investment-related situation在做投资决策是尽可能的保持客观和开放的思维
-8. Develop an appropriate investment policy strategy, carefully research and analyze investment decisions before making them, and focus on long-term result.采用合适的投资策略，在实施投资决策前谨慎的进行研究分析，聚焦长期结果
-9. A disciplined approach to investment based on fundamental analysis 基于基本面分析，保持纪律性的投资方法
-10. Qualify the risk-reducing and return-enhancing advantages of diversification and proper asset allocation. 量化分散化和合适的资产配置的风险降低和收益增强的优势
 
-7、简答题：Dealing with behavior biases 针对一些Bias，用哪些投资方法可以应对
+一、如何克服这些bias ？
 
-（1）loss-aversion：goal-based investing
+1. be as neutral as possible and open-minded as possible when interpreting investment-related situation在做投资决策是尽可能的保持客观和开放的思维
+2. Develop an appropriate investment policy strategy, carefully research and analyze investment decisions before making them, and focus on long-term result.采用合适的投资策略，在实施投资决策前谨慎的进行研究分析，聚焦长期结果
+3. A disciplined approach to investment based on fundamental analysis 基于基本面分析，保持纪律性的投资方法
+4. Qualify the risk-reducing and return-enhancing advantages of diversification and proper asset allocation. 量化分散化和合适的资产配置的风险降低和收益增强的优势
 
-（2）illusion of control:global market portfolio
+二、简答题：Dealing with behavior biases 针对一些Bias，用哪些投资方法可以应对
 
-（3）mental accounting: for each sub-portfolio, do MVO
-
-（4）representative bias: 客观的AA流程和强化管理框架objective asset allocation process and strong governance framework
-
-（5）framing bias：as neutral as possible, open-mind for multiple perspective
-
-（6）availability bias: using global market portfolio as the starting point in developing the asset allocation
+1. loss-aversion：goal-based investing
+2. illusion of control:global market portfolio
+3. mental accounting: for each sub-portfolio, do MVO
+4. representative bias: 客观的AA流程和强化管理框架objective asset allocation process and strong governance framework
+5. framing bias：as neutral as possible, open-mind for multiple perspective
+6. availability bias: using global market portfolio as the starting point in developing the asset allocation
 
 三、投资者的分类，两分、四分、五分法，客户分类的限制。
 
@@ -139,7 +124,7 @@ PP & AA(emotional bias): big picture; safety; generation
 
 FF & II(cognitive error) : quantitative method; data
 
-4、简答题：客户分类的限制:
+四、简答题：客户分类的限制:
 
 （1）客户会同时表现出cognitive和emotional两种bias
 
@@ -149,7 +134,7 @@ FF & II(cognitive error) : quantitative method; data
 
 （4）随着年龄增长，会表现出不同的行为特征will likely to go through behavioral changes as they age
 
-5、简答题：如何降低social proof的影响
+五、简答题：如何降低social proof的影响
 
 （1）多元化人员背景diverse background
 
@@ -159,7 +144,7 @@ FF & II(cognitive error) : quantitative method; data
 
 （4）多元化人员经历、文化、技能diverse in skills,experience and culture
 
-**Capital Market Expectation**
+### Capital Market Expectation
 
 为了后续做资产配置，需要先对宏观经济进行分析，得到各类资产的预期回报、风险。
 
@@ -241,15 +226,11 @@ Taylor rule: optimal interest rate = neutral interest rate + 0.5*(forecast - tar
 
 六、Yield Curve的形状，重点关注何时inverted。
 
-1、Yield curve 形状取决于短期利率
-
-2、货币政策一般影响短期利率
-
-3、财政政策影响长期利率
-
-4、经济grow or contraction 取决于货币政策和财政政策是否同时stimulative or restrictive
-
-5、stimulative or restrictive
+1. Yield curve 形状取决于短期利率
+2. 货币政策一般影响短期利率
+3. 财政政策影响长期利率
+4. 经济grow or contraction 取决于货币政策和财政政策是否同时stimulative or restrictive
+5. stimulative or restrictive
 
 （1）货币政策刺激 & 财政政策刺激：短期利率下降，长期利率上升（财政政策刺激需要钱，政府要多发行债券，长期利率上涨），steep，经济grow
 
@@ -261,21 +242,15 @@ Taylor rule: optimal interest rate = neutral interest rate + 0.5*(forecast - tar
 
 七、进行CME的步骤
 
-1、明确CME是针对对哪项资产、哪个时间段等性质
+1. 明确CME是针对对哪项资产、哪个时间段等性质
+2. 研究历史数据
+3. 明确（specify）用那种方法、模型进行研究
+4. 搜集所需数据
+5. 针对当前经济投资环境，对所选数据和方法，进行研究
+6. 得出结论
+7. 监测结果，并与预期做对比，提供反馈以优化预测过程 monitor actual outcomes and compare them with expectations, providing feedback to improve the expectation-setting process.
 
-2、研究历史数据
-
-3、明确（specify）用那种方法、模型进行研究
-
-4、搜集所需数据
-
-5、针对当前经济投资环境，对所选数据和方法，进行研究
-
-6、得出结论
-
-7、监测结果，并与预期做对比，提供反馈以优化预测过程 monitor actual outcomes and compare them with expectations, providing feedback to improve the expectation-setting process.
-
-Read 4. Forecasting Asset class Returns.
+### Read 4. Forecasting Asset class Returns.
 
 基于不同的经济周期，预期不同资产的表现，收益&风险
 
@@ -296,7 +271,7 @@ Read 4. Forecasting Asset class Returns.
 7. Shrinkage estimate: 既考虑历史情况，也考虑分析师自身判断，做加权平均
 8. Smoothed return to estimate volatility (for Real Estate)
 
-**Asset Allocation**
+### Asset Allocation
 
 此部分内容即开始介绍资产配置，首先介绍资产配置的基本情况，然后开始构建组合，最后是组合构建时会遇到的一些限制。
 
@@ -306,7 +281,9 @@ Reading 5 Overview of Asset Allocation & Reading 6 Principles of Asset Allocatio
 
 Economic net worth(also known as Net wealth) = Net worth + Extended asset - Extended Liability
 
-二、构建Asset class, 简答题：criteria for specifying asset class for the purpose of asset allocation.资产大类的划分方法
+二、构建Asset class, 
+
+三、简答题：criteria for specifying asset class for the purpose of asset allocation.资产大类的划分方法
 
 1. 单一资产大类内资产应该性质相同, homogeneous
 2. 资产大类之间应互斥, mutually exclusive
@@ -315,9 +292,11 @@ Economic net worth(also known as Net wealth) = Net worth + Extended asset - Exte
 5. 资产大类应占投资人组合中的大部分
 6. Rebalancing (Range的大小及其影响因素)
 7. Rebalancing range大小，正相关：transaction cost/risk tolerance/correlation ; 负相关：volatility（standard deviation越大，则range越小）
-8. 简答题：Rebalancing 好处（与战略资产配置保持一直、分散化、做空波动性）
-9. 税后的range大于税前range，由于税后的收益波动小，所以range大
-10. Asset allocation的3种方法
+
+四、简答题：Rebalancing 好处（与战略资产配置保持一直、分散化、做空波动性）
+
+1. 税后的range大于税前range，由于税后的收益波动小，所以range大
+2. Asset allocation的3种方法
 
 | Asset allocation方法 | 目的                                                         | 风险                                                         | 细分方法                                                     |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -336,17 +315,19 @@ Economic net worth(also known as Net wealth) = Net worth + Extended asset - Exte
 7. Risk may not be diversified : risk-factor MVO
 8. Single-period framework : monte carlo simulation
 9. Liability or consumption no consider : surplus MVO (ALM)
-10. 解决方法的优缺点
-11. add constraints : 
-    优点：包含真实世界的限制、克服传统MVO的部分缺点
-    缺点：如果加入了过多的限制，则不再是MVO，而是指定的资产配置方法
-12. Resampled MVO (引入monte carlo simulation，多次模拟后取平均)
-    缺点：可能出现收益降低反而风险提升、风险资产过度分散化、缺少理论基础
-13. Reverse optimization: 利用Global index中隐含的各项资产大类的weight，反向MVO得出implied return，然后再利用implied return再次与risk，covariance一起进行MVO，得出optimal weighting。另外，也可以用CAPM模型计算出implied return。
-14. Black-litterman model： 与reverse optimization一致，但加入了分析师观点
-15. Monte Carlo simulation较MVO的优点（见MCS专题）
 
-六、Liability-relative (ALM) 三种方法
+解决方法的优缺点
+
+1. add constraints : 
+   优点：包含真实世界的限制、克服传统MVO的部分缺点
+   缺点：如果加入了过多的限制，则不再是MVO，而是指定的资产配置方法
+2. Resampled MVO (引入monte carlo simulation，多次模拟后取平均)
+   缺点：可能出现收益降低反而风险提升、风险资产过度分散化、缺少理论基础
+3. Reverse optimization: 利用Global index中隐含的各项资产大类的weight，反向MVO得出implied return，然后再利用implied return再次与risk，covariance一起进行MVO，得出optimal weighting。另外，也可以用CAPM模型计算出implied return。
+4. Black-litterman model： 与reverse optimization一致，但加入了分析师观点
+5. Monte Carlo simulation较MVO的优点（见MCS专题）
+
+### Liability-relative (ALM) 三种方法
 
 1、Surplus optimization
 
@@ -389,7 +370,7 @@ ACTR = weight * MCTR
 1. 优点：风险分散化the source of risk are diversified、后评估表现良好back test show promising result
 2. 缺点：未考虑收益ignores expected return、需要加杠杆（需要低利率环境）depend on use large leverage at low borrow rates、有look-back bias，不同时段表现不一致（比如金融危机期间或股票牛市期间）
 
-Reading 7 Asset Allocation with real-world constraints
+### Reading 7 Asset Allocation with real-world constraints
 
 1. 简答题：Advanteges and Limitation of Large asset and small asset.
 2. large asset 缺点：
@@ -402,13 +383,12 @@ Reading 7 Asset Allocation with real-world constraints
 9. 管理成本高higher internal management cost
 10. 由于资产规模小，分散化能力有限too small to diversify across the range of asset classes
 
-二、Tax consideration 
+Tax consideration 
 
-1、rebalancing时税后range大于税前的range：因为tax高时，cost高，导致range应该提高以减少损失
+1. rebalancing时税后range大于税前的range：因为tax高时，cost高，导致range应该提高以减少损失
+2. 债券放入tax deferred account; 股票放入taxable account
 
-2、债券放入tax deferred account; 股票放入taxable account
-
-**Derivatives and Currency Management**
+### Derivatives and Currency Management
 
 Reading 8 Option Strategy
 
@@ -417,7 +397,8 @@ Reading 8 Option Strategy
 3. Spread (vertical): bull spread, bear spread.（breakeven = 低执行价格+premium）
 4. Calender spread (horizontal arbitrage 到期时间不同，执行价格相同): long calender(买长期，卖短期，如long long-term option, short short-term option), short calender.
 5. Straddle (at the money)，(strangle, out of the money): long, short (strangle, out of the money)（有两个breakeven price）
-6. 期权交易策略总结
+
+期权交易策略总结
 
 |            | direction                         | direction           | direction                         |
 | ---------- | --------------------------------- | ------------------- | --------------------------------- |
@@ -455,7 +436,7 @@ Reading 8 Option Strategy
 2. Volatility feedback effect: 反身性，波动上升——要求回报上升——股价下跌
 3. Crashophobia : 害怕下跌
 
-Reading 9 Swaps, Forwards, and Futures strategies
+### Reading 9 Swaps, Forwards, and Futures strategies
 
 1. 管理Interest rate risk
 2. Interest rate swap（同一种货币）: change exposure, adjust duration（adjust duration: receiver swpa,收固定支浮动，duration上升）
@@ -480,7 +461,7 @@ Fed fund futures contract price (美联储联邦利率期货) = 100 - expected F
 
 反应市场对于美联储利率调整的预期（25bps为调整单位）
 
-Reading 10 Currency Management: An Introduction
+### Reading 10 Currency Management: An Introduction
 
 一、利率平价公式：假设各国真是利率相等，从长期来看，利率高是因为inflation高；利率高时，短期汇率升值，长期汇率贬值
 
@@ -563,32 +544,34 @@ NDF， non-deliverable forward 元气不交割合同，而是采用主流货币�
 
 固定收益资产的管理有三大类：ALM、AO、信用债
 
-Reading 11 Overview of Fixed-Income Portfolio Management 
+### Reading 11 Overview of Fixed-Income Portfolio Management 
 
-Reading 12 liability-driven and index-based strategies
+### Reading 12 liability-driven and index-based strategies
 
-Reading 13 Yield curve strategies
+### Reading 13 Yield curve strategies
 
-1. 基础知识：
-2. Duration:
-3. Macaulay duration : immunization, 以现金为权重的现金流的加权回收时间weighted average of the time to receipt of the bond’s promised payments
-4. Modified duration : 用于研究价格变动
-5. Effective duration :用于含权债券
-6. Key rate duration：非平行移动，也叫partial duration。一般用于对比指数，所以用于AO场景下，对比某个关键时间点的利率改变，对比portfolio和benchmark价格变化的差异。
-7. Empirical duration : 实践中观察利率变化对债券价格的影响，回归得到
-8. Spread duration :有spread变化带来的债券价格的变化
-9. Duration times spread DTS = spread duration * spread
-10. Money duration = dollar * duration
-    在实际应用中，也可以将dollar*duration *0.01作为money duration，可以从题目中的数字大小来判断是否需要乘0.01
-11. Duration的计算，equity duration = asset duration - liability duration； portfolio duration = long asset duration - short asset duration. 在duration的计算中，要注意用value进行加权
-12. BPV：price value of a basis point, bond price change given 0.01% change in yield to maturity
-13. Convexity :用于衡量现金流的离散程度（dispersion）
-    涨多跌少(在volatility上涨时获益)，当较大的平行移动时，需要用convexity+duration一起衡量 （含权债券价格的变动位effective convexity）。如何增convexity：long barbell, short bullet; long putable bond(putable bond convexity大), short callable bond(callable bond convexity为负)
-    Callable bond significantly underperform non-callable bond when interest rate decline because of their negative convexity. Because the price increase of callable bond is limited by call price. 
-    Callable bond: 发行商手里有call option， 债券价格=non-callable bond + short call option (即 - call option)， 即callable bond里面可以理解为内嵌了一个short call option
-    MBS embedded with short call option (repay the debt early), and short call option has negative convexity.
-14. Repurchase agreement (repo）：借入短期资金，买入长期债券
-15. Liability分类
+一、基础知识：
+
+1. Duration:
+   1. Macaulay duration : immunization, 以现金为权重的现金流的加权回收时间weighted average of the time to receipt of the bond’s promised payments
+   2. Modified duration : 用于研究价格变动
+   3. Effective duration :用于含权债券
+   4. Key rate duration：非平行移动，也叫partial duration。一般用于对比指数，所以用于AO场景下，对比某个关键时间点的利率改变，对比portfolio和benchmark价格变化的差异。
+   5. Empirical duration : 实践中观察利率变化对债券价格的影响，回归得到
+   6. Spread duration :有spread变化带来的债券价格的变化
+   7. Duration times spread DTS = spread duration * spread
+   8. Money duration = dollar * duration
+      在实际应用中，也可以将dollar*duration *0.01作为money duration，可以从题目中的数字大小来判断是否需要乘0.01
+2. Duration的计算，equity duration = asset duration - liability duration； portfolio duration = long asset duration - short asset duration. 在duration的计算中，要注意用value进行加权
+3. BPV：price value of a basis point, bond price change given 0.01% change in yield to maturity
+4. Convexity :用于衡量现金流的离散程度（dispersion）
+   涨多跌少(在volatility上涨时获益)，当较大的平行移动时，需要用convexity+duration一起衡量 （含权债券价格的变动位effective convexity）。如何增convexity：long barbell, short bullet; long putable bond(putable bond convexity大), short callable bond(callable bond convexity为负)
+   Callable bond significantly underperform non-callable bond when interest rate decline because of their negative convexity. Because the price increase of callable bond is limited by call price. 
+   Callable bond: 发行商手里有call option， 债券价格=non-callable bond + short call option (即 - call option)， 即callable bond里面可以理解为内嵌了一个short call option
+   MBS embedded with short call option (repay the debt early), and short call option has negative convexity.
+5. Repurchase agreement (repo）：借入短期资金，买入长期债券
+
+Liability分类
 
 | Type               | I          | II            | III             | IV                                       |
 | ------------------ | ---------- | ------------- | --------------- | ---------------------------------------- |
@@ -665,7 +648,7 @@ Positive butterfly spread 也叫negative butterfly, 因为positive butterfly spr
 4. Prob * LGD
 5. 外汇
 
-Reading 14 Fixed-Income Active Management : Credit Strategies
+### Reading 14 Fixed-Income Active Management : Credit Strategies
 
 Credit rating ： BBB及以上级别的债券叫investment grade bond/ BB及以下级别的债券叫high-yield bond (trash bond)
 
@@ -717,7 +700,7 @@ Early expansion/ Late expansion/ Peak/ Contraction
 19. Payer swaption on CDS ， 有权利付premium买入CDS
 20. 信用债收益：五因子分解 + excess spread
 
-**Equity Portfolio Management**
+### Equity Portfolio Management
 
 1. Passive Equity Investing
 2. Benchmark selection : SAMURAI
@@ -872,7 +855,7 @@ Long/short strategy drawback:
 
 Return = leverage factor * expected arithmetic return - (leverage factor * standard deviation of return)²/2
 
-**Alternative Investment for Portfolio Management (hedge fund strategy)**
+### Alternative Investment for Portfolio Management (hedge fund strategy)
 
 1. Equity Strategy
 2. long/short equity: net long 
@@ -956,13 +939,13 @@ MOIC = (NAV + distribution)/paid-in-capital
 
 2、IRR vs MOIC：如果PE早期的现金流入多，则IRR较高，limited partner（LP）不喜欢用IRR来评价业绩，因为支付给general partner（GP）的奖金incentive 多，反之亦然
 
-**Private Wealth Management**
+### Private Wealth Management
 
 私人财富管理的流程，个人IPS的构建。
 
 This IPS identifies the needs, goals, and risk tolerance of the investor, as well as constrains under which the investment portfolio must operate.
 
-Reading 21 Overview of Private Wealth Management
+### Reading 21 Overview of Private Wealth Management
 
 1. Private Client versus Institutional Client
 2. Client Goal of Private Client
@@ -1001,7 +984,7 @@ Reading 21 Overview of Private Wealth Management
 3. Portfolio performance: absolute or relative
 4. Definition of success for client’s investment program.
 
-Reading 22 Topics in Private wealth management
+### Reading 22 Topics in Private wealth management
 
 Three issue :
 
@@ -1071,7 +1054,7 @@ Irrevocable trust的好处？
 3. Transfer of asset without the potential publicity associated with probate, keep privacy
 4. Worried about their children can not manage the asset themselves because children are minors
 
-Reading 23 Risk management for individuals
+### Reading 23 Risk management for individuals
 
 1. Human capital, financial capital, economic net worth
 2. Economic net worth (net wealth) = net worth (traditional asset- liability) + present value of future earning -present value of future expense
@@ -1119,7 +1102,7 @@ Gross premium (保费) = net premium (通过死亡概率计算得出) + cash val
 9. High expected inflation: the real value of payment from a fixed annuity declines over time due to inflation, and rising inflation exacerbates this problem.
 10. Fixed annuity is not liquid (especially for non-trade-out provision)
 
-**Portfolio management for institutional investors**
+### Portfolio management for institutional investors
 
 1. 机构投资者分类（六类）：
 
@@ -1207,9 +1190,9 @@ Funded ratio = asset/obligation(PBO)
 4. Pension reserve fund 养老基金， accumulation stage/ decumulation stage
 5. Budget stabilization fund 平准基金：市场好时抗通胀，市场差时促发展（短期）
 
-**Trading, performance evaluation and manger selection**
+### Trading, performance evaluation and manger selection
 
-Reading 25 Trade Strategy and Execution
+### Reading 25 Trade Strategy and Execution
 
 1. 交易前：reference price选择
 2. Pre-trade benchmark：is a reference price that is known before the start of the trading take place. 总体上risk tolerance低，urgency高，不愿意承担execution risk(is the risk of an adverse price movement occurring over the trading horizon because of change in fundamental value of the security or trading-induced volatility). Pre-trade benchmark is widely used for seeing short-term alpha by buying undervalued or selling overvalued.
@@ -1283,7 +1266,7 @@ Highest probability of executing small order with best price; continuously monit
 
 Add-value >0, 即underperform
 
-Reading 26 portfolio performance evaluation & reading 27 investment manager selection
+### Reading 26 portfolio performance evaluation & reading 27 investment manager selection
 
 1. 业绩归因
 2. 归因角度
@@ -1430,7 +1413,7 @@ More attractive compensation package advantage优点：
 
 This incentive its investment professionals to stay in the company; leading to greater longevity and experience over time; additionally, increase the reward to its manager when performance exceed benchmark, this better align their interest with client. Motivate the manager to work harder to improve performance.
 
-**Ethical and Professional Standards**
+### Ethical and Professional Standards
 
 分为三部分
 
