@@ -951,7 +951,7 @@ A risk with the loss characteristics of **low frequency** of occurrence and **lo
 
 - Equity-like human capital: 如个人工资中与stock挂钩的部分多，则 Financial Capital can be less aggressive portfolio
 
-- Bond-like human capital: 如医生律师人力资本收入稳定，则 Financial Capital 金融资本可以more agreesive portfolio
+- Bond-like human capital: 如医生律师人力资本收入稳定，则 Financial Capital 金融资本可以more aggresive portfolio
 
 - 投资的 financial asset 要与 Human Capital 即工作领域&工作领域的option/stock
 

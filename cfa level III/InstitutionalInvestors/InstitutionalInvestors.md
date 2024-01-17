@@ -11,7 +11,7 @@ Types
 
 ## Common Characteristics
 
-![Screenshot 2024-01-01 at 15.43.41](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011543682.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011543682.png" alt="Screenshot 2024-01-01 at 15.43.41" style="zoom:67%;" />
 
 - **Scale (Asset Size)** 
     - Small institutional investor小的机构，outsource外包给别的人做投资。<500 millions, 
@@ -46,7 +46,7 @@ Types
 
 ## Investment Approaches
 
-![Screenshot 2024-01-01 at 15.44.08](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011612038.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401011612038.png" alt="Screenshot 2024-01-01 at 15.44.08" style="zoom:67%;" />
 
 Scales matters: 
 
@@ -94,9 +94,9 @@ Scales matters:
 - DB Plan 由 employer承担风险，所以相对于 institutional investment
 - DC Plan 由 员工 承担风险，所以相对于 individual investment
 
-![Screenshot 2023-11-24 at 13.09.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.09.42.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.09.42.png" alt="Screenshot 2023-11-24 at 13.09.42" style="zoom: 50%;" />
 
-![Screenshot 2023-11-24 at 13.10.13](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.10.13.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-11-24%20at%2013.10.13.png" alt="Screenshot 2023-11-24 at 13.10.13" style="zoom: 50%;" />
 
 ### DB Plan
 
@@ -141,7 +141,7 @@ Scales matters:
     
     由公式可以看出影响 PBO的因素
     
-    ![Screenshot 2023-11-25 at 20.48.58](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252049751.png)
+    <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252049751.png" alt="Screenshot 2023-11-25 at 20.48.58" style="zoom:50%;" />
     
 - Investment Horizon
 
@@ -184,33 +184,33 @@ Plan Sponsors 不负责 investment risks
 
 1. Stakeholders
 
-![image-20240102123900496](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123900496.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123900496.png" alt="image-20240102123900496" style="zoom:67%;" />
 
 2. Liability and Investment Horizon
 
-![image-20240102123948151](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123948151.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102123948151.png" alt="image-20240102123948151" style="zoom:67%;" />
 
-![image-20240102124035971](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124035971.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124035971.png" alt="image-20240102124035971" style="zoom:67%;" />
 
 3. Liquidity Needs
 
-![image-20240102124056062](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124056062.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124056062.png" alt="image-20240102124056062" style="zoom:67%;" />
 
 4. External Constraint
 
-![image-20240102124210770](./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240102124210770.png)
+<img src="./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240102124210770.png" alt="image-20240102124210770" style="zoom:67%;" />
 
 5. Risk Consideration
 
-![image-20240102124401605](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124401605.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124401605.png" alt="image-20240102124401605" style="zoom:67%;" />
 
 6. Investment Objective
 
-![image-20240102124428307](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124428307.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124428307.png" alt="image-20240102124428307" style="zoom:67%;" />
 
 7. Asset Allocation
 
-![image-20240102124502390](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124502390.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102124502390.png" alt="image-20240102124502390" style="zoom:67%;" />
 
 Pension Asset Allocation
 
@@ -265,11 +265,11 @@ Pension Asset Allocation
    - SWF's board: **oversee** the management or investment, and has a **fiduciary duty to the ultimate beneficiaries**
 2. Liabilities and Investment Horizon
 
-![image-20240102130804171](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130804171.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130804171.png" alt="image-20240102130804171" style="zoom:67%;" />
 
 3. Liquidity Needs
 
-![image-20240102131145632](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131145632.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131145632.png" alt="image-20240102131145632" style="zoom:67%;" />
 
 4. External Constraints
    - Legal and Regulatory: **transparent and accountable manner**
@@ -277,11 +277,11 @@ Pension Asset Allocation
 
 5. Investment Objectives
 
-![image-20240102130301158](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130301158.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130301158.png" alt="image-20240102130301158" style="zoom:67%;" />
 
 6. Asset Allocation
 
-![image-20240102130322213](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130322213.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102130322213.png" alt="image-20240102130322213" style="zoom:67%;" />
 
 - **Budget stabilization funds.** 
 
@@ -305,7 +305,7 @@ Pension Asset Allocation
 
 7. Risks Tolerance
 
-![Screenshot 2023-11-25 at 21.53.59](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252154641.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252154641.png" alt="Screenshot 2023-11-25 at 21.53.59" style="zoom:50%;" />
 
 ---
 
@@ -313,15 +313,15 @@ Pension Asset Allocation
 
 1. Stakeholders
 
-![image-20240102131506749](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131506749.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131506749.png" alt="image-20240102131506749" style="zoom:67%;" />
 
 **Stakeholder**: Student Alumni, employees 因为免税，所以没有 government作为 stakeholder
 
 2. Liabilities and Investment Horizon: Endowments
 
-![image-20240102131606933](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131606933.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131606933.png" alt="image-20240102131606933" style="zoom:67%;" />
 
-![image-20240102131931052](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131931052.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102131931052.png" alt="image-20240102131931052" style="zoom:67%;" />
 
 - **Time Horizon**: perpetual
 
@@ -337,7 +337,7 @@ Pension Asset Allocation
 
 3. Liquidity Needs
 
-![image-20240102132012133](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132012133.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132012133.png" alt="image-20240102132012133" style="zoom:67%;" />
 
 **flow-through**: A flow-through entity is a legal business entity that passes any income it makes straight to its owners, shareholders, or investors. 相当于 donate 对钱，直接立刻全部花掉，且不占用 5% 的额度
 
@@ -348,13 +348,13 @@ Pension Asset Allocation
 
 5. Investment Objectives
 
-![image-20240102133048348](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102133048348.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102133048348.png" alt="image-20240102133048348" style="zoom:67%;" />
 
 6. Asset Allocation
 
-![image-20240102132916482](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132916482.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240102132916482.png" alt="image-20240102132916482" style="zoom:67%;" />
 
-### Difference Between US Foundations and Unversity Endowment
+### Difference Between US Foundations and University Endowment
 
  
 
@@ -372,7 +372,7 @@ Pension Asset Allocation
 
 ## Banks & Insurers
 
-![Screenshot 2023-11-25 at 23.14.42](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252314907.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311252314907.png" alt="Screenshot 2023-11-25 at 23.14.42" style="zoom:50%;" />
 
 银行会面临 Asset Lia 期限错配的问题，久期错配 $Dur_A > Dur_L$
 
@@ -395,27 +395,27 @@ Pension Asset Allocation
 
 1. Stakehoders
 
-![Screenshot 2024-01-02 at 21.41.28](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022141358.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022141358.png" alt="Screenshot 2024-01-02 at 21.41.28" style="zoom:67%;" />
 
 2. Liability and Investment Horizon
 
-![Screenshot 2024-01-02 at 21.44.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022146531.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022146531.png" alt="Screenshot 2024-01-02 at 21.44.44" style="zoom:67%;" />
 
 3. Liquidity Needs
 
-![Screenshot 2024-01-02 at 21.43.05](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143030.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143030.png" alt="Screenshot 2024-01-02 at 21.43.05" style="zoom:67%;" />
 
 4. External Constraints
 
-![Screenshot 2024-01-02 at 21.43.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143861.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022143861.png" alt="Screenshot 2024-01-02 at 21.43.35" style="zoom:67%;" />
 
 5. Investment Objectives
 
-![Screenshot 2024-01-02 at 21.44.01](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144546.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144546.png" alt="Screenshot 2024-01-02 at 21.44.01" style="zoom: 67%;" />
 
-![Screenshot 2024-01-02 at 21.44.27](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144359.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144359.png" alt="Screenshot 2024-01-02 at 21.44.27" style="zoom:67%;" />
 
-![Screenshot 2024-01-02 at 21.44.44](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144505.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022144505.png" alt="Screenshot 2024-01-02 at 21.44.44" style="zoom:67%;" />
 
 ### Insurers 保险公司 见individual的章节
 
@@ -450,7 +450,7 @@ Pension Asset Allocation
 
 6. Asset Allocation
 
-   ![Screenshot 2023-11-26 at 00.25.39](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311260025690.png)
+   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311260025690.png" alt="Screenshot 2023-11-26 at 00.25.39" style="zoom:50%;" />
 
 7. 相对利率敏感性 寿险周期长，久期高，所以 r 变化对寿险影响大
 
@@ -523,7 +523,7 @@ or,
 
 $D_E = \frac{A}{E}D_A - (\frac{A}{E}-1)D_L\frac{\Delta i}{\Delta y}$
 
-![Screenshot 2024-01-01 at 20.13.21](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401012013382.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401012013382.png" alt="Screenshot 2024-01-01 at 20.13.21" style="zoom: 67%;" />
 
 #### Portfolio RIsks
 
@@ -537,9 +537,9 @@ $\sigma^2_E = (\frac{A}{E})^2 \sigma_A^2 + (\frac{A}{E}-1)^2\sigma^2_L - 2 \frac
 
 #### 影响因素
 
-![Screenshot 2023-11-26 at 22.41.09](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262241769.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262241769.png" alt="Screenshot 2023-11-26 at 22.41.09" style="zoom:50%;" />
 
-![Screenshot 2023-11-26 at 22.42.07](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262242620.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311262242620.png" alt="Screenshot 2023-11-26 at 22.42.07" style="zoom:50%;" />
 
 Sample Text
 
@@ -575,7 +575,7 @@ Sell Stocks <=> Short Derivatives (short futures)
 
 没有直接买卖股票，所以没有realised gain/loss
 
-### Earning an Illiquidty Premium
+### Earning an Illiquidity Premium
 
 - Illiquid Asst Price = Marketable Asset Price - Put Price
     - 因为只要能买到put，就能保证一定等把它卖掉，可以保证流动性

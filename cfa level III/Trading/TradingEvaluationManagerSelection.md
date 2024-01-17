@@ -93,6 +93,12 @@
 
 ### Execution Algorithm 电子化 execution trading 的五个交易方法
 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240116103026785.png" alt="image-20240116103026785" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240116103049792.png" alt="image-20240116103049792" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240116103104155.png" alt="image-20240116103104155" style="zoom:67%;" />
+
 1. Scheduled (POV, VWAP, TWAP) 适用小订单，不适用大订单，**有可能完不成交易如果illiquid**
 
     Scheduled algorithms are appropriate for orders in which **portfolio managers or traders do not have expectations for adverse price movement during the trade horizon**. These algorithms are also used by portfolio managers and traders who have **greater risk tolerance for longer execution time periods** and are more concerned with **minimizing market impact**. Scheduled algorithms are often appropriate **when the order size is relatively smal**l (e.g., no more than 5%–10% of expected volume), the **security is relatively liquid**, or the orders are part of a risk-balanced basket and trading all orders at a similar pace will maintain the risk balance.
@@ -144,6 +150,12 @@
 
 ### Comparison of Markets 交易方法
 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240116120542401.png" alt="image-20240116120542401" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240116120556570.png" alt="image-20240116120556570" style="zoom:67%;" />
+
+
+
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131328037.png" alt="image-20240103131328037" style="zoom:33%;" />
 
 
@@ -173,7 +185,7 @@
 
 The implementation shortfall (IS) metric7 is the most important ***ex post*** trade cost measurement used in finance.
 
-![image-20240103131940941](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131940941.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103131940941.png" alt="image-20240103131940941" style="zoom: 67%;" />
 
 - $P_n$ current price
 - $P_d$  price at the time of investment decision **(decision price)**
@@ -251,7 +263,7 @@ Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 
 
 #### Trade Cost Measurement :$ \frac{ave - *} {*}$
 
-![image-20240103132041810](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103132041810.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240103132041810.png" alt="image-20240103132041810" style="zoom:67%;" />
 
 - \* **Cost in Dollar per share**: $Cost(\$/share) = Side \times (\bar{P}-P^*)$
 - \* **Cost in Total Dollar**: $Cost(\$) = Side \times (\bar{P}-P^*) \times Shares $
@@ -476,7 +488,7 @@ B 左边 相当于 与基金经理能录无关
 
 B 右边 相当于基金经理通过自己能力挣的钱
 
-![Screenshot 2023-11-30 at 16.59.35](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301659035.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301659035.png" alt="Screenshot 2023-11-30 at 16.59.35" style="zoom:50%;" />
 
 - P - Portfolio Returns
 - M - Market Index Return
@@ -554,7 +566,7 @@ Rationale
 
   - The semistandard deviation : $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
 
-    ![Screenshot 2023-11-30 at 19.01.05](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301901297.png)
+    <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301901297.png" alt="Screenshot 2023-11-30 at 19.01.05" style="zoom:50%;" />
 
     Excess return w.r.t. Target, per unit of downside return 
     
@@ -576,7 +588,7 @@ Rationale
 
   - CR < 1 : negative asymmetric, concave 
 
-    ![Screenshot 2023-12-01 at 13.28.23](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-01%20at%2013.28.23.png)
+    <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-12-01%20at%2013.28.23.png" alt="Screenshot 2023-12-01 at 13.28.23" style="zoom:50%;" />
 
 - Drawdown: cumulative peak-to-trough loss **during a continuous period**
 
