@@ -338,7 +338,7 @@ Drawback of Goal Based: (1) inefficient, (2) not consider correlation between as
 
 The goal of risk budgeting is to **maximise return per unit of risk.** A risk budget identifies the total amount of risk and attributes risk to its constituent parts. An optimum risk budget allocates risk efficiently.
 
-![_cgi-bin_mmwebwx-bin_webwxgetmsgimg](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%253F%253F%2526MsgID%253D6268719542435932561%2526skey%253D%40crypt_df70b197_26e8fd2fe06b2899556fa708fc188e62%2526mmweb_appid%253Dwx_webfilehelper.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%253F%253F%2526MsgID%253D6268719542435932561%2526skey%253D%40crypt_df70b197_26e8fd2fe06b2899556fa708fc188e62%2526mmweb_appid%253Dwx_webfilehelper.png" alt="_cgi-bin_mmwebwx-bin_webwxgetmsgimg" style="zoom: 33%;" />
 
 1. MCTR Goal: maximise the return per unit of risk 每承担一单位风险获得的收益
 2. 投资 MCTR 最低的 portfolio

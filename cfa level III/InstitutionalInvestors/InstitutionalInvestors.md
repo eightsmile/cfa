@@ -393,13 +393,13 @@ Pension Asset Allocation
 
 ### IPS
 
-1. Stakehoders
+1. Stakeholders
 
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022141358.png" alt="Screenshot 2024-01-02 at 21.41.28" style="zoom:67%;" />
 
 2. Liability and Investment Horizon
 
-<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401022146531.png" alt="Screenshot 2024-01-02 at 21.44.44" style="zoom:67%;" />
+<img src="./../../../../../AppData/Roaming/Typora/typora-user-images/image-20240117123725057.png" alt="image-20240117123725057" style="zoom:67%;" />
 
 3. Liquidity Needs
 

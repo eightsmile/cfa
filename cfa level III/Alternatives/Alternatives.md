@@ -192,9 +192,9 @@ Hedge Fund 会一次性买一个 pool的保单， pay lump sum fee 一次性一�
 
 ### Multi-Manager Strategy
 
-#### ![Screenshot 2023-10-29 at 00.50.27](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2000.50.27.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2000.50.27.png" alt="Screenshot 2023-10-29 at 00.50.27" style="zoom:50%;" />
 
-![Screenshot 2023-10-29 at 10.40.41](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2010.40.41.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-29%20at%2010.40.41.png" alt="Screenshot 2023-10-29 at 10.40.41" style="zoom:50%;" />
 
 **FoF一定有 double layer fees**: **FoFs have double layers of fees** without being able to net performance fees on individual managers. The FoF investor always faces netting risk and is responsible for paying performance fees that are due to winning underlying funds while suffering return drag from the performance of losing underlying funds. Even if the FoF’s overall performance (aggregated across all funds) is flat or down, FoF investors must still pay incentive fees that are due to the managers of the winning underlying funds. 
 
@@ -305,7 +305,7 @@ Invest in  (1) future (2) 实物 farmland
 
     1. Large investors, invest in LP
     2. FoF <- lack of enpertise investors (pros: access and diversify, cons: additional fees layer)
-    3. Seperately Managed Accounts (SMA, funds of one) 由GP独立管理，专户管理，给 large investors
+    3. Separately Managed Accounts (SMA, funds of one) 由GP独立管理，专户管理，给 large investors
     4. Open-ended Mutual Funds and UCITS, give smaller investors access to alternatives 降低准入门槛，给小invetors
 
 - Liquidity
@@ -352,11 +352,11 @@ Invest in  (1) future (2) 实物 farmland
 
 ## Investment Consideration
 
-![Screenshot 2024-01-14 at 17.51.00](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751337.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751337.png" alt="Screenshot 2024-01-14 at 17.51.00" style="zoom:67%;" />
 
-![Screenshot 2024-01-14 at 17.51.19](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751904.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751904.png" alt="Screenshot 2024-01-14 at 17.51.19" style="zoom:67%;" />
 
-![Screenshot 2024-01-14 at 17.51.37](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751129.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401141751129.png" alt="Screenshot 2024-01-14 at 17.51.37" style="zoom:67%;" />
 
 #### Suitability Consideration
 
