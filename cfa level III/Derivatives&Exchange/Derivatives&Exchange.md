@@ -331,6 +331,8 @@ $Basis = S - F \times CF$
 - if basis is **positive**, **sell the basis** , ( long the future and short the bond) 因为 Basis converges to zero, 所以如果 basis 正，那么S会变小，F会变大 使basis趋近于0
 - if the basis is **negative**, **buy the basis**, ( long the bond and short the future)
 
+![Screenshot 2024-01-20 at 18.32.34](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401201832739.png)
+
 #### Fixed-Income Future Hedging 
 
 担心 interest rate 上涨， 带来 T-bond Price 下跌，同时 Fixed-Income Future 价格下跌，所以 **Short Futures**
@@ -442,9 +444,30 @@ $F \Leftrightarrow f \times Multiplier$ are $ amount
 
 ### Manage Currency Risks
 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401202009787.png" alt="Screenshot 2024-01-20 at 20.09.06" style="zoom:67%;" />
+
+本国US investor 要买 EU bond。进入Cross-currency Swap. （现金流结构相当于在期初 花USD 买了 USD bond，收EUR，发行EUR bond）
+
+1. 在inception期初 换本金 付出 USD principal 收到 EUR principal
+2. 在 perodic 期中， pay EUR interest， 收到 USD interest （有 basis）
+3. 在期末 换回本金。收到 USD，付出 EUR
+
+- P.S. 如果美元涨价，那么外国人要付basis给本国 
+- In this case, US investor pays USD and receives EUR, if the USD appreciates the US investor needs to pay more interest of USD, but why the answer is "the US investor will most likely increase the periodic net interest she receives in US dollars." the US investor pays USD!!!
+
 Cross-currency basis: additional cost of borrowing dollar (most currencies show a negative basis against dollar) 即美元有加点
 
-$\frac{F}{S} = \frac{1+r_f+(basis)}{1+r_d +(basis)}$
+$\frac{F}{S} = \frac{1+r_f}{1+r_d \pm(basis)}$
+
+if USD (domestic) is strong, then receive basis
+
+- Sample Text:
+
+  Cross currency basis is a measure of dollar shortage in the market. Whenever there’s a higher demand for the dollar, the counterparty lending the dollar will ask for a price premium. It is this amount which is referred to as the “cross currency basis”. The more negative the basis becomes, the more severe the shortage.
+
+  For a European investor looking to take a loan (borrow) from a domestic bank (EUR) and enter a EUR/USD currency swap, if the basis is (-) then there is a Dollar shortage, and European investor will have to pay additional basis. 
+
+  For dollar-funded investors, negative basis can work in their favor when they hedge currency exposures. In order to hedge foreign currency exposure, the dollar-funded investors lend out dollar today and receive it back in the future, earning additional cross currency basis spread on top of the yield of their foreign investments.
 
 ##### Cross-Currency Basis Swap 期初还两个币种的本，期末换回来
 
@@ -461,6 +484,10 @@ The amount of exchanged are based on the Exchange Rate and Interest Rate
 ##### Currency Forward and Futures
 
 $HR = \frac{\text{Amount of Currency to be Exchanged}}{\text{Future Contract Size}}$
+
+Buy EUR/USD 相当于买USD
+
+Sell EUR/USD 相当于卖USD
 
 ---
 
@@ -536,9 +563,9 @@ $weights_1 = t / T,  weight_2 = (T-t)/T$
 
   $(\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T}) - Strike_T^2$
 
-- 把 T 时点的 payoff 折现即为 现在的 value
+- 把 T 时点的 payoff 折现即为 现在的 value, 是 从 T 折现到 t，单利，所以折现为 T-t
 
-  $\frac{(\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T}) - Strike_T^2}{1+r\frac{t}{T}}$
+  $\frac{(\sigma^2_t \times \frac{t}{T}) + (K^2_{T-t} \times  \frac{T-t}{T}) - Strike_T^2}{1+r\times\frac{T-t}{T}}$
 
 ---
 
@@ -939,6 +966,8 @@ $N_{vega}(\frac{\sigma^2 - X^2}{2\times Strike}) = N_{var}(\sigma^2 - X^2)$
 站在 t 时点，variance swap的价值是多少。在 t 时点， [0,t]已经过去了，所以可以算出来 realised vol。[t,T]未发生，所以 用 implied vol or fair strike
 
 $V_t = N_{var} \times PV_t \times \bigg[( \frac{t}{T}\times RV_{0,t}^2 + \frac{T-t}{T}\times IV_{t,T}^2) - X^2 \bigg]$
+
+discount at $1+r\times\frac{T-t}{T}$
 
 - N_var is variance notional
 - RV is realised vol

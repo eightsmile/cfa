@@ -630,7 +630,11 @@ However, **for lower-rated bond**, it is the **percentage of spread change** $\f
 
   i.e. semi-annual payments means 2 periods per year, so Spread / 2
 
+  if it is half year hodling, then Spread * 0.5
+  
   - Instantaneous spread change = $-\Delta Spread \times Eff.Spread.Duration$
+  
+    Spread * 0
 
 ### Credit Strategy
 
@@ -652,6 +656,7 @@ $Spread \approx LGD \times PoD$
     3. Credit Spread => Excess Return
 
         $\mathbb{E}(Excess S)=S - S.D.\times \Delta S -PoD\times LGD$
+        
     
     P.S. Consider (1) other features such as options (2) cost of trading
 
@@ -711,6 +716,13 @@ Three methods:
 
 ## Synthetic Credit Strategy: CDS 
 
+CDS buyer 买 CDS 相当于买了保险，会在每期付"保费" fixed payment，为固定金额 1% or 5%。
+
+CDS Spread 为实际上值多少钱，如实际上值 1.75%，但是每期只固定付 1%，那么就要在inception 付 upfront premium
+
+- buy protection means pay fixed payment, gaining a protect. short the credit risks 
+- sell protection means receive fixed payment, have obligation to pay while default. Long the credit risks
+
 Fixed CDS Coupon 为标准化的 investment-grade = 1%, high-yield bond = 5% 。所以 实际的情况与标准的差值将作为 upfront fee 在前期支付，差值折现后求和，为 CDS quoted price。
 
 CDS is quoted on a Issuer's CDS Spread = PV of difference between CDS Spread & Fixed Coupon
@@ -719,8 +731,11 @@ CDS is quoted on a Issuer's CDS Spread = PV of difference between CDS Spread & F
 
 - Single-Name CDS,   long or short single name CDS
 - Index-Based CDS,   for index-based
-- Payer Option on CDS index,   short CDS index-based credit spread exposure
-- Receiver Option on CDS index,   long CDS index-based credit spread exposure
+- Payer Option on CDS index, short CDS index-based credit spread exposure
+- Receiver Option on CDS index, long CDS index-based credit spread exposure
+- Sample Text:
+
+  **Selling protection** on the CDX index is a “**long” credit spread risk position**, while purchasing protection on the CDX Financials subindex is a “short” credit spread risk position, leaving the investor with a long index position without exposure to financial reference entities in the CDX index. Both A and C increase exposure to financial sector issuers.
 
 #### CDS Price
 
