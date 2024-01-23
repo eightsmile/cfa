@@ -163,6 +163,7 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
     - **Effective Number of Stocks** 真正在市场上能影响股票价格 的 #，所以
         - the greater the efficient #, the more diversified
         - the lower the efficient #, the more concentrated
+        - $HHI = \sum w^2 $
         - Effective # <=> $1 / HHI = \frac{1}{\sum w^2}$
         - if equal weighted, $w = 1/n$, then HHI is lowest, and effective # is highest. Thus, Equal Weighting would generating greatest diversification, lowest concentration.
 
@@ -858,3 +859,16 @@ Fee / Active Share 越小，说明 fee 越便宜
 ![Screenshot 2023-12-26 at 19.37.16](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202312261937371.png)
 
 The risk targets for Fund Z are most likely those of a manager using a diversified **multi-factor approach.** Low single-security risk of 1% and modest overall portfolio risk of 4%, combined with flexibility on sector risk, demonstrate a highly diversified portfolio that primarily emphasizes factor exposures. Fund X has risk targets consistent with an emphasis on **stock picking**—namely, high active risk, high exposure to risk from a single security, and low sector deviations. Fund Y has risk targets consistent with an emphasis on **sector rotation**—namely, high active risk and a high tolerance for sector deviations.
+
+
+
+- Active Share: differ from the benchmark
+- Active Risks: concentration or diversification 
+- Style/Sector Deviation: style / sector rotation would have high deviation
+
+
+
+- Stock Picking: high active share (pick so high active share and high concentration)
+- diversified stock picking: high active share (pick so high active share, diversified so low active risks), 
+- style rotation: high active risks (concentrated)
+

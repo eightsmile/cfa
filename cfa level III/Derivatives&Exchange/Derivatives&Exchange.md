@@ -449,7 +449,7 @@ $F \Leftrightarrow f \times Multiplier$ are $ amount
 本国US investor 要买 EU bond。进入Cross-currency Swap. （现金流结构相当于在期初 花USD 买了 USD bond，收EUR，发行EUR bond）
 
 1. 在inception期初 换本金 付出 USD principal 收到 EUR principal
-2. 在 perodic 期中， pay EUR interest， 收到 USD interest （有 basis）
+2. 在 periodic 期中， pay EUR interest， 收到 USD interest （有 basis）一般dealer在哪国就需要哪国的basis。如本国US，那么dealer也在US，那么investor收到的 USD interim interest 就会有 basis扣除，即为 dealer 挣的钱
 3. 在期末 换回本金。收到 USD，付出 EUR
 
 - P.S. 如果美元涨价，那么外国人要付basis给本国 
@@ -689,9 +689,9 @@ $\sigma^2_{R_{DC}}\approx  \sigma^2_{R_{FC}} + \sigma^2_{R_{FX}} + 2\sigma_{R_{F
      - **Hedging Costs are from (1) trading cost (2) opportunity cost** 
   
      1. **Passive Hedge**, 100% hedge with benchmark portfolio used to evaluate performance
-     2. **Discretionary Hedge,** with limits.
+     2. **Discretionary Hedge,** with limits. 为了**降风险**
         - The primary duty of the discretionary hedger is to protect the portfolio from currency risk.
-     3. **Active Currency Management**, more active management
+     3. **Active Currency Management**, more active management 为了**提升收益**
      4. 0% is assume the market is efficient that speculation is useless.
      5. **Currency Overlay**， 0% hedge 有专员负责 trade and bargin with the FX, speculate
         - If internal resources for active management are lacking, the fund manager would **outsource** currency exposure management to a sub-advisor that specializes in foreign exchange management. **This approach would allow the fund manager of Portfolio A to separate the currency hedging function (currency beta)**, which can be done effectively internally, **and the active currency management function (currency alpha)** which can be managed externally by a foreign currency specialist. 外包给专门做外汇交易的人做，可以挣 currency beta 和 currency aloha

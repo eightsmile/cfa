@@ -14,14 +14,16 @@
 
 bottom up
 
-- Look for poorly managed and overvalued companies 如 浑水
-- Activist short selling 在short后出报告
 - Typically take a **bottom-up** approach   short的全是bottom-up
-- the stock’s **high short-interest ratio** and **high cost to borrow** (“on special”) are very concerning. Both factors suggest significant potential that a dangerous **short-squeeze situation**.
+- **Activist short selling** 在short后出报告
+  - Look for poorly managed and overvalued companies 如 浑水
+  - Activist short-selling funds take short positions and publicly share their negative fundamental views. 
 
+- the stock’s **high short-interest ratio** and **high cost to borrow** (“on special”) are very concerning. Both factors suggest significant potential that a dangerous **short-squeeze situation**.
 - **Dedicated short-selling** funds take **only** short positions.
-- **Short-biased** hedge fund focues on good short-side stock picking.
-- Activist short-selling funds take short positions and publicly share their negative fundamental views. 
+- **Short-biased** hedge fund focus on good short-side stock picking.
+  - Short-biased strategies are expected to **provide some measure of alpha in addition to lowering a portfolio’s overall equity beta**.
+
 
 ##### Equity Market Neutral (EMN)
 
@@ -95,13 +97,16 @@ Characteristics:
 
 ### Relative Value Strategy
 
+- Equity market neutral strategy
+- convertible bond arbitrage
+
 #### Fixed-Income Arbitrage
 
 - Yield Curve Trades: taking long and short positions at different points on the yield curve
-  - **Sample Text**: For yield curve trades, the prevalent calendar spread strategy involves taking long and short positions at different points on the yield curve where the relative mispricing of securities offers the best opportunities, such as in a curve flattening or steepening.
+  - **Sample Text**: For yield curve trades, **the prevalent calendar spread strategy involves taking long and short positions at different points on the yield curve** where the relative mispricing of securities offers the best opportunities, such as in a curve flattening or steepening.
 
 - Carry Trades: long a higher yielding security and shorting a lower yielding security
-  - **Sample Text**: Carry Trade: A classic example of a fixed-income arbitrage trade involves buying lower-liquidity, off-the-run government securities and selling higher-liquidity, duration-matched, on-the-run government securities.
+  - **Sample Text**: Carry Trade: A classic example of a fixed-income arbitrage trade involves **buying lower-liquidity, off-the-run government securities and selling higher-liquidity, duration-matched, on-the-run government securities.**
 
 
 **Return profile is like put option.**
@@ -137,13 +142,19 @@ If the convertible bond’s current price is near the conversion value, then the
 
 #### Managed Futures
 
-- exotic contract: furtures on weather / derivatives on carbon emission, etc.
-- time-series momentum trend 
+- exotic contract: futures on weather / derivatives on carbon emission, etc.
+- time-series momentum trend 与过去自己的 performance 比
     - Absolute basis: can net long / net short
-
-- cross-sectional momentum
+    - Sample Text:  Time-series trading strategies are **driven by the past performance** of the individual assets. The manager will **take long positions for assets that are rising in value and short positions for assets that are falling in value**. Positions are taken on an absolute basis, and individual positions are determined independent of the performance of the other assets in the strategy. 
+    
+- Cross-Sectional Momentum 与其他 bond 的 relative value 比
     - **Net zero** or **market neutral** 
     - Work well when market is out / underperformed relative to other mkt  因为net zero
+    - Sample Text:
+    
+      Such an approach is generally implemented with securities in the same asset class, which is corporate bonds in this case. The strategy is to **take long positions in contracts for bonds that have risen the most in value relative to the others** (the bonds with the narrowing spreads) and **short positions in contracts for bonds that have fallen the most in value relative to the others** (the bonds with the widening spreads). Cross-sectional momentum strategies generally result in holding a net zero or market-neutral position. In contrast, positions for assets in time-series momentum strategies are determined in isolation, independent of the performance of the other assets in the strategy and can be net long or net short depending on the current price trend of an asset.
+    
+      cross-sectional strategies, where the position taken in an asset depends on that asset’s performance relative to the other assets. 
 
 
 #### Characteristics
@@ -310,15 +321,19 @@ Invest in  (1) future (2) 实物 farmland
 
 - Liquidity
 
-    - Notation:
+    - Notation: all 站在 PE fund 的 GP 的角度。GP 是基金经理，LP 是出钱的金主。GP call就是 fund 在要钱，distribute 就是把钱返给 LP
 
         1. Commitment 承诺出资，如commit 10b
         2. Call 召款，相当于花3年把10万投完，每投一笔之前都要 call
         3. Calldown Period，相当于召款周期
 
-        - Commited Captial （10b） = Paid in Capital （已经call的，已经投入的） + 未投的
+        - Committed Captial （10b） = Paid in Capital （已经call的，已经投入的） + 未投的
 
         4. Distribution
+
+        P.S. Sample Text:
+
+        "In a bear market, GPs may call capital at a higher pace and/or make distributions at a slower pace than had been expected. This suggests that in addition to the base case scenario planning, the analyst should develop an additional set of assumptions with faster capital calls and lower distribution rates."
 
     - Drawdown Structure
 
@@ -342,13 +357,19 @@ Invest in  (1) future (2) 实物 farmland
 
 ### Asset Classification
 
-- Traditional Approach 看表面 
+- **Traditional Approach** 看表面 
   - 按流动性分：private 的流动性都差，public 的都好，包括REITs / Public Real Estate，包括上市公司股票的HF
   - 按通胀，高通胀 real estate / commodity, 高通胀+low growth : inflation-linked bond TIPS, Gold
   - Limitation: 主观判断投资的asset，容易 over-estimate the diversification
   - doesn’t group assets together based on a few shared characteristics. 不会通过risk factor 对asset分类，如 traditional approach 会对待 high yield bond 和 gov bond 会在同一个 fixed-income portfolio中。但是 risk-based approach 会把两种bond 不同对待
-- Risk-Based Approach 和 risk fator 回归 
-  - 因为是回归，所以 sensitive to hisorical look-back period
+- **Risk-Based Approach** 和 risk factor 回归 
+  - 因为是回归，所以 sensitive to historical look-back period
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240123142446578.png" alt="image-20240123142446578" style="zoom: 67%;" />
+
+如果说： **Risk-Based Approach** does equally well accounting for risk levels of alternative assets as it does for publicly traded assets. 
+
+**False**: 因为 PE or Alternatives 不是定期report，data are non-continuous, so use **appraisal data**.  Data are smoothed, 低估 vol，低估 corr, making diversification benefits o
 
 ## Investment Consideration
 
@@ -361,21 +382,31 @@ Invest in  (1) future (2) 实物 farmland
 #### Suitability Consideration
 
 - Investment Horizon: long
+
 - Enterprise: Skilled Manager
+
 - Governance: formal investment policy
+
 - Transparency: low
+
+  - Sample Text: PE, real estate, HF 的 transparency 就是低，得认
+
+    Investors in alternative investments, such as **private equity, direct real estate, and hedge funds**, should not expect transparency in holdings or strategies; rather, investors in these asset classes must be comfortable with a lack of transparency in specific strategies and a “blind pool” of assets. If full transparency is desired or required, alternative investments will not be suitable.
+
+    **用 appraisal data**: Returns from private equity are based on infrequent reporting and typically use appraisal values, resulting in a smoothing of returns and less accurate return volatilities. In comparison, investment-grade fixed-income returns are based on transaction prices, resulting in more accurate return volatilities.
+
 - 不能用 s.d. 分析风险，因为 risk 不对称
 
 In sum, alternatives are suitable to high risk tolerance investors.
 
 #### Soft Skills
 
-- commnication skills
+- communication skills
 - social skill, interpersonal skills
 - education and coaching skills
 - Business development and sales skills, lead new business development 
 
-P.S. 与 soft skill 对应的是 technical skills 包含: captial market proficiency, portfolio construction ability, financial planning knowledge, technology skills, **language skill** 多会说一种外语
+P.S. 与 soft skill 对应的是 technical skills 包含: capital market proficiency, portfolio construction ability, financial planning knowledge, technology skills, **language skill** 多会说一种外语
 
 ### Approach to Asset Allocation
 
@@ -414,11 +445,11 @@ $NAV_t = NAV_{t-1} \times (1+g) + Captial Contribtuion - Distribution$
 在 call 之前，把准备投
 
 1. 投 PE 的钱，投 Public Equity
-2. 投 RE 的钱，投 REITs
+2. 投 RE 的钱，投 REITs (public real estate investments 为大类，其中 REITs 是其中之一)
 
 #### Prepare for Unexpectation (Stress-test)
 
-Stree test for unexpectred events 
+Stress test for unexpected events 
 
 ### Performance Evaluation
 
