@@ -287,6 +287,12 @@ Not fully hedge the Liability. **Partially** hedge the liability, and use the ot
 
 use Asset to purchase derivative and use derivative to hedge the change of liability
 
+##### Difference between Hedging/Return-seeking (two portfolio) and Surplus Opt
+
+Surplus Optimization is a holistic approach focusing on the surplus of assets over liabilities, integrating the risks and returns of both. 
+
+In contrast, the Hedging/Return-Seeking approach separates the portfolio into two parts, each with a distinct focus: one to hedge against liabilities and the other to seek additional returns.
+
 #### Integrated Asset-Liability Approach
 
 把 A & L 一起考虑。由于 Two Portfolio 适合用于 Over-funded pension，因为可以把大于 L 的部分拆开。

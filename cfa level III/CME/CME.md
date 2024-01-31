@@ -75,6 +75,7 @@
         1. data has economic basis, 数据有经济含义 ，避免相关性因果关系的问题
         2. Scrutinty 仔细检查 examine and inspect closely and thoroughly
         3. Test relationship with out-of-sample data 用样本外数据建议
+6. **Prudence Trap**: The prudence trap is the tendency to be cautious when making decisions that could be potentially expensive or damaging to the decision maker’s career.
 
 ### Economic Growth
 
@@ -186,8 +187,8 @@ Reason of cyclical business activities
 
 - high confidence and high employment
 - No Output Gap: Actual GDP > Potential GDP
-- CB reduce the growth of Money Supply (restrictive moneytary policy)
-    - Short-term rate increasing 
+- CB reduce the growth of Money Supply (**restrictive monetary policy**)
+    - **Short-term rate increasing** 
     - **bond yield increase, so bond price decrease**
     - **stock price achieve the top, sell stocks**
 
@@ -363,6 +364,8 @@ Text Sample: Eastland currently has a fixed exchange rate pegged to Northland wi
 
 $r = r_f + TP + CP + LP$
 
+ = Rf + Term Premium + Credit Premium + Liquidity Premium
+
 - **risk free rate**: short term 因为如果是长期的就不需要 term premium, similarly risk-free rate without TP CP LP risks
 
     - **T-bill rate, if negative interest rate**, then use **policy rate** replaced 
@@ -431,13 +434,15 @@ GGM -> 3 steps -> GK model
 
 $GGM: r_e = \frac{D_1}{P_0}+g$
 
-- **Step 1**: **Expected Cash Flow Returns** 调Repurchase
+- **Step 1**: **Expected Cash Flow Returns** 调 share changes，$+\% \Delta S$
 
-    因为 Dividend Yield: Cash Div + Repurchase
+- if it is the Repurchase, then there shall be a minus sign. $-\% \Delta S$
+
+    因为 Dividend Yield: Cash Div + Share changes (Repurchase)
 
     其中回购越多，对 shareholders 越好，因为 share 被浓缩了，同时因为 $\% \Delta S$ 本身是负数，所以
 
-    调增为 $-\% \Delta S$
+    调增为 $+\% \Delta S$
 
 - **Step 2**: **The Expected Nominal Earning Growth** $\%\Delta E$
 
@@ -449,13 +454,13 @@ $GGM: r_e = \frac{D_1}{P_0}+g$
 
 - Thus, 
 
-    - $r_e = \frac{D_1}{P_0}- \%\Delta S  + \%\Delta E + \%\Delta P/E$
+    - $r_e = \frac{D_1}{P_0} +(-) \%\Delta S  + \%\Delta E + \%\Delta P/E$
 
-    - $r_e = \frac{D_1}{P_0} - \%\Delta S  + g_{real} + \pi + \%\Delta P/E$
+    - $r_e = \frac{D_1}{P_0} +(-) \%\Delta S  + g_{real} + \pi + \%\Delta P/E$
 
 - P.S. Sample Text: Grinold–Kroner model states that the **expected return on equity is the sum of** the **expected income return** (2.4%), the **expected nominal earnings growth return** (7.3% = 2.3% from inflation + 5.0% from real earnings growth) and **the expected repricing return** (−3.45%). The expected change in market valuation of −3.45% is calculated as the percentage change in the P/E level from the current 14.5× to the expected level of 14.0×: (14 − 14.5)/14.5 = −3.45%. Thus, the expected return is 2.4% + 7.3% − 3.45% = 6.25%.
 
-    - Expected Cash Flow (Income) Return = $D/P - \%\Delta S$
+    - Expected Cash Flow (Income) Return = $D/P +(-) \%\Delta S$
     - Expected Nominal Earnings Growth Return = $\%\Delta E$ (Inflation + Real Earning Growth)
     - Expected Repricing Return = $\%\Delta P/E$
 
@@ -495,11 +500,15 @@ Sample Text:
 
 - All else being equal, the Singer–Terhaar model implies that when a market becomes more globally integrated (segmented), its required return should decline (rise). As prices adjust to a lower (higher) required return, the market should deliver an even higher (lower) return than was previously expected or required by the market. Therefore, the allocation to markets that are moving toward integration should be increased. If a market is moving toward integration, its increased allocation will come at the expense of markets that are already highly integrated. This will typically entail a shift from developed markets to emerging markets.
 - If hot money flows out, then CB is likely to sell foreign currency to limit domestic currency depreciation. So, CB sell foreign currency for domestic currency (卖外汇买本币，本比增加), （然后用买了的本比，买本国bond，叫 sterilise）buy domestic govenment bond (provide liquidity) => impact on both bank reserves and interest rates.
+- Country B is facing the **outflow of hot money**, which is typically speculative capital that moves to take advantage of short-term interest rate differences between countries. When hot money flows out, the domestic currency experiences depreciation pressures. The central bank of Country B would likely **sell foreign currency reserves to support the domestic currency**, draining domestic liquidity in the process. To offset or "sterilize" this effect, the **central bank would then buy domestic bonds, adding liquidity back into the system**. This **two-step** process ensures that the impact of the hot money outflow on domestic interest rates and bank reserves is neutralized, making Country B the most likely to engage in this form of sterilization. 
+  - Step 1: Sterilise. 当 hot money 流出，相当于 资本外逃，foreign investor 卖本币买外币 撤离本国市场。CB 为了防止本币贬值，卖外币买本币。如此操作市场上 本币流动性会降低。
+  - Step 2: Open Market Operation，CB 买 bond，为市场注入流动性
+
 - the Composition of each country's currency portfolio. 外国人持有本币的形式，如果持有的 equity 那么比较好，但是 持有 domestic debt 不好，因为如果本国还不上钱，那么 主权违约。**supportive of the currency**: Public debt is less supportive because it has to be serviced and must be either repaid or refinanced, potentially triggering a crisis. Some types of flows and holdings are considered to be more or less supportive of the currency. Investments in private equity represent long-term capital committed to the market and are most supportive of the currency. Public equity would likely be considered the next most supportive of the currency. Debt investments are the least supportive of the currency.
 
 ###  Real Estate
 
-**illiquidy**, **hetergenous** (各个不一样), **maintainance and operation cost**, **Appreaisals**
+**illiquidy**, **heterogeneous** (各个不一样), **maintenance and operation cost**, **Appraisals**
 
 - Real Estate Cycles: high quality properties are less cyclical, low quality properties are more cyclical 
 
@@ -511,7 +520,7 @@ $V_0 = \frac{NOI_1}{r-g}$ => $r = \frac{NOI_1}{V_0} + g$
 
 We get to the formula by composing three parts
 
-1. Cap Rate: $\frac{NOI_1}{V_0}$, 经营带来的 income return
+1. Cap Rate: $\frac{NOI_1}{V_0}$, 经营带来的 income return, should be **current cap rate**
 2. $g_{nominal} = g_{realNOI} + \pi $
 3. $-\%\Delta CapRate$ **repricing**, coz $\text{Capital Gain} = \frac{V_1 - V_0}{V_0}$ 但是因为 估值上升 即 V 提升带来的 Capital Gain 会使 Captial Rate 在分母的 V 变大。所以 Capital Gain & Capital Rate are negative correlated.
 
@@ -522,6 +531,8 @@ $r = CapRate + NOI \ growth - \%\Delta CapRate$
 - Interest rate increase => NOI increase => Cap Rate increase
 - vacancy rate increase => $V_0$ decrease => Cap Rate Increase
 - availability of credit and debts 信贷多，买房多demand of houses increase => $V_0$ increase => Cap Rate decrease
+
+![image-20240118141110287](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240118141110287.png)
 
 #### Risk Premium
 
@@ -580,6 +591,7 @@ $E(\%\Delta S_{d/f}) = (r_d -r_f) + (Term_d - Term_f) + (Credit_d - Credit_f )+ 
 
 - Sample VCV, 用样本的资产 sampel statistics 估计 **consistent and unbiased**
 - Factor-based VCV, 因为用 factors to estimate the variance covariance matrix, so the estimate is **biased and inconsistent**
+- Shrinkage method <- weighted average
 
 下为 Factor-based VCV
 
@@ -598,6 +610,10 @@ $\sigma_i^2 = \sum_{m=1}^K \sum_{n=1}^K \beta_{i,m}\beta_{m,n} cov_{m,n} + \sigm
 
 1. 用历史估计未来, biased
 2. 如果 low liquidity 流动性差，则需要 appraisal ，那么数据要 smoothing
+
+   result in **low volatile and low correlation**
+
+   因为两组资产通常受到大的经济环境影响，价格的波动原本应趋于一致。**但是**现在要把这种趋于一致的波动的一方给平滑了，变成一方波动，一方不波动了，那么两者的**相关性就变小**了。
 3. Volatility Clustering
 
 To **overcome** those drawbacks, we would use those three methods.
@@ -657,3 +673,8 @@ To **overcome** those drawbacks, we would use those three methods.
 
             ​	We need $1 - \alpha + \beta >1$ to make the expectation of var is positive over time
 
+---
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240118131829249.png" alt="image-20240118131829249" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240118131904705.png" alt="image-20240118131904705" style="zoom:67%;" />
