@@ -391,7 +391,9 @@ Life-Insurance has long time horizon, so less liquidity demand. Bank has higher 
 
 ### Taxable Investors
 
-$\sigma_{at} = \sigma_{pt} (1-t)$, at-after-tax, pt-pre-tax by $r_{at} = (1-t)r_{pr}$
+$\sigma_{at} = \sigma_{pt} (1-t)$, at-after-tax, pt-pre-tax by $r_{at} = (1-t)r_{pr}$​
+
+The correlation between assets are not affected by tax rate
 
 #### Rebalance Corridor
 
