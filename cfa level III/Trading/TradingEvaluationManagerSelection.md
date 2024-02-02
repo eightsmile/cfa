@@ -115,8 +115,10 @@
         - Cons: 无法控制 **outlayer**
     3. TWAP 按时间 equal-weighted time schedule
         - 有 schedule
-        - Pros: exclude outlayers
+        - Pros: **exclude outlayers**
         - Text Sample: Portfolio managers may choose TWAP when they wish to **exclude potential trade outliers**. Trade outliers may be **caused by trading a large buy order at the day’s low or a large sell order at the day’s high 价格的过高和过低**. **If market participants are not able to fully participate in these trades, then TWAP may be a more appropriate choice.** The TWAP benchmark is used by portfolio managers and traders to evaluate fair and reasonable trading prices in market environments with high volume uncertainty and for securities that are subject to spikes in trading volume throughout the day.
+        - VWAP and TWAP algorithms release orders to the market following a time-specified schedule, trading a predetermined number of shares within the specified time interval (e.g., one day). Following a fixed schedule as VWAP algorithms do, however, may not be optimal for certain stocks because such algorithms may not complete the order in cases where volumes are low. Furthermore, while POV algorithms incorporate real-time volume by following (or chasing) volumes, they may not complete the order within the time period specified.
+          TWAP algorithms, which send the same number of shares and the same percentage of the order to be traded in each time period, will help ensure the specified number of shares are executed within the specified time period. Given Bean’s stated priority of complete execution in one day, he is likely to use a TWAP algorithm for the Dynopax sell order.
 
 2. Liquidity Seeking 在不同市场中寻找流动性，适合小盘股，**适合大单交易**
 
@@ -312,9 +314,13 @@ $Active \ Return \leftrightarrow \alpha$
 
 ### Performance Attribution 只管分析 return / risks 的来源，不管分析 investment quality 不管投资好坏
 
-1. Return-based attribtuion 
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/image-20240126125409951.png" alt="image-20240126125409951" style="zoom:67%;" />
 
-   用 total portfolio return 总收益 来算，有的产品如 hedge funds 不会公布 return 那么 return based attrituion 就不能用
+1. **Return-based attribtuion** 
+
+   **Sample Text:**  The returns-based attribution method is most appropriate when the underlying portfolio holdings are not readily available with sufficient frequency at the required level of detail (e.g., hedge funds).
+
+   用 total portfolio return 总收益 来算，有的产品如 hedge funds 不会公布 return 那么 return based attribution 就不能用
 
    **Pros:** Easy
 
@@ -322,7 +328,9 @@ $Active \ Return \leftrightarrow \alpha$
 
    **Cons:** can be manipulate 因为没有分配到个股，total port容易被操纵
 
-2. Holding-based attribution 会考虑个体持仓，个体的收益率
+2. **Holding-based attribution** 会考虑个体持仓，个体的收益率
+
+   **Sample Text**: The holdings-based attribution method is most appropriate for investment strategies with little turnover (e.g., passive strategies) because it only references the beginning-of-period and end-of-period holdings and ignores individual transactions.
 
    **Pros:** more accurate 
 
@@ -330,13 +338,15 @@ $Active \ Return \leftrightarrow \alpha$
 
    也因此，适用于 passive strategy 因为turnover低，适用于短期的，也是因为 turnover 低
 
-3. Transaction-based attribtuon 考虑了 both holdings and transaction
+3. **Transaction-based attribution** 考虑了 both holdings and transaction
+
+   **Sample Text:** The transactions-based attribution method is most effective for active stock selection portfolios because it captures both the holdings and the transactions (purchases/sales) completed within the defined period, which would allow the entire excess return to be quantified and explained.
 
    **Pros:** accurate
 
    **Cons:** difficult to calculate
 
-### Return Attribtuon
+### Return Attribution
 
 #### Equity
 
@@ -361,6 +371,10 @@ $Active \ Return \leftrightarrow \alpha$
   $w_i$ portfolio component weight
   
   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png" alt="Screenshot 2023-11-29 at 21.27.20" style="zoom:50%;" />
+
+- allocation是sponsor决定的。所以才导致有了题干是单纯的selection，但答案却是S+I的情况。(Sponsor 决定行业配比 **sector weights**，即 allocation)
+- 宏观归因把selection和interaction混在一起，宏观归因中，认为**选股和交叉项是由manager**决定的，( FM 在给定 sector weights 后决定 selection, 即sector 内股票的return, **sector return**)
+- interaction 给以给 allocation 也可以给 selection， 但是一般会归给 FM 即 selection + interaction
 
 ##### Carhart 4 Factor Model
 
@@ -560,17 +574,20 @@ Rationale
 
 - Sortino Ratio
 
-  $Sor R = \frac{R_p - MAR}{\sigma_{Downside}}$
+  $Sor R = \frac{R_p - MAR}{\sigma_{Downside}}$​
+
+  1. Downside var
+  2. investor-specific preference, use MAR not rf
 
   - $MAR$ is the minimum required return, e.g. hurdle rate
 
-  - The semistandard deviation : $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
+  - The semi-standard deviation : $\sigma_D = \sqrt{\frac{\sum min(r_t-r_T,0)}{N}}$ 目标半方差 ，只考虑 downside risks
 
     <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311301901297.png" alt="Screenshot 2023-11-30 at 19.01.05" style="zoom:50%;" />
 
     Excess return w.r.t. Target, per unit of downside return 
     
-    **The Sortino ratio penalizes a manager when portfolio return is less than the MAR (minimum acceptable return) and thus is preferred when the investor’s goal is to preserve capital.**
+    **The Sortino ratio penalizes a manager when portfolio return is less than the MAR (minimum acceptable return) and thus is preferred when the investor’s goal is to preserve capital.** The Sortino ratio penalizes a manager when portfolio return is less than the MAR (minimum acceptable return) and thus is preferred when the investor’s goal is to preserve capital.
 
 - **Capture Ratio**
 
