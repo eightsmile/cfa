@@ -23,11 +23,6 @@
 
 - **Indicators 用 indicator 预测经济情况**
   - Leading indicators. A composite of leading indicators is called a **diffusion index**
-  
-  - Coincident 
-  
-  - Lagging
-  
   - Pros and Cons
   
     - Pros: 
@@ -157,6 +152,8 @@ Reason of cyclical business activities
 
 ### Phases
 
+![Screenshot 2024-01-31 at 22.21.20](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202401312221985.png)
+
 <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Image.png" alt="Image" style="zoom:50%;" />
 
 - **short-term rate** by CB is same as the slope of curve
@@ -195,7 +192,7 @@ Reason of cyclical business activities
 #### 4. Slowdown
 
 - Inflation still Increase
-- Short-term rate Peak (achieve the peak, and going down 在4的最开始 curve flat -> achieve the top)
+- **Short-term rate Peak** (achieve the peak, and going down 在4的最开始 curve flat -> achieve the top)
     - bond yield peak, bond price goes to the bottom
 - Might have inverted yield curve, short-term rate > long term rate
 - Buy: Bond as it achieves the bottom

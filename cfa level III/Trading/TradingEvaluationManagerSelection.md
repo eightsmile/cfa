@@ -1,4 +1,4 @@
-# Trading Evaluation & Manager Selection
+#### Trading Evaluation & Manager Selection
 
 ## Trading
 
@@ -23,6 +23,8 @@
     1. Dividends / coupons
     2. Index tracking
     3. Margin or Collateral calls
+
+Sample Text: In a favorably trending market, buying in a falling market or selling in a rising market, portfolio managers are better off trading at a slower pace to execute at more favorable prices expected later in the trading horizon. Favorable price movements decrease trading costs.
 
 ### Trading Strategies and Strategy Selection
 
@@ -233,13 +235,15 @@ Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 
 
      1. **Delay Cos**t:  arrival price: $P_0$ 注意这里是交易了多少的 # 
 
+        从 FM 作出决定decision price，到 trader 收到指令arrival price
+
         **Delay cost = (Number of shares sold × Arrival price) – (Number of shares sold × Decision price)**
 
          **= Value of shares sold at arrival price – Value of shares sold decision price**
 
         (\$10.2 - \$10) * #900 = 180
 
-     2. **Trading Cost**
+     2. **Trading Cost** 从 trader 收到指令arrival price，到买到订单 execution price
 
         **Trading cost = (Total shares sold × Execution price) – (Number of shares sold × Arrival price)**
 
@@ -328,7 +332,9 @@ $Active \ Return \leftrightarrow \alpha$
 
    **Cons:** fails to capture the impact of transaction 只考虑了起初期末，期中的交易没考虑到
 
-   也因此，适用于 passive strategy 因为turnover低，适用于短期的，也是因为 turnover 低
+   Holding based attribution fails to capture the impact of transactions, so holding based attribution works well for low-turnover portfolio.q	1™¡™œ˙∆bnp [;5r4 ntm678`31]
+
+   也因此，适用于 passive strategy 因为turnover低，。适用于短期的，也是因为 turnover 低
 
 3. Transaction-based attribtuon 考虑了 both holdings and transaction
 
@@ -336,11 +342,11 @@ $Active \ Return \leftrightarrow \alpha$
 
    **Cons:** difficult to calculate
 
-### Return Attribtuon
+#### Return Attribtuon
 
-#### Equity
+##### Equity
 
-##### Brinson Model 画长方形 asset allocation + securities selection
+###### Brinson Model 画长方形 asset allocation + securities selection
 
 - BHB Model
 
@@ -362,7 +368,7 @@ $Active \ Return \leftrightarrow \alpha$
   
   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png" alt="Screenshot 2023-11-29 at 21.27.20" style="zoom:50%;" />
 
-##### Carhart 4 Factor Model
+###### Carhart 4 Factor Model
 
 $R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML + \epsilon$ 
 
@@ -378,7 +384,7 @@ $R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML +
 
   WML = **winners minus losers**, a **momentum factor** (WML is the return on a portfolio of the past year’s winners minus the return on a portfolio of the past year’s losers)
 
-####   Fixed-Income
+#####   Fixed-Income
 
 1. Exposure Decomposition - Duration Based 使用给clients画饼
 
@@ -403,13 +409,13 @@ $R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML +
 
    Bottom-up
 
-#### Return Attribution Analysis at Multiple Levels
+##### Return Attribution Analysis at Multiple Levels
 
 - Macro Attribution: determine the impact of the **fund sponsor’s** decisions
 - Micro Attribution: determine the impact of the **portfolio managers’** decisions on total fund performance
 - 用 BF 模型画矩形，BF模型纵坐标从B开始
 
-### Risk Attribution 风险归因
+#### Risk Attribution 风险归因
 
 $Active Risks = \sigma_A = \sqrt{\frac{\sum (R_A^i-\bar{R})^2}{n-1}}$
 
@@ -480,7 +486,7 @@ Type of Attribution Analysis
 
 - Custom 自己定制 benchmark
 
-### Evaluating Benchmark Quality
+#### Evaluating Benchmark Quality
 
 $P=M+S+A$
 
@@ -501,7 +507,7 @@ If 一个benchmark好，要能把A、S区分开。那么 A 与 S 的相关性要
 
 If 一个benchmark好，$\rho(S,E) = \rho(S,S+A) $ 高，这个相关系数高与上式一致，意味着 S & A的相关性低$\rho(A,S)=0$，则$\rho(S,E) = \rho(S,S+A) $ 高
 
-### Benchmark for Alternatives Investment
+#### Benchmark for Alternatives Investment
 
 Rationale
 
@@ -516,7 +522,9 @@ Rationale
 
 - 因为 Leverage 大，所以收益率高。此时用有杠杆的和无杠杆的 port & benchmark 比，是不可比的
 
-### Performance Appraisal 用来分析FM水平
+### Performance Appraisal 用来分析FM水平 
+
+**review the quality of performance and distinguish between manager skill and luck**
 
 - Sharpe Ratio
 
