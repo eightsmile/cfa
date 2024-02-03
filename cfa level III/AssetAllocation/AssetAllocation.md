@@ -274,6 +274,8 @@ Asset Liability Management (ALM) approach minimise the difference between assets
 
 ##### ***Basic***: A > L (hedge fully, or called True Hedge)
 
+Two portfolio, with one that includes riskless bonds that will **pay off the fixed obligation** in 10 years and the other a risky portfolio that earns a **competitive risk-adjusted return**. This approach is a simple two-step process of hedging the fixed obligation and then investing the balance of the assets in a return-seeking portfolio.
+
 The Liability-relative Asset Allocation task is divided into two parts (1) **hedging portfolio**, (2) **return-seeking portfolio**.
 
 - Hedging Portfolio is used to hedge **fully** Liability

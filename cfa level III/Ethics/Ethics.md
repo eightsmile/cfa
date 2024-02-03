@@ -31,7 +31,7 @@ ABC 与 codes and standards 一致
 2. **Appoint a compliance officer** 公司需要任命一个合规负责人
 
     - Compliance Officer should **competent, knowledgeable, and credible**
-      - should be **independent from** the **investment and operations** **独立**于投资和运营。不能是公司的 senior portfolio manager
+      - should be **independent from** the **investment and operations** **独立**于投资和运营。不能是公司的 senior portfolio manager 不能是 investment manager
       - **Correct**: by appointing an existing employee to act as a Compliance Officer the Fund would be in Compliance with the Asset Manager Code assuming that the employee is competent, knowledgeable, and credible and is empowered to carry out their duties.
     - **Report directly** to the CEO **or** board of directors.
     - eastblish **backup office and opertaional space,** 
@@ -67,14 +67,20 @@ ABC 与 codes and standards 一致
 1. Communicate with clients **timely**
 
     Clients may reasonably expect to receive regular performance reporting about their accounts. Without such performance information, even for investment vehicles with lock-up periods, clients cannot evaluate their overall asset allocations (i.e., including assets not held or managed by the Managers) and determine whether rebalancing is necessary. Accordingly, unless otherwise specified by the client, Managers must provide regular, ongoing performance reporting. Managers should report to clients **at least quarterly,** and when possible, such reporting should be provided within 30 days after the end of the quarter.
+    
 2. Disclosures are **truthful, accurate, complete, and understandable**
+
 3. Include **material facts**
+
 4. Include: 
     1. conflicts of interests 
     2. regulatory or disciplinary action 
     3. Investment process, including information regarding lock-up periods, strategies, risk factors, and use of derivatives and leverage
     4. **At minimum, disclose Gross-and net-of-fees returns, unusual expenses**
        - only direct trading expenses should be deducted in calculating gross-of-fees returns. Custodial fees cannot be considered a component of direct trading expenses.
+       - Gross & Net 都是扣除 trading cost 后
+       - Net 的区别是，还会扣除 performance fee, management fees, incentive fees
+       - custody cost 都不扣除
     5. Retrospectively disclose
     6. Disclosure specific **management fee, incentive fee**, etc
        - disclose **actual fee with itemisation**
@@ -102,7 +108,7 @@ Compliance Officer
 
 - The GIPS standards require that all actual, fee-paying, discretionary segregated accounts must be included in **at least** one composite.  一个 portfolio 可以在多个 composite 中
   - The GIPS standards state that firms must include all actual, discretionary, fee-paying segregated accounts in **at least one of the firm’s composites**. **If the segregated account meets the defined criteria for inclusion in more than one composite, the firm must include the account in all the firm’s appropriate composites.** For example, a firm may have a large-cap composite and a large-cap growth composite. If the firm manages a segregated account that meets the criteria for inclusion in the large-cap composite as well as the large-cap growth composite, the firm must include the account in both composites.
-- The GIPS standards state that portfolios must be valued in accordance with the definition of fair value, and that firms must value portfolios in accordance with the composite-specific valuation policy. The GIPS standards do not require firms to adhere to the principles of financial accounting.
+- The GIPS standards state that portfolios must be valued in accordance with the definition of fair value, and that firms must value portfolios in accordance with the composite-specific valuation policy. **The GIPS standards do not require firms to adhere to the principles of financial accounting.**
 
 Firm comply with GIPS must provide GIPS report to all **prospective clients**, and **limited distribution pooled fund investors**.
 
@@ -222,7 +228,7 @@ True TWR: valuate and calculate returns with every external CF.
 
 - (1) 先算 portfolio return, (2) weighted those portfolio, get the composite return
 
-##### Large CF 全分段compound，因为是large CF所以不再weighted average
+##### Large/significant CF 全分段compound，因为是large CF所以不再weighted average
 
 Returns are calculated **geometrically**, where $r_{t,1}, r_{t,n}$ are the sub-period returns
 
@@ -250,7 +256,7 @@ We use the following methods to estimate TWRs
     
     computational intensive
 
-#### P.S. Fee， Cash, 
+#### P.S. Fee, Cash,  
 
 - Return period less than one year should not be annualised
 - 算 total returns 时要包括 Cash, and Cash Equivalents 。所以会导致 cash drag
@@ -297,14 +303,14 @@ Performance from the target may be used to represent the historical performance 
 
 在 A 收购 B后，是否要把 B 的业绩展示出来？如果符合以下 ABC（意味着the target 被收购后还是可以独立自主投资，原班人马不变，记录有保存），则可以展示B的业绩
 
-1. A: All investment decisions makers must be employed by the acquirer A雇用了B所以做投资决策的人
+1. A: All investment decisions makers must be employed by the acquirer A雇用了B 所有做投资决策的人
 2. B: Decision-making process must remain substantially **intact** and **independent** within the acquirer B的投资人依然可以 完整 独立 于A去做投资决策
 3. C: The acquirer must **have records** to support the performance (historical records are available)
 4. D: there must be **no break in the track record** between the target and the acquirer
 
 (ABC) 其一不满足，则不满足。如果ABC都满足了，只有D不满足即Acquirer和target的记录有断档，可以展示 Target 的 performance, but the two performance records may not be linked
 
-if a GIPS-compliant firm acquires the target, the firm is given a one-year to bring any non-compliant target into compliance for future reporting periods. 如果
+if a GIPS-compliant firm acquires the target, the firm is given a one-year to bring any non-compliant target into compliance for future reporting periods. Assets of the acquired non-compliant firm or affiliation must meet all the requirements of the GIPS standards within one year of the acquisition date, on a going forward basis. (A,B,C,D)
 
 ### Verification
 

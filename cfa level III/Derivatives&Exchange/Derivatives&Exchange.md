@@ -979,4 +979,4 @@ discount at $1+r\times\frac{T-t}{T}$
 - X - original strike
 - () 内相当于 换的 var的加权平均，X^2 为最开始约定的 strike variance。求PV现值，求 notional value
 
-$VarianceNotional = \frac{VegaNotional}{2X}$
+$VarianceNotional = \frac{VegaNotional}{2X}$r
