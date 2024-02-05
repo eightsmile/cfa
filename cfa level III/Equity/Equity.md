@@ -11,6 +11,7 @@ Value typically refer to company that have already been large and mature, but ar
 ### Income associated with an Equity Portfolio
 
 1. Dividend Income
+
 2. Securities Lending Income: lend to short seller 借出后 div 和 voting right 都不归自己了， 但是可以主动 get cash equivalent to the dividend amount
 
    - By investopedia: 
@@ -19,16 +20,15 @@ Value typically refer to company that have already been large and mature, but ar
 
    1. dividends on loaned stock are compensated by the borrower
    2. Reinvestment return of cash collateral are received
-3. Strategy
 
-   1. Dividend Capture 
-      1. buy a stock before ex-dividend date
-      2. hold it throng the ex-dividend date
-      3. sell that stock after ex date
+3. Dividend Capture 
+   1. buy a stock before ex-dividend date
+   2. hold it throng the ex-dividend date
+   3. sell that stock after ex date
 
-   2. Writing Options 
-      1. write Covered call: long stock + write a call = + S - c
-      2. Cash-coverd put: sell a put + buy bond, at same strike price = K - p
+4. Writing Options 
+   1. write Covered call: long stock + write a call = + S - c
+   2. Cash-coverd put: sell a put + buy bond, at same strike price = K - p
 
 
 ### Fees
@@ -40,7 +40,12 @@ Value typically refer to company that have already been large and mature, but ar
 3. Marketing and Distribution fees
 4. Trading Costs 
     1. explicit cost: broker com mission, stock exchange fee, taxes, etc  , directly visible
-    2. implicit cost 在计算cost过程中不算，但是依然存在 : bid-ask spread, **price impact cost** from transaction 由于买卖量大导致价格被推高或拉低 造成的成本 **Delay cost** (slippage costs) 由于延迟下单导致的cost
+    2. implicit cost 在计算cost过程中不算，但是依然存在 : **bid-ask spread**, **price impact cost** from transaction 由于买卖量大导致价格被推高或拉低 造成的成本 **Delay cost** (slippage costs) 由于延迟下单导致的cost
+5. 弥补 trading cost 的方法
+    1. Dividend Capture
+    2. Security Lending
+    3. Wirite Options
+
 
 ### Shareholder Engagement 股东主义
 
@@ -74,11 +79,17 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
 
 - **Investable** 如 HS300为市值最大的300只，那么300th可能会变化，此时 passive invest to replicate the index 会导致300th经常更换而带来transaction cost
 
-    - **Buffering** 缓冲区: establishing ranges around breakpoints that define whether a stock belongs in one index or another. 在 rebalance 和 reconstitution时设置一个边界，可以减少 trading cost
+- **To limit stock migration problems and to mitigate trading costs,** 两个方法 buffering & Packeting
+
+    - **Buffering** 缓冲区: establishing ranges around breakpoints that define whether a stock belongs in one index or another. 在 rebalance 和 reconstitution时设置一个边界，可以减少 trading cost 
+
+        **如 XX300 指数，设置 buffer意味着，到top200 才纳入，跌出 400 才剔除**
 
         左右两边取一个范围 构建更宽的边界，达到更大的边界才会纳入或剔除。
 
     - **Packeting**: splitting stock positions into multiple parts 
+
+        **如果 growth 转变为 value 了，那么先将一部分纳入 value index，等到下一个 reconstitution date 才把所有的转入**
 
     - 不能计算成分股权重的benchmark： 
 
@@ -777,7 +788,13 @@ Relative risk is measured w.r.t. the benchmark. There are two measures of the be
   - Leverage $R_g = R_a - \sigma^2/2$ 几何平均数 = 代数平均数 - sigma^2/2 这意味着 **return 和 risk 是非线性的，不是 risk 越多 return 就越多，而是类似抛物线。所以不能无限leverage扩大收益**。
   - Risk Measures
 
-#### Market Inpacts Cost
+#### Implicit Cost 
+
+###### Delay Cost
+
+###### Ask-Bid Spread
+
+###### Market Impacts Cost
 
 由于买卖时推高或者拉低price **Slippage Cost** 带来的价格变化，而产生的成本
 

@@ -891,7 +891,11 @@ Emerging mkt 特点
 
 - **Cross hedge (proxy hedge)**: hedge with an instrument that is not the same as the exposure 通过hedge 与目标相关的资产，如原要hedge 航空燃油，实际 hedge 原油，这样可以达成相同的效果
 - **Macro Hedge**: focus on the entire portfolio, not individual assets or currency pair,, as assets themselves inside the portfolio might hedge themselves, so we care what left from the entire portfolio 
-- **Minimum-variance hedge ratio**: using OLS to get the cross hedging ratio ($\beta$, the slope in regression is the **optimal hedging ratio**).
+- **Minimum-variance hedge ratio**: using OLS to get the cross hedging ratio ($\beta$​, the slope in regression is the **optimal hedging ratio**).
+
+  $Hedge Ratio = corr (x,y)\times STD. X \times STD. Y$​
+
+  $Asset * HR = MinimumVarHedge$
 
 #### Emerging Mkt Currency Management
 

@@ -27,7 +27,7 @@ bottom up
 
 ##### Equity Market Neutral (EMN)
 
-- Construct a **zero beta portfolio**, so **immune to market risk**, **earn only alpha**
+- Construct a **zero beta portfolio**, so **immune to market risk**, **earn only alpha**. Work well under non-trending and bearish mkt, as the strategy can earn stable with low volatility (because of zero beta)
 - Types:
     1. Pairs Trading: two stocks hedge each other
     2. Stub Trading: long short subsidiary and parent
