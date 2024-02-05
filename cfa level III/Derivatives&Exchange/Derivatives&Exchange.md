@@ -536,7 +536,7 @@ Swap 的双方为 $\sigma^2$ and $K^2$. 如果市场上实际的 variance, $\sig
 - So, $N_{vega} = \frac{4K}{2}=2K\times N_{variance}$
 - $N_{variance} = \frac{N_{vega}}{2K}$
 
-- Settlement Amount (long): $=N_{vega}\times \frac{\sigma^2-K^2}{2K}$
+- Settlement Amount (long): $=\frac{N_{vega}}{2K}\times (\sigma^2-K^2)$
 - $vega \ notional$ 是指实际中 quote Variance Swap 的报价，题目会给的数值，让我们算 variance notional
 
 P.S. the payoff of variance swap is **convex** 即 var 增大带来的 payoff 提升 > 比 var 减少带来的 payoff 减少。投资者喜欢
