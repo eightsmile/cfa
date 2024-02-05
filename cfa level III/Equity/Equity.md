@@ -147,9 +147,11 @@ So, portfolio 偏离 Benchmark, 则 T.E 提升
         - **受small cap 影响更大，因为小盘股 volatility大，所以此指数也 vol 大。**Affected by price change, so small stocks (, which are highly volatile) would make the index highly fluctuated. 小市值股票会带来 index 波动
         - Require **regular rebalancing**. I.E. 如果 Price Increase，那么在 index 中 MV 上升，所以 weights 上升。要保证 equal weight 就需要 卖出该 stock。所以经常需要 rebalance。且 高抛低吸 contrarian
         - **Limited Investment Capacity** （1）因为小盘股多，流动性不好（2）需要老 rebalance 所以 trading cost 高 （因为要等权买，此时买小盘股时也需要买很多，可能流通的股不够，所以缺少investment capacity。market cap weighting 有好的 investment capacity）
-    
-    4. **Fundamental Weighting** （上证50）(偏向 低价股 low price stock）（虽然叫 fundamental 但是实际上，**假设是市场不有效，market inefficient**， 通过市场上的错误定价 而选择特定的 tilt 挣钱
+        - minimise single stock concentration risks. 
+        - Randomise factor misplacing
 
+    4. **Fundamental Weighting** （上证50）(偏向 低价股 low price stock）（虽然叫 fundamental 但是实际上，**假设是市场不有效 assume misplacing，market inefficient**， 通过市场上的错误定价 而选择特定的 tilt 挣钱
+    
         weight stocks by fundamental factors
     
         1. Contrarian 
