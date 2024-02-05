@@ -325,3 +325,9 @@ A single verification report is issued only w.r.t. the whole firm, not on single
 If a firm does not meet all the requirements of GIPS standards, it may not state it's in compliance with GIPS 如果有不符合GIPS的要求，就不要说自己符合。是整个公司都不符合，不能只说是一个 composite不符合
 
 Verified firms could choose to have a **detailed performance examination**
+
+---
+
+## How to Do
+
+- Risk Tolerance: Ability * Willingness, (ability: 2i ), 判断 above or below average
