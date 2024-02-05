@@ -306,7 +306,7 @@ In contrast, the Hedging/Return-Seeking approach separates the portfolio into tw
 - Has to potential to **improve the institution's surplus**
 - Can be implemented in a **factor-based** model
 - 因为Asset和Lia一起考虑，所以decision可能更加 紧密，也因此有可能 improve institution's surplus
-- **可以考虑 multi-period**
+- **可以考虑 multi-period** 可以多期，与其他不同
 
 #### Comparison
 
