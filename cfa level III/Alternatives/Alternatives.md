@@ -369,7 +369,10 @@ Invest in  (1) future (2) 实物 farmland
 
 如果说： **Risk-Based Approach** does equally well accounting for risk levels of alternative assets as it does for publicly traded assets. 
 
-**False**: 因为 PE or Alternatives 不是定期report，data are non-continuous, so use **appraisal data**.  Data are smoothed, 低估 vol，低估 corr, making diversification benefits o
+**False**: 因为 PE or Alternatives 不是定期report，data are non-continuous, so use **appraisal data**.  Data are smoothed, 低估 vol，低估 corr, making diversification benefits 
+
+​	stale pricing和smoothing是同源的。因为另类资产因为没有活跃的交易价格，因此定价一般都是过时的（stale pricing）,所以会用 appraisal data估算另类资产的价值，导致另类资产的收益率是smoothing的，从而在进行MVO的时候会把过多的权重给另类资产。
+MVO会因为另类资产stale pricing的原因，低估风险，因此会把过多的权重配给另类资产。这是没错的。
 
 ## Investment Consideration
 

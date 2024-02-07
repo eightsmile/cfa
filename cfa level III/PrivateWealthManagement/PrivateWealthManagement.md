@@ -973,6 +973,8 @@ About Retirement Income Goal
 - **A mortality table i**llustrates an individual’s **life expectancy at any given age**. A potential problem with using mortality tables as the sole method to analyze the Benetton’s retirement goal is the **probability that either one or both of them live to an age that exceeds the life expectancy of the general population**. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
 - **The Monte Carlo simulation** analyzes the **likelihood of the client’s actual portfolio meeting anticipated retirement needs**. **Although the Monte Carlo output would include the probability of achieving the Benetton’s goal, it would not guarantee that their goal is achieved**, nor would it necessarily measure the “shortfall magnitude” to achieving their goal. Thus, they run the risk of outliving their assets and may need to reduce their annual income (spending) goal at some point.
 
+  MCS does not deal with the "shortfall"
+
 ---
 
 ## IPS
