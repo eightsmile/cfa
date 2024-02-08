@@ -647,7 +647,13 @@ The manager universe 提前根据 **IPS** filter了符合的
 - Null Hypothesis: the manager is not skillful 基金经理skill=0
 
 - Type I: 去真，reject the null when it is true。FM是垃圾，但是还是雇了他（reject the true null） **(error of commission 雇了个sb)**
+    - errors of commission, 
+    - explicit cost, 
+    - Type I errors are more transparent to investors, so they entail not only the **regret** of an incorrect decision but the pain of having to explain this decision to the investor.
+
 - Type II: 纳伪，accept the null when it is false。FM nb 但是没雇 **(error of omission 错过了人才**)
+    - errors are errors of omission
+
 - Decision Makers worry more about Type I errors than Type II errors. coz
     1. 请神容易送神难，雇sb往往会更糟
     2. Psychologically, people seek to avoid feelings of regret 因为 type I 是做错了， type ii 是错过了。人们容易忽略错过了，而放大做错的
@@ -660,7 +666,7 @@ The manager universe 提前根据 **IPS** filter了符合的
 - In deciding which fund to hire, the **goal is to avoid making decisions based on short-term performance** (trend following) and to **identify evidence of behavioral biases** in the evaluation of managers during the selection process.
 - **Psychologically, people seek to avoid feelings of regret.** Type I errors are errors of commission, active decisions that turn out to be incorrect, whereas Type II errors are errors of omission, or inaction. **Type I errors create explicit costs, whereas Type II errors create opportunity costs.** Because individuals appear to put less weight on opportunity costs, **Type I errors are psycho­logically more painful than Type II errors.**
 - **Type I errors are more transparent to investors, so they entail not only the regret of an incorrect decision but the pain of having to explain this decision to the investor.** Type II errors, such as firing (or not hiring) a manager with skill, are less transparent to investors—unless the investor tracks fired managers or evaluates the universe themselves.
--  突然说因为 Type I error 更显性 explicit，更透明 transparent，同同时 Behaviourally, people seek to avoid the feelings of regret 所有 Type I error 跟被重视。而 Type II error is about the opportunity cost, which is less tranparent unless they evaluate un-hired FM. 所以经常被忽视
+- 突然说因为 Type I error 更显性 explicit，更透明 transparent，同同时 Behaviourally, people seek to avoid the feelings of regret 所有 Type I error 跟被重视。而 Type II error is about the opportunity cost, which is less tranparent unless they evaluate un-hired FM. 所以经常被忽视
 
 ### Quantitative
 
@@ -704,7 +710,8 @@ The manager universe 提前根据 **IPS** filter了符合的
 
 - Process and Procedure 制度是否完善
 - Firm & terms 企业文化 条款条例等
-- Investment vehicle 
+- **Investment vehicle** 
+    
     - (1) individual separate account SMA 可以定制的，自己玩的 
         - Owner 归客户
         - 可 customised
@@ -721,6 +728,10 @@ The manager universe 提前根据 **IPS** filter了符合的
     
     Insert 2
 - Management Team 管理，比 个人管理Fund好，因为 key person risk降低
+
+Experienced investment personnel is a key aspect of investment due diligence. 
+
+A strong **back office** and **suitable investment vehicles** are key aspects of operational due diligence
 
 #### Management Fee
 

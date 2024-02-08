@@ -30,6 +30,10 @@ Dark Pool:
 ### Performance Allocation Method 
 
 - **Returns-based attribution method** is most appropriate when the underlying portfolio holdings are not readily available with sufficient frequency at the required level of detail (e.g., hedge funds).  缺holding数据时，直接拿factor 和 return 跑回归，easy
+  - long series is better than short 因为数据更多，但是考虑regime changes
+  - 有 illiquid security 不用 return-based，因为 data smoothing 会 lead to an underestimation of the portfolio’s volatility in a returns-based style analysis.
+  - 可以 comparable
+
 - **Transactions-based attribution method** is most effective for active stock selection portfolios because it captures both the holdings and the transactions (purchases/sales) completed within the defined period, which would allow the entire excess return to be quantified and explained.
 - **Holdings-based attribution method** is most appropriate for investment strategies **with little turnover (e.g., passive strategies)** because it only references the beginning-of-period and end-of-period holdings and ignores individual transactions. In this case, because the identified portfolio is a very active strategy, the holdings-based method would not be the most appropriate method*.*
 
