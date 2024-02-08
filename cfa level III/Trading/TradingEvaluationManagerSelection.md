@@ -50,7 +50,7 @@ Sample Text: In a favorably trending market, buying in a falling market or selli
 - User-Based Consideration
     - 个人越厌恶风险，trade urgency 越高（越急着做交易）
 
-### Reference Pirce
+### Reference Price
 
 - Pre-trade Benchmark 交易前的 benchmark 适用于 Quant Trader 因为需要有数据做跑模型，只能用此前的数据
 
@@ -195,7 +195,11 @@ The implementation shortfall (IS) metric7 is the most important ***ex post*** tr
 - $P_d$  price at the time of investment decision **(decision price)**
 - $P_0$ arrival price
 
-$Implementation\ Shortfall = Paper\ Return - Actual\ Return = Total\ Return$ ，再把 total cost 拆分成 1,2,3三部分
+$Implementation\ Shortfall = Paper\ Return - Actual\ Return = Total\ Return$​ ，再把 total cost 拆分成 1,2,3三部分
+
+Paper Return = (结束时的价格 - decision的价格) * #
+
+Actual Return = (结束时的价格 - 执行的价格) * 执行的 #  -  transaction cost * 执行的# 
 
 Paper 是 打算买 #1000 share @ \$10，预计能涨价到 $12 , Real Cost 是 实际只买到了 #900 share (#900 = #800@\$10.5 + #100@\$11 其中#800股用\$10.5买到，#100股用\$11买到).
 
@@ -306,7 +310,7 @@ $Active \ Return \leftrightarrow \alpha$
 
   $A = R-B$
 
-- Geometric Attribtuion <- Multi-period
+- Geometric Attribution <- Multi-period
 
   $(1+G)(1+B)=1+R$
 
@@ -340,7 +344,7 @@ $Active \ Return \leftrightarrow \alpha$
 
    **Cons:** fails to capture the impact of transaction 只考虑了起初期末，期中的交易没考虑到
 
-   Holding based attribution fails to capture the impact of transactions, so holding based attribution works well for low-turnover portfolio.q	1™¡™œ˙∆bnp [;5r4 ntm678`31]
+   Holding based attribution fails to capture the impact of transactions, so holding based attribution works well for low-turnover portfolio.
 
    也因此，适用于 passive strategy 因为turnover低，。适用于短期的，也是因为 turnover 低
 
@@ -352,12 +356,7 @@ $Active \ Return \leftrightarrow \alpha$
 
    **Cons:** difficult to calculate
 
-<<<<<<< HEAD
-#### Return Attribtuon
-=======
 ### Return Attribution
->>>>>>> 153c1cc616420adc5292d95fa4d35657ef4060a9
-
 ##### Equity
 
 ###### Brinson Model 画长方形 asset allocation + securities selection
@@ -382,15 +381,13 @@ $Active \ Return \leftrightarrow \alpha$
   
   <img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/202311292127418.png" alt="Screenshot 2023-11-29 at 21.27.20" style="zoom:50%;" />
 
-<<<<<<< HEAD
 ###### Carhart 4 Factor Model
-=======
+$R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML + \epsilon$ 
 - allocation是sponsor决定的。所以才导致有了题干是单纯的selection，但答案却是S+I的情况。(Sponsor 决定行业配比 **sector weights**，即 allocation)
 - 宏观归因把selection和interaction混在一起，宏观归因中，认为**选股和交叉项是由manager**决定的，( FM 在给定 sector weights 后决定 selection, 即sector 内股票的return, **sector return**)
 - interaction 给以给 allocation 也可以给 selection， 但是一般会归给 FM 即 selection + interaction
 
 ##### Carhart 4 Factor Model
->>>>>>> 153c1cc616420adc5292d95fa4d35657ef4060a9
 
 $R_p-R_f = \alpha + \beta_{1}RMRF + \beta_{2}SMB + \beta_{3}HML + \beta_{4}WML + \epsilon$ 
 
@@ -770,4 +767,4 @@ The manager universe 提前根据 **IPS** filter了符合的
 
   如果基于 active return,  则 用( port return - benchmarket ) * sharing %
 
-  如果基于 base fee， 则用 (port return - base fee) * sharing %
+  如果基于 base fee， 则用 (port return - base fee) * sharing %st
