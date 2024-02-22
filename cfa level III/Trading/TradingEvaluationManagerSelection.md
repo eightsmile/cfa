@@ -711,7 +711,7 @@ The manager universe 提前根据 **IPS** filter了符合的
 - Process and Procedure 制度是否完善
 - Firm & terms 企业文化 条款条例等
 - **Investment vehicle** 
-    
+  
     - (1) individual separate account SMA 可以定制的，自己玩的 
         - Owner 归客户
         - 可 customised
@@ -776,6 +776,6 @@ A strong **back office** and **suitable investment vehicles** are key aspects of
 
 - **Sharing based on active return / based on return net of base fee**
 
-  如果基于 active return,  则 用( port return - benchmarket ) * sharing %
+  如果基于 active return,  则 用( port return - benchmark ) * sharing %
 
   如果基于 base fee， 则用 (port return - base fee) * sharing %st
