@@ -580,7 +580,7 @@ $E(\%\Delta S_{d/f}) = (r_d -r_f) + (Term_d - Term_f) + (Credit_d - Credit_f )+ 
 
 - **Hot Money**
 
-![Screenshot 2023-10-22 at 21.47.22](https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-22%20at%2021.47.22.png)
+<img src="https://cdn.jsdelivr.net/gh/eightsmile/ImageLib@main/Screenshot%202023-10-22%20at%2021.47.22.png" alt="Screenshot 2023-10-22 at 21.47.22" style="zoom:33%;" />
 
 ---
 
