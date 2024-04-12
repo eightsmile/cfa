@@ -1,6 +1,8 @@
 # CFA
 
-Here is a bit notes for CFA,
+Here are my learning notes for CFA,
+
+
 
 Level II, passed in May 2023
 
